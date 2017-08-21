@@ -1,0 +1,27 @@
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - redcarpet
+# Permalinks
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           'pretty'
+#relative_permalinks: true
+# Rendering
+markdown:            'kramdown'
+highlighter:         'rouge'
+# Setup
+title:               'Ryan B. Harvey'
+tagline:             'Instructor in Computer Science'
+description:         "Information about Ryan's teaching, research and computer science education work."
+#url:                 'https://www.loyno.edu/~rharvey'
+#baseurl:             'https://www.loyno.edu/'
+paginate:            10
+credits:             'Built with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+# About/contact
+author:
+- name:              'Ryan B. Harvey'
+- url:               'https://www.loyno.edu/~rharvey'
+- email:             'rharvey@loyno.edu'
+# Custom vars
+version:             '0.0.1'
