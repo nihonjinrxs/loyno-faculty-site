@@ -11,7 +11,7 @@
 
   <title>
     
-      Ryan B. Harvey &middot; Instructor in Computer Science
+      Ryan Bensussan Harvey &middot; Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div>
     
   </title>
 
@@ -19,22 +19,38 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.loyno.edu/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.loyno.edu/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.loyno.edu/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.loyno.edu/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.loyno.edu/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.loyno.edu/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.loyno.edu/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.loyno.edu/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.loyno.edu/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.loyno.edu/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.loyno.edu/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://www.loyno.edu/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.loyno.edu/favicon-16x16.png">
+  <!-- link rel="manifest" href="./manifest.json" -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.loyno.edu/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
 
-  <body>
+  <body class="theme-base-ryan sidebar-overlay">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
@@ -59,10 +75,31 @@
     
       
     
+      
+        
+          <a class="sidebar-nav-item" href="/blog/">Blog</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/teaching/2017f-cosc-a451/">COSC A451 Software Engineering<br>Fall 2017</a>
+        
+      
+    
+      
+    
 
-    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
-    <a class="sidebar-nav-item" href="">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v1.0.0</span>
+    <a class="sidebar-nav-item" href="">
+      <small>
+        <i class="fa fa-code-fork"></i> Fork this site on GitHub
+      </small>
+    </a>
+    <span class="sidebar-nav-item">
+      <small>
+        Site v0.0.1, updated 08/22/2017
+      </small>
+    </span>
   </nav>
 
   <div class="sidebar-item">
@@ -79,235 +116,238 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/" title="Home">Ryan B. Harvey</a>
-            <small>Instructor in Computer Science</small>
+            <a href="/" title="Home">Ryan Bensussan Harvey</a>
+            <small>Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div></small>
           </h3>
         </div>
       </div>
 
       <div class="container content">
-        <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2014/01/02/introducing-lanyon/">
-        Introducing Lanyon
-      </a>
-    </h1>
-
-    <span class="post-date">02 Jan 2014</span>
-
-    <p>Lanyon is an unassuming <a href="http://jekyllrb.com">Jekyll</a> theme that places content first by tucking away navigation in a hidden drawer. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
-
-<h3 id="built-on-poole">Built on Poole</h3>
-
-<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Lanyon here) includes the following:</p>
-
-<ul>
-  <li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
-  <li>Mobile friendly design and development</li>
-  <li>Easily scalable text and component sizing with <code class="highlighter-rouge">rem</code> units in the CSS</li>
-  <li>Support for a wide gamut of HTML elements</li>
-  <li>Related posts (time-based, because Jekyll) below each post</li>
-  <li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
-</ul>
-
-<h3 id="lanyon-features">Lanyon features</h3>
-
-<p>In addition to the features of Poole, Lanyon adds the following:</p>
-
-<ul>
-  <li>Toggleable sliding sidebar (built with only CSS) via <strong>☰</strong> link in top corner</li>
-  <li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
-  <li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
-  <li><a href="https://github.com/poole/lanyon#themes">Eight optional color schemes</a>, available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
-</ul>
-
-<p><a href="https://github.com/poole/lanyon#readme">Head to the readme</a> to learn more.</p>
-
-<h3 id="browser-support">Browser support</h3>
-
-<p>Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
-
-<h3 id="download">Download</h3>
-
-<p>Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.</p>
-
-<p>Thanks!</p>
-
+        <div class="about-me">
+  <img id="photo-main"
+       src="./public/RyanTreesBreezer.png"
+       alt="Picture of Ryan Harvey">
+  <div class="finding-me">
+    <img src="http://www.loyno.edu/img/svg/logo-loyola-horizontal.svg"
+         alt="Loyola University New Orleans">
+    <p>Department of Mathematics and Computer Science
+       <br>
+       Monroe Hall, Room 437</p>
+    <p><strong>Availability</strong>: Tuesdays &amp; Thursdays after 9:30 AM
+       <br>
+       <strong>Email</strong>: <a href="mailto:rharvey@loyno.edu">rharvey@loyno.edu</a></p>
   </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2014/01/01/example-content/">
-        Example content
-      </a>
-    </h1>
-
-    <span class="post-date">01 Jan 2014</span>
-
-    <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 </div>
 
-<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+<a href="./teaching/2017f-cosc-a451/"  class="current-classes">
+  COSC A451 051 - Software Engineering (Fall 2017)
+</a>
 
-<blockquote>
-  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-</blockquote>
-
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-
-<h2 id="inline-html-elements">Inline HTML elements</h2>
-
-<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
-<ul>
-  <li><strong>To bold text</strong>, use <code class="highlighter-rouge">&lt;strong&gt;</code>.</li>
-  <li><em>To italicize text</em>, use <code class="highlighter-rouge">&lt;em&gt;</code>.</li>
-  <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="highlighter-rouge">title</code> attribute for the full phrase.</li>
-  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="highlighter-rouge">&lt;cite&gt;</code>.</li>
-  <li><del>Deleted</del> text should use <code class="highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="highlighter-rouge">&lt;ins&gt;</code>.</li>
-  <li>Superscript <sup>text</sup> uses <code class="highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="highlighter-rouge">&lt;sub&gt;</code>.</li>
-</ul>
-
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
-
-<h2 id="heading">Heading</h2>
-
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-<h3 id="code">Code</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis <code class="highlighter-rouge">code element</code> montes, nascetur ridiculus mus.</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console
-</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments
-</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"return a + b"</span><span class="p">);</span>
-
-<span class="c1">// Call the function
-</span>
-<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span></code></pre></figure>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-
-<h3 id="lists">Lists</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-<ul>
-  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-  <li>Donec id elit non mi porta gravida at eget metus.</li>
-  <li>Nulla vitae elit libero, a pharetra augue.</li>
-</ul>
-
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-
-<ol>
-  <li>Vestibulum id ligula porta felis euismod semper.</li>
-  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-</ol>
-
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
-
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<h3 id="tables">Tables</h3>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<hr />
-
-<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2013/12/31/whats-jekyll/">
-        What's Jekyll?
-      </a>
-    </h1>
-
-    <span class="post-date">31 Dec 2013</span>
-
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
-
-<blockquote>
-  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>It’s an immensely useful tool and one we encourage you to use here with Lanyon.</p>
-
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
-
-  </div>
-  
+<div class="who-am-i">
+  <p>
+    I'm a <em>software engineer</em>, <em>data scientist</em>,
+    <em>data engineer</em>, and <em>educator</em>.
+  </p>
+  <p>
+    I've worked in <em>large commercial</em>, <em>startup</em>,
+    <em>academic</em>, <em>government</em>, and <em>not-for-profit</em>
+    settings.
+  </p>
+  <p>
+    I'm always excited to discuss new ideas or projects and to
+    share my experiences.
+  </p>
 </div>
 
-<div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+<h2>
+  <div id="education-toggle" class="education-toggle section-toggle">
+    <i id="education-switch" class="switch fa fa-toggle-off"></i>
+    <span class="underlined">Education</span>
+  </div>
+</h2>
+<div id="education" class="education collapsed">
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">B.S.</span>
+      <span class="degree-year">2001</span>
+      <span class="degree-institution">Loyola University New Orleans</span>
+    </div>
+    <div class="degree-subject">Mathematics &amp; Computer Science</div>
+  </div>
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">Grad. Cert.</span>
+      <span class="degree-year">2007</span>
+      <span class="degree-institution">University of Maryland at College Park</span>
+    </div>
+    <div class="degree-subject">Scientific Computing</div>
+  </div>
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">Grad. Cert.</span>
+      <span class="degree-year">2007</span>
+      <span class="degree-institution">University of Maryland at College Park</span>
+    </div>
+    <div class="degree-subject">Computational Harmonic Analysis</div>
+  </div>
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">M.S.</span>
+      <span class="degree-year">2007</span>
+      <span class="degree-institution">University of Maryland at College Park</span>
+    </div>
+    <div class="degree-subject">Applied Mathematics &amp; Scientific Computing</div>
+  </div>
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">Cert.</span>
+      <span class="degree-year">2010</span>
+      <span class="degree-institution">University of Maryland at College Park</span>
+    </div>
+    <div class="degree-subject">Innovation Management (Non-Credit)</div>
+  </div>
+  <div class="degree">
+    <div class="degree-info">
+      <span class="degree-type">Ph.D.</span>
+      <span class="degree-year">(ABD/ unfinished)</span>
+      <span class="degree-institution">University of Maryland at College Park</span>
+    </div>
+    <div class="degree-subject">Applied Mathematics, Applied Statistics &amp; Scientific Computing</div>
+  </div>
 </div>
 
+<h2>
+  <div id="work-toggle" class="work-toggle section-toggle">
+    <i id="work-switch" class="switch fa fa-toggle-off"></i>
+    <span class="underlined">Professional Activities</span>
+  </div>
+</h2>
+<div id="work" class="work collapsed">
+  <div class="job">
+    <a href="https://www.loyno.edu/" target="_blank"
+         alt="Visit the Loyola University New Orleans homepage.">
+      <img src="http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif"
+           alt="Loyola University New Orleans" class="job-logo">
+    </a>
+    <span class="job-position">Instructor in Computer Science</span>
+    <span class="job-since">since 2017</span>
+  </div>
+  <div class="job">
+    <a href="https://www.ted.com/" target="_blank"
+       alt="Visit the TED Conferences homepage.">
+      <img src="./public/TED_logo_rgb.png"
+           alt="TED Conferences" class="job-logo">
+    </a>
+    <span class="job-position">Data Engineer</span>
+    <span class="job-since">since 2016</span>
+  </div>
+  <div class="job">
+    <a href="https://www.kitchology.com/" target="_blank"
+       alt="Visit the Kitchology Inc. homepage.">
+      <img src="https://www.kitchology.com/assets/updated_logo_resized.png"
+           alt="Kitchology Inc." class="job-logo">
+    </a>
+    <span class="job-position">Data Scientist &amp; Software Architect</span>
+    <span class="job-since">since 2013</span>
+  </div>
+</div>
+
+<h2>
+  <div id="volunteer-toggle" class="volunteer-toggle section-toggle">
+    <i id="volunteer-switch" class="switch fa fa-toggle-off"></i>
+    <span class="underlined">Volunteer Activities</span>
+  </div>
+</h2>
+<div id="volunteer" class="volunteer collapsed">
+  <div class="job">
+    <a href="https://www.loyno.edu/" target="_blank"
+       alt="Visit the Loyola University New Orleans homepage.">
+      <img src="http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif"
+           alt="Loyola University New Orleans" class="job-logo">
+    </a>
+    <span class="job-position">Research Associate Pro Bono</span>
+    <span class="job-since">since 2016</span>
+  </div>
+  <div class="job">
+    <a href="https://www.codeforneworleans.org/" target="_blank"
+       alt="Visit the Code for New Orleans homepage.">
+      <img src="https://codefornola.github.io/style_guide/assets/images/cfno-logo.png"
+           alt="Code for New Orleans" class="job-logo">
+    </a>
+    <span class="job-position">Co-Organizer &amp; Chief Data Wrangler</span>
+    <span class="job-since">since 2016</span>
+  </div>
+  <div class="job">
+    <a href="https://norbertwiener.umd.edu/" target="_blank"
+       alt="Visit the homepage of the Norbert Wiener Center at University of Maryland.">
+      <img src="http://norbertwiener.umd.edu/NWC_logos/Color/ColorLogoBig.png"
+         alt="University of Maryland at College Park" class="job-logo">
+    </a>
+    <span class="job-position">Research Affiliate, Norbert Wiener Center</span>
+    <span class="job-since">since 2014</span>
+  </div>
+</div>
+
+<script>
+  function toggle_class(elt, class_string) {
+    if (elt.classList) {
+      elt.classList.toggle(class_string);
+    } else {
+      // For IE9
+      var classes = elt.className.split(" ");
+      var i = classes.indexOf(class_string);
+        if (i >= 0)
+          classes.splice(i, 1);
+        else
+          classes.push(class_string);
+          elt.className = classes.join(" ");
+    }
+  }
+
+  function toggle_switch(id) {
+    var switch_i = document.getElementById(id);
+    console.log(switch_i);
+    toggle_class(switch_i, "fa-toggle-off");
+    toggle_class(switch_i, "fa-toggle-on");
+  }
+
+  function toggle_education(ev) {
+    var ed_div = document.getElementById("education");
+    console.log(ed_div);
+    toggle_class(ed_div, "collapsed");
+    toggle_switch("education-switch");
+  }
+
+  function toggle_work(ev) {
+    var wk_div = document.getElementById("work");
+    console.log(wk_div);
+    toggle_class(wk_div, "collapsed");
+    toggle_switch("work-switch");
+  }
+
+  function toggle_volunteer(ev) {
+    var wk_div = document.getElementById("volunteer");
+    console.log(wk_div);
+    toggle_class(wk_div, "collapsed");
+    toggle_switch("volunteer-switch");
+  }
+
+  document.getElementById("education-toggle")
+    .addEventListener("click", toggle_education);
+  document.getElementById("work-toggle")
+    .addEventListener("click", toggle_work);
+  document.getElementById("volunteer-toggle")
+    .addEventListener("click", toggle_volunteer);
+</script>
 
       </div>
+      
+<hr>
+<div class="container footer">
+  Built with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> using
+  the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a>.
+</div>
+
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
@@ -329,5 +369,6 @@
         }, false);
       })(document);
     </script>
+    <script src="https://use.fontawesome.com/263865d36b.js"></script>
   </body>
 </html>

@@ -1,0 +1,193 @@
+/* Custom Theme: Ryan Harvey */
+.theme-base-ryan .sidebar,
+.theme-base-ryan .sidebar-toggle:active,
+.theme-base-ryan #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #660000;
+  color: #fad800;
+}
+.theme-base-ryan .container a,
+.theme-base-ryan .sidebar-toggle,
+.theme-base-ryan .related-posts li a:hover {
+  color: #660000;
+}
+.theme-base-ryan .masthead-title small {
+  color: #660000;
+  padding-left: 1rem;
+}
+.theme-base-ryan .masthead-title .social-icons {
+  display: inline-block;
+  padding-left: 2rem;
+}
+.theme-base-ryan .masthead-title .social-icons a:hover {
+  color: #fad800;
+}
+.theme-base-ryan .footer {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 0.8rem;
+}
+.theme-base-ryan a.current-classes {
+  display: block;
+  font-style: bold;
+  color: #fad800;
+  font-size: 1.2rem;
+  background-color: #660000;
+  padding: 1.5rem;
+  margin: 0.8rem auto;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -.025rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid #660000;
+  box-sizing: border-box;
+}
+.theme-base-ryan a.current-classes:hover {
+  text-decoration: none;
+  border: 3px dashed #fad800;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+.theme-base-ryan .who-am-i {
+  font-style: italic;
+  color: #660000;
+  font-size: 1.2rem;
+  background-color: #fad800;
+  padding: 1.5rem;
+  margin: 0.8rem auto;
+  border-radius: 5px;
+}
+.theme-base-ryan .who-am-i em {
+  font-weight: bold;
+}
+.theme-base-ryan .about-me {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+.theme-base-ryan img#photo-main {
+  width: 200px;
+  height: 200px;
+  align-self: flex-start;
+}
+.theme-base-ryan .finding-me {
+  align-self: center;
+  padding-left: 20px;
+}
+.theme-base-ryan .education {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 100%;
+}
+.theme-base-ryan .collapsed {
+  display: none !important;
+}
+.theme-base-ryan .underlined {
+  text-decoration: underline;
+}
+.theme-base-ryan .syllabus .right {
+  align-self: flex-end;
+  text-align: right;
+}
+.theme-base-ryan .syllabus .toc-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.theme-base-ryan .syllabus .toc-columns ul {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+.theme-base-ryan .syllabus .toc-schedule-wrapper {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+.theme-base-ryan .syllabus .toc-schedule {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.theme-base-ryan .syllabus h2 {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.theme-base-ryan .syllabus table td {
+  vertical-align: top;
+}
+.theme-base-ryan .syllabus .instructor-notes {
+  color: #ccc;
+  font-size: 0.4rem;
+}
+.theme-base-ryan .section-toggle {
+  color: #660000;
+}
+.theme-base-ryan .section-toggle:hover {
+  background-color: #fad800;
+}
+.theme-base-ryan .education .degree {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  width: 100%;
+  min-width: 100%;
+  padding-bottom: 20px;
+}
+.theme-base-ryan .education .degree .degree-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.theme-base-ryan .education .degree .degree-type {
+  font-weight: bold;
+  flex: 1, 0, 16.666667%;
+}
+.theme-base-ryan .education .degree .degree-year {
+  flex: 2, 0, 33.333333%;
+  text-align: center;
+}
+.theme-base-ryan .education .degree .degree-institution {
+  font-style: italic;
+  flex: 3, 0, 50%;
+  text-align: right;
+}
+.theme-base-ryan .education .degree .degree-subject {
+  font-style: italic;
+  font-weight: bold;
+}
+.theme-base-ryan .work {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.theme-base-ryan .volunteer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.theme-base-ryan .job {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 100%;
+}
+.theme-base-ryan .job .job-logo {
+  height: 50px;
+}
+.theme-base-ryan .job .job-position {
+  font-weight: bold;
+}
+.theme-base-ryan .job .job-since {
+  color: #888;
+  text-align: right;
+}
