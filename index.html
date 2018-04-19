@@ -2,6 +2,96 @@
 layout: default
 title: Home
 menu: main
+info:
+  office: Monroe Hall, Room 437
+  availability: Tuesdays &amp; Thursdays after 9:30 AM
+  currentsemester: Fall 2017
+  currentcourses:
+    -
+      number: COSC A451
+      section: "051"
+      title: Software Engineering
+      url: ./teaching/cosc-a451/2017f/
+  whoami: |
+      I'm a _software engineer_, _data scientist_,
+      _data engineer_, and _educator_.
+
+      I've worked in _large commercial_, _startup_,
+      _academic_, _government_, and _not-for-profit_
+      settings.
+
+      I'm always excited to discuss new ideas or
+      projects and to share my experiences.
+  education:
+    -
+      type: Ph.D.
+      year: (ABD/ unfinished)
+      institution: University of Maryland at College Park
+      subject: Applied Mathematics, Applied Statistics &amp; Scientific Computing
+    -
+      type: Cert.
+      year: 2010
+      institution: University of Maryland at College Park
+      subject: Innovation Management (Non-Credit)
+    -
+      type: M.S.
+      year: 2007
+      institution: University of Maryland at College Park
+      subject: Applied Mathematics &amp; Scientific Computing
+    -
+      type: Grad. Cert.
+      year: 2007
+      institution: University of Maryland at College Park
+      subject: Computational Harmonic Analysis
+    -
+      type: Grad. Cert.
+      year: 2007
+      institution: University of Maryland at College Park
+      subject: Scientific Computing
+    -
+      type: B.S.
+      year: 2001
+      institution: Loyola University New Orleans
+      subject: Mathematics &amp; Computer Science
+  work:
+    -
+      organization: Loyola University New Orleans
+      position: Instructor in Computer Science
+      startyear: 2017
+      imageurl: http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif
+      url: https://www.loyno.edu/
+    -
+      organization: TED Conferences
+      position: Data Engineer
+      startyear: 2016
+      imageurl: ./public/TED_logo_rgb.png
+      url: https://www.ted.com/
+    -
+      organization: Kitchology Inc.
+      position: Data Scientist &amp; Software Architect
+      startyear: 2013
+      imageurl: https://www.kitchology.com/assets/updated_logo_resized.png
+      url: https://www.kitchology.com/
+  volunteering:
+    -
+      organization: Loyola University New Orleans
+      position: Research Associate Pro Bono
+      startyear: 2016
+      imageurl: http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif
+      url: https://www.loyno.edu/
+    -
+      organization: Code for New Orleans
+      position: Brigade Captain &amp; Chief Data Wrangler
+      startyear: 2016
+      imageurl: https://codefornola.github.io/style_guide/assets/images/cfno-logo.png
+      url: https://codeforneworleans.org/
+    -
+      organization: University of Maryland at College Park
+      position: Research Affiliate, Norbert Wiener Center
+      startyear: 2014
+      imageurl: http://norbertwiener.umd.edu/NWC_logos/Color/ColorLogoBig.png
+      url: https://norbertwiener.umd.edu/
+      linkalt: Visit the homepage of the Norbert Wiener Center at the University of Maryland.
 ---
 
 <div class="about-me">
@@ -13,31 +103,21 @@ menu: main
          alt="Loyola University New Orleans">
     <p>Department of Mathematics and Computer Science
        <br>
-       Monroe Hall, Room 437</p>
-    <p><strong>Availability</strong>: Tuesdays &amp; Thursdays after 9:30 AM
+       {{ page.info.office }}</p>
+    <p><strong>Availability</strong>: {{ page.info.availability }}
        <br>
        <strong>Email</strong>: <a href="mailto:rharvey@loyno.edu">rharvey@loyno.edu</a></p>
   </div>
 </div>
 
-<a href="./teaching/2017f-cosc-a451/"  class="current-classes">
-  COSC A451 051 - Software Engineering (Fall 2017)
+{% for course in page.info.currentcourses %}
+<a href="{{ course.url }}"  class="current-classes">
+  {{ course.number }} {{ course.section }} - {{ course.title }} ({{ page.info.currentsemester }})
 </a>
+{% endfor %}
 
 <div class="who-am-i">
-  <p>
-    I'm a <em>software engineer</em>, <em>data scientist</em>,
-    <em>data engineer</em>, and <em>educator</em>.
-  </p>
-  <p>
-    I've worked in <em>large commercial</em>, <em>startup</em>,
-    <em>academic</em>, <em>government</em>, and <em>not-for-profit</em>
-    settings.
-  </p>
-  <p>
-    I'm always excited to discuss new ideas or projects and to
-    share my experiences.
-  </p>
+  {{ page.info.whoami | markdownify }}
 </div>
 
 <h2>
@@ -47,54 +127,16 @@ menu: main
   </div>
 </h2>
 <div id="education" class="education collapsed">
+  {% for degree in page.info.education %}
   <div class="degree">
     <div class="degree-info">
-      <span class="degree-type">B.S.</span>
-      <span class="degree-year">2001</span>
-      <span class="degree-institution">Loyola University New Orleans</span>
+      <span class="degree-type">{{ degree.type }}</span>
+      <span class="degree-year">{{ degree.year }}</span>
+      <span class="degree-institution">{{ degree.institution }}</span>
     </div>
-    <div class="degree-subject">Mathematics &amp; Computer Science</div>
+    <div class="degree-subject">{{ degree.subject }}</div>
   </div>
-  <div class="degree">
-    <div class="degree-info">
-      <span class="degree-type">Grad. Cert.</span>
-      <span class="degree-year">2007</span>
-      <span class="degree-institution">University of Maryland at College Park</span>
-    </div>
-    <div class="degree-subject">Scientific Computing</div>
-  </div>
-  <div class="degree">
-    <div class="degree-info">
-      <span class="degree-type">Grad. Cert.</span>
-      <span class="degree-year">2007</span>
-      <span class="degree-institution">University of Maryland at College Park</span>
-    </div>
-    <div class="degree-subject">Computational Harmonic Analysis</div>
-  </div>
-  <div class="degree">
-    <div class="degree-info">
-      <span class="degree-type">M.S.</span>
-      <span class="degree-year">2007</span>
-      <span class="degree-institution">University of Maryland at College Park</span>
-    </div>
-    <div class="degree-subject">Applied Mathematics &amp; Scientific Computing</div>
-  </div>
-  <div class="degree">
-    <div class="degree-info">
-      <span class="degree-type">Cert.</span>
-      <span class="degree-year">2010</span>
-      <span class="degree-institution">University of Maryland at College Park</span>
-    </div>
-    <div class="degree-subject">Innovation Management (Non-Credit)</div>
-  </div>
-  <div class="degree">
-    <div class="degree-info">
-      <span class="degree-type">Ph.D.</span>
-      <span class="degree-year">(ABD/ unfinished)</span>
-      <span class="degree-institution">University of Maryland at College Park</span>
-    </div>
-    <div class="degree-subject">Applied Mathematics, Applied Statistics &amp; Scientific Computing</div>
-  </div>
+  {% endfor %}
 </div>
 
 <h2>
@@ -104,33 +146,21 @@ menu: main
   </div>
 </h2>
 <div id="work" class="work collapsed">
+  {% for job in page.info.work %}
   <div class="job">
-    <a href="https://www.loyno.edu/" target="_blank"
-         alt="Visit the Loyola University New Orleans homepage.">
-      <img src="http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif"
-           alt="Loyola University New Orleans" class="job-logo">
-    </a>
-    <span class="job-position">Instructor in Computer Science</span>
-    <span class="job-since">since 2017</span>
-  </div>
-  <div class="job">
-    <a href="https://www.ted.com/" target="_blank"
-       alt="Visit the TED Conferences homepage.">
-      <img src="./public/TED_logo_rgb.png"
-           alt="TED Conferences" class="job-logo">
-    </a>
-    <span class="job-position">Data Engineer</span>
-    <span class="job-since">since 2016</span>
-  </div>
-  <div class="job">
-    <a href="https://www.kitchology.com/" target="_blank"
-       alt="Visit the Kitchology Inc. homepage.">
-      <img src="https://www.kitchology.com/assets/updated_logo_resized.png"
-           alt="Kitchology Inc." class="job-logo">
-    </a>
-    <span class="job-position">Data Scientist &amp; Software Architect</span>
-    <span class="job-since">since 2013</span>
-  </div>
+      <a href="{{ job.url }}" target="_blank"
+        {% if job.linkalt != null %}
+          alt="{{ job.linkalt }}">
+        {% else %}
+          alt="Visit the {{ job.organization }} homepage.">
+        {% endif %}
+         <img src="{{ job.imageurl }}"
+             alt="{{ job.organization }}" class="job-logo">
+      </a>
+      <span class="job-position">{{ job.position }}</span>
+      <span class="job-since">since {{ job.startyear }}</span>
+    </div>
+  {% endfor %}
 </div>
 
 <h2>
@@ -140,33 +170,17 @@ menu: main
   </div>
 </h2>
 <div id="volunteer" class="volunteer collapsed">
-  <div class="job">
-    <a href="https://www.loyno.edu/" target="_blank"
-       alt="Visit the Loyola University New Orleans homepage.">
-      <img src="http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif"
-           alt="Loyola University New Orleans" class="job-logo">
-    </a>
-    <span class="job-position">Research Associate Pro Bono</span>
-    <span class="job-since">since 2016</span>
-  </div>
-  <div class="job">
-    <a href="https://www.codeforneworleans.org/" target="_blank"
-       alt="Visit the Code for New Orleans homepage.">
-      <img src="https://codefornola.github.io/style_guide/assets/images/cfno-logo.png"
-           alt="Code for New Orleans" class="job-logo">
-    </a>
-    <span class="job-position">Co-Organizer &amp; Chief Data Wrangler</span>
-    <span class="job-since">since 2016</span>
-  </div>
-  <div class="job">
-    <a href="https://norbertwiener.umd.edu/" target="_blank"
-       alt="Visit the homepage of the Norbert Wiener Center at University of Maryland.">
-      <img src="http://norbertwiener.umd.edu/NWC_logos/Color/ColorLogoBig.png"
-         alt="University of Maryland at College Park" class="job-logo">
-    </a>
-    <span class="job-position">Research Affiliate, Norbert Wiener Center</span>
-    <span class="job-since">since 2014</span>
-  </div>
+    {% for job in page.info.volunteering %}
+    <div class="job">
+        <a href="{{ job.url }}" target="_blank"
+           alt="Visit the {{ job.organization }} homepage.">
+          <img src="{{ job.imageurl }}"
+               alt="{{ job.organization }}" class="job-logo">
+        </a>
+        <span class="job-position">{{ job.position }}</span>
+        <span class="job-since">since {{ job.startyear }}</span>
+      </div>
+    {% endfor %}
 </div>
 
 <script>
