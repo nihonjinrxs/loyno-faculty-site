@@ -25,6 +25,6 @@ author:
 - url:               'https://www.loyno.edu/~rharvey'
 - email:             'rharvey@loyno.edu'
 # Custom vars
-version:             '0.0.1'
+version:             '0.2.0'
 github:
 - repo:              'https://github.com/nihonjinrxs/loyno-faculty-repo'
