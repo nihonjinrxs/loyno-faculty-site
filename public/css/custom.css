@@ -225,8 +225,12 @@
 }
 .theme-base-ryan .job .job-position {
   font-weight: bold;
+  text-align: center;
 }
 .theme-base-ryan .job .job-since {
   color: #888;
   text-align: right;
+}
+.theme-base-ryan i.fa {
+  padding-right: 0.5rem;
 }

@@ -12,5 +12,8 @@ Prerequisites include [COSC A212 Introduction to Programming II](http://2017bull
 
 To be successful in this course, you should have practical experience building software, and in particular, should be comfortable working with data structures, designing classes, and writing software modules.
 
-## Offerings of this course
+## General Syllabus
+[The general syllabus](./syllabus) describes the common elements of this course across sections and semester offerings.
+
+## Sites specific to offerings of this course
 * [2018 Fall](./2018f/)
