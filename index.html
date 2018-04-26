@@ -116,7 +116,7 @@ info:
 </div>
 
 {% for course in page.info.currentcourses %}
-<a href="{{ course.url }}"  class="current-classes">
+<a href="{{ site.baseurl }}/{{ course.url }}"  class="current-classes">
   {{ course.number }} {{ course.section }} - {{ course.title }} ({{ page.info.currentsemester }})
 </a>
 {% endfor %}

@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ryan Bensussan Harvey</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2018-04-22T14:21:07-05:00</updated>
+ <link href="http://localhost:4000/~rharvey/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/~rharvey/"/>
+ <updated>2018-04-26T14:59:00-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -16,7 +16,7 @@
    <title>There's a Blog?</title>
    <link href="http://localhost:4000/2017/08/21/theres-a-blog/"/>
    <updated>2017-08-21T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2017/08/21/theres-a-blog</id>
+   <id>http://localhost:4000/~rharvey/2017/08/21/theres-a-blog</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;Move along.  Nothing to see here.&lt;/p&gt;
 &lt;/blockquote&gt;

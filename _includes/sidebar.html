@@ -21,7 +21,7 @@
       {% if node.menu == "main" %} 
         {% if node.layout == "page" %}
           <a  class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" 
-              href="{{ node.url }}">
+              href="{{ site.baseurl }}{{ node.url }}">
             {{ node.title }}
           </a>
         {% endif %} 
@@ -34,7 +34,7 @@
       {% if node.menu == "teaching" %} 
         {% if node.layout == "page" %}
           <a  class="sidebar-nav-item{% if page.url == node.url %} active{% endif %} level-2" 
-              href="{{ node.url }}">
+              href="{{ site.baseurl }}{{ node.url }}">
             <i class="fa fa-angle-right"></i>
             <p>{{ node.title }}</p>
           </a>
