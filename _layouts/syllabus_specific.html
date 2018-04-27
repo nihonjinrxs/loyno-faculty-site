@@ -16,6 +16,9 @@ layout: default
       </ul>
       <ul>
         <li><a href="#textbooks">Required Textbooks</a></li>
+        {% if page.syllabus.textbooks_optional != null %}
+        <li><a href="#textbooks-optional">Recommended Textbooks</a></li>
+        {% endif %}
         {% if page.syllabus.project != null %}
         <li><a href="#project">{{ page.syllabus.project.title }}</a></li>
         {% endif %}
@@ -60,11 +63,17 @@ layout: default
       COURSE DESCRIPTION
       <span class="right"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
+    <h3>👨🏻‍🏫 From the Instructor</h3>
     {{ page.syllabus.description | markdownify }}
+    
+    {% if page.syllabus.bulletin != nil %}
+    <h3><a href="{{ page.course_info.bulletin_link }}" target="_blank">📜 From the Undergraduate Bulletin</a></h3>
+    {{ page.syllabus.bulletin | markdownify }}
+    {% endif %}
 
     <a name='prerequisites' class='md-header-anchor '></a>
     <h2>
-      PREREQUISITES
+      🏛 PREREQUISITES
       <span class="right"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.prerequisites | markdownify }}
@@ -85,20 +94,41 @@ layout: default
       
     <a name='textbooks' class='md-header-anchor '></a>
     <h2>
-      REQUIRED TEXTBOOKS
+      📚 REQUIRED TEXTBOOKS
       <span class="right"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {% if page.syllabus.textbooks != null %}
     {% for book in page.syllabus.textbooks %}
-    <p>{{ book.icon }} <a href='{{ book.isbn_url }}'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
-      {% if book.student_site != null %}
-      Companion website for students: <a href='{{ book.student_site }}'>{{ book.student_site }}</a>.
-      {% endif %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+      Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
     </p>
-    {% endfor %}
     {% endif %}
+    </p>
     {% if book.textbook_message != null %}
       {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page.syllabus.textbooks_optional != null %}
+    <h2>
+      📚  RECOMMENDED TEXTBOOKS
+        <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% for book in page.syllabus.textbooks_optional %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+        Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
+    </p>
+    {% endif %}
+    </p>
+    {% if book.textbook_message != null %}
+      {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
     {% endif %}
 
     {% if page.syllabus.project != null %}
@@ -124,6 +154,7 @@ layout: default
       💯 GRADES
       <span class="right"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
+    {% if page.syllabus.grades != null %}
     {% if page.syllabus.grades.activities != null %}
     <p>The following activities will contribute to your final grade in this course:</p>
     <ul>
@@ -167,6 +198,7 @@ layout: default
         </tr>
       </tbody>
     </table>
+    {% endif %}
     {% include syllabus-ten-point-scale.html %}
 
     <a name='schedule' class='md-header-anchor '></a>
