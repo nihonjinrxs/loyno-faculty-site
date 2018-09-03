@@ -1,0 +1,251 @@
+---
+layout: default
+---
+<a name='title' class='md-header-anchor '></a>
+<div class='page syllabus'>
+  <div id='write' class='is-mac'>
+    <a name='toc' class='md-header-anchor'></a>
+    <h2>Table of Contents</h2>
+    <div class="toc-columns">
+      <ul>
+        <li><a href="#instructor-info">Instructor Information</a></li>
+        <li><a href="#description">Course Description</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#learning-objectives">Learning Objectives</a></li>
+        <li><a href="#learning-outcomes">Learning Outcomes</a></li>
+      </ul>
+      <ul>
+        <li><a href="#textbooks">Required Textbooks</a></li>
+        {% if page.syllabus.textbooks_optional != null %}
+        <li><a href="#textbooks-optional">Recommended Textbooks</a></li>
+        {% endif %}
+        {% if page.syllabus.project != null %}
+        <li><a href="#project">{{ page.syllabus.project.title }}</a></li>
+        {% endif %}
+        {% if page.syllabus.final != null %}
+        <li><a href="#final">{{ page.syllabus.final.title }}</a></li>
+        {% endif %}
+        <li><a href="#grades">Grades</a></li>
+        <li><a href="#policies">General Policies</a></li>
+      </ul>
+    </div>
+    <ul class="toc-schedule-wrapper">
+      <li>
+        <a href="#schedule">Course Schedule</a>
+        <div class="toc-schedule">
+          Week
+          <a href="#schedule-week-01">1</a>
+          <a href="#schedule-week-02">2</a>
+          <a href="#schedule-week-03">3</a>
+          <a href="#schedule-week-04">4</a>
+          <a href="#schedule-week-05">5</a>
+          <a href="#schedule-week-06">6</a>
+          <a href="#schedule-week-07">7</a>
+          <a href="#schedule-week-08">8</a>
+          <a href="#schedule-week-09">9</a>
+          <a href="#schedule-week-10">10</a>
+          <a href="#schedule-week-11">11</a>
+          <a href="#schedule-week-12">12</a>
+          <a href="#schedule-week-13">13</a>
+          <a href="#schedule-week-14">14</a>
+          <a href="#schedule-week-15">15</a>
+          <a href="#schedule-week-16">16</a>
+          <a href="#schedule-week-17">F</a>
+        </div>
+      </li>
+    </ul>
+
+    <a name='instructor-info' class='md-header-anchor '></a>
+    {% include syllabus-instructor-info.html %}
+
+    <a name='description' class='md-header-anchor '></a>
+    <h2>
+      COURSE DESCRIPTION
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    <h3>👨🏻‍🏫 From the Instructor</h3>
+    {{ page.syllabus.description | markdownify }}
+    
+    {% if page.syllabus.bulletin != nil %}
+    <h3><a href="{{ page.course_info.bulletin_link }}" target="_blank">📜 From the Undergraduate Bulletin</a></h3>
+    {{ page.syllabus.bulletin | markdownify }}
+    {% endif %}
+
+    <a name='prerequisites' class='md-header-anchor '></a>
+    <h2>
+      🏛 PREREQUISITES
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.prerequisites | markdownify }}
+
+    <a name='learning-objectives' class='md-header-anchor '></a>
+    <h2>
+      🎓 LEARNING OBJECTIVES
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.learning_objectives | markdownify }}
+
+    <a name='learning-outcomes' class='md-header-anchor '></a>
+    <h2>
+      🎓 LEARNING OUTCOMES
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.learning_outcomes | markdownify }}
+      
+    <a name='textbooks' class='md-header-anchor '></a>
+    <h2>
+      📚 REQUIRED TEXTBOOKS
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% if page.syllabus.textbooks != null %}
+    {% for book in page.syllabus.textbooks %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+      Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
+    </p>
+    {% endif %}
+    </p>
+    {% if book.textbook_message != null %}
+      {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page.syllabus.textbooks_optional != null %}
+    <h2>
+      📚  RECOMMENDED TEXTBOOKS
+        <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% for book in page.syllabus.textbooks_optional %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+        Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
+    </p>
+    {% endif %}
+    </p>
+    {% if book.textbook_message != null %}
+      {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page.syllabus.project != null %}
+    <a name='project' class='md-header-anchor '></a>
+    <h2>
+      💻 {{ page.syllabus.project.title | upcase }}
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.project.description | markdownify }}
+    {% endif %}
+
+    {% if page.syllabus.final != null %}
+    <a name='final' class='md-header-anchor '></a>
+    <h2>
+      📝 {{ page.syllabus.final.title | upcase }}
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.final.description | markdownify }}
+    {% endif %}
+
+    <a name='grades' class='md-header-anchor '></a>
+    <h2>
+      💯 GRADES
+      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% if page.syllabus.grades != null %}
+    {% if page.syllabus.grades.activities != null %}
+    <p>The following activities will contribute to your final grade in this course:</p>
+    <ul>
+      {% for activity in page.syllabus.grades.activities %}
+      <li>{{ activity }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p>The following calculation will be used to compute your final score in the course:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style='text-align:left;'>Grade</th>
+          <th style='text-align:right;'>Value</th>
+          <th style='text-align:right;'>Quantity</th>
+          <th style='text-align:right;'>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for header_row in page.syllabus.grades.table %}
+        <tr>
+          <td style='text-align:left;'><strong>{{ header_row.activity }}</strong></td>
+          <td style='text-align:right;'><strong><em>{{ header_row.percent }}%</em></strong></td>
+          <td style='text-align:right;'></td>
+          <td style='text-align:right;'><strong>{{ header_row.possible_points }} points possible</strong></td>
+        </tr>
+        {% for grade_row in header_row.rows %}
+        <tr>
+          <td style='text-align:left;'>{{ grade_row.grade }}</td>
+          <td style='text-align:right;'>{{ grade_row.points }} points</td>
+          <td style='text-align:right;'>{{ grade_row.quantity }}</td>
+          <td style='text-align:right;'>{{ grade_row.points | times: grade_row.quantity }} points possible</td>
+        </tr>
+        {% endfor %}
+        {% endfor %}
+        <tr>
+          <td style='text-align:left;'><strong>TOTAL</strong></td>
+          <td style='text-align:right;'><strong><em>100%</em></strong></td>
+          <td style='text-align:right;'></td>
+          <td style='text-align:right;'><strong>{{ page.syllabus.grades.total_points }} points possible</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+    {% include syllabus-ten-point-scale.html %}
+
+    <a name='schedule' class='md-header-anchor '></a>
+    <h2>
+      📆 SCHEDULE OF TOPICS
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th style='text-align:center;'><strong>Week •  Session</strong></th>
+          <th style='text-align:center;'><strong>Date</strong></th>
+          <th style='text-align:left;'><strong>Topics</strong></th>
+          <th style='text-align:left;'><strong>Activities</strong></th>
+          <th style='text-align:left;'><strong>Readings &amp; Preparation</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for week in page.syllabus.schedule %}
+          {% for session in week.sessions %}
+          <tr>
+            <td style='text-align:center;'>
+              {% if forloop.first %}
+                {% assign padded_week = week.week_num %}
+                {% if padded_week < 10 %}
+                  {% assign padded_week = padded_week | prepend: '0' %}
+                {% endif %}
+                <a name="schedule-week-{{ padded_week }}"></a>
+              {% endif %}
+              {{ week.week_num }}&nbsp;•&nbsp;{{ session.session_num }}</td>
+            <td style='text-align:center;'>
+              <p>{{ session.day | truncate: 3, "" }} {{ session.date }}</p>
+            </td>
+            <td style='text-align:left;'>
+              {{ session.topics | markdownify }}
+            </td>
+            <td style='text-align:left;'>
+              {{ session.activities | markdownify }}
+            </td>
+            <td style='text-align:left;'>
+              {{ session.readings | markdownify }}
+            </td>
+          </tr>
+          {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% include syllabus-policies.html year=page.syllabus.policies_year %}
+  </div>
+</div>

@@ -1,0 +1,32 @@
+---
+layout: page
+---
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#course-description">Course Description</a></li>
+  <li><a href="#prerequisites">Prerequisites</a></li>
+  <li><a href="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#selected-topics">Selected Topics</a></li>
+</ul>
+
+<h2 id="course-description">Course Description</h2>
+<h3>From the Instructor</h3>
+{{ page.course_info.description | markdownify }}
+
+{% if page.course_info.bulletin != nil %}
+<h3><a href="{{ page.course_info.bulletin_link }}" target="_blank">From the Undergraduate Bulletin</a></h3>
+{{ page.course_info.bulletin | markdownify }}
+{% endif %}
+
+<h2 id="prerequistes">Prerequistes</h2>
+{{ page.course_info.prerequisites | markdownify }}
+
+<h2 id="learning-objectives">Learning Objectives</h2>
+{{ page.course_info.learning_objectives | markdownify }}
+
+<h2 id="learning-outcomes">Learning Outcomes</h2>
+{{ page.course_info.learning_outcomes | markdownify }}
+
+<h2 id="selected-topics">Selected Topics</h2>
+{{ page.course_info.topics | markdownify }}
