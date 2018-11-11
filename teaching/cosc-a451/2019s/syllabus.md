@@ -297,6 +297,8 @@ syllabus:
             topics: |
               💻 Customer Organization &amp; Project Intro
               
+              📓 Reflections Journal
+
               💭 Version Control, Git and GitHub
             activities: |
               💭 Lecture
@@ -334,6 +336,11 @@ syllabus:
             topics: |
               💻 Course Project Intro
             activities: |
+              📓 Turn in Reflections Journal
+
+              * What are your expectations for the project?
+              * Do you feel you are prepared to take on this challenge? Why?
+              
               💭 Lecture
               
               💻 Project
@@ -388,6 +395,8 @@ syllabus:
               
               💭 Behavior-Driven Development (BDD)
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
               
               💭 Lecture
@@ -440,6 +449,8 @@ syllabus:
               * RSpec Ruby test framework
               * Jasmine JavaScript test framework
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
               
               💭 Lecture
@@ -471,6 +482,8 @@ syllabus:
 
               💭 Guest Lecture: Building SaaS Software
             activities: |
+              📓 Turn in Reflections Journal
+
               📋 Concepts Check
 
               💻 Project: Stand-up
@@ -502,6 +515,8 @@ syllabus:
             topics: |
               💭 Legacy Code &amp; Refactoring
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
 
               💭 Lecture
@@ -541,6 +556,8 @@ syllabus:
             topics: |
               💻 Course Project
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project
                 
               * Sprint 2 Demo
@@ -604,6 +621,8 @@ syllabus:
 
               💭 Bugs &amp; Debugging
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
               
               💭 Lecture
@@ -639,6 +658,8 @@ syllabus:
 
               💭 Software Design
             activities: |
+              📓 Turn in Reflections Journal
+
               📋 Concepts Check
               
               💻 Project: Stand-up
@@ -676,6 +697,8 @@ syllabus:
             topics: |
               💭 Software Design (cont.)
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
               
               💭 Lecture
@@ -716,6 +739,8 @@ syllabus:
               
               <small class="instructor-notes">_(RC17)_</small>
             activities: |
+              📓 Turn in Reflections Journal
+
               📋 Concepts Check
               
               💻 Project: Stand-up
@@ -749,6 +774,8 @@ syllabus:
             topics: |
               💭 Software &amp; Technology Ethics
             activities: |
+              📓 Turn in Reflections Journal
+
               💻 Project: Stand-up
               
               💭 Lecture
@@ -801,6 +828,8 @@ syllabus:
               
               <small class="instructor-notes">_(TS-Ch ⬅️)_</small>
             activities: |
+              📓 Turn in Reflections Journal
+
               📋 Concepts Check
               
               💻 Project: Retrospective 4
