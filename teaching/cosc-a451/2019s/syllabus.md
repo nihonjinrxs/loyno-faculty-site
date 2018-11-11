@@ -77,10 +77,10 @@ syllabus:
       
       Sprints will run during the following dates:
       
-      * Sprint 1: 9/7 - 9/26
-      * Sprint 2: 9/26 - 10/17
-      * Sprint 3: 10/17 - 11/7
-      * Sprint 4: 11/7 - 11/30
+      * Sprint 1: 1/24 - 2/12
+      * Sprint 2: 2/12 - 2/28
+      * Sprint 3: 2/28 - 3/26
+      * Sprint 4: 3/26 - 4/23
   reflection:
     title: Reflection Paper
     description: |
