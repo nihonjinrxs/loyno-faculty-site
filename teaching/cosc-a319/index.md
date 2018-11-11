@@ -16,4 +16,4 @@ To be successful in this course, you should have practical experience building s
 [The general syllabus](./syllabus/) describes the common elements of this course across sections and semester offerings.
 
 ## Sites specific to offerings of this course
-* [2018 Fall](./2018f/)
+* [2018 Fall](./2018f/) - cancelled for budgetary reasons

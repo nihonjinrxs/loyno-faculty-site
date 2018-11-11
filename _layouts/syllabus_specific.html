@@ -13,14 +13,16 @@ layout: default
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#learning-objectives">Learning Objectives</a></li>
         <li><a href="#learning-outcomes">Learning Outcomes</a></li>
+        {% if page.syllabus.textbooks != null or page.syllabus.textbooks_optional != null %}
+        <li><a href="#textbooks">Textbooks</a></li>
+        {% endif %}
       </ul>
       <ul>
-        <li><a href="#textbooks">Required Textbooks</a></li>
-        {% if page.syllabus.textbooks_optional != null %}
-        <li><a href="#textbooks-optional">Recommended Textbooks</a></li>
-        {% endif %}
         {% if page.syllabus.project != null %}
         <li><a href="#project">{{ page.syllabus.project.title }}</a></li>
+        {% endif %}
+        {% if page.syllabus.reflection != null %}
+        <li><a href="#reflection">{{ page.syllabus.reflection.title }}</a></li>
         {% endif %}
         {% if page.syllabus.final != null %}
         <li><a href="#final">{{ page.syllabus.final.title }}</a></li>
@@ -34,23 +36,21 @@ layout: default
         <a href="#schedule">Course Schedule</a>
         <div class="toc-schedule">
           Week
-          <a href="#schedule-week-01">1</a>
-          <a href="#schedule-week-02">2</a>
-          <a href="#schedule-week-03">3</a>
-          <a href="#schedule-week-04">4</a>
-          <a href="#schedule-week-05">5</a>
-          <a href="#schedule-week-06">6</a>
-          <a href="#schedule-week-07">7</a>
-          <a href="#schedule-week-08">8</a>
-          <a href="#schedule-week-09">9</a>
-          <a href="#schedule-week-10">10</a>
-          <a href="#schedule-week-11">11</a>
-          <a href="#schedule-week-12">12</a>
-          <a href="#schedule-week-13">13</a>
-          <a href="#schedule-week-14">14</a>
-          <a href="#schedule-week-15">15</a>
-          <a href="#schedule-week-16">16</a>
-          <a href="#schedule-week-17">F</a>
+          {% for month in page.syllabus.schedule %}
+          {% for week in month.weeks %}
+          {% assign padded_week = week.week_num %}
+          {% if padded_week < 10 %}
+            {% assign padded_week = padded_week | prepend: '0' %}
+          {% endif %}
+          <a href="#schedule-week-{{padded_week}}">{{week.week_num}}</a>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="toc-schedule">
+          Month
+          {% for month in page.syllabus.schedule %}
+          <a href="#schedule-month-{{month.month | downcase}}">{{month.month}}</a>
+          {% endfor %}
         </div>
       </li>
     </ul>
@@ -140,6 +140,15 @@ layout: default
     {{ page.syllabus.project.description | markdownify }}
     {% endif %}
 
+    {% if page.syllabus.reflection != null %}
+    <a name='reflection' class='md-header-anchor '></a>
+    <h2>
+      📝 {{ page.syllabus.reflection.title | upcase }}
+      <span class="right"><a href="#reflection" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.reflection.description | markdownify }}
+    {% endif %}
+
     {% if page.syllabus.final != null %}
     <a name='final' class='md-header-anchor '></a>
     <h2>
@@ -186,7 +195,9 @@ layout: default
           <td style='text-align:left;'>{{ grade_row.grade }}</td>
           <td style='text-align:right;'>{{ grade_row.points }} points</td>
           <td style='text-align:right;'>{{ grade_row.quantity }}</td>
-          <td style='text-align:right;'>{{ grade_row.points | times: grade_row.quantity }} points possible</td>
+          <td style='text-align:right;'>
+          {% if grade_row.grade contains "Extra Credit:" %}+{% endif %}{{ grade_row.points | times: grade_row.quantity }}
+           points possible</td>
         </tr>
         {% endfor %}
         {% endfor %}
@@ -216,10 +227,15 @@ layout: default
         </tr>
       </thead>
       <tbody>
-        {% for week in page.syllabus.schedule %}
-          {% for session in week.sessions %}
+        {% for month_block in page.syllabus.schedule %}
+          {% for week in month_block.weeks %}
+          {% assign first_of_month = forloop.first %}
+            {% for session in week.sessions %}
           <tr>
             <td style='text-align:center;'>
+              {% if first_of_month %}
+              <a name="schedule-month-{{ month_block.month | downcase }}"></a>
+              {% endif %}
               {% if forloop.first %}
                 {% assign padded_week = week.week_num %}
                 {% if padded_week < 10 %}
@@ -243,6 +259,7 @@ layout: default
           </tr>
           {% endfor %}
         {% endfor %}
+      {% endfor %}
       </tbody>
     </table>
 
