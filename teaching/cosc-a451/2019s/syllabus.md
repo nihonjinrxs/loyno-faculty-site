@@ -7,7 +7,7 @@ syllabus:
   description: |
     This course provides students with a view into the job of a software engineer through hands-on interaction with course material. Topics covered include engineering processes and their application to the development of software; cost and effort estimation; software testing and test management; team structure, roles and composition; deployment and configuration management; and professional ethics.
 
-    This course is taught with a mandatory service learning component, during which you students work on a real software development project in a team context for a real client and reflect upon that experience. It is not possible to pass this course without taking part in this hands-on learning experience.
+    This course is taught with a mandatory service learning component, during which students work on a real software development project in a team context for a real client and reflect upon that experience. It is not possible to pass this course without taking part in this hands-on learning experience.
   prerequisites: |
     One of:
 
@@ -59,11 +59,11 @@ syllabus:
       
       ### Expectations of students
 
-      As with any major software development effort, you will be expected to work independently and as a team **outside the classroom** in order to complete this project. You will be expected to coordinate with classmates **on your own** in order to facilitate team collaborative work outside of class.
+      As with any major software development effort, you will be expected to **work independently and as a team outside the classroom** in order to complete this project. You will be expected to **coordinate with classmates on your own** in order to facilitate team collaborative work outside of class.
       
       ### Project Schedule and Meetings
 
-      We will discuss the project beginning in Week 3, plan our first development iteration (or sprint) at the end of that week, and begin development immediately afterward. In total, the project will cover four (4) three-week sprints. Detailed project schedule will be presented at the project kick-off meeting during class.
+      We will discuss the project beginning in Week 3, plan our first development iteration (or sprint) at the end of that week, and begin development immediately afterward. In total, the project will cover four (4) three-week sprints. Detailed project schedule will be presented at the project kick-off meeting during class, and may change as needed during the course of the project.
       
       Each sprint will begin during the class period with a **planning session**. During this session, you will, as a team, estimate the development effort required for requirements and decide on a subset of requirements you will implement during the iteration. As a team, you will commit to completing these requirements entirely by the end of the iteration.
       
@@ -84,13 +84,18 @@ syllabus:
   reflection:
     title: Reflection Paper
     description: |
-      As part of the service learning aspect of this course, you will be keeping a journal with at least weekly reflections on your experiences, on software process and team interaction, on client interactions, and more.
+      As part of the service learning aspect of this course, in addition to university-required tracking of hours spent performing service work, you will also be keeping **a journal with at least weekly reflections on your experiences**, on software process and team interaction, on client interactions, and more.
 
-      Toward the end of the semester, you will be required to write a short reflection essay examining the following questions:
+      Toward the end of the semester, you will be required to write **a short (5-10 pages) reflection essay** examining the following questions:
 
-      * a
-      * b
-      * c
+      * What activities did you perform as part of your service learning experience?
+      * What were your expectations at the beginning of the course? How did your expectations and attitudes change during and after engaging in this service learning activity?
+      * How does what you experienced during the service learning project exemplify or contradict what you've learned in previous courses and through the lectures in this course? Please include at least two concepts that could be applied to your experience.
+      * Did the service learning experience make your understanding of software development and computer science clearer? How?
+      * What did you learn about yourself during this experience?
+      * What did you learn about others during this experience?
+      * How can you use what you learned through this experience in your future coursework and in your future career? Do you feel better prepared for your career path after this experience? Why?
+      * Will you continue to actively be of service in the future? Why or why not?
   final:
     title: Final Issue Paper and Presentation
     description: |
