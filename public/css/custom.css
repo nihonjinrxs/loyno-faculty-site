@@ -234,3 +234,7 @@
 .theme-base-ryan i.fa {
   padding-right: 0.5rem;
 }
+
+@media print {
+  .masthead, .footer, .sidebar { display: none; }
+}
