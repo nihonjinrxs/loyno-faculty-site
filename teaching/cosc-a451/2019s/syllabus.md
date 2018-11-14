@@ -4,6 +4,9 @@ title: COSC A451 Software Engineering<br/>Syllabus (Spring 2019)
 syllabus:
   semester: 2019 Spring
   policies_year: 2018
+  bulletin_link: http://2018bulletin.loyno.edu/undergraduate/computer-science#cosc-a451
+  bulletin: |
+    This course describes engineering processes and their application to the development of software.
   description: |
     This course provides students with a view into the job of a software engineer through hands-on interaction with course material. Topics covered include engineering processes and their application to the development of software; cost and effort estimation; software testing and test management; team structure, roles and composition; deployment and configuration management; and professional ethics.
 

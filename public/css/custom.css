@@ -236,5 +236,7 @@
 }
 
 @media print {
-  .masthead, .footer, .sidebar { display: none; }
+  .masthead, .footer, .sidebar, .toplink { display: none; }
+  .content { max-width: 100%; }
+  .container { max-width: 90%; }
 }

@@ -61,7 +61,7 @@ layout: page
     <a name='description' class='md-header-anchor '></a>
     <h2>
       COURSE DESCRIPTION
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     <h3>👨🏻‍🏫 From the Instructor</h3>
     {{ page.syllabus.description | markdownify }}
@@ -74,28 +74,28 @@ layout: page
     <a name='prerequisites' class='md-header-anchor '></a>
     <h2>
       🏛 PREREQUISITES
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.prerequisites | markdownify }}
 
     <a name='learning-objectives' class='md-header-anchor '></a>
     <h2>
       🎓 LEARNING OBJECTIVES
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.learning_objectives | markdownify }}
 
     <a name='learning-outcomes' class='md-header-anchor '></a>
     <h2>
       🎓 LEARNING OUTCOMES
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.learning_outcomes | markdownify }}
       
     <a name='textbooks' class='md-header-anchor '></a>
     <h2>
       📚 REQUIRED TEXTBOOKS
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {% if page.syllabus.textbooks != null %}
     {% for book in page.syllabus.textbooks %}
@@ -115,7 +115,7 @@ layout: page
     {% if page.syllabus.textbooks_optional != null %}
     <h2>
       📚  RECOMMENDED TEXTBOOKS
-        <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+        <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {% for book in page.syllabus.textbooks_optional %}
     <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
@@ -135,7 +135,7 @@ layout: page
     <a name='project' class='md-header-anchor '></a>
     <h2>
       💻 {{ page.syllabus.project.title | upcase }}
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.project.description | markdownify }}
     {% endif %}
@@ -144,7 +144,7 @@ layout: page
     <a name='reflection' class='md-header-anchor '></a>
     <h2>
       📝 {{ page.syllabus.reflection.title | upcase }}
-      <span class="right"><a href="#reflection" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#reflection" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.reflection.description | markdownify }}
     {% endif %}
@@ -153,7 +153,7 @@ layout: page
     <a name='final' class='md-header-anchor '></a>
     <h2>
       📝 {{ page.syllabus.final.title | upcase }}
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.final.description | markdownify }}
     {% endif %}
@@ -161,7 +161,7 @@ layout: page
     <a name='grades' class='md-header-anchor '></a>
     <h2>
       💯 GRADES
-      <span class="right"><a href="#title" alt="go to top">🔝</a></span>
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {% if page.syllabus.grades != null %}
     {% if page.syllabus.grades.activities != null %}
