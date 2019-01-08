@@ -58,11 +58,19 @@ syllabus:
       
       ### About the project
 
-      The project will be a web application, and will likely be built (depending on the client needs and project requirements) with [Ruby](https://www.ruby-lang.org/en/) and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) using the [Rails](http://rubyonrails.org/) web framework. Project, requirement, code and code review artifacts will be managed via [GitHub](https://github.com) using the [git](https://git-scm.com/) version control system.
+      As a service learning project, and in the spirit of Loyola University New Orleans' focus on social justice and the public good, we will be working with a client who focuses on an issue in this realm, helping them to complete their mission through the software we build.
+      
+      The software project we work on will be a web application, and will likely be built (depending on the client needs and project requirements) with [Ruby](https://www.ruby-lang.org/en/) and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) using the [Rails](http://rubyonrails.org/) web framework. Project, requirement, code and code review artifacts will be managed via [GitHub](https://github.com) using the [git](https://git-scm.com/) version control system. Your main textbook (see [**Required Textbooks**](#textbooks)) covers working with these languages and tools in some detail.
+      
+      These tools are quite common in industry, and working with them in a collaborative, team-based software development scenario will provide you hands-on experience that you can include on a resume and use when applying for jobs in software development. All code you write for the course project will be open source, meaning that your work will be available for use in a code portfolio for prospective employers, should you choose.
       
       ### Expectations of students
 
-      As with any major software development effort, you will be expected to **work independently and as a team outside the classroom** in order to complete this project. You will be expected to **coordinate with classmates on your own** in order to facilitate team collaborative work outside of class.
+      As with any major software development effort, you will be expected to **work independently and as a team outside the classroom** in order to complete this project. You will be expected to **coordinate with classmates on your own** in order to facilitate team collaborative work **outside of class**.
+
+      To be abundantly clear, **almost no time during class periods will be spent writing or reviewing code**. Project work during class periods will be limited to client interactions such as meetings and demos, as well as stand-up check-ins. If you have questions your teammates cannot answer, it is your responsibility to reach out and ask the appropriate person as soon as possible, so as not to delay completion of project tasks.
+
+      You will be required to reflect on your experiences throughout the project duration and to write a reflection paper toward the end of the semester synthesizing these reflections (see [**Reflection Paper**](#reflection)). In addition, you will be required to complete a service learning project evaluation on or before to the final day of class.
       
       ### Project Schedule and Meetings
 
@@ -78,12 +86,16 @@ syllabus:
 
       In addition, during the course of the project, you will be required to keep a reflections journal, periodically turned in, with reflections on what you&#39;ve learned, how you&#39;ve adjusted your process and team interactions, and assumptions you&#39;ve had that have been overturned. This journal will be invaluable when completing the reflection paper assignment at the end of the course, and may also help you complete the final (see *Final Issue Paper and Presentation* below).
       
+      The project kickoff meeting, where you will be introduced to the client and topic of the project, is scheduled for the class period on Thursday, January 17, 2019.
+      
       Sprints will run during the following dates:
       
       * Sprint 1: 1/24 - 2/12
       * Sprint 2: 2/12 - 2/28
       * Sprint 3: 2/28 - 3/26
       * Sprint 4: 3/26 - 4/23
+
+      Final project demo is scheduled for Tuesday, April 23, 2019. 
   reflection:
     title: Reflection Paper
     description: |
@@ -251,10 +263,11 @@ syllabus:
               📗 Textbook &amp; 💻 Project Prep
 
               * [Create a GitHub Account](https://github.com)
-              * [Prepare Cloud9 IDE Workspace](https://github.com/saasbook/courseware/wiki/Setting-up-Cloud9)
-              * [Create a Heroku Account](https://signup.heroku.com)
-              * [Install the Heroku Toolbelt CLI in Cloud9](https://github.com/saasbook/courseware/wiki/Recommended-Setup:-GitHub,-Cloud9,-Heroku#step-3-30-mins)
-              * Complete [Try Git!](https://try.github.io)
+              * View the [Github Guides videos](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-)
+              * If you don't have a personal computer: [Prepare Cloud9 IDE Workspace](https://github.com/saasbook/courseware/wiki/Setting-up-Cloud9)
+              * If you're following along with the main text:
+                * [Create a Heroku Account](https://signup.heroku.com)
+                * [Install the Heroku Toolbelt CLI in Cloud9](https://github.com/saasbook/courseware/wiki/Recommended-Setup:-GitHub,-Cloud9,-Heroku#step-3-30-mins)
           -
             session_num: 2
             day: Thursday
