@@ -28,6 +28,9 @@ layout: page
         <li><a href="#final">{{ page.syllabus.final.title }}</a></li>
         {% endif %}
         <li><a href="#grades">Grades</a></li>
+        {% if page.syllabus.instructor_policies != null %}
+        <li><a href="#instructor-policies">Instructor's Policies</a></li>
+        {% endif %}
         <li><a href="#policies">General Policies</a></li>
       </ul>
     </div>
