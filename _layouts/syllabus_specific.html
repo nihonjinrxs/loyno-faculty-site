@@ -137,7 +137,11 @@ layout: page
     {% if page.syllabus.project != null %}
     <a name='project' class='md-header-anchor '></a>
     <h2>
-      💻 {{ page.syllabus.project.title | upcase }}
+      {% if page.syllabus.project.icon %}
+      {{ page.syllabus.project.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.project.title | upcase }}
       <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.project.description | markdownify }}
@@ -146,7 +150,11 @@ layout: page
     {% if page.syllabus.reflection != null %}
     <a name='reflection' class='md-header-anchor '></a>
     <h2>
-      📝 {{ page.syllabus.reflection.title | upcase }}
+      {% if page.syllabus.reflection.icon %}
+      {{ page.syllabus.reflection.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.reflection.title | upcase }}
       <span class="right toplink"><a href="#reflection" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.reflection.description | markdownify }}
@@ -155,7 +163,11 @@ layout: page
     {% if page.syllabus.final != null %}
     <a name='final' class='md-header-anchor '></a>
     <h2>
-      📝 {{ page.syllabus.final.title | upcase }}
+      {% if page.syllabus.final.icon %}
+      {{ page.syllabus.final.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.final.title | upcase }}
       <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {{ page.syllabus.final.description | markdownify }}
