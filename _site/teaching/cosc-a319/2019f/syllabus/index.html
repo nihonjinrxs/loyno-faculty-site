@@ -496,7 +496,7 @@
     
       <p>This book will be a good reference for the project, particularly if you choose to use a container-based architecture to build your API and web components.</p>
 
-<p>At least one copy of this book will also be on reserve in Monroe Library for the duration of the semester.</p>
+<p>Several copies of this book will also be available for use in Monroe Hall Rm 413 for the duration of the semester.</p>
 
     
     
@@ -537,7 +537,7 @@
 
 <h3 id="what-to-expect">What to Expect</h3>
 
-<p>Several class periods during the semester are set aside for working on the project during class. These days will help you to get started building out the required functionality, but likely will not be enough to complete the project. <strong>Please expect to dedicate time outside of class to working on the project on your own.</strong></p>
+<p>Several class periods during the semester are set aside for working on the project during class. These days will help you to get started building out the required functionality for each assignment with instructor/faculty assistance, but likely will not be enough to complete the project assignments. <strong>Please expect to dedicate time outside of class to working on the project on your own.</strong></p>
 
 <h3 id="tools-and-equipment">Tools and Equipment</h3>
 
@@ -579,6 +579,21 @@
 
 <p>A helpful tool for hardware design is the free <a href="https://fritzing.org/home/">Fritzing App</a>, which provides a virtual design lab with ready-made hardware components. You may wish to install and use this to create your hardware design prior to implementing it.</p>
 
+<h4 id="network-inspection-tools">Network Inspection Tools</h4>
+
+<p>During this course, we will be learning to use a variety of basic Linux command line tools (that are available on almost every installation of Linux) to inspect the networks of the Internet and how our computers interact with them.</p>
+
+<p>In some cases, these are not enough, and we want to inspect the packet-level data being transmitted through the network. In such cases, there are a few useful tools you can use.</p>
+
+<ul>
+  <li><a href="https://www.wireshark.org/">Wireshark</a> - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides <code class="highlighter-rouge">tshark</code>, the command-line version of Wireshark. This was originally named “Ethereal”, with command-line version <code class="highlighter-rouge">tethereal</code>.</li>
+  <li>Under the hood of Wireshark is <code class="highlighter-rouge">libpcap</code>, which is part of the <a href="https://www.tcpdump.org/"><code class="highlighter-rouge">tcpdump</code> command line packet analyzer</a>. Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)</li>
+  <li><a href="https://www.telerik.com/fiddler">Fiddler</a> is a web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software.</li>
+  <li><a href="https://nmap.org/zenmap/">Zenmap</a>, the graphical interface for the <code class="highlighter-rouge">nmap</code> command line tool, provides facilities for scanning networks and systems for security volnerabilities.</li>
+</ul>
+
+<p>During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.</p>
+
 <h3 id="project-poster-for-extra-credit">Project Poster for Extra Credit</h3>
 
 <p>If you personalize and complete your multi-component project, you also have an opportunity for 500 points of extra credit if you create a poster (using the provided template) explaining the system, its design and operation, and the process used to build and test it.</p>
@@ -611,7 +626,9 @@
   <li>how the experiences and material in this course might be relevant to your future career</li>
 </ul>
 
-<p><strong>Journal entries will be due at the end of the day every Friday</strong> (i.e., just before midnight Central time), with the exception of the first entry, which you’ll do during the first class period.</p>
+<p><strong>Journal entries will be due at the end of the day every Friday</strong> (i.e., just before midnight Central time), with the exception of the first entry, which you’ll do during the first class period. Journal entries must be submitted using the Reflections Journals in Blackboard. Be sure to write your entry into the journal with the appropriate due date.</p>
+
+<p>Additional journal entries beyond those required weekly may be eligible for extra credit points at the instructor’s discretion.</p>
 
 <h3 id="reflection-essay">Reflection Essay</h3>
 
@@ -628,7 +645,7 @@
   <li>What topics will you continue exploring after the course? Why does each interest you? How will you go about exploring each of those concepts?</li>
 </ul>
 
-<p>This paper is <strong>due on Thursday, December 5, 2019, at 4:55 PM</strong> just before our last regular class period.</p>
+<p>This paper is <strong>due on Thursday, December 5, 2019, at 4:55 PM</strong> just before our last regular class period, and <strong>must be submitted in PDF format through the Blackboard assignment</strong>, which uses SafeAssign. Unless you have arranged with me ahead of time due to some unforeseen circumstance, essays emailed to me or handed in on paper will not be graded and will receive zero credit.</p>
 
 <h3 id="how-you-will-be-graded">How you will be graded</h3>
 
@@ -651,8 +668,41 @@
     <p>There will be two exams in this course, each testing your understanding of the material covered in the prior half of the semester:</p>
 
 <ul>
-  <li>A <strong>MIDTERM EXAM</strong> on <strong>Thursday, October 10, 2019, 4:55 — 5:45 PM</strong> (followed by presentation of assignments for the 3 following project days)</li>
-  <li>A <strong>FINAL EXAM</strong> on <strong>Thursday, December 12, 2019, 4:30 — 5:30 PM</strong> (followed by final project demos from 5:30 — 6:30 PM)</li>
+  <li>
+    <p>A <strong>MIDTERM EXAM</strong> on <strong>Thursday, October 10, 2019, 4:55 — 5:45 PM</strong>
+(followed by presentation of assignments for the 3 following project days)</p>
+
+    <p>Topics covered will include some combination of the following:</p>
+    <ul>
+      <li>JavaScript language &amp; runtime, debugging, and internals</li>
+      <li>JavaScript in the browser and React</li>
+      <li>JavaScript on the server and Node.js</li>
+      <li>JavaScript on mobile devices and React Native</li>
+      <li>The internet, the web of things definitions</li>
+      <li>The TCP/IP protocol stack overview</li>
+      <li>Containerization for deployment</li>
+      <li>Embedded devices and IoT integration patterns</li>
+    </ul>
+  </li>
+  <li>
+    <p>A <strong>FINAL EXAM</strong> on <strong>Thursday, December 12, 2019, 4:30 — 5:30 PM</strong>
+(followed by final project demos from 5:30 — 6:30 PM)</p>
+
+    <p>Topics covered will include some combination of the following:</p>
+    <ul>
+      <li>The OSI Layered Network Model</li>
+      <li>Network Link Technologies, Packet Optical Networks and FEC</li>
+      <li>IPv4 &amp; IPv6 Addressing, ARP, IPv4 &amp; IPv6 Headers, and ICMP</li>
+      <li>Routing and IP Forwarding</li>
+      <li>UDP and TCP</li>
+      <li>Multiplexing and Sockets</li>
+      <li>DHCP and DNS</li>
+      <li>FTP, SMTP &amp; Email, and HTTP</li>
+      <li>SSL, SSH, NAT, Firewalls and IPSEC</li>
+      <li>WoT/IoT Discovery and Sharing Patterns</li>
+      <li>Network Failure Modes &amp; Mitigation Techniques</li>
+    </ul>
+  </li>
 </ul>
 
 <p><strong>Please be on time, as exams will start promptly at the beginning of the timeframe listed.</strong></p>
@@ -1349,6 +1399,8 @@
             <td style='text-align:left;'>
               <p>📘 TIN: pp. 3 - 69 (Ch 1 - 2)</p>
 
+<p>🔗 <a href="https://www.computerworld.com/article/2563041/network-failure-modes-and-prevention.html">Network Failure Modes and Prevention</a></p>
+
             </td>
           </tr>
           
@@ -1636,6 +1688,10 @@
             <td style='text-align:left;'>
               <p>📘 TIN: pp. 71 - 135 (Ch 3 - 4)</p>
 
+<p>🔗 <a href="https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html">Network Failure Prevention: Let’s Get Physical</a></p>
+
+<p>🔗 <a href="https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html">Network Failure Modes and Prevention: The Data Link Layer</a></p>
+
             </td>
           </tr>
           
@@ -1722,6 +1778,8 @@
             </td>
             <td style='text-align:left;'>
               <p>📘 TIN: pp. 247 - 288 (Ch 9 - 10)</p>
+
+<p>🔗 <a href="https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html">Network Failure Modes and Prevention: Murphy and the Network Layer</a></p>
 
             </td>
           </tr>
@@ -1867,6 +1925,8 @@
             </td>
             <td style='text-align:left;'>
               <p>📘 TIN: pp. 637 - 684 (Ch 25 - 26)</p>
+
+<p>🔗 <a href="https://www.computerworld.com/article/2545395/network-failure-modes-and-prevention--application-layers.html">Network Failure Modes and Prevention: Application Layers</a></p>
 
             </td>
           </tr>

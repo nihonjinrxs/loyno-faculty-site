@@ -3,6 +3,7 @@ layout: syllabus_specific
 title: COSC A319 Internet Technologies<br/>Syllabus (Fall 2019)
 syllabus:
   semester: 2019 Fall
+  class_location: Monroe Hall, Rm 413
   policies_year: 2019-319
   bulletin_link: http://2019bulletin.loyno.edu/undergraduate/computer-science#cosc-a319
   bulletin: |
@@ -83,7 +84,7 @@ syllabus:
       textbook_message: |
         This book will be a good reference for the project, particularly if you choose to use a container-based architecture to build your API and web components.
 
-        At least one copy of this book will also be on reserve in Monroe Library for the duration of the semester.
+        Several copies of this book will also be available for use in Monroe Hall Rm 413 for the duration of the semester.
       isbn_url: https://isbnsearch.org/isbn/9781491983645
       companion_site: http://shop.oreilly.com/product/0636920072768.do
     -
@@ -114,7 +115,7 @@ syllabus:
 
       ### What to Expect
 
-      Several class periods during the semester are set aside for working on the project during class. These days will help you to get started building out the required functionality, but likely will not be enough to complete the project. **Please expect to dedicate time outside of class to working on the project on your own.**
+      Several class periods during the semester are set aside for working on the project during class. These days will help you to get started building out the required functionality for each assignment with instructor/faculty assistance, but likely will not be enough to complete the project assignments. **Please expect to dedicate time outside of class to working on the project on your own.**
 
       ### Tools and Equipment
       
@@ -146,6 +147,19 @@ syllabus:
       
       A helpful tool for hardware design is the free [Fritzing App](https://fritzing.org/home/), which provides a virtual design lab with ready-made hardware components. You may wish to install and use this to create your hardware design prior to implementing it.
 
+      #### Network Inspection Tools
+
+      During this course, we will be learning to use a variety of basic Linux command line tools (that are available on almost every installation of Linux) to inspect the networks of the Internet and how our computers interact with them.
+
+      In some cases, these are not enough, and we want to inspect the packet-level data being transmitted through the network. In such cases, there are a few useful tools you can use.
+
+      * [Wireshark](https://www.wireshark.org/) - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides `tshark`, the command-line version of Wireshark. This was originally named "Ethereal", with command-line version `tethereal`.
+      * Under the hood of Wireshark is `libpcap`, which is part of the [`tcpdump` command line packet analyzer](https://www.tcpdump.org/). Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)
+      * [Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software.
+      * [Zenmap](https://nmap.org/zenmap/), the graphical interface for the `nmap` command line tool, provides facilities for scanning networks and systems for security volnerabilities.
+
+      During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.
+
       ### Project Poster for Extra Credit
 
       If you personalize and complete your multi-component project, you also have an opportunity for 500 points of extra credit if you create a poster (using the provided template) explaining the system, its design and operation, and the process used to build and test it.
@@ -169,7 +183,9 @@ syllabus:
       * how the experiences and material in this course relate to your degree program
       * how the experiences and material in this course might be relevant to your future career
 
-      **Journal entries will be due at the end of the day every Friday** (i.e., just before midnight Central time), with the exception of the first entry, which you'll do during the first class period.
+      **Journal entries will be due at the end of the day every Friday** (i.e., just before midnight Central time), with the exception of the first entry, which you'll do during the first class period. Journal entries must be submitted using the Reflections Journals in Blackboard. Be sure to write your entry into the journal with the appropriate due date.
+      
+      Additional journal entries beyond those required weekly may be eligible for extra credit points at the instructor's discretion.
 
       ### Reflection Essay
 
@@ -184,7 +200,7 @@ syllabus:
       * How can you use what you learned through this experience in your future coursework and in your future career? Do you feel better prepared for your career path after this experience? Why?
       * What topics will you continue exploring after the course? Why does each interest you? How will you go about exploring each of those concepts?
 
-      This paper is **due on Thursday, December 5, 2019, at 4:55 PM** just before our last regular class period.
+      This paper is **due on Thursday, December 5, 2019, at 4:55 PM** just before our last regular class period, and **must be submitted in PDF format through the Blackboard assignment**, which uses SafeAssign. Unless you have arranged with me ahead of time due to some unforeseen circumstance, essays emailed to me or handed in on paper will not be graded and will receive zero credit.
 
       ### How you will be graded
 
@@ -199,8 +215,33 @@ syllabus:
     description: |
       There will be two exams in this course, each testing your understanding of the material covered in the prior half of the semester:
 
-      * A **MIDTERM EXAM** on **Thursday, October 10, 2019, 4:55 &mdash; 5:45 PM** (followed by presentation of assignments for the 3 following project days)
-      * A **FINAL EXAM** on **Thursday, December 12, 2019, 4:30 &mdash; 5:30 PM** (followed by final project demos from 5:30 &mdash; 6:30 PM)
+      * A **MIDTERM EXAM** on **Thursday, October 10, 2019, 4:55 &mdash; 5:45 PM**
+        (followed by presentation of assignments for the 3 following project days)
+
+        Topics covered will include some combination of the following:
+        * JavaScript language & runtime, debugging, and internals
+        * JavaScript in the browser and React
+        * JavaScript on the server and Node.js
+        * JavaScript on mobile devices and React Native
+        * The internet, the web of things definitions
+        * The TCP/IP protocol stack overview
+        * Containerization for deployment
+        * Embedded devices and IoT integration patterns
+      * A **FINAL EXAM** on **Thursday, December 12, 2019, 4:30 &mdash; 5:30 PM**
+        (followed by final project demos from 5:30 &mdash; 6:30 PM)
+
+        Topics covered will include some combination of the following:
+        * The OSI Layered Network Model
+        * Network Link Technologies, Packet Optical Networks and FEC
+        * IPv4 & IPv6 Addressing, ARP, IPv4 & IPv6 Headers, and ICMP
+        * Routing and IP Forwarding
+        * UDP and TCP
+        * Multiplexing and Sockets
+        * DHCP and DNS
+        * FTP, SMTP & Email, and HTTP
+        * SSL, SSH, NAT, Firewalls and IPSEC
+        * WoT/IoT Discovery and Sharing Patterns
+        * Network Failure Modes & Mitigation Techniques
 
       **Please be on time, as exams will start promptly at the beginning of the timeframe listed.**
   grades:
@@ -480,6 +521,8 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 3 - 69 (Ch 1 - 2)
+
+                🔗 [Network Failure Modes and Prevention](https://www.computerworld.com/article/2563041/network-failure-modes-and-prevention.html)
     -
       month: Oct
       weeks:
@@ -615,6 +658,10 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 71 - 135 (Ch 3 - 4)
+
+                🔗 [Network Failure Prevention: Let's Get Physical](https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html)
+
+                🔗 [Network Failure Modes and Prevention: The Data Link Layer](https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html)
             -
               session_num: 21
               day: Thursday
@@ -659,6 +706,8 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 247 - 288 (Ch 9 - 10)
+
+                🔗 [Network Failure Modes and Prevention: Murphy and the Network Layer](https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html)
         -
           week_num: 13
           sessions:
@@ -732,6 +781,8 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 637 - 684 (Ch 25 - 26)
+
+                🔗 [Network Failure Modes and Prevention: Application Layers](https://www.computerworld.com/article/2545395/network-failure-modes-and-prevention--application-layers.html)
             -
               session_num: "-"
               day: Thursday
