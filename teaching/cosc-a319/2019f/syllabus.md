@@ -179,7 +179,7 @@ syllabus:
       * your time management / procrastination practices
       * your questions for further learning after the class
       * connections to other courses or course material you've made
-      * "Ah ha!" moments you've had during this course
+      * "Aha!" moments you've had during this course
       * how the experiences and material in this course relate to your degree program
       * how the experiences and material in this course might be relevant to your future career
 
