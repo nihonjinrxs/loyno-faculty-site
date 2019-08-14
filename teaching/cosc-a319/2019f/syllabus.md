@@ -16,7 +16,7 @@ syllabus:
     * [COSC A212 Introduction to Programming II](http://2017bulletin.loyno.edu/undergraduate/computer-science#cosc-a212) and Sophomore standing
     * Instructor Approval.
 
-    To be successful in this course, students are expected to have practical experience building software, and in particular, should be comfortable working with data structures, designing classes, and writing software modules.
+    To be successful in this course, students are expected to have practical experience building multi-file/multi-component software projects. In particular, students should be comfortable working with data structures, designing classes and class interfaces, and writing software modules that form part of a larger application.
   learning_objectives: |
     Students will experience the design and construction of internet-based systems through hands-on interaction with course material. The course will provide students with a basis of theory upon which to reflect upon experiences: designing and building server-side systems that must serve multiple client system types; designing and building several types of client systems that operate and interact with the server system concurrently and asynchronously; debugging process timing and network failure issues; and building systems on networked physical devices; understanding the network designs and protocols that enable the modern internet.
   learning_outcomes: |
@@ -43,7 +43,7 @@ syllabus:
       pub_date: 2016
       isbn: 978-16-172926-8-2
       textbook_message: |
-        This book is available for sale online for about $35.
+        This book is available for sale online for about $35. **You DO need to buy this book, or at least rent it for the semester.**
         
         Supplies for IoT projects will be provided for use during the course. If you treat the supplies with care and return them at the end of the course, you will not need to buy anything.
         
@@ -58,7 +58,7 @@ syllabus:
       pub_date: 2018
       isbn: 978-15-932795-0-9
       textbook_message: |
-        **This version of the book is available for free online. You do not need to buy this book. In addition, the online version is interactive, allowing you to try out code and explore the output while you read.**
+        **This version of the book is available for free online. You DO NOT need to buy this book. In addition, the online version is interactive, allowing you to try out code and explore the output while you read.**
 
         A print version is available from No Starch Press. If you would like to purchase the book, you can get there from the book website.
       isbn_url: https://isbnsearch.org/isbn/9781593279509
@@ -71,7 +71,7 @@ syllabus:
       pub_date: 2017
       isbn: 978-0-12-811027-0
       textbook_message: |
-        This book is available for sale online for between $70 and $90.
+        This book is available for sale online for between $70 and $90. **You DO need to buy this book, or at least rent it for the semester.**
       isbn_url: https://isbnsearch.org/isbn/9780128110270
   textbooks_optional:
     -
@@ -84,7 +84,7 @@ syllabus:
       textbook_message: |
         This book will be a good reference for the project, particularly if you choose to use a container-based architecture to build your API and web components.
 
-        Several copies of this book will also be available for use in Monroe Hall Rm 413 for the duration of the semester.
+        Several copies of this book will also be available for use in Monroe Hall Rm 413 for the duration of the semester. **You DO NOT need to buy this book**, but it is a good reference if you can afford it.
       isbn_url: https://isbnsearch.org/isbn/9781491983645
       companion_site: http://shop.oreilly.com/product/0636920072768.do
     -
@@ -95,7 +95,7 @@ syllabus:
       pub_date: 2017
       isbn: 978-15-430573-8-6 (print), 978-90-815406-2-9 (digital)
       textbook_message: |
-        **This book is available free online, and will only be used as reference. You do not need to purchase a printed copy of this textbook.**
+        **This book is available free online, and will only be used as reference. You DO NOT need to buy this book.**
       isbn_url: https://isbnsearch.org/isbn/9781543057386
       companion_site: https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/
   project:
@@ -111,7 +111,7 @@ syllabus:
       * a **web API server** that can provide data and back-end services for client applications
       * a **browser-based client application** (commonly called a "web app") for interacting with the server's back-end services via a computer through a website
       * a **mobile application** (such as you might find in an app store like Apple's or Google Play) for interacting with the server's back-end services via a mobile phone
-      * a **web-of-things client hardware device** for displaying (and possibly minimally interacting with) the server's back-end services, using a Raspberry Pi 3B+ system board
+      * a **web-of-things hardware device** for reporting the state of a number of sensors and interacting with the server's back-end services, using a Raspberry Pi 3B+ system board
 
       ### What to Expect
 
@@ -126,18 +126,18 @@ syllabus:
       JavaScript was originally meant for the web browser. However, it is now used often in various non-browser ways. For this project, we'll use the following JavaScript based tools:
 
       * API:
-        * [Node.js ("LTS" v10.x)](https://nodejs.org/en/)
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
+        * [Node.js ("LTS" v10.x)](https://nodejs.org/en/)
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
       * Web App:
         * [React.js](https://reactjs.org/)
         * [Create React App](https://facebook.github.io/create-react-app/)
       * Mobile App: [React Native](https://facebook.github.io/react-native/)
-      * Web of Things Client: [onoff](https://www.npmjs.com/package/onoff)
+      * Web of Things Device: [onoff](https://www.npmjs.com/package/onoff)
 
-      #### Web of Things Client Equipment
+      #### Web of Things Device Equipment
       
-      Equipment for the web of things client will be provided by the instructor. A few cautions about university-provided equipment:
+      Equipment for the web of things device will be provided by the instructor. A few cautions about university-provided equipment:
       
       * If you break the equipment, you'll need to pay for it. Please take care of it.
       * If you fail to return the equipment, you'll need to pay for it. Please return it during the final exam period.
@@ -156,7 +156,7 @@ syllabus:
       * [Wireshark](https://www.wireshark.org/) - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides `tshark`, the command-line version of Wireshark. This was originally named "Ethereal", with command-line version `tethereal`.
       * Under the hood of Wireshark is `libpcap`, which is part of the [`tcpdump` command line packet analyzer](https://www.tcpdump.org/). Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)
       * [Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software.
-      * [Zenmap](https://nmap.org/zenmap/), the graphical interface for the `nmap` command line tool, provides facilities for scanning networks and systems for security volnerabilities.
+      * [Zenmap](https://nmap.org/zenmap/), the graphical interface for the `nmap` command line tool, provides facilities for scanning networks and systems for security vulnerabilities.
 
       During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.
 
@@ -287,7 +287,7 @@ syllabus:
             points: 250
             quantity: 2
           -
-            grade: "PROJECT DAY:<br/>IoT/WoT Client"
+            grade: "PROJECT DAY:<br/>IoT/WoT Device"
             points: 400
             quantity: 1
           -
@@ -732,7 +732,7 @@ syllabus:
 
                 💭 IoT Sharing Patterns
 
-                🏗 PROJECT DAY: IoT/WoT Client
+                🏗 PROJECT DAY: IoT/WoT Device
               activities: |
                 🏗 Project
               readings: |

@@ -13,7 +13,7 @@ To be successful in this course, you should have practical experience building s
 
 ## Important Links
 
-* [Read the Syllabus!](./syllabus)
+* **[Read the Syllabus!](./syllabus)**
 * [Our Blackboard Class (requires login)](https://loyno.blackboard.com/ultra/courses/_67687_1/cl/outline)
 * Textbooks and their companion websites
   * 📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)
@@ -30,6 +30,6 @@ To be successful in this course, you should have practical experience building s
   * [Node.js](https://nodejs.org/en/) (For server applications -- We'll be using "LTS" versions consistently.)
   * [React](https://reactjs.org/) (For web-browser applications)
   * [React Native](https://facebook.github.io/react-native/) (For mobile phone applications)
-  * [Raspberry Pi](https://www.raspberrypi.org/) (For web-of-things clients)
+  * [Raspberry Pi](https://www.raspberrypi.org/) (As the base for our web-of-things device)
   * [onoff library for Node.js](https://www.npmjs.com/package/onoff) (For web-of-things applications)
-  * [fritzing design app](https://fritzing.org/home/) (To design web-of-things clients)
+  * [fritzing design app](https://fritzing.org/home/) (To design web-of-things device hardware)

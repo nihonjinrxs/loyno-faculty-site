@@ -102,7 +102,7 @@ layout: page
     </h2>
     {% if page.syllabus.textbooks != null %}
     {% for book in page.syllabus.textbooks %}
-    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><strong><em>{{ book.title }}</em></strong></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
     {% if book.companion_site != null %}
     <p>
       Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
@@ -121,7 +121,7 @@ layout: page
         <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
     </h2>
     {% for book in page.syllabus.textbooks_optional %}
-    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><em>{{ book.title }}</em></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><strong><em>{{ book.title }}</em></strong></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
     {% if book.companion_site != null %}
     <p>
         Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
