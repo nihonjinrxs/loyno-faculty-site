@@ -1,6 +1,6 @@
 ---
 layout: page
-title: COSC A319 Internet Technologies<br/>(Fall 2018)
+title: COSC A319 Internet Technologies<br/>(Fall 2019)
 ---
 
 ## What is this course about?
@@ -32,4 +32,5 @@ To be successful in this course, you should have practical experience building s
   * [React Native](https://facebook.github.io/react-native/) (For mobile phone applications)
   * [Raspberry Pi](https://www.raspberrypi.org/) (As the base for our web-of-things device)
   * [onoff library for Node.js](https://www.npmjs.com/package/onoff) (For web-of-things applications)
+  * [Electron.js library for Node.js](https://electronjs.org/) (For desktop apps built like web interfaces)
   * [fritzing design app](https://fritzing.org/home/) (To design web-of-things device hardware)

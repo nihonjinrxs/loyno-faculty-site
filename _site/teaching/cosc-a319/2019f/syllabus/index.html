@@ -181,7 +181,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 08/13/2019
+        Site v1.0.0, updated 08/18/2019
       </small>
     </span>
   </nav>
@@ -530,9 +530,9 @@
 
 <ul>
   <li>a <strong>web API server</strong> that can provide data and back-end services for client applications</li>
-  <li>a <strong>browser-based client application</strong> (commonly called a “web app”) for interacting with the server’s back-end services via a computer through a website</li>
+  <li>a <strong>web-of-things hardware device</strong> for reporting the state of a number of sensors and interacting with the API server’s back-end services, using a Raspberry Pi 3B+ system board</li>
+  <li>a <strong>browser-based client application</strong> (commonly called a “web app”) for interacting with the API server’s back-end services via a computer through a website</li>
   <li>a <strong>mobile application</strong> (such as you might find in an app store like Apple’s or Google Play) for interacting with the server’s back-end services via a mobile phone</li>
-  <li>a <strong>web-of-things hardware device</strong> for reporting the state of a number of sensors and interacting with the server’s back-end services, using a Raspberry Pi 3B+ system board</li>
 </ul>
 
 <h3 id="what-to-expect">What to Expect</h3>
@@ -548,6 +548,12 @@
 <p>JavaScript was originally meant for the web browser. However, it is now used often in various non-browser ways. For this project, we’ll use the following JavaScript based tools:</p>
 
 <ul>
+  <li>Web App:
+    <ul>
+      <li><a href="https://reactjs.org/">React.js</a></li>
+      <li><a href="https://facebook.github.io/create-react-app/">Create React App</a></li>
+    </ul>
+  </li>
   <li>API:
     <ul>
       <li><a href="https://github.com/nvm-sh/nvm">nvm (on macOS or Linux)</a> or <a href="https://github.com/coreybutler/nvm-windows">nvm-windows (on Windows)</a></li>
@@ -555,14 +561,14 @@
       <li><a href="https://docs.npmjs.com/cli/npm">NPM</a> and/or <a href="https://yarnpkg.com/en/">Yarn</a></li>
     </ul>
   </li>
-  <li>Web App:
+  <li>Web of Things Device:
     <ul>
-      <li><a href="https://reactjs.org/">React.js</a></li>
-      <li><a href="https://facebook.github.io/create-react-app/">Create React App</a></li>
+      <li><a href="https://www.npmjs.com/package/onoff">onoff</a></li>
+      <li><a href="https://electronjs.org/">Electron.js</a></li>
+      <li>Node.js (with nvm &amp; npm/yarn), React.js and Create React App</li>
     </ul>
   </li>
   <li>Mobile App: <a href="https://facebook.github.io/react-native/">React Native</a></li>
-  <li>Web of Things Device: <a href="https://www.npmjs.com/package/onoff">onoff</a></li>
 </ul>
 
 <h4 id="web-of-things-device-equipment">Web of Things Device Equipment</h4>
@@ -577,13 +583,19 @@
 
 <h4 id="hardware-design-tools">Hardware Design Tools</h4>
 
-<p>A helpful tool for hardware design is the free <a href="https://fritzing.org/home/">Fritzing App</a>, which provides a virtual design lab with ready-made hardware components. You may wish to install and use this to create your hardware design prior to implementing it.</p>
+<p>A helpful tool for hardware design is the free <a href="https://fritzing.org/home/">Fritzing App</a>, which provides a virtual design lab with ready-made hardware components.</p>
+
+<p>For the project assignments, your instructor will provide plans in fritzing format for you to use, should you wish, in addition to images of those plans for you to follow.</p>
+
+<p>If you personalize your project, you may wish to install and use this software to create your hardware design prior to implementing it.</p>
 
 <h4 id="network-inspection-tools">Network Inspection Tools</h4>
 
 <p>During this course, we will be learning to use a variety of basic Linux command line tools (that are available on almost every installation of Linux) to inspect the networks of the Internet and how our computers interact with them.</p>
 
 <p>In some cases, these are not enough, and we want to inspect the packet-level data being transmitted through the network. In such cases, there are a few useful tools you can use.</p>
+
+<p>Although not strictly related to the project, you may find some of these tools useful in debugging what you build.</p>
 
 <ul>
   <li><a href="https://www.wireshark.org/">Wireshark</a> - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides <code class="highlighter-rouge">tshark</code>, the command-line version of Wireshark. This was originally named “Ethereal”, with command-line version <code class="highlighter-rouge">tethereal</code>.</li>
@@ -594,9 +606,36 @@
 
 <p>During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.</p>
 
-<h3 id="project-poster-for-extra-credit">Project Poster for Extra Credit</h3>
+<h3 id="extra-credit-opportunities">Extra Credit Opportunities</h3>
 
-<p>If you personalize and complete your multi-component project, you also have an opportunity for 500 points of extra credit if you create a poster (using the provided template) explaining the system, its design and operation, and the process used to build and test it.</p>
+<p>There are a few extra credit opportunities associated with the project that you may wish to take advantage of.</p>
+
+<h4 id="personalize-your-project-up-to-500-points">Personalize Your Project (up to 500 points)</h4>
+
+<p>You may choose to personalize your project in some way for extra credit. Some ideas for how you might do so are:</p>
+
+<ul>
+  <li>add an integration with the <a href="https://openweathermap.org/api">OpenWeatherMap API</a> that pulls in weather forecasts for one or more locations (configurable, of course) periodically and makes them available with the sensor data through all interfaces</li>
+  <li>create an online brand for your weather station, and redesign each interface to match the brand you create, so everything looks like a coherent product</li>
+  <li>add a camera, and implement user recognition and preferences setting using face detection</li>
+  <li>add additional sensors to report information you’re interested in seeing, and add them to your interfaces</li>
+  <li>upgrade your API to accept streaming data connections (perhaps via <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">web sockets</a>), and provide near-real-time temperature and humidity data feeds to all connected clients</li>
+  <li>enhance the mobile app client to support both iOS and Android phone platforms, aligning your design with each of their user interface guidelines and commonly accepted user interface patterns</li>
+</ul>
+
+<p>Be creative and make your project yours.  You’ll have fun, and you’ll be rewarded with up to 500 extra points too!</p>
+
+<p><small>(The total amount of points awarded will depend on the difficulty and complexity of the enhancements, and will be at the discretion of the instructor.)</small></p>
+
+<h4 id="project-poster-500-points">Project Poster (500 points)</h4>
+
+<h5 id="option-a">Option A</h5>
+
+<p>If you complete your multi-component project <strong>and personalize it</strong>, you also have an opportunity for 500 more points of extra credit if you create a poster (using the instructor-provided template) explaining the system, its design and operation, and the process used to build and test it.</p>
+
+<h5 id="option-b">Option B</h5>
+
+<p>Use your project to explore in detail some of the protocols and transport mechanisms covered in this course. Use some of the network inspection tools listed above to explore the data transport between components of your app, and create a poster explaining in detail what you are seeing and how that works in relation to the protocols used.</p>
 
 <p>Please contact the instructor if you wish to create a poster.</p>
 
@@ -677,11 +716,13 @@
       <li>JavaScript language &amp; runtime, debugging, and internals</li>
       <li>JavaScript in the browser and React</li>
       <li>JavaScript on the server and Node.js</li>
-      <li>JavaScript on mobile devices and React Native</li>
       <li>The internet, the web of things definitions</li>
-      <li>The TCP/IP protocol stack overview</li>
       <li>Containerization for deployment</li>
-      <li>Embedded devices and IoT integration patterns</li>
+      <li>Embedded devices and WoT/IoT integration patterns</li>
+      <li>WoT/IoT Discovery and Sharing Patterns</li>
+      <li>The TCP/IP protocol stack overview</li>
+      <li>The OSI Layered Network Model</li>
+      <li>Network Link Technologies, Packet Optical Networks and FEC</li>
     </ul>
   </li>
   <li>
@@ -690,8 +731,7 @@
 
     <p>Topics covered will include some combination of the following:</p>
     <ul>
-      <li>The OSI Layered Network Model</li>
-      <li>Network Link Technologies, Packet Optical Networks and FEC</li>
+      <li>JavaScript on mobile devices and React Native</li>
       <li>IPv4 &amp; IPv6 Addressing, ARP, IPv4 &amp; IPv6 Headers, and ICMP</li>
       <li>Routing and IP Forwarding</li>
       <li>UDP and TCP</li>
@@ -699,7 +739,6 @@
       <li>DHCP and DNS</li>
       <li>FTP, SMTP &amp; Email, and HTTP</li>
       <li>SSL, SSH, NAT, Firewalls and IPSEC</li>
-      <li>WoT/IoT Discovery and Sharing Patterns</li>
       <li>Network Failure Modes &amp; Mitigation Techniques</li>
     </ul>
   </li>
@@ -768,10 +807,10 @@
         
         <tr>
           <td style='text-align:left;'>Extra Credit:<br/>Attend DevFest 10/05</td>
-          <td style='text-align:right;'>+200 points</td>
+          <td style='text-align:right;'>+250 points</td>
           <td style='text-align:right;'>1</td>
           <td style='text-align:right;'>
-          +200
+          +250
            points possible</td>
         </tr>
         
@@ -780,31 +819,22 @@
           <td style='text-align:left;'><strong>🏗 Project</strong></td>
           <td style='text-align:right;'><strong><em>42.5%</em></strong></td>
           <td style='text-align:right;'></td>
-          <td style='text-align:right;'><strong>1200 points possible</strong></td>
+          <td style='text-align:right;'><strong>3400 points possible</strong></td>
         </tr>
         
         <tr>
           <td style='text-align:left;'>PROJECT DAY:<br/>Web Client</td>
-          <td style='text-align:right;'>250 points</td>
-          <td style='text-align:right;'>2</td>
+          <td style='text-align:right;'>300 points</td>
+          <td style='text-align:right;'>1</td>
           <td style='text-align:right;'>
-          500
+          300
            points possible</td>
         </tr>
         
         <tr>
           <td style='text-align:left;'>PROJECT DAY:<br/>Server API</td>
           <td style='text-align:right;'>500 points</td>
-          <td style='text-align:right;'>2</td>
-          <td style='text-align:right;'>
-          1000
-           points possible</td>
-        </tr>
-        
-        <tr>
-          <td style='text-align:left;'>PROJECT DAY:<br/>Mobile Client</td>
-          <td style='text-align:right;'>250 points</td>
-          <td style='text-align:right;'>2</td>
+          <td style='text-align:right;'>1</td>
           <td style='text-align:right;'>
           500
            points possible</td>
@@ -813,9 +843,27 @@
         <tr>
           <td style='text-align:left;'>PROJECT DAY:<br/>IoT/WoT Device</td>
           <td style='text-align:right;'>400 points</td>
+          <td style='text-align:right;'>2</td>
+          <td style='text-align:right;'>
+          800
+           points possible</td>
+        </tr>
+        
+        <tr>
+          <td style='text-align:left;'>PROJECT DAY:<br/>Integration</td>
+          <td style='text-align:right;'>250 points</td>
+          <td style='text-align:right;'>2</td>
+          <td style='text-align:right;'>
+          500
+           points possible</td>
+        </tr>
+        
+        <tr>
+          <td style='text-align:left;'>PROJECT DAY:<br/>Mobile Client</td>
+          <td style='text-align:right;'>300 points</td>
           <td style='text-align:right;'>1</td>
           <td style='text-align:right;'>
-          400
+          300
            points possible</td>
         </tr>
         
@@ -825,6 +873,15 @@
           <td style='text-align:right;'>1</td>
           <td style='text-align:right;'>
           1000
+           points possible</td>
+        </tr>
+        
+        <tr>
+          <td style='text-align:left;'>Extra Credit:<br/>Personalized Project</td>
+          <td style='text-align:right;'>+500 points</td>
+          <td style='text-align:right;'>1</td>
+          <td style='text-align:right;'>
+          +500
            points possible</td>
         </tr>
         
@@ -1283,7 +1340,7 @@
             <td style='text-align:left;'>
               <p>🏗 PROJECT DAY: Web Client</p>
 
-<p><em>(Instructor out of town)</em></p>
+<p><small><em>(Instructor out of town)</em></small></p>
 
             </td>
             <td style='text-align:left;'>
@@ -1312,11 +1369,15 @@
               <p>Tue 09/17</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Intro to Node.js</p>
+              <p>🏗 Check-in about PROJECT DAY</p>
+
+<p>💭 Intro to Node.js</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>💭 Lecture</p>
+              <p>🏗 Project</p>
+
+<p>💭 Lecture</p>
 
 <p>💻 Demo</p>
 
@@ -1338,7 +1399,9 @@
               <p>Thu 09/19</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Web of Things APIs</p>
+              <p>💭 Intro to Node.js (cont.)</p>
+
+<p>💭 Web of Things APIs</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1424,7 +1487,11 @@
               <p>Tue 10/01</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Intro to React Native</p>
+              <p>💭 Embedded Devices</p>
+
+<p>💭 IoT Integration Patterns</p>
+
+<p>💭 Intro to Electron.js</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1434,9 +1501,13 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>🔗 <a href="https://facebook.github.io/react-native/docs/getting-started.html">React Native: Getting Started</a></p>
+              <p>📗 BWT: pp. 83 - 108 (Ch 4)</p>
 
-<p>🔗 <a href="https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09">Building a Minimalist Weather App with React Native and Expo</a></p>
+<p>📗 BWT: pp. 175 - 213 (Ch 7)</p>
+
+<p>🔗 <a href="https://electronjs.org/docs/tutorial/first-app">Writing Your First Electron App</a></p>
+
+<p>🔗 <a href="https://electronjs.org/docs/tutorial/application-architecture">Electron Application Architecture</a></p>
 
             </td>
           </tr>
@@ -1452,7 +1523,9 @@
               <p>Thu 10/03</p>
             </td>
             <td style='text-align:left;'>
-              <p>🏗 PROJECT DAY: Mobile Client</p>
+              <p>💭 IoT Discovery &amp; Sharing Patterns</p>
+
+<p>🏗 PROJECT DAY: IoT/WoT Device</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1460,7 +1533,7 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>📗 BWT: pp. 109 - 174 (Ch 8 - 9)</p>
 
             </td>
           </tr>
@@ -1478,7 +1551,7 @@
             <td style='text-align:left;'>
               <p>👨🏻‍🏫 Instructor speaking</p>
 
-<p>Attend for 200 points extra credit</p>
+<p>Attend for 250 points extra credit</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1511,9 +1584,11 @@
               <p>Tue 10/08</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Embedded Devices</p>
+              <p>💭 Network Link Technologies</p>
 
-<p>💭 IoT Integration Patterns</p>
+<p>💭 Packet Optical Networks</p>
+
+<p>💭 Forward Error Correction (FEC)</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1521,9 +1596,11 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>📗 BWT: pp. 83 - 108 (Ch 4)</p>
+              <p>📘 TIN: pp. 71 - 135 (Ch 3 - 4)</p>
 
-<p>📗 BWT: pp. 175 - 213 (Ch 7)</p>
+<p>🔗 <a href="https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html">Network Failure Prevention: Let’s Get Physical</a></p>
+
+<p>🔗 <a href="https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html">Network Failure Modes and Prevention: The Data Link Layer</a></p>
 
             </td>
           </tr>
@@ -1545,7 +1622,7 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>Study!</p>
 
             </td>
           </tr>
@@ -1588,9 +1665,9 @@
               <p>Thu 10/17</p>
             </td>
             <td style='text-align:left;'>
-              <p>🏗 PROJECT DAY: Server API</p>
+              <p>🏗 PROJECT DAY: IoT/WoT Device</p>
 
-<p><em>(Instructor out of town)</em></p>
+<p><small><em>(Instructor out of town)</em></small></p>
 
             </td>
             <td style='text-align:left;'>
@@ -1598,7 +1675,7 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>Plan your work to be effective during the class period.</p>
 
             </td>
           </tr>
@@ -1619,9 +1696,9 @@
               <p>Tue 10/22</p>
             </td>
             <td style='text-align:left;'>
-              <p>🏗 PROJECT DAY: Web Client</p>
+              <p>🏗 PROJECT DAY:  Server API &lt;-&gt; IoT/WoT Device</p>
 
-<p><em>(Instructor out of town)</em></p>
+<p><small><em>(Instructor out of town)</em></small></p>
 
             </td>
             <td style='text-align:left;'>
@@ -1629,7 +1706,7 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>Plan your work to be effective during the class period.</p>
 
             </td>
           </tr>
@@ -1643,9 +1720,9 @@
               <p>Thu 10/24</p>
             </td>
             <td style='text-align:left;'>
-              <p>🏗 PROJECT DAY: Mobile Client</p>
+              <p>🏗 PROJECT DAY:  Web Client &lt;-&gt; Server API</p>
 
-<p><em>(Instructor out of town)</em></p>
+<p><small><em>(Instructor out of town)</em></small></p>
 
             </td>
             <td style='text-align:left;'>
@@ -1653,7 +1730,7 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>Plan your work to be effective during the class period.</p>
 
             </td>
           </tr>
@@ -1674,23 +1751,21 @@
               <p>Tue 10/29</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Network Link Technologies</p>
+              <p>🏗 Check-in about PROJECT DAYS</p>
 
-<p>💭 Packet Optical Networks</p>
+<p>💭 IPv4 &amp; IPv6 Addressing</p>
 
-<p>💭 Forward Error Correction (FEC)</p>
-
-            </td>
-            <td style='text-align:left;'>
-              <p>💭 Lecture</p>
+<p>💭 Address Resolution Protocol (ARP)</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 71 - 135 (Ch 3 - 4)</p>
+              <p>🏗 Project</p>
 
-<p>🔗 <a href="https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html">Network Failure Prevention: Let’s Get Physical</a></p>
+<p>💭 Lecture</p>
 
-<p>🔗 <a href="https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html">Network Failure Modes and Prevention: The Data Link Layer</a></p>
+            </td>
+            <td style='text-align:left;'>
+              <p>📘 TIN: pp. 139 - 195 (Ch 5 - 6)</p>
 
             </td>
           </tr>
@@ -1704,11 +1779,13 @@
               <p>Thu 10/31</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 IPv4 &amp; IPv6 Addressing</p>
+              <p>💭 IPv4 &amp; IPv6 Headers</p>
 
-<p>💭 Address Resolution Protocol (ARP)</p>
+<p>💭 Internet Control Message Protocol (ICMP)</p>
 
-<p>🎃 <em>Happy Halloween!</em> 👻</p>
+<p>🎃 <em>Happy Halloween!</em></p>
+
+<p>👻 <small>Feel free to attend class in (classroom-appropriate) costume. Bragging rights awarded for costumes related to course material.</small></p>
 
             </td>
             <td style='text-align:left;'>
@@ -1716,7 +1793,7 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 139 - 195 (Ch 5 - 6)</p>
+              <p>📘 TIN: pp. 197 - 246 (Ch 7 - 8)</p>
 
             </td>
           </tr>
@@ -1741,9 +1818,9 @@
               <p>Tue 11/05</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 IPv4 &amp; IPv6 Headers</p>
+              <p>💭 Routing</p>
 
-<p>💭 Internet Control Message Protocol (ICMP)</p>
+<p>💭 IP Forwarding</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1751,7 +1828,9 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 197 - 246 (Ch 7 - 8)</p>
+              <p>📘 TIN: pp. 247 - 288 (Ch 9 - 10)</p>
+
+<p>🔗 <a href="https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html">Network Failure Modes and Prevention: Murphy and the Network Layer</a></p>
 
             </td>
           </tr>
@@ -1767,9 +1846,9 @@
               <p>Thu 11/07</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Routing</p>
+              <p>💭 User Datagram Protocol (UDP)</p>
 
-<p>💭 IP Forwarding</p>
+<p>💭 Transmission Control Protocol (TCP)</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1777,9 +1856,7 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 247 - 288 (Ch 9 - 10)</p>
-
-<p>🔗 <a href="https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html">Network Failure Modes and Prevention: Murphy and the Network Layer</a></p>
+              <p>📘 TIN: pp. 289 - 330 (Ch 11 - 12)</p>
 
             </td>
           </tr>
@@ -1800,9 +1877,9 @@
               <p>Tue 11/12</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 User Datagram Protocol (UDP)</p>
+              <p>💭 Multiplexing &amp; Sockets</p>
 
-<p>💭 Transmission Control Protocol (TCP)</p>
+<p>💭 Dynamic Host Configuration Protocol (DHCP)</p>
 
             </td>
             <td style='text-align:left;'>
@@ -1810,7 +1887,9 @@
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 289 - 330 (Ch 11 - 12)</p>
+              <p>📘 TIN: pp. 331 - 348 (Ch 13)</p>
+
+<p>📘 TIN: pp. 563 - 586 (Ch 22)</p>
 
             </td>
           </tr>
@@ -1824,19 +1903,23 @@
               <p>Thu 11/14</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 IoT Discovery Patterns</p>
+              <p>💭 Intro to React Native</p>
 
-<p>💭 IoT Sharing Patterns</p>
-
-<p>🏗 PROJECT DAY: IoT/WoT Device</p>
+<p>🏗 Project (Intro/Start Mobile Client)</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>🏗 Project</p>
+              <p>💭 Lecture</p>
+
+<p>💻 Demo</p>
+
+<p>🏗 Project</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>📗 BWT: pp. 109 - 174 (Ch 8 - 9)</p>
+              <p>🔗 <a href="https://facebook.github.io/react-native/docs/getting-started.html">React Native: Getting Started</a></p>
+
+<p>🔗 <a href="https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09">Building a Minimalist Weather App with React Native and Expo</a></p>
 
             </td>
           </tr>
@@ -1857,19 +1940,15 @@
               <p>Tue 11/19</p>
             </td>
             <td style='text-align:left;'>
-              <p>💭 Multiplexing &amp; Sockets</p>
-
-<p>💭 Dynamic Host Configuration Protocol (DHCP)</p>
+              <p>🏗 PROJECT DAY: Mobile Client</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>💭 Lecture</p>
+              <p>🏗 Project</p>
 
             </td>
             <td style='text-align:left;'>
-              <p>📘 TIN: pp. 331 - 348 (Ch 13)</p>
-
-<p>📘 TIN: pp. 563 - 586 (Ch 22)</p>
+              
 
             </td>
           </tr>
@@ -2048,7 +2127,9 @@
 
             </td>
             <td style='text-align:left;'>
-              
+              <p>Study!</p>
+
+<p>Complete your 🏗 Project!</p>
 
             </td>
           </tr>
@@ -2074,7 +2155,7 @@
 <h3><a name='header-n1155' class='md-header-anchor '></a>Cell Phones</h3>
 <p>Cell phones must be turned off during class, unless being used to test project work.</p>
 <h3><a name='header-n1158' class='md-header-anchor '></a>Email</h3>
-<p>Students must check their Loyola email **at least daily**.</p>
+<p>Students must check their Loyola email <strong>at least daily</strong>.</p>
 
 <h3><a name='header-n1164' class='md-header-anchor '></a>Late Work</h3>
 <p>As a professional, if you miss a deadline, there are consequences.</p>
@@ -2112,7 +2193,7 @@
   <li>Any extra credit points previously earned will be removed.</li>
   <li>Because you have broken trust, I will be forced to reevaluate all other assignments to determine if I may have missed a possible violation. Appropriate action will be taken on every instance in which I suspect you of violating the University’s policy on Academic Honesty and Plagiarism.</li>
 </ul>
-<p>For your benefit, the University policy on Academic Honesty and Plagiarism is available in the 2018 University Bulletin at <a href='http://2019bulletin.loyno.edu/academic-regulations/academic-honesty-and-plagiarism' target='_blank'>http://2019bulletin.loyno.edu/academic-regulations/academic-honesty-and-plagiarism</a>, including procedures associated with processing violations of the policy. Please read it and be familiar with it, as you will be responsible for ensuring your own compliance with it.</p>
+<p>For your benefit, the University policy on Academic Honesty and Plagiarism is available in the 2019 University Bulletin at <a href='http://2019bulletin.loyno.edu/academic-regulations/academic-honesty-and-plagiarism' target='_blank'>http://2019bulletin.loyno.edu/academic-regulations/academic-honesty-and-plagiarism</a>, including procedures associated with processing violations of the policy. Please read it and be familiar with it, as you will be responsible for ensuring your own compliance with it.</p>
 <a name='policies' class='md-header-anchor '></a>
 <h2>
     📜 GENERAL POLICIES

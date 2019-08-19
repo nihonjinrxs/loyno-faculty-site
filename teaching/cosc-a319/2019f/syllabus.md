@@ -109,9 +109,9 @@ syllabus:
       The project entails creating several components:
 
       * a **web API server** that can provide data and back-end services for client applications
-      * a **browser-based client application** (commonly called a "web app") for interacting with the server's back-end services via a computer through a website
+      * a **web-of-things hardware device** for reporting the state of a number of sensors and interacting with the API server's back-end services, using a Raspberry Pi 3B+ system board
+      * a **browser-based client application** (commonly called a "web app") for interacting with the API server's back-end services via a computer through a website
       * a **mobile application** (such as you might find in an app store like Apple's or Google Play) for interacting with the server's back-end services via a mobile phone
-      * a **web-of-things hardware device** for reporting the state of a number of sensors and interacting with the server's back-end services, using a Raspberry Pi 3B+ system board
 
       ### What to Expect
 
@@ -125,15 +125,18 @@ syllabus:
 
       JavaScript was originally meant for the web browser. However, it is now used often in various non-browser ways. For this project, we'll use the following JavaScript based tools:
 
+      * Web App:
+        * [React.js](https://reactjs.org/)
+        * [Create React App](https://facebook.github.io/create-react-app/)
       * API:
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
         * [Node.js ("LTS" v10.x)](https://nodejs.org/en/)
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
-      * Web App:
-        * [React.js](https://reactjs.org/)
-        * [Create React App](https://facebook.github.io/create-react-app/)
+      * Web of Things Device:
+        * [onoff](https://www.npmjs.com/package/onoff)
+        * [Electron.js](https://electronjs.org/)
+        * Node.js (with nvm & npm/yarn), React.js and Create React App
       * Mobile App: [React Native](https://facebook.github.io/react-native/)
-      * Web of Things Device: [onoff](https://www.npmjs.com/package/onoff)
 
       #### Web of Things Device Equipment
       
@@ -145,13 +148,19 @@ syllabus:
 
       #### Hardware Design Tools
       
-      A helpful tool for hardware design is the free [Fritzing App](https://fritzing.org/home/), which provides a virtual design lab with ready-made hardware components. You may wish to install and use this to create your hardware design prior to implementing it.
+      A helpful tool for hardware design is the free [Fritzing App](https://fritzing.org/home/), which provides a virtual design lab with ready-made hardware components.
+      
+      For the project assignments, your instructor will provide plans in fritzing format for you to use, should you wish, in addition to images of those plans for you to follow.
+
+      If you personalize your project, you may wish to install and use this software to create your hardware design prior to implementing it.
 
       #### Network Inspection Tools
 
       During this course, we will be learning to use a variety of basic Linux command line tools (that are available on almost every installation of Linux) to inspect the networks of the Internet and how our computers interact with them.
 
       In some cases, these are not enough, and we want to inspect the packet-level data being transmitted through the network. In such cases, there are a few useful tools you can use.
+
+      Although not strictly related to the project, you may find some of these tools useful in debugging what you build.
 
       * [Wireshark](https://www.wireshark.org/) - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides `tshark`, the command-line version of Wireshark. This was originally named "Ethereal", with command-line version `tethereal`.
       * Under the hood of Wireshark is `libpcap`, which is part of the [`tcpdump` command line packet analyzer](https://www.tcpdump.org/). Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)
@@ -160,9 +169,34 @@ syllabus:
 
       During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.
 
-      ### Project Poster for Extra Credit
+      ### Extra Credit Opportunities
 
-      If you personalize and complete your multi-component project, you also have an opportunity for 500 points of extra credit if you create a poster (using the provided template) explaining the system, its design and operation, and the process used to build and test it.
+      There are a few extra credit opportunities associated with the project that you may wish to take advantage of.
+
+      #### Personalize Your Project (up to 500 points)
+
+      You may choose to personalize your project in some way for extra credit. Some ideas for how you might do so are:
+
+      * add an integration with the [OpenWeatherMap API](https://openweathermap.org/api) that pulls in weather forecasts for one or more locations (configurable, of course) periodically and makes them available with the sensor data through all interfaces
+      * create an online brand for your weather station, and redesign each interface to match the brand you create, so everything looks like a coherent product
+      * add a camera, and implement user recognition and preferences setting using face detection
+      * add additional sensors to report information you're interested in seeing, and add them to your interfaces
+      * upgrade your API to accept streaming data connections (perhaps via [web sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)), and provide near-real-time temperature and humidity data feeds to all connected clients
+      * enhance the mobile app client to support both iOS and Android phone platforms, aligning your design with each of their user interface guidelines and commonly accepted user interface patterns
+
+      Be creative and make your project yours.  You'll have fun, and you'll be rewarded with up to 500 extra points too!
+      
+      <small>(The total amount of points awarded will depend on the difficulty and complexity of the enhancements, and will be at the discretion of the instructor.)</small>
+
+      #### Project Poster (500 points)
+      
+      ##### Option A
+
+      If you complete your multi-component project **and personalize it**, you also have an opportunity for 500 more points of extra credit if you create a poster (using the instructor-provided template) explaining the system, its design and operation, and the process used to build and test it.
+
+      ##### Option B
+
+      Use your project to explore in detail some of the protocols and transport mechanisms covered in this course. Use some of the network inspection tools listed above to explore the data transport between components of your app, and create a poster explaining in detail what you are seeing and how that works in relation to the protocols used.
       
       Please contact the instructor if you wish to create a poster.
   reflection:
@@ -222,17 +256,18 @@ syllabus:
         * JavaScript language & runtime, debugging, and internals
         * JavaScript in the browser and React
         * JavaScript on the server and Node.js
-        * JavaScript on mobile devices and React Native
         * The internet, the web of things definitions
-        * The TCP/IP protocol stack overview
         * Containerization for deployment
-        * Embedded devices and IoT integration patterns
+        * Embedded devices and WoT/IoT integration patterns
+        * WoT/IoT Discovery and Sharing Patterns
+        * The TCP/IP protocol stack overview
+        * The OSI Layered Network Model
+        * Network Link Technologies, Packet Optical Networks and FEC
       * A **FINAL EXAM** on **Thursday, December 12, 2019, 4:30 &mdash; 5:30 PM**
         (followed by final project demos from 5:30 &mdash; 6:30 PM)
 
         Topics covered will include some combination of the following:
-        * The OSI Layered Network Model
-        * Network Link Technologies, Packet Optical Networks and FEC
+        * JavaScript on mobile devices and React Native
         * IPv4 & IPv6 Addressing, ARP, IPv4 & IPv6 Headers, and ICMP
         * Routing and IP Forwarding
         * UDP and TCP
@@ -240,7 +275,6 @@ syllabus:
         * DHCP and DNS
         * FTP, SMTP & Email, and HTTP
         * SSL, SSH, NAT, Firewalls and IPSEC
-        * WoT/IoT Discovery and Sharing Patterns
         * Network Failure Modes & Mitigation Techniques
 
       **Please be on time, as exams will start promptly at the beginning of the timeframe listed.**
@@ -267,32 +301,40 @@ syllabus:
             quantity: 1
           - 
             grade: "Extra Credit:<br/>Attend DevFest 10/05"
-            points: "+200"
+            points: "+250"
             quantity: 1
       -
         activity: 🏗 Project
         percent: 42.5
-        possible_points: 1200
+        possible_points: 3400
         rows:
           -
             grade: "PROJECT DAY:<br/>Web Client"
-            points: 250
-            quantity: 2
+            points: 300
+            quantity: 1
           -
             grade: "PROJECT DAY:<br/>Server API"
             points: 500
-            quantity: 2
-          -
-            grade: "PROJECT DAY:<br/>Mobile Client"
-            points: 250
-            quantity: 2
+            quantity: 1
           -
             grade: "PROJECT DAY:<br/>IoT/WoT Device"
             points: 400
+            quantity: 2
+          -
+            grade: "PROJECT DAY:<br/>Integration"
+            points: 250
+            quantity: 2
+          -
+            grade: "PROJECT DAY:<br/>Mobile Client"
+            points: 300
             quantity: 1
           -
             grade: Final Project Demo
             points: 1000
+            quantity: 1
+          - 
+            grade: "Extra Credit:<br/>Personalized Project"
+            points: "+500"
             quantity: 1
           - 
             grade: "Extra Credit:<br/>Project Poster"
@@ -468,7 +510,7 @@ syllabus:
               topics: |
                 🏗 PROJECT DAY: Web Client
 
-                *(Instructor out of town)*
+                <small>*(Instructor out of town)*</small>
               activities: |
                 🏗 Project
               readings: |
@@ -480,8 +522,12 @@ syllabus:
               day: Tuesday
               date: 09/17
               topics: |
+                🏗 Check-in about PROJECT DAY
+                
                 💭 Intro to Node.js
               activities: |
+                🏗 Project
+                
                 💭 Lecture
 
                 💻 Demo
@@ -494,6 +540,8 @@ syllabus:
               day: Thursday
               date: 09/19
               topics: |
+                💭 Intro to Node.js (cont.)
+
                 💭 Web of Things APIs
               activities: |
                 💭 Lecture
@@ -534,24 +582,35 @@ syllabus:
               day: Tuesday
               date: 10/01
               topics: |
-                💭 Intro to React Native
+                💭 Embedded Devices
+
+                💭 IoT Integration Patterns
+
+                💭 Intro to Electron.js
               activities: |
                 💭 Lecture
 
                 💻 Demo
               readings: |
-                🔗 [React Native: Getting Started](https://facebook.github.io/react-native/docs/getting-started.html)
+                📗 BWT: pp. 83 - 108 (Ch 4)
 
-                🔗 [Building a Minimalist Weather App with React Native and Expo](https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09)
+                📗 BWT: pp. 175 - 213 (Ch 7)
+
+                🔗 [Writing Your First Electron App](https://electronjs.org/docs/tutorial/first-app)
+
+                🔗 [Electron Application Architecture](https://electronjs.org/docs/tutorial/application-architecture)
             -
               session_num: 14
               day: Thursday
               date: 10/03
               topics: |
-                🏗 PROJECT DAY: Mobile Client
+                💭 IoT Discovery & Sharing Patterns
+
+                🏗 PROJECT DAY: IoT/WoT Device
               activities: |
                 🏗 Project
               readings: |
+                📗 BWT: pp. 109 - 174 (Ch 8 - 9)
             -
               session_num: "-"
               day: Saturday
@@ -559,7 +618,7 @@ syllabus:
               topics: |
                 👨🏻‍🏫 Instructor speaking
                 
-                Attend for 200 points extra credit
+                Attend for 250 points extra credit
               activities: |
                 [DevFest New Orleans 2019](https://devfest2019.gdgneworleans.com/)
 
@@ -576,15 +635,19 @@ syllabus:
               day: Tuesday
               date: 10/08
               topics: |
-                💭 Embedded Devices
+                💭 Network Link Technologies
 
-                💭 IoT Integration Patterns
+                💭 Packet Optical Networks
+
+                💭 Forward Error Correction (FEC)
               activities: |
                 💭 Lecture
               readings: |
-                📗 BWT: pp. 83 - 108 (Ch 4)
+                📘 TIN: pp. 71 - 135 (Ch 3 - 4)
 
-                📗 BWT: pp. 175 - 213 (Ch 7)
+                🔗 [Network Failure Prevention: Let's Get Physical](https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html)
+
+                🔗 [Network Failure Modes and Prevention: The Data Link Layer](https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html)
             -
               session_num: 16
               day: Thursday
@@ -594,6 +657,7 @@ syllabus:
               activities: |
                 ✅ Exam
               readings: |
+                Study!
         -
           week_num: 9
           sessions:
@@ -610,12 +674,13 @@ syllabus:
               day: Thursday
               date: 10/17
               topics: |
-                🏗 PROJECT DAY: Server API
+                🏗 PROJECT DAY: IoT/WoT Device
 
-                *(Instructor out of town)*
+                <small>*(Instructor out of town)*</small>
               activities: |
                 🏗 Project
               readings: |
+                Plan your work to be effective during the class period.
         -
           week_num: 10
           sessions:
@@ -624,23 +689,25 @@ syllabus:
               day: Tuesday
               date: 10/22
               topics: |
-                🏗 PROJECT DAY: Web Client
+                🏗 PROJECT DAY:  Server API <-> IoT/WoT Device
 
-                *(Instructor out of town)*
+                <small>*(Instructor out of town)*</small>
               activities: |
                 🏗 Project
               readings: |
+                Plan your work to be effective during the class period.
             -
               session_num: 19
               day: Thursday
               date: 10/24
               topics: |
-                🏗 PROJECT DAY: Mobile Client
+                🏗 PROJECT DAY:  Web Client <-> Server API
 
-                *(Instructor out of town)*
+                <small>*(Instructor out of town)*</small>
               activities: |
                 🏗 Project
               readings: |
+                Plan your work to be effective during the class period.
         -
           week_num: 11
           sessions:
@@ -649,33 +716,33 @@ syllabus:
               day: Tuesday
               date: 10/29
               topics: |
-                💭 Network Link Technologies
+                🏗 Check-in about PROJECT DAYS
 
-                💭 Packet Optical Networks
+                💭 IPv4 & IPv6 Addressing
 
-                💭 Forward Error Correction (FEC)
+                💭 Address Resolution Protocol (ARP)
               activities: |
+                🏗 Project
+
                 💭 Lecture
               readings: |
-                📘 TIN: pp. 71 - 135 (Ch 3 - 4)
-
-                🔗 [Network Failure Prevention: Let's Get Physical](https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html)
-
-                🔗 [Network Failure Modes and Prevention: The Data Link Layer](https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html)
+                📘 TIN: pp. 139 - 195 (Ch 5 - 6)
             -
               session_num: 21
               day: Thursday
               date: 10/31
               topics: |
-                💭 IPv4 & IPv6 Addressing
+                💭 IPv4 & IPv6 Headers
 
-                💭 Address Resolution Protocol (ARP)
+                💭 Internet Control Message Protocol (ICMP)
 
-                🎃 *Happy Halloween!* 👻
+                🎃 *Happy Halloween!*
+                
+                👻 <small>Feel free to attend class in (classroom-appropriate) costume. Bragging rights awarded for costumes related to course material.</small>
               activities: |
                 💭 Lecture
               readings: |
-                📘 TIN: pp. 139 - 195 (Ch 5 - 6)
+                📘 TIN: pp. 197 - 246 (Ch 7 - 8)
     -
       month: Nov
       weeks:
@@ -687,18 +754,6 @@ syllabus:
               day: Tuesday
               date: 11/05
               topics: |
-                💭 IPv4 & IPv6 Headers
-
-                💭 Internet Control Message Protocol (ICMP)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 197 - 246 (Ch 7 - 8)
-            -
-              session_num: 23
-              day: Thursday
-              date: 11/07
-              topics: |
                 💭 Routing
 
                 💭 IP Forwarding
@@ -708,13 +763,10 @@ syllabus:
                 📘 TIN: pp. 247 - 288 (Ch 9 - 10)
 
                 🔗 [Network Failure Modes and Prevention: Murphy and the Network Layer](https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html)
-        -
-          week_num: 13
-          sessions:
             -
-              session_num: 24
-              day: Tuesday
-              date: 11/12
+              session_num: 23
+              day: Thursday
+              date: 11/07
               topics: |
                 💭 User Datagram Protocol (UDP)
 
@@ -723,27 +775,13 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 289 - 330 (Ch 11 - 12)
-            -
-              session_num: 25
-              day: Thursday
-              date: 11/14
-              topics: |
-                💭 IoT Discovery Patterns
-
-                💭 IoT Sharing Patterns
-
-                🏗 PROJECT DAY: IoT/WoT Device
-              activities: |
-                🏗 Project
-              readings: |
-                📗 BWT: pp. 109 - 174 (Ch 8 - 9)
         -
-          week_num: 14
+          week_num: 13
           sessions:
             -
-              session_num: 26
+              session_num: 24
               day: Tuesday
-              date: 11/19
+              date: 11/12
               topics: |
                 💭 Multiplexing & Sockets
 
@@ -754,6 +792,36 @@ syllabus:
                 📘 TIN: pp. 331 - 348 (Ch 13)
 
                 📘 TIN: pp. 563 - 586 (Ch 22)
+            -
+              session_num: 25
+              day: Thursday
+              date: 11/14
+              topics: |
+                💭 Intro to React Native
+
+                🏗 Project (Intro/Start Mobile Client)
+              activities: |
+                💭 Lecture
+
+                💻 Demo
+
+                🏗 Project
+              readings: |
+                🔗 [React Native: Getting Started](https://facebook.github.io/react-native/docs/getting-started.html)
+
+                🔗 [Building a Minimalist Weather App with React Native and Expo](https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09)
+        -
+          week_num: 14
+          sessions:
+            -
+              session_num: 26
+              day: Tuesday
+              date: 11/19
+              topics: |
+                🏗 PROJECT DAY: Mobile Client
+              activities: |
+                🏗 Project
+              readings: |
             -
               session_num: 27
               day: Thursday
@@ -843,4 +911,7 @@ syllabus:
 
                 🏗 Project
               readings: |
+                Study!
+
+                Complete your 🏗 Project!
 ---
