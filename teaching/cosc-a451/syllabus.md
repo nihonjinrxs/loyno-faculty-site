@@ -2,7 +2,7 @@
   layout: syllabus_general
   title: COSC A451 Software Engineering<br/>Syllabus (General)
   course_info:
-    bulletin_link: http://2018bulletin.loyno.edu/undergraduate/computer-science#cosc-a451
+    bulletin_link: http://2019bulletin.loyno.edu/undergraduate/computer-science#cosc-a451
     bulletin: |
       This course describes engineering processes and their application to the development of software.
     description: |
@@ -47,6 +47,14 @@
       * Debugging &amp; Refactoring Software
       * Working with Legacy Software
       * Professionalism, Software Craftsmanship &amp; Software Ethics
+    learning_format: |
+      **Content Delivery.** This course is taught in an experiential service learning format. Conceptual material is delivered in lecture and discussion format, and applied when possible through a service learning project experience.
+
+      **Service Learning Project.** A central focus of this course, the service learning project places students in the context of a software team working on a real piece of existing software for a real client. Projects are created by partners with a public benefit mission (usually non-profits or governmental organizations), and partners participate with the class during the course of the project as product owners for the software being built. Through the project, students gain real-life experience of what it's like to work on a team as a professional software engineer.
+      
+      **Critical Reflection.** With an experiential format, research has shown that students retain material better when they reflect critically on their learning. As such, students will be expected to write weekly reflection journal entries, as well as a short personal reflection essay at the end of the semester.
+
+      **Exams.** There are no exams in this course. However, students will be responsible for writing an analysis paper on a software ethics issue of their choice and presenting it in a mini-conference format at the end of the semester.
     textbooks:
       - 
         icon: 📗
