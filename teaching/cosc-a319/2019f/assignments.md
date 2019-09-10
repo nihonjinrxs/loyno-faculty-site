@@ -29,15 +29,25 @@ For PROJECT DAY 1, you'll build the web application that will eventually display
 
 ### 🛠 The Tools
 
-To do this, we'll use JavaScript with HTML and CSS, as you might expect, but we'll also use three key JavaScript libraries and two infrastructure tools/services:
+To do this, we'll use JavaScript with HTML and CSS, as you might expect, but we'll also use two key JavaScript libraries and four infrastructure tools/services:
 
-* [create-react-app](https://create-react-app.dev/) - a companion library to React that scaffolds a web-based application for you using React for components. (This piece will be done for you for this first project day.)
-* [React](https://reactjs.org/) - a library for building dynamic web interfaces using JavaScript in a componentized and manageable way.
-* [Jest](https://jestjs.io/) - a testing library included with the project scaffold created by create-react-app that allows testing your code.
-* [Docker (Community Edition)](https://hub.docker.com/search/?type=edition&offering=community) - a software containerization platform that allows building an image of your software and deploying that built image
+#### 📦 JavaScript Libraries
+
+* [React](https://reactjs.org/) - a library for building dynamic web interfaces using JavaScript in a componentized and manageable way. Along with React, [create-react-app](https://create-react-app.dev/) is a companion library that scaffolds a web-based application for you using React for components. (This scaffolding piece will be done for you for this first project day.)
+* [Jest](https://jestjs.io/) - a testing library included with the project scaffold created by create-react-app that allows testing your code. Along with Jest, [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) is a companion library that provides easy ways to render components and assert properties on them when testing.
+
+#### 🏭 Infrastructure Services
+
+* [Github](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and Github to manage your codebase.
+* [Travis CI](https://education.travis-ci.com) - a continuous integration platform that you'll use to ensure every commit you push to Github passes all automated tests.
+* [Docker (Community Edition)](https://hub.docker.com/search/?type=edition&offering=community) - a software containerization platform that allows building an image of your software and deploying that built image.
 * [Amazon Web Services](https://aws.amazon.com/) - a suite of cloud services where we will deploy our work. (You should already have applied for, and hopefully received, [AWS Educate](https://aws.amazon.com/education/awseducate/) membership, which provides some free credits in addition to the free services you get during the first year of AWS membership.)
 
 ### ✅ Requirements for the Assignment
+
+Create a web-based application that provides an interface to the data collected by your IoT/WoT Device Weather Station, displaying temperature and humidity data using the user's choice of scale for temperature display.
+
+Assume that data reported by the Weather Station is in Celsius degrees for temperature and in percentage for humidity.
 
 #### ⚙️ Functional Requirements
 

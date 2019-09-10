@@ -185,7 +185,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 09/08/2019
+        Site v1.0.0, updated 09/10/2019
       </small>
     </span>
   </nav>
@@ -259,17 +259,29 @@
 
 <h3 id="-the-tools">🛠 The Tools</h3>
 
-<p>To do this, we’ll use JavaScript with HTML and CSS, as you might expect, but we’ll also use three key JavaScript libraries and two infrastructure tools/services:</p>
+<p>To do this, we’ll use JavaScript with HTML and CSS, as you might expect, but we’ll also use two key JavaScript libraries and four infrastructure tools/services:</p>
+
+<h4 id="-javascript-libraries">📦 JavaScript Libraries</h4>
 
 <ul>
-  <li><a href="https://create-react-app.dev/">create-react-app</a> - a companion library to React that scaffolds a web-based application for you using React for components. (This piece will be done for you for this first project day.)</li>
-  <li><a href="https://reactjs.org/">React</a> - a library for building dynamic web interfaces using JavaScript in a componentized and manageable way.</li>
-  <li><a href="https://jestjs.io/">Jest</a> - a testing library included with the project scaffold created by create-react-app that allows testing your code.</li>
-  <li><a href="https://hub.docker.com/search/?type=edition&amp;offering=community">Docker (Community Edition)</a> - a software containerization platform that allows building an image of your software and deploying that built image</li>
+  <li><a href="https://reactjs.org/">React</a> - a library for building dynamic web interfaces using JavaScript in a componentized and manageable way. Along with React, <a href="https://create-react-app.dev/">create-react-app</a> is a companion library that scaffolds a web-based application for you using React for components. (This scaffolding piece will be done for you for this first project day.)</li>
+  <li><a href="https://jestjs.io/">Jest</a> - a testing library included with the project scaffold created by create-react-app that allows testing your code. Along with Jest, <a href="https://testing-library.com/docs/react-testing-library/intro">react-testing-library</a> is a companion library that provides easy ways to render components and assert properties on them when testing.</li>
+</ul>
+
+<h4 id="-infrastructure-services">🏭 Infrastructure Services</h4>
+
+<ul>
+  <li><a href="https://github.com">Github</a> - a web service providing hosting and additional features for the <a href="https://git-scm.com/">git</a> distributed version control system. You’ll be using git and Github to manage your codebase.</li>
+  <li><a href="https://education.travis-ci.com">Travis CI</a> - a continuous integration platform that you’ll use to ensure every commit you push to Github passes all automated tests.</li>
+  <li><a href="https://hub.docker.com/search/?type=edition&amp;offering=community">Docker (Community Edition)</a> - a software containerization platform that allows building an image of your software and deploying that built image.</li>
   <li><a href="https://aws.amazon.com/">Amazon Web Services</a> - a suite of cloud services where we will deploy our work. (You should already have applied for, and hopefully received, <a href="https://aws.amazon.com/education/awseducate/">AWS Educate</a> membership, which provides some free credits in addition to the free services you get during the first year of AWS membership.)</li>
 </ul>
 
 <h3 id="-requirements-for-the-assignment">✅ Requirements for the Assignment</h3>
+
+<p>Create a web-based application that provides an interface to the data collected by your IoT/WoT Device Weather Station, displaying temperature and humidity data using the user’s choice of scale for temperature display.</p>
+
+<p>Assume that data reported by the Weather Station is in Celsius degrees for temperature and in percentage for humidity.</p>
 
 <h4 id="️-functional-requirements">⚙️ Functional Requirements</h4>
 
