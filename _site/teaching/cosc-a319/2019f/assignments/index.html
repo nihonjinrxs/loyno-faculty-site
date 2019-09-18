@@ -185,7 +185,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 09/10/2019
+        Site v1.0.0, updated 09/17/2019
       </small>
     </span>
   </nav>
@@ -334,17 +334,47 @@
 
 <h3 id="-the-tools-1">🛠 The Tools</h3>
 
-<p>More to come soon.</p>
+<p>To do this, we’ll use JavaScript in its Node.js form, but we’ll also use a few key JavaScript libraries and four infrastructure tools/services:</p>
+
+<h4 id="-javascript-libraries-1">📦 JavaScript Libraries</h4>
+
+<ul>
+  <li><a href="https://expressjs.com/">Express</a> - a library for building web servers.</li>
+  <li><a href="https://jestjs.io/">Jest</a> - a testing library (chosen because this is hat was used for Project Day 1, included with the project scaffold created by create-react-app) that allows testing your code. Along with Jest, <a href="https://www.npmjs.com/package/jest-express">jest-express</a> is a companion library that provides easy ways to interact with the core objects in the Express library.</li>
+</ul>
+
+<h4 id="-infrastructure-services-1">🏭 Infrastructure Services</h4>
+
+<ul>
+  <li><a href="https://github.com">Github</a> - a web service providing hosting and additional features for the <a href="https://git-scm.com/">git</a> distributed version control system. You’ll be using git and Github to manage your codebase.</li>
+  <li><a href="https://education.travis-ci.com">Travis CI</a> - a continuous integration platform that you’ll use to ensure every commit you push to Github passes all automated tests.</li>
+  <li><a href="https://hub.docker.com/search/?type=edition&amp;offering=community">Docker (Community Edition)</a> - a software containerization platform that allows building an image of your software and deploying that built image.</li>
+  <li><a href="https://aws.amazon.com/">Amazon Web Services</a> - a suite of cloud services where we will deploy our work. (You should already have applied for, and hopefully received, <a href="https://aws.amazon.com/education/awseducate/">AWS Educate</a> membership, which provides some free credits in addition to the free services you get during the first year of AWS membership.)</li>
+</ul>
 
 <h3 id="-requirements-for-the-assignment-1">✅ Requirements for the Assignment</h3>
 
+<p>In this portion of the project, you’ll build an API with endpoints that allow getting weather sensor data, updating weather sensor data, and eventually registering sensors with the API to handle multiple sensors.</p>
+
 <h4 id="️-functional-requirements-1">⚙️ Functional Requirements</h4>
 
-<p>More to come soon.</p>
+<ol>
+  <li>Create a new Express-based API with a single <code class="highlighter-rouge">GET</code> endpoint at the path <code class="highlighter-rouge">/beacon</code> that responds with a <code class="highlighter-rouge">200</code> status code, and the plain text <code class="highlighter-rouge">OK</code>. Appropriate response headers should be set when the API returns a response.</li>
+  <li>Create a new <code class="highlighter-rouge">GET</code> endpoint at <code class="highlighter-rouge">/weather-sensor/data</code> to get data from the sensor. The endpoint should respond with JSON-format data with keys <code class="highlighter-rouge">"temperature"</code> and <code class="highlighter-rouge">"humidity"</code>. Appropriate response headers should be set when the API returns a response. Values for temperature and humidity can be generated randomly upon request for now.</li>
+  <li>Create a new <code class="highlighter-rouge">POST</code> endpoint at <code class="highlighter-rouge">/weather-sensor/update</code> to allow a sensor to send new data to the API. Successful operation should result in a <code class="highlighter-rouge">201</code> status code. Appropriate response headers should be set when the API returns a response.</li>
+  <li>Update the API to maintain a list of registered sensors in memory, and modify the previously created <code class="highlighter-rouge">GET</code> and <code class="highlighter-rouge">POST</code> requests to accept a path-based parameter <code class="highlighter-rouge">:id</code> for the sensor identifier, moving their mount points to <code class="highlighter-rouge">/weather-sensors/:id/{data|update}</code>.</li>
+  <li>Create a new <code class="highlighter-rouge">GET</code> endpoint at <code class="highlighter-rouge">/weather-sensors</code> that returns a list of sensors registered with the API. Appropriate response status code and headers should be set when the API returns a response.</li>
+  <li>Create a new <code class="highlighter-rouge">POST</code> endpoint at <code class="highlighter-rouge">/weather-sensors/register</code> that allows a weather sensor device to register itself with the API. Appropriate response status code and headers should be set when the API returns a response.</li>
+</ol>
 
 <h4 id="-source-code-process--deployment-requirements-1">🔩 Source Code, Process &amp; Deployment Requirements</h4>
 
-<p>More to come soon.</p>
+<ol>
+  <li>Code for the application should be well-organized, using components and folders to keep related code together.</li>
+  <li>The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.</li>
+  <li>All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.</li>
+  <li>The application should be deployed to Amazon Web Services as a Docker Container, and should be live (that is, publicly available on the Internet).</li>
+</ol>
 
 <hr />
 

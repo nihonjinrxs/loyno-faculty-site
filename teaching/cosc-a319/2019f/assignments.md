@@ -83,17 +83,39 @@ For PROJECT DAY 2, you'll build the server API that will collect and serve data 
 
 ### 🛠 The Tools
 
-More to come soon.
+To do this, we'll use JavaScript in its Node.js form, but we'll also use a few key JavaScript libraries and four infrastructure tools/services:
+
+#### 📦 JavaScript Libraries
+
+* [Express](https://expressjs.com/) - a library for building web servers.
+* [Jest](https://jestjs.io/) - a testing library (chosen because this is hat was used for Project Day 1, included with the project scaffold created by create-react-app) that allows testing your code. Along with Jest, [jest-express](https://www.npmjs.com/package/jest-express) is a companion library that provides easy ways to interact with the core objects in the Express library.
+
+#### 🏭 Infrastructure Services
+
+* [Github](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and Github to manage your codebase.
+* [Travis CI](https://education.travis-ci.com) - a continuous integration platform that you'll use to ensure every commit you push to Github passes all automated tests.
+* [Docker (Community Edition)](https://hub.docker.com/search/?type=edition&offering=community) - a software containerization platform that allows building an image of your software and deploying that built image.
+* [Amazon Web Services](https://aws.amazon.com/) - a suite of cloud services where we will deploy our work. (You should already have applied for, and hopefully received, [AWS Educate](https://aws.amazon.com/education/awseducate/) membership, which provides some free credits in addition to the free services you get during the first year of AWS membership.)
 
 ### ✅ Requirements for the Assignment
 
+In this portion of the project, you'll build an API with endpoints that allow getting weather sensor data, updating weather sensor data, and eventually registering sensors with the API to handle multiple sensors.
+
 #### ⚙️ Functional Requirements
 
-More to come soon.
+1. Create a new Express-based API with a single `GET` endpoint at the path `/beacon` that responds with a `200` status code, and the plain text `OK`. Appropriate response headers should be set when the API returns a response.
+2. Create a new `GET` endpoint at `/weather-sensor/data` to get data from the sensor. The endpoint should respond with JSON-format data with keys `"temperature"` and `"humidity"`. Appropriate response headers should be set when the API returns a response. Values for temperature and humidity can be generated randomly upon request for now.
+3. Create a new `POST` endpoint at `/weather-sensor/update` to allow a sensor to send new data to the API. Successful operation should result in a `201` status code. Appropriate response headers should be set when the API returns a response.
+4. Update the API to maintain a list of registered sensors in memory, and modify the previously created `GET` and `POST` requests to accept a path-based parameter `:id` for the sensor identifier, moving their mount points to `/weather-sensors/:id/{data|update}`.
+5. Create a new `GET` endpoint at `/weather-sensors` that returns a list of sensors registered with the API. Appropriate response status code and headers should be set when the API returns a response.
+6. Create a new `POST` endpoint at `/weather-sensors/register` that allows a weather sensor device to register itself with the API. Appropriate response status code and headers should be set when the API returns a response.
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. Code for the application should be well-organized, using components and folders to keep related code together.
+2. The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+4. The application should be deployed to Amazon Web Services as a Docker Container, and should be live (that is, publicly available on the Internet).
 
 ---------------------------------------------
 

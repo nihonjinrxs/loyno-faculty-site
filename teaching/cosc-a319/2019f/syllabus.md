@@ -620,11 +620,11 @@ syllabus:
                 
                 Attend for 250 points extra credit
               activities: |
-                [DevFest New Orleans 2019](https://devfest2019.gdgneworleans.com/)
+                🔗 [DevFest New Orleans 2019](https://devfest2019.gdgneworleans.com/)
 
                 8 AM &mdash; 5 PM<br/>Miller Hall Rm 114
               readings: |
-                [Register Now](https://forms.gle/GNihqAGiK8aWgMZb7)
+                🔗 [Register Now](https://forms.gle/GNihqAGiK8aWgMZb7)
 
                 Registration is $10 &mdash; $25 (more the later you register), scholarships available
         -
@@ -648,6 +648,22 @@ syllabus:
                 🔗 [Network Failure Prevention: Let's Get Physical](https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html)
 
                 🔗 [Network Failure Modes and Prevention: The Data Link Layer](https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html)
+            -
+              session_num: "-"
+              day: Tuesday
+              date: 10/08
+              topics: |
+                👨🏻‍🏫 Dr. Stephen Kent speaking
+                
+                Attend for 250 points extra credit
+              activities: |
+                6:30 PM (immediately after class)
+
+                Danna Center Audubon Room
+              readings: |
+                🔗 [Internet Hall of Fame page](https://www.internethalloffame.org/inductees/stephen-kent)
+
+                🔗 [Co-Authored IETF RFCs](https://www.rfc-editor.org/search/rfc_search_detail.php?pubstatus%5B%5D=Any&pub_date_type=any&author=Kent)
             -
               session_num: 16
               day: Thursday
