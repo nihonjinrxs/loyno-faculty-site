@@ -142,7 +142,7 @@ For this project day, you begin working with hardware. During this assignment, y
 * a multi-color LED - used for immediate display of temperature range by color
 * a passive infrared (PIR) sensor - used to detect when there is someone near the device
 * a single-color LED - used to indicate when the PIR sensor detects someone
-* an LED touch screen - used to display the on-board app that shows sensor values
+* an LED touch screen - (in a future assignment) used to display the on-board app that shows sensor values
 
 In addition to this, you'll be using two Node.js-based libraries to interact with the hardware (in addition to the installed hardware driver software for the components):
 
