@@ -23,7 +23,7 @@ For PROJECT DAY 1, you'll build the web application that will eventually display
 
 | Intro/Demo     | Tue, Sep 10, 2019 |
 | PROJECT DAY    | Thu, Sep 12, 2019 |
-| Assignment Due | Tue, Sep 17, 2019 |
+| Assignment Due | Tue, Sep 24, 2019 |
 
 ### 💯 Points Possible: **300**
 
@@ -127,25 +127,48 @@ For PROJECT DAY 3, you'll begin building and programming the device that will ho
 
 ### 📆 Schedule
 
-| Intro/Demo     | Tue, Oct 1, 2019 |
-| PROJECT DAY    | Thu, Oct 3, 2019 |
-| Assignment Due | Tue, Oct 8, 2019 |
+| Intro/Demo     | Tue, Oct  1, 2019 |
+| PROJECT DAY    | Thu, Oct  3, 2019 |
+| Assignment Due | Tue, Oct 29, 2019 |
 
 ### 💯 Points Possible: **400**
 
 ### 🛠 The Tools
 
-More to come soon.
+For this project day, you begin working with hardware. During this assignment, you'll be creating a device with several hardware components:
+
+* a Raspberry Pi 3B+ - the controller device used to coordinate the interaction of all the sensors and actuators, and to run the software you write
+* a DHT22 temperature/humidity sensor - used to retrieve atmospheric data to feed into the Server API
+* a multi-color LED - used for immediate display of temperature range by color
+* a passive infrared (PIR) sensor - used to detect when there is someone near the device
+* a single-color LED - used to indicate when the PIR sensor detects someone
+* an LED touch screen - used to display the on-board app that shows sensor values
+
+In addition to this, you'll be using two Node.js-based libraries to interact with the hardware (in addition to the installed hardware driver software for the components):
+
+* **[onoff](https://www.npmjs.com/package/onoff)** - a library for interacting with devices on the GPIO pins of the Raspberry Pi
+* **[node-dht-sensor](https://www.npmjs.com/package/node-dht-sensor)** - a library for interacting with the DHT22 sensor specifically, as it has a proprietary binary protocol for its data
 
 ### ✅ Requirements for the Assignment
 
 #### ⚙️ Functional Requirements
 
-More to come soon.
+1. **LED Library** For the single-color LED (an actuator), create an importable library file that exports the following interface functions to control the LED: `turnOn()`, `turnOff()`, `lightSwitch(booleanValue)`. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which the LED resides. For example:
+2. **MulticolorLED Library** For the multi-color LED (also an actuator), create an importable library file that exports the following interface functions to control the LED: `turnOn()`, `turnOff()`, `setColor(colorArg)`, where `colorArg` is either a hexadecimal color value string (i.e., `'#54A5B3'`) or an object with `red`, `green` and `blue` property values. The library should also export an `init(gpioPins)` function to identify the GPIO pins that control the color values for the LED (where `gpioPins` is an object with `red`, `green` and `blue` property values).
+3. **PIR Library** For the PIR sensor, create an importable library file that exports the following interface functions to read from the PIR sensor: `watch()` - generates events that can be acted upon on a change of value, `seesSomething()` - returns a boolean. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which to listen for data.
+4. **DHT Library** For the DHT22 sensor, create an importable library file that exports the following interface functions to read from the DHT sensor: `watch()` - generates events that can be acted upon on a change of value, `read()` - reads the current data from the sensor, `intervalRead(intervalMilliseconds, callbackFunction)` - reads data from the sensor on an interval and calls the callback function with the data. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which to listen for data.
+5. **PIR controls LED** Write a program that imports the PIR sensor and single-color LED actuator libraries, and make the LED turn on when the PIR sensor sees something, and turn off when it does not. Be sure to use asynchronous methods, so that none of the listening activity blocks other processes running simultaneously in your program. Also, be sure to handle turning everything off when the program stops (see "Error handling" below).
+6. **DHT controls MulticolorLED** Write a program that imports the DHT sensor and multi-color LED actuator libraries, and make the LED actuator display a range from blue (approximately 7°C) to red (approximately 33°C) based on the temperature value read from the sensor. Be sure to use asynchronous methods, so that none of the listening activity blocks other processes running simultaneously in your program. Also, be sure to handle turning everything off when the program stops (see "Error handling" below).
+7. **Main program** Write a wrapper program that imports the programs you wrote for requirements 5 and 6, and starts them both.
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. **Hardware build** Your device should be built so that it works as described in the functional requirements above. Provided system diagrams are a recommendation, but if you find that a different wiring better suits your needs, you should feel free to implement it.
+2. **Code organization and style** Code for the application should be well-organized, using components and folders to keep related code together. Code should be written asynchronously where possible in order to allow for multiple simultaneous activities.
+3. **Tests** All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+4. **Error handling** Code should also handle errors and software termination (premature or otherwise) gracefully. For software termination, you may want to look at handling the following events on the `process` object: `exit`, `SIGINT`, `SIGUSR1`, `SIGUSR2`, `uncaughtException`, and `unhandledRejection`.
+5. **Version control** The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+6. **Deployment** Software should be deployed on your device, and you should be able to demonstrate its operation in class on the due date of the assignment.
 
 ---------------------------------------------
 
@@ -187,7 +210,7 @@ For PROJECT DAY 5, you'll teach your device how to report data from its sensors 
 ### 📆 Schedule
 
 | PROJECT DAY    | Tue, Oct 22, 2019 |
-| Assignment Due | Tue, Oct 29, 2019 |
+| Assignment Due | Tue, Nov  5, 2019 |
 
 💯 Points Possible: **250**
 
@@ -216,7 +239,7 @@ For PROJECT DAY 5, you'll teach your Server API how to serve up data in real-tim
 ### 📆 Schedule
 
 | PROJECT DAY    | Thu, Oct 24, 2019 |
-| Assignment Due | Thu, Oct 31, 2019 |
+| Assignment Due | Thu, Nov  5, 2019 |
 
 💯 Points Possible: **250**
 
