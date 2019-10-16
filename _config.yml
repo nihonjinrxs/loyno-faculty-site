@@ -17,7 +17,7 @@ description:         "Information about Ryan's teaching, research and computer s
 # url:                 'https://loyno.edu/~rharvey'
 #baseurl:             'https://www.loyno.edu/'
 # baseurl:             '/~rharvey'
-baseurl:             ''
+baseurl:             '/loyno-faculty-site'
 paginate:            10
 credits:             'Built with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 # About/contact
