@@ -18,10 +18,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="/~rharvey/public/css/poole.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/syntax.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/lanyon.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/custom.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="https://www.loyno.edu/apple-icon-57x57.png">
@@ -60,7 +60,7 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/~rharvey/">Home</a>
+    <a class="sidebar-nav-item" href="/">Home</a>
 
      
     
@@ -77,10 +77,12 @@
        
         
           <a  class="sidebar-nav-item" 
-              href="/~rharvey/blog/">
+              href="/blog/">
             Blog
           </a>
          
+       
+     
        
      
        
@@ -134,7 +136,7 @@
        
         
           <a  class="sidebar-nav-item level-2" 
-              href="/~rharvey/teaching/cosc-a319/">
+              href="/teaching/cosc-a319/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A319 Internet Technologies</p>
           </a>
@@ -154,9 +156,11 @@
        
      
        
+     
+       
         
           <a  class="sidebar-nav-item level-2" 
-              href="/~rharvey/teaching/cosc-a451/">
+              href="/teaching/cosc-a451/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A451 Software Engineering</p>
           </a>
@@ -185,7 +189,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 10/03/2019
+        Site v1.0.0, updated 10/16/2019
       </small>
     </span>
   </nav>
@@ -208,7 +212,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/~rharvey/" title="Home">Ryan Bensussan Harvey</a>
+            <a href="/" title="Home">Ryan Bensussan Harvey</a>
             <small>Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div></small>
           </h3>
         </div>
@@ -418,6 +422,12 @@
   <li>an LED touch screen - (in a future assignment) used to display the on-board app that shows sensor values</li>
 </ul>
 
+<p><a href="../COSC-A319-Class-Project_bb.png"><img src="../COSC-A319-Class-Project_bb.png" alt="Raspberry Pi 3B+ with Breadboard layout" /></a></p>
+
+<p>Recall, the GPIO pin layout on the Raspberry Pi 3B+ is as follows.</p>
+
+<p><img src="https://i2.wp.com/www.fypsolutions.com/wp-content/uploads/2018/02/boardvsbcm.png?w=2400" alt="Raspberry Pi 3B+ GPIO pin layout" /></p>
+
 <p>In addition to this, you’ll be using two Node.js-based libraries to interact with the hardware (in addition to the installed hardware driver software for the components):</p>
 
 <ul>
@@ -430,7 +440,7 @@
 <h4 id="️-functional-requirements-2">⚙️ Functional Requirements</h4>
 
 <ol>
-  <li><strong>LED Library</strong> For the single-color LED (an actuator), create an importable library file that exports the following interface functions to control the LED: <code class="highlighter-rouge">turnOn()</code>, <code class="highlighter-rouge">turnOff()</code>, <code class="highlighter-rouge">lightSwitch(booleanValue)</code>. The library should also export an <code class="highlighter-rouge">init(gpioPin)</code> function to identify the GPIO pin on which the LED resides. For example:</li>
+  <li><strong>LED Library</strong> For the single-color LED (an actuator), create an importable library file that exports the following interface functions to control the LED: <code class="highlighter-rouge">turnOn()</code>, <code class="highlighter-rouge">turnOff()</code>, <code class="highlighter-rouge">lightSwitch(booleanValue)</code>. The library should also export an <code class="highlighter-rouge">init(gpioPin)</code> function to identify the GPIO pin on which the LED resides.</li>
   <li><strong>MulticolorLED Library</strong> For the multi-color LED (also an actuator), create an importable library file that exports the following interface functions to control the LED: <code class="highlighter-rouge">turnOn()</code>, <code class="highlighter-rouge">turnOff()</code>, <code class="highlighter-rouge">setColor(colorArg)</code>, where <code class="highlighter-rouge">colorArg</code> is either a hexadecimal color value string (i.e., <code class="highlighter-rouge">'#54A5B3'</code>) or an object with <code class="highlighter-rouge">red</code>, <code class="highlighter-rouge">green</code> and <code class="highlighter-rouge">blue</code> property values. The library should also export an <code class="highlighter-rouge">init(gpioPins)</code> function to identify the GPIO pins that control the color values for the LED (where <code class="highlighter-rouge">gpioPins</code> is an object with <code class="highlighter-rouge">red</code>, <code class="highlighter-rouge">green</code> and <code class="highlighter-rouge">blue</code> property values).</li>
   <li><strong>PIR Library</strong> For the PIR sensor, create an importable library file that exports the following interface functions to read from the PIR sensor: <code class="highlighter-rouge">watch()</code> - generates events that can be acted upon on a change of value, <code class="highlighter-rouge">seesSomething()</code> - returns a boolean. The library should also export an <code class="highlighter-rouge">init(gpioPin)</code> function to identify the GPIO pin on which to listen for data.</li>
   <li><strong>DHT Library</strong> For the DHT22 sensor, create an importable library file that exports the following interface functions to read from the DHT sensor: <code class="highlighter-rouge">watch()</code> - generates events that can be acted upon on a change of value, <code class="highlighter-rouge">read()</code> - reads the current data from the sensor, <code class="highlighter-rouge">intervalRead(intervalMilliseconds, callbackFunction)</code> - reads data from the sensor on an interval and calls the callback function with the data. The library should also export an <code class="highlighter-rouge">init(gpioPin)</code> function to identify the GPIO pin on which to listen for data.</li>
@@ -477,17 +487,43 @@
 
 <h3 id="-the-tools-3">🛠 The Tools</h3>
 
-<p>More to come soon.</p>
+<p>During this assignment, you’ll continue working the tools mentioned for PROJECT DAY 1 and PROJECT DAY 3, and combine them by using the following JavaScript libraries:</p>
+
+<ul>
+  <li><strong><a href="https://electronjs.org/">Electron</a></strong> - a library for creating desktop applications using web technologies like HTML, CSS and JavaScript.</li>
+  <li><strong><a href="https://www.electron.build/">Electron Builder</a></strong> - a companion library for Electron that builds your application as a desktop app.</li>
+  <li><strong><a href="https://www.npmjs.com/package/electron-is-dev">ElectronIsDev</a></strong> - a companion library for Electron that identifies whether an Electron app is running in development mode or as a built application artifact.</li>
+  <li><strong><a href="https://www.npmjs.com/package/concurrently">Concurrently</a></strong> - a library that lets you run start multiple processes concurrently from the command line.</li>
+  <li><strong><a href="https://www.npmjs.com/package/wait-on">wait-on</a></strong> - a library that provides a command-line way to wait for a specified dependency to be available before running the next command.</li>
+</ul>
+
+<p>In addition, you’ll be attaching the <strong><a href="http://www.lcdwiki.com/3.5inch_RPi_Display">LCD TFT TouchScreen Display</a></strong> to your Raspberry Pi, and using the <strong><a href="https://github.com/goodtft/LCD-show">LCD-show</a></strong> software to control the display output on your device. Your display is the Raspberry Pi 3.5in Display.</p>
+
+<p>You can switch video output to the attached LCD display by running the <code class="highlighter-rouge">LCD35-show</code> program from the command line. To switch back to the HDMI port, you can run the <code class="highlighter-rouge">HDMI-show</code> program. These programs, and the display drivers, are already installed on your Raspberry Pi 3B+.</p>
 
 <h3 id="-requirements-for-the-assignment-3">✅ Requirements for the Assignment</h3>
 
 <h4 id="️-functional-requirements-3">⚙️ Functional Requirements</h4>
 
-<p>More to come soon.</p>
+<ol>
+  <li>Make a copy of your Web Client application in a new folder, then follow <a href="../converting-cra-to-electron">the instructions for converting your Create React App application to an Electron application</a>. Once done, you should have an application that is runnable as a desktop application in development, and that can be built into a desktop executable for your computer and for the Raspberry Pi 3B+. (Be sure to test building on both systems.)</li>
+  <li>Add the sensor library code you wrote for the last assignment to your web app in a new folder, <code class="highlighter-rouge">&lt;web client root&gt;/lib/sensors</code>.</li>
+  <li>Modify and import the sensor libraries as needed in your application in order to enable the data displayed on the application interface to be the actual data coming off the sensors. Be sure to use the integrations you did for the last assignment to ensure that the hardware indicators of sensor value (i.e., the LEDs) are also enabled.</li>
+  <li>Convert the <code class="highlighter-rouge">div</code> element that wraps the content rendered by your <code class="highlighter-rouge">App</code> component into a new <code class="highlighter-rouge">WeatherStationDisplay</code> component. This should include moving all relevant state and props values to the new component.</li>
+  <li>Add a new component to your React app that displays a completely black screen with no content. Modify your <code class="highlighter-rouge">App</code> component to display that new blank screen component as default, and to display the <code class="highlighter-rouge">WeatherStationDisplay</code> component when the PIR sensor sees something. After switching to the <code class="highlighter-rouge">WeatherStationDisplay</code> component, the app should wait 30 seconds after the PIR sensor no longer sees anything before switching back to the blank screen component.</li>
+  <li>Build the application on the Raspberry Pi 3B+, and enable running it on boot in the <code class="highlighter-rouge">/etc/rc.local</code> file. <strong>Note: do NOT do this until you know it’s running without failing.</strong> To do so, you can edit the file using <code class="highlighter-rouge">sudo nano /etc/rc.local</code>, and add the full absolute path to the built executable as a new line in the file, and end that new line with an ampersand (<code class="highlighter-rouge">&amp;</code>) to run the program as a background job. If not there already, be sure to add a line at the end of the file that says <code class="highlighter-rouge">exit 0</code>.</li>
+</ol>
 
 <h4 id="-source-code-process--deployment-requirements-3">🔩 Source Code, Process &amp; Deployment Requirements</h4>
 
-<p>More to come soon.</p>
+<ol>
+  <li><strong>Hardware build</strong> Your device should be built so that it works as described in the functional requirements above. Provided system diagrams are a recommendation, but if you find that a different wiring better suits your needs, you should feel free to implement it.</li>
+  <li><strong>Code organization and style</strong> Code for the application should be well-organized, using components and folders to keep related code together. Code should be written asynchronously where possible in order to allow for multiple simultaneous activities.</li>
+  <li><strong>Tests</strong> All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.</li>
+  <li><strong>Error handling</strong> Code should also handle errors and software termination (premature or otherwise) gracefully. For software termination, you may want to look at handling the following events on the <code class="highlighter-rouge">process</code> object: <code class="highlighter-rouge">exit</code>, <code class="highlighter-rouge">SIGINT</code>, <code class="highlighter-rouge">SIGUSR1</code>, <code class="highlighter-rouge">SIGUSR2</code>, <code class="highlighter-rouge">uncaughtException</code>, and <code class="highlighter-rouge">unhandledRejection</code>.</li>
+  <li><strong>Version control</strong> The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.</li>
+  <li><strong>Deployment</strong> Software should be deployed on your device, and you should be able to demonstrate its operation in class on the due date of the assignment.</li>
+</ol>
 
 <hr />
 

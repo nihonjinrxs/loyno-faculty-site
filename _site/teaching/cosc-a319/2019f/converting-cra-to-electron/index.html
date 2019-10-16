@@ -11,7 +11,7 @@
 
   <title>
     
-      Blog &middot; Ryan Bensussan Harvey
+      Converting your Create React App application to an Electron desktop app<br/>COSC A319 Internet Technologies<br/>(Fall 2019) &middot; Ryan Bensussan Harvey
     
   </title>
 
@@ -76,7 +76,7 @@
      
        
         
-          <a  class="sidebar-nav-item active" 
+          <a  class="sidebar-nav-item" 
               href="/blog/">
             Blog
           </a>
@@ -221,19 +221,82 @@
       <div class="container content">
         <div class="page">
   <a name="title" class='md-header-anchor'></a>
-  <h1 class="page-title">Blog</h1>
-  <div class="posts">
-  
-</div>
+  <h1 class="page-title">Converting your Create React App application to an Electron desktop app<br/>COSC A319 Internet Technologies<br/>(Fall 2019)</h1>
+  <p>Starting from the directory where you’ve copied your application, take the following steps to convert your app to an Electron-based desktop application.</p>
 
-<div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
-</div>
+<ol>
+  <li>Install some new dependencies:
+    <pre><code class="language-{bash}">npm install electron electron-builder wait-on concurrently --only=dev
+npm install electron-is-dev
+</code></pre>
+  </li>
+  <li>Create a new file in the <code class="highlighter-rouge">public</code> folder of your app, <code class="highlighter-rouge">public/start-electron.js</code>, with the following code:
+    <pre><code class="language-{javascript}">const electron = require('electron'),
+  app = electron.app,
+  BrowserWindow = electron.BrowserWindow;
+   
+const path = require('path'),
+  isDev = require('electron-is-dev');
+   
+let mainWindow;
+   
+const createWindow = () =&gt; {
+  mainWindow = new BrowserWindow({ width: 480, height: 320 })
+  const appUrl = isDev ? 'http://localhost:3000' :
+    `file://${path.join(__dirname, '../build/index.html')}`
+  mainWindow.loadURL(appUrl)
+  mainWindow.maximize()
+  mainWindow.setFullScreen(true)
+  mainWindow.on('closed', () =&gt; mainWindow = null)
+}
+app.on('ready', createWindow)
+app.on('window-all-closed', () =&gt; {
+  // Follow OS convention on whether to quit app when
+  // all windows are closed.
+  if (process.platform !== 'darwin') { app.quit() }
+})
+app.on('activate', () =&gt; {
+  // If the app is still open, but no windows are open,
+  // create one when the app comes into focus.
+  if (mainWindow === null) { createWindow() }
+})
+</code></pre>
+  </li>
+  <li>Add some new configuration to your app’s <code class="highlighter-rouge">package.json</code> file:
+    <ul>
+      <li>In the <code class="highlighter-rouge">"scripts"</code> section, add the following scripts:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 &amp;&amp; electron .\"",
+ "electron-package": "./node_modules/.bin/electron-builder -c.extraMetadata.main=build/start-electron.js",
+ "preelectron-package": "npm run build"
+</code></pre></div>        </div>
+        <p>These scripts will allow you to start electron in development mode (<code class="highlighter-rouge">npm run electron-dev</code>), and to build (“package”) your application into an executable for the system you’re running on (<code class="highlighter-rouge">npm run electron-package</code>).</p>
+      </li>
+      <li>Modify the <code class="highlighter-rouge">"homepage"</code> value to read: <code class="highlighter-rouge">"homepage": "./",</code>. (If it’s not there, add it.)</li>
+      <li>Add a new <code class="highlighter-rouge">"build"</code> section to the file:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "build": {
+   "appId": "com.loyno-mathcs.your-github-name.weatherstation.wotdevice",
+   "files": [ "build/**/*", "node_modules/**/*" ],
+   "directories":{
+ "buildResources": "assets"
+   }
+ },
+</code></pre></div>        </div>
+        <p>(Be sure to replace <code class="highlighter-rouge">your-github-name</code> above with your actual Github username.)</p>
+      </li>
+      <li>Update the <code class="highlighter-rouge">"name"</code> value to something more appropriate for this application (i.e., <code class="highlighter-rouge">"name": "wot-device"</code> or similar).</li>
+    </ul>
+  </li>
+  <li>Test running your application in development mode:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-dev
+</code></pre></div>    </div>
+    <p>You should see your app launch as a desktop application in a new window, and immediately become fullscreen.</p>
+  </li>
+  <li>Test building your application:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-package
+</code></pre></div>    </div>
+    <p>You should find a new <code class="highlighter-rouge">dist</code> directory with a folder for your operating system. Inside, you should see a new executable. Double-click it to test executing the app you’ve created.</p>
+  </li>
+</ol>
 
 </div>
 
