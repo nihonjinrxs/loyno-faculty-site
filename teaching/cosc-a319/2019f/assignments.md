@@ -144,6 +144,12 @@ For this project day, you begin working with hardware. During this assignment, y
 * a single-color LED - used to indicate when the PIR sensor detects someone
 * an LED touch screen - (in a future assignment) used to display the on-board app that shows sensor values
 
+[![Raspberry Pi 3B+ with Breadboard layout](../COSC-A319-Class-Project_bb.png)](../COSC-A319-Class-Project_bb.png)
+
+Recall, the GPIO pin layout on the Raspberry Pi 3B+ is as follows.
+
+![Raspberry Pi 3B+ GPIO pin layout](https://i2.wp.com/www.fypsolutions.com/wp-content/uploads/2018/02/boardvsbcm.png?w=2400)
+
 In addition to this, you'll be using two Node.js-based libraries to interact with the hardware (in addition to the installed hardware driver software for the components):
 
 * **[onoff](https://www.npmjs.com/package/onoff)** - a library for interacting with devices on the GPIO pins of the Raspberry Pi
@@ -153,7 +159,7 @@ In addition to this, you'll be using two Node.js-based libraries to interact wit
 
 #### ⚙️ Functional Requirements
 
-1. **LED Library** For the single-color LED (an actuator), create an importable library file that exports the following interface functions to control the LED: `turnOn()`, `turnOff()`, `lightSwitch(booleanValue)`. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which the LED resides. For example:
+1. **LED Library** For the single-color LED (an actuator), create an importable library file that exports the following interface functions to control the LED: `turnOn()`, `turnOff()`, `lightSwitch(booleanValue)`. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which the LED resides.
 2. **MulticolorLED Library** For the multi-color LED (also an actuator), create an importable library file that exports the following interface functions to control the LED: `turnOn()`, `turnOff()`, `setColor(colorArg)`, where `colorArg` is either a hexadecimal color value string (i.e., `'#54A5B3'`) or an object with `red`, `green` and `blue` property values. The library should also export an `init(gpioPins)` function to identify the GPIO pins that control the color values for the LED (where `gpioPins` is an object with `red`, `green` and `blue` property values).
 3. **PIR Library** For the PIR sensor, create an importable library file that exports the following interface functions to read from the PIR sensor: `watch()` - generates events that can be acted upon on a change of value, `seesSomething()` - returns a boolean. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which to listen for data.
 4. **DHT Library** For the DHT22 sensor, create an importable library file that exports the following interface functions to read from the DHT sensor: `watch()` - generates events that can be acted upon on a change of value, `read()` - reads the current data from the sensor, `intervalRead(intervalMilliseconds, callbackFunction)` - reads data from the sensor on an interval and calls the callback function with the data. The library should also export an `init(gpioPin)` function to identify the GPIO pin on which to listen for data.
@@ -187,17 +193,37 @@ For PROJECT DAY 4, you'll finish building and programming the device that will h
 
 ### 🛠 The Tools
 
-More to come soon.
+During this assignment, you'll continue working the tools mentioned for PROJECT DAY 1 and PROJECT DAY 3, and combine them by using the following JavaScript libraries:
+
+* **[Electron](https://electronjs.org/)** - a library for creating desktop applications using web technologies like HTML, CSS and JavaScript.
+* **[Electron Builder](https://www.electron.build/)** - a companion library for Electron that builds your application as a desktop app.
+* **[ElectronIsDev](https://www.npmjs.com/package/electron-is-dev)** - a companion library for Electron that identifies whether an Electron app is running in development mode or as a built application artifact.
+* **[Concurrently](https://www.npmjs.com/package/concurrently)** - a library that lets you run start multiple processes concurrently from the command line.
+* **[wait-on](https://www.npmjs.com/package/wait-on)** - a library that provides a command-line way to wait for a specified dependency to be available before running the next command.
+
+In addition, you'll be attaching the **[LCD TFT TouchScreen Display](http://www.lcdwiki.com/3.5inch_RPi_Display)** to your Raspberry Pi, and using the **[LCD-show](https://github.com/goodtft/LCD-show)** software to control the display output on your device. Your display is the Raspberry Pi 3.5in Display.
+
+You can switch video output to the attached LCD display by running the `LCD35-show` program from the command line. To switch back to the HDMI port, you can run the `HDMI-show` program. These programs, and the display drivers, are already installed on your Raspberry Pi 3B+.
 
 ### ✅ Requirements for the Assignment
 
 #### ⚙️ Functional Requirements
 
-More to come soon.
+1. Make a copy of your Web Client application in a new folder, then follow [the instructions for converting your Create React App application to an Electron application](../converting-cra-to-electron). Once done, you should have an application that is runnable as a desktop application in development, and that can be built into a desktop executable for your computer and for the Raspberry Pi 3B+. (Be sure to test building on both systems.)
+2. Add the sensor library code you wrote for the last assignment to your web app in a new folder, `<web client root>/lib/sensors`.
+3. Modify and import the sensor libraries as needed in your application in order to enable the data displayed on the application interface to be the actual data coming off the sensors. Be sure to use the integrations you did for the last assignment to ensure that the hardware indicators of sensor value (i.e., the LEDs) are also enabled.
+4. Convert the `div` element that wraps the content rendered by your `App` component into a new `WeatherStationDisplay` component. This should include moving all relevant state and props values to the new component.
+5. Add a new component to your React app that displays a completely black screen with no content. Modify your `App` component to display that new blank screen component as default, and to display the `WeatherStationDisplay` component when the PIR sensor sees something. After switching to the `WeatherStationDisplay` component, the app should wait 30 seconds after the PIR sensor no longer sees anything before switching back to the blank screen component.
+6. Build the application on the Raspberry Pi 3B+, and enable running it on boot in the `/etc/rc.local` file. **Note: do NOT do this until you know it's running without failing.** To do so, you can edit the file using `sudo nano /etc/rc.local`, and add the full absolute path to the built executable as a new line in the file, and end that new line with an ampersand (`&`) to run the program as a background job. If not there already, be sure to add a line at the end of the file that says `exit 0`.
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. **Hardware build** Your device should be built so that it works as described in the functional requirements above. Provided system diagrams are a recommendation, but if you find that a different wiring better suits your needs, you should feel free to implement it.
+2. **Code organization and style** Code for the application should be well-organized, using components and folders to keep related code together. Code should be written asynchronously where possible in order to allow for multiple simultaneous activities.
+3. **Tests** All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+4. **Error handling** Code should also handle errors and software termination (premature or otherwise) gracefully. For software termination, you may want to look at handling the following events on the `process` object: `exit`, `SIGINT`, `SIGUSR1`, `SIGUSR2`, `uncaughtException`, and `unhandledRejection`.
+5. **Version control** The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+6. **Deployment** Software should be deployed on your device, and you should be able to demonstrate its operation in class on the due date of the assignment.
 
 ---------------------------------------------
 
