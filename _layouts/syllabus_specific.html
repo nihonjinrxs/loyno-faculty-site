@@ -205,6 +205,14 @@ layout: page
           <td style='text-align:right;'></td>
           <td style='text-align:right;'><strong>{{ header_row.possible_points }} points possible</strong></td>
         </tr>
+        {% if header_row.extra_points != null and header_row.extra_points > 0 %}
+        <tr>
+          <td style='text-align:left;'>{{ header_row.activity }}: <em>Extra Credit</em></td>
+          <td style='text-align:right;'><em>+{{ header_row.extra_points | times: 100.0 | divided_by: page.syllabus.grades.total_points }}%</em></td>
+          <td style='text-align:right;'></td>
+          <td style='text-align:right;'><em>{{ header_row.extra_points }} extra points possible</em></td>
+        </tr>
+        {% endif %}
         {% for grade_row in header_row.rows %}
         <tr>
           <td style='text-align:left;'>{{ grade_row.grade }}</td>
@@ -222,6 +230,14 @@ layout: page
           <td style='text-align:right;'></td>
           <td style='text-align:right;'><strong>{{ page.syllabus.grades.total_points }} points possible</strong></td>
         </tr>
+        {% if page.syllabus.grades.total_extra_points != null and page.syllabus.grades.total_extra_points > 0 %}
+        <tr>
+          <td style='text-align:left;'><em>TOTAL EXTRA CREDIT</strong></td>
+          <td style='text-align:right;'><em>+{{ page.syllabus.grades.total_extra_points | times: 100.0 | divided_by: page.syllabus.grades.total_points }}%</em></td>
+          <td style='text-align:right;'></td>
+          <td style='text-align:right;'><em>{{ page.syllabus.grades.total_extra_points }} extra points possible</em></td>
+        </tr>
+        {% endif %}
       </tbody>
     </table>
     {% endif %}
