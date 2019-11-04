@@ -285,13 +285,13 @@ syllabus:
       - 📓 Reflections Journal &amp; Paper
       - ✅ Exams
     total_points: 8000
-    total_extra_points: 3500
+    total_extra_points: 4000
     table:
       -
         activity: 🕟 Participation
         percent: 8.75
         possible_points: 700
-        extra_points: 2000
+        extra_points: 2500
         rows:
           -
             grade: Class Participation
@@ -313,6 +313,10 @@ syllabus:
             grade: "Extra Credit:<br/>Hacktoberfest PRs<br/>(during Oct/after Oct)"
             points: "+300/+200"
             quantity: 5
+          - 
+            grade: "Extra Credit:<br/>Attend The Big Elixir<br/>Nov 7 & 8, 2019"
+            points: "+250"
+            quantity: 2
       -
         activity: 🏗 Project
         percent: 42.5
