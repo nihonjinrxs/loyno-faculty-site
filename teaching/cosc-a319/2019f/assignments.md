@@ -3,21 +3,21 @@ layout: page
 title: Assignments<br/>COSC A319 Internet Technologies<br/>(Fall 2019)
 ---
 
-* [PROJECT DAY 1](#project-day-1) - Web Client (Thu, Sep 12, 2019)
-* [PROJECT DAY 2](#project-day-2) - Server API (Tue, Sep 24, 2019)
-* [PROJECT DAY 3](#project-day-3) - IoT/WoT Device #1 (Thu, Oct 3, 2019)
-* [PROJECT DAY 4](#project-day-4) - IoT/WoT Device #2 (Thu, Oct 17, 2019)
-* [PROJECT DAY 5](#project-day-5) - Integration #1: API <-> Device (Tue, Oct 22, 2019)
-* [PROJECT DAY 6](#project-day-6) - Integration #2: Web <-> API (Thu, Oct 24, 2019)
-* [PROJECT DAY 7](#project-day-7) - Mobile Client (Tue, Nov 19, 2019)
+* [PROJECT DAY: ASSIGNMENT 1](#project-day-1) - Web Client<br /><small><strong>Start:</strong> Thu, Sep 12, 2019; <strong>Due:</strong> Tue, Sep 24, 2019</small>
+* [PROJECT DAY: ASSIGNMENT 2](#project-day-2) - Server API<br /><small><strong>Start:</strong> Tue, Sep 24, 2019; <strong>Due:</strong> Tue, Oct 1, 2019</small>
+* [PROJECT DAY: ASSIGNMENT 3](#project-day-3) - IoT/WoT Device #1<br /><small><strong>Start:</strong> Thu, Oct 3, 2019; <strong>Due:</strong> Tue, Nov 5, 2019</small>
+* [PROJECT DAY: ASSIGNMENT 4](#project-day-4) - IoT/WoT Device #2<br /><small><strong>Start:</strong> Thu, Oct 17, 2019; <strong>Due:</strong> Tue, Nov 5, 2019</small>
+* [PROJECT DAY: ASSIGNMENT 5](#project-day-5) - Integration #1: API <-> Device<br /><small><strong>Start:</strong> Tue, Oct 22, 2019; <strong>Due:</strong> Tue, Nov 19, 2019</small>
+* [PROJECT DAY: ASSIGNMENT 6](#project-day-6) - Integration #2: Web <-> API<br /><small><strong>Start:</strong> Thu, Oct 24, 2019; <strong>Due:</strong> Tue, Nov 19, 2019</small>
+* [OPTIONAL: ASSIGNMENT 7](#project-day-7) - Mobile Client<br /><small><strong>Start:</strong> Thu, Nov 19, 2019; <strong>Due:</strong> Thu, Dec 12, 2019</small>
 
 ---------------------------------------------
 
 <a name="project-day-1"></a>
 
-## 🏗 PROJECT DAY 1 - Web Client
+## 🏗 PROJECT DAY: ASSIGNMENT 1 - Web Client
 
-For PROJECT DAY 1, you'll build the web application that will eventually display data from the sensors on the device (which you haven't built yet) and allow you to view it from whereever you may have an Internet connection and a web browser.
+For ASSIGNMENT 1, you'll build the web application that will eventually display data from the sensors on the device (which you haven't built yet) and allow you to view it from whereever you may have an Internet connection and a web browser.
 
 ### 📆 Schedule
 
@@ -69,15 +69,15 @@ Assume that data reported by the Weather Station is in Celsius degrees for tempe
 
 <a name="project-day-2"></a>
 
-## 🏗 PROJECT DAY 2 - Server API
+## 🏗 PROJECT DAY: ASSIGNMENT 2 - Server API
 
-For PROJECT DAY 2, you'll build the server API that will collect and serve data collected from your sensors.
+For ASSIGNMENT 2, you'll build the server API that will collect and serve data collected from your sensors.
 
 ### 📆 Schedule
 
 | Intro/Demo     | Thu, Sep 19, 2019 |
 | PROJECT DAY    | Tue, Sep 24, 2019 |
-| Assignment Due | Tue, Oct 1, 2019  |
+| Assignment Due | Tue, Oct  1, 2019 |
 
 ### 💯 Points Possible: **500**
 
@@ -121,15 +121,15 @@ In this portion of the project, you'll build an API with endpoints that allow ge
 
 <a name="project-day-3"></a>
 
-## 🏗 PROJECT DAY 3 - IoT/WoT Device #1
+## 🏗 PROJECT DAY: ASSIGNMENT 3 - IoT/WoT Device #1
 
-For PROJECT DAY 3, you'll begin building and programming the device that will house the sensors and send data to the Server API.
+For ASSIGNMENT 3, you'll begin building and programming the device that will house the sensors and send data to the Server API.
 
 ### 📆 Schedule
 
-| Intro/Demo     | Tue, Oct  1, 2019 |
-| PROJECT DAY    | Thu, Oct  3, 2019 |
-| Assignment Due | Tue, Oct 29, 2019 |
+| Intro/Demo     | Tue, Oct 1, 2019 |
+| PROJECT DAY    | Thu, Oct 3, 2019 |
+| Assignment Due | Tue, Nov 5, 2019 |
 
 ### 💯 Points Possible: **400**
 
@@ -180,14 +180,14 @@ In addition to this, you'll be using two Node.js-based libraries to interact wit
 
 <a name="project-day-4"></a>
 
-## 🏗 PROJECT DAY 4 - IoT/WoT Device #2
+## 🏗 PROJECT DAY: ASSIGNMENT 4 - IoT/WoT Device #2
 
-For PROJECT DAY 4, you'll finish building and programming the device that will house the sensors and send data to the Server API.
+For ASSIGNMENT 4, you'll finish building and programming the device that will house the sensors and send data to the Server API.
 
 ### 📆 Schedule
 
 | PROJECT DAY    | Thu, Oct 17, 2019 |
-| Assignment Due | Tue, Oct 29, 2019 |
+| Assignment Due | Tue, Nov 19, 2019 |
 
 💯 Points Possible: **400**
 
@@ -229,30 +229,54 @@ You can switch video output to the attached LCD display by running the `LCD35-sh
 
 <a name="project-day-5"></a>
 
-## 🏗 PROJECT DAY 5 - Integration #1: Server API <-> IoT/WoT Device
+## 🏗 PROJECT DAY: ASSIGNMENT 5 - Integration #1: Server API <-> IoT/WoT Device
 
-For PROJECT DAY 5, you'll teach your device how to report data from its sensors back to the Server API, and teach your Server API how to accept that data.
+For ASSIGNMENT 5, you'll teach your device how to report data from its sensors back to the Server API, and teach your Server API how to accept that data.
 
 ### 📆 Schedule
 
 | PROJECT DAY    | Tue, Oct 22, 2019 |
-| Assignment Due | Tue, Nov  5, 2019 |
+| Assignment Due | Tue, Dec  3, 2019 |
 
-💯 Points Possible: **250**
+💯 Points Possible: **400**
 
 ### 🛠 The Tools
 
-More to come soon.
+You will use the same tools for this as you've used for prior assignments.
+
+The one new concept you'll need is the concept of [web sockets](https://sookocheff.com/post/networking/how-do-websockets-work/) ([RFC 6455](https://tools.ietf.org/html/rfc6455)).
+
+The following articles on the Mozilla Developer Network provide more information about how Web Sockets applications can be built both on the server and client side:
+
+* [Writing WebSocket servers](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+* [Writing WebSocket client applications](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+* [The WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+
+To work with web sockets, you'll use the **[ws](https://github.com/websockets/ws)** library for node.js, which provides an abstraction interface which takes care of a lot of the details of server-side web sockets implementation.
 
 ### ✅ Requirements for the Assignment
 
-#### ⚙️ Functional Requirements
+#### ⚙️ Functional Requirements: Server API
 
-More to come soon.
+1. Ensure the `/weather-sensors/register` `POST` endpoint is available, and that it maintains a list of registered sensors.
+2. Create a new `GET` endpoint `/weather-sensors/updates-channels/:id` on the API that supports upgrading the connection to a `WebSocket` connection. Ensure that the endpoint creates a single new socket for any known weather sensor ID, and replaces an old socket (after draining it of data events) if a new request from the same sensor comes in, and rejects requests from unknown sensors with a `401 Unauthorized` response.
+3. Implement handlers on the `WebSocket` connections to handle all appropriate events in the lifecycle of the connection, including but not limited to `connection`, `upgrade`, `open`, `message`, and `close`.
+
+#### ⚙️ Functional Requirements: WoT/IoT Device
+
+1. Modify the `main.js` (or whichever file in your WoT application from Assignment 4 starts the device integrations) to import your DHT Library and begin watching the DHT sensor.
+2. In the same file, make a `POST` request to the `/weather-sensors/register` endpoint, specifying a sensor ID and appropriate configuration information (you will likely need to tell the API what measurements to expect and what units they will be specified with).
+3. Also in the same file, make an initial data update using a `POST` request to the `/weather-sensors/:id/update` endpoint.
+4. Finally, create a new `WebSocket` connection to the `/weather-sensors/updates-channels/:id` endpoint, using the sensor ID specified above as the `:id` value in the URI.
+5. Complete your web socket implementation by writing an event handler on the `data` event on the DHT sensor object that sends the new information to the API via the web socket connection created.
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. **Code organization and style** Code for the application should be well-organized, using components and folders to keep related code together. Code should be written asynchronously where possible in order to allow for multiple simultaneous activities.
+2. **Tests** All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+3. **Error handling** Code should also handle errors and software termination (premature or otherwise) gracefully. For software termination, you may want to look at handling the following events on the `process` object: `exit`, `SIGINT`, `SIGUSR1`, `SIGUSR2`, `uncaughtException`, and `unhandledRejection`. On program termination, as with closing out hardware connections cleanly (see ASSIGNMENT 3), be sure to close out any web socket connections you may have created before exiting the program.
+4. **Version control** The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+5. **Deployment** The Server API should be demonstrable locally on your computer. Extra points will be given for deployments in Amazon Web Services using ECS (see ASSIGNMENT 2). Code that runs on the WoT device must be deployed to the device and must start on device boot. You should be able to demonstrate the integration in class on the due date of the assignment.
 
 ---------------------------------------------
 
@@ -265,49 +289,69 @@ For PROJECT DAY 5, you'll teach your Server API how to serve up data in real-tim
 ### 📆 Schedule
 
 | PROJECT DAY    | Thu, Oct 24, 2019 |
-| Assignment Due | Thu, Nov  5, 2019 |
+| Assignment Due | Thu, Dec  3, 2019 |
 
-💯 Points Possible: **250**
+💯 Points Possible: **400**
 
 ### 🛠 The Tools
 
-More to come soon.
+No new tools are necessary for this assignment.
 
 ### ✅ Requirements for the Assignment
 
-#### ⚙️ Functional Requirements
+#### ⚙️ Functional Requirements: Server API
 
-More to come soon.
+1. Implement a `/weather-sensors/data-channels/:id` web sockets enabled endpoint on the Server API that creates new sockets on each new request, and sends new data on those sockets when provided by the sensor with matching ID.
+2. Protect your endpoint from a Denial of Service attack by ensuring you close unused/dormant web socket connections on data channels, and that you enforce a maximum number of allowable data channel connections per registered sensor.
+
+#### ⚙️ Functional Requirements: Web Client
+
+1. Create a new `SensorSelector` component which makes a `GET` request to the Server API's `/weather-sensors` endpoint and displays a list of sensors registered (perhaps as a `<ul>` or `<nav>`). Add this component to the main `App` component hierarchy where appropriate. Ensure that the first sensor is automatically selected, in the absense of user input.
+2. Modify the `SensorDataProvider` component to accept the sensor ID as a prop (from the `SensorSelector` component above, possibly through state in the `App` component, depending on where you put it in the hierarchy).
+3. Then, modify that component to attempt to open a web socket connection to the server API at `/weather-sensors/updates-channels/:id` to retrieve new data, using the web socket connection object's events instead of generating random numbers as before.
+4. Finally, in the event that a web socket connection to the Server API cannot be created, implement a fallback strategy using a periodic polling method. The component should, in this case, make `GET` requests to the Server API's `/weather-sensors/:id/data` endpoint for updates to data on a set interval.
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. Code for each application should be well-organized, using components and folders to keep related code together.
+2. The applications should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for each application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+4. The applications should be demonstrable locally in class. Extra points will be given for solutions deployed to Amazon Web Services as  Docker containers that are live (that is, publicly available on the Internet).
 
 ---------------------------------------------
 
 <a name="project-day-7"></a>
 
-## 🏗 PROJECT DAY 7 - Mobile Client
+## 🏗 OPTIONAL ASSIGNMENT 7 - Mobile Client
 
-For PROJECT DAY 7, you'll create a mobile app that will read and display sensor data served by the Server API.
+For ASSIGNMENT 7, you'll create a mobile app that will read and display sensor data served by the Server API.
 
 ### 📆 Schedule
 
-| PROJECT DAY    | Tue, Nov 19, 2019 |
-| Assignment Due | Tue, Dec 3, 2019  |
+| ASSIGNMENT Start | Tue, Nov 19, 2019 |
+| Assignment Due   | Thu, Dec 12, 2019  |
 
-💯 Points Possible: **300**
+💯 Extra Points Possible: **500**
 
 ### 🛠 The Tools
 
-More to come soon.
+For this project, you'll be using the **[React Native](https://facebook.github.io/react-native/)** library for Node.js, as well as the **[Expo](https://expo.io/)** toolset to test the app on your phone.
+
+Since we won't have time to cover this in class, here are a few resources that will be helpful in figuring this out:
+
+* [React Native: Getting Started](https://facebook.github.io/react-native/docs/getting-started.html)
+* [Building a Minimalist Weather App with React Native and Expo](https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09)
 
 ### ✅ Requirements for the Assignment
 
 #### ⚙️ Functional Requirements
 
-More to come soon.
+1. Migrate your Web Client application (as integrated in Assignment 6) into a React Native application.
+2. Adapt the user interface of the application to better fit a mobile device. (You may wish to use common mobile app patterns and controls for things like setting the temperature scale and selecting the sensor to display.)
 
 #### 🔩 Source Code, Process & Deployment Requirements
 
-More to come soon.
+1. Code for each application should be well-organized, using components and folders to keep related code together.
+2. The applications should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for each application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo.
+4. The application should be deployed on your phone and demoable during the final exam period demo session. In addition, you should provide an Expo link so that others (including your instructor) may attempt to deploy it to their phones as well.

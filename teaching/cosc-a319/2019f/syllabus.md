@@ -285,11 +285,13 @@ syllabus:
       - 📓 Reflections Journal &amp; Paper
       - ✅ Exams
     total_points: 8000
+    total_extra_points: 3500
     table:
       -
         activity: 🕟 Participation
         percent: 8.75
         possible_points: 700
+        extra_points: 2000
         rows:
           -
             grade: Class Participation
@@ -300,33 +302,42 @@ syllabus:
             points: 100
             quantity: 1
           - 
-            grade: "Extra Credit:<br/>Attend DevFest 10/05"
+            grade: "Extra Credit:<br/>Attend DevFest<br/>Oct 5, 2019"
             points: "+250"
             quantity: 1
+          - 
+            grade: "Extra Credit:<br/>Attend Stephen Kent talk<br/>Oct 8, 2019"
+            points: "+250"
+            quantity: 1
+          - 
+            grade: "Extra Credit:<br/>Hacktoberfest PRs<br/>(during Oct/after Oct)"
+            points: "+300/+200"
+            quantity: 5
       -
         activity: 🏗 Project
         percent: 42.5
         possible_points: 3400
+        extra_points: 1500
         rows:
           -
-            grade: "PROJECT DAY:<br/>Web Client"
+            grade: "PROJECT DAY ASSIGNMENT:<br/>Web Client (1)"
             points: 300
             quantity: 1
           -
-            grade: "PROJECT DAY:<br/>Server API"
+            grade: "PROJECT DAY ASSIGNMENT:<br/>Server API (2)"
             points: 500
             quantity: 1
           -
-            grade: "PROJECT DAY:<br/>IoT/WoT Device"
+            grade: "PROJECT DAY ASSIGNMENT:<br/>IoT/WoT Device (3 &amp; 4)"
             points: 400
             quantity: 2
           -
-            grade: "PROJECT DAY:<br/>Integration"
-            points: 250
+            grade: "PROJECT DAY ASSIGNMENT:<br/>Integration (5 &amp; 6)"
+            points: 400
             quantity: 2
           -
-            grade: "PROJECT DAY:<br/>Mobile Client"
-            points: 300
+            grade: "Extra Credit:<br/>OPTIONAL ASSIGNMENT:<br/>Mobile Client (7)"
+            points: "+500"
             quantity: 1
           -
             grade: Final Project Demo
@@ -344,6 +355,7 @@ syllabus:
         activity: 📓 Reflections
         percent: 11.25
         possible_points: 900
+        extra_points: 0
         rows:
           -
             grade: Weekly Reflection Journal
@@ -357,6 +369,7 @@ syllabus:
         activity: 📝 Exams
         percent: 37.5
         possible_points: 3000
+        extra_points: 0
         rows:
           -
             grade: Midterm Exam
@@ -732,33 +745,23 @@ syllabus:
               day: Tuesday
               date: 10/29
               topics: |
-                🏗 Check-in about PROJECT DAYS
-
-                💭 IPv4 & IPv6 Addressing
-
-                💭 Address Resolution Protocol (ARP)
+                🏗 Check-in & help for PROJECT DAYS
               activities: |
                 🏗 Project
-
-                💭 Lecture
               readings: |
-                📘 TIN: pp. 139 - 195 (Ch 5 - 6)
             -
               session_num: 21
               day: Thursday
               date: 10/31
               topics: |
-                💭 IPv4 & IPv6 Headers
-
-                💭 Internet Control Message Protocol (ICMP)
+                ✅ Midterm Exam detailed review
 
                 🎃 *Happy Halloween!*
                 
                 👻 <small>Feel free to attend class in (classroom-appropriate) costume. Bragging rights awarded for costumes related to course material.</small>
               activities: |
-                💭 Lecture
+                ✅ Exam Review
               readings: |
-                📘 TIN: pp. 197 - 246 (Ch 7 - 8)
     -
       month: Nov
       weeks:
@@ -770,19 +773,39 @@ syllabus:
               day: Tuesday
               date: 11/05
               topics: |
+                💭 IPv4 & IPv6 Addressing
+
+                💭 Address Resolution Protocol (ARP)
+
+                💭 IPv4 & IPv6 Headers
+              activities: |
+                💭 Lecture
+              readings: |
+                📘 TIN: pp. 139 - 219 (Ch 5 - 7)
+            -
+              session_num: 23
+              day: Thursday
+              date: 11/07
+              topics: |
+
+                💭 Internet Control Message Protocol (ICMP)
+
                 💭 Routing
 
                 💭 IP Forwarding
               activities: |
                 💭 Lecture
               readings: |
-                📘 TIN: pp. 247 - 288 (Ch 9 - 10)
+                📘 TIN: pp. 221 - 288 (Ch 8 - 10)
 
                 🔗 [Network Failure Modes and Prevention: Murphy and the Network Layer](https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html)
+        -
+          week_num: 13
+          sessions:
             -
-              session_num: 23
-              day: Thursday
-              date: 11/07
+              session_num: 24
+              day: Tuesday
+              date: 11/12
               topics: |
                 💭 User Datagram Protocol (UDP)
 
@@ -791,13 +814,28 @@ syllabus:
                 💭 Lecture
               readings: |
                 📘 TIN: pp. 289 - 330 (Ch 11 - 12)
+            -
+              session_num: 25
+              day: Thursday
+              date: 11/14
+              topics: |
+                🏗 PROJECT DAY: Instructor Q&A/Assist
+
+                <small>This is a time to get help working through
+                remaining issues on your project assignments during
+                class.</small>
+              activities: |
+                🏗 Project
+              readings: |
+                <small>Come with your questions and frustrations
+                ready.</small>
         -
-          week_num: 13
+          week_num: 14
           sessions:
             -
-              session_num: 24
+              session_num: 26
               day: Tuesday
-              date: 11/12
+              date: 11/19
               topics: |
                 💭 Multiplexing & Sockets
 
@@ -808,36 +846,6 @@ syllabus:
                 📘 TIN: pp. 331 - 348 (Ch 13)
 
                 📘 TIN: pp. 563 - 586 (Ch 22)
-            -
-              session_num: 25
-              day: Thursday
-              date: 11/14
-              topics: |
-                💭 Intro to React Native
-
-                🏗 Project (Intro/Start Mobile Client)
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-
-                🏗 Project
-              readings: |
-                🔗 [React Native: Getting Started](https://facebook.github.io/react-native/docs/getting-started.html)
-
-                🔗 [Building a Minimalist Weather App with React Native and Expo](https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09)
-        -
-          week_num: 14
-          sessions:
-            -
-              session_num: 26
-              day: Tuesday
-              date: 11/19
-              topics: |
-                🏗 PROJECT DAY: Mobile Client
-              activities: |
-                🏗 Project
-              readings: |
             -
               session_num: 27
               day: Thursday
