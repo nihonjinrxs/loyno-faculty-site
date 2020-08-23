@@ -18,3 +18,4 @@ To be successful in this course, you should have practical experience building s
 ## Sites specific to offerings of this course
 * [2018 Fall](./2018f/) - cancelled for budgetary reasons
 * [2019 Fall](./2019f/)
+* [2020 Fall](./2020f/)

@@ -3,15 +3,18 @@ layout: default
 title: Home
 menu: main
 info:
-  office: Monroe Hall, Room 407
-  availability: Tuesdays &amp; Thursdays after 9:30 AM
-  currentsemester: Spring 2019
+  office: Monroe Hall, Room 407 (not in office Fall 2020)
+  availability: 
+    times: by appointment
+    url: https://bit.ly/mr-harvey-office-hours
+  zoom: https://bit.ly/meet-mr-harvey
+  currentsemester: Fall 2020
   currentcourses:
     -
       number: COSC A319
       section: "051"
       title: Internet Technologies
-      url: ./teaching/cosc-a319/2019f/
+      url: ./teaching/cosc-a319/2020f/
   whoami: |
       I'm a _software engineer_, _data scientist_,
       _data engineer_, and _educator_.
@@ -62,7 +65,7 @@ info:
       url: https://www.loyno.edu/
     -
       organization: TED Conferences
-      position: Data Engineer
+      position: Data Engineer / Sr. Backend Engineer
       startyear: 2016
       imageurl: ./public/TED_logo_rgb.png
       url: https://www.ted.com/
@@ -73,6 +76,12 @@ info:
       imageurl: https://static.wixstatic.com/media/83a4ea_367395d85b6849afa07759b239a106c6~mv2.gif
       url: https://www.kitchology.com/
   volunteering:
+    -
+      organization: The St. Charles Center for Faith + Action
+      position: Board Member
+      startyear: 2020
+      imageurl: ./public/st-charles-center.png
+      url: https://stcharlesave.center
     -
       organization: Loyola University New Orleans
       position: Research Associate Pro Bono
@@ -107,11 +116,16 @@ info:
       <a href="http://cas.loyno.edu/mathematics" target="_blank" alt="Visit the homepage of Loyola's Department of Mathematics and Computer Science">
         Department of Mathematics and Computer Science
       </a>
-       <br>
-       {{ page.info.office }}</p>
-    <p><strong>Availability</strong>: {{ page.info.availability }}
-       <br>
-       <strong>Email</strong>: <a href="mailto:rharvey@loyno.edu">rharvey@loyno.edu</a></p>
+      <br>
+      {{ page.info.office }}</p>
+    <p><strong>Availability</strong>:
+      <a href="{{ page.info.availability.url }}"
+        target="_blank"
+        alt="Schedule an appointment with Mr. Harvey during Office Hours">
+        {{ page.info.availability.times }}
+      </a>
+      <br>
+      <strong>Email</strong>: <a href="mailto:rharvey@loyno.edu">rharvey@loyno.edu</a></p>
   </div>
 </div>
 
