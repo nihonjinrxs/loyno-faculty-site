@@ -39,13 +39,17 @@ layout: page
         <a href="#schedule">Course Schedule</a>
         <div class="toc-schedule">
           Week
+          {% assign last_week_added = 0 %}
           {% for month in page.syllabus.schedule %}
           {% for week in month.weeks %}
-          {% assign padded_week = week.week_num %}
-          {% if padded_week < 10 %}
-            {% assign padded_week = padded_week | prepend: '0' %}
+          {% if last_week_added != week.week_num %}
+            {% assign padded_week = week.week_num %}
+            {% if padded_week < 10 %}
+              {% assign padded_week = padded_week | prepend: '0' %}
+            {% endif %}
+            <a href="#schedule-week-{{padded_week}}">{{week.week_num}}</a>
+            {% assign last_week_added = week.week_num %}
           {% endif %}
-          <a href="#schedule-week-{{padded_week}}">{{week.week_num}}</a>
           {% endfor %}
           {% endfor %}
         </div>
