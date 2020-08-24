@@ -205,7 +205,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 08/23/2020
+        Site v1.1.0, updated 08/24/2020
       </small>
     </span>
   </nav>
@@ -278,87 +278,135 @@
           
           
           
-          <a href="#schedule-week-01">1</a>
+            
+            
+            <a href="#schedule-week-01">1</a>
+            
           
           
           
-          <a href="#schedule-week-02">2</a>
-          
-          
-          
-          
-          
-          <a href="#schedule-week-02">2</a>
-          
-          
-          
-          <a href="#schedule-week-03">3</a>
-          
-          
-          
-          <a href="#schedule-week-04">4</a>
-          
-          
-          
-          <a href="#schedule-week-05">5</a>
-          
-          
-          
-          <a href="#schedule-week-06">6</a>
+            
+            
+            <a href="#schedule-week-02">2</a>
+            
           
           
           
           
           
-          <a href="#schedule-week-06">6</a>
+          
+          
+            
+            
+            <a href="#schedule-week-03">3</a>
+            
           
           
           
-          <a href="#schedule-week-07">7</a>
+            
+            
+            <a href="#schedule-week-04">4</a>
+            
           
           
           
-          <a href="#schedule-week-08">8</a>
+            
+            
+            <a href="#schedule-week-05">5</a>
+            
           
           
           
-          <a href="#schedule-week-09">9</a>
-          
-          
-          
-          <a href="#schedule-week-10">10</a>
-          
-          
-          
-          
-          
-          <a href="#schedule-week-11">11</a>
-          
-          
-          
-          <a href="#schedule-week-12">12</a>
-          
-          
-          
-          <a href="#schedule-week-13">13</a>
-          
-          
-          
-          <a href="#schedule-week-14">14</a>
+            
+            
+            <a href="#schedule-week-06">6</a>
+            
           
           
           
           
           
-          <a href="#schedule-week-15">15</a>
+          
+          
+            
+            
+            <a href="#schedule-week-07">7</a>
+            
           
           
           
-          <a href="#schedule-week-16">16</a>
+            
+            
+            <a href="#schedule-week-08">8</a>
+            
           
           
           
-          <a href="#schedule-week-17">17</a>
+            
+            
+            <a href="#schedule-week-09">9</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-10">10</a>
+            
+          
+          
+          
+          
+          
+            
+            
+            <a href="#schedule-week-11">11</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-12">12</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-13">13</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-14">14</a>
+            
+          
+          
+          
+          
+          
+            
+            
+            <a href="#schedule-week-15">15</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-16">16</a>
+            
+          
+          
+          
+            
+            
+            <a href="#schedule-week-17">17</a>
+            
+          
           
           
         </div>
@@ -597,7 +645,7 @@ The Monroe Library has been able to provide a digital copy of the book. You shou
   <li>API:
     <ul>
       <li><a href="https://github.com/nvm-sh/nvm">nvm (on macOS or Linux)</a> or <a href="https://github.com/coreybutler/nvm-windows">nvm-windows (on Windows)</a></li>
-      <li><a href="https://nodejs.org/en/">Node.js (“LTS” v10.x)</a></li>
+      <li><a href="https://nodejs.org/en/">Node.js (“LTS” v12.x)</a></li>
       <li><a href="https://docs.npmjs.com/cli/npm">NPM</a> and/or <a href="https://yarnpkg.com/en/">Yarn</a></li>
       <li><a href="https://expressjs.com/">Express.js</a></li>
     </ul>
@@ -613,10 +661,10 @@ The Monroe Library has been able to provide a digital copy of the book. You shou
 <p>Although not strictly related to the project, you may find some of these tools useful in debugging what you build.</p>
 
 <ul>
-  <li><a href="https://www.wireshark.org/">Wireshark</a> - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides <code class="highlighter-rouge">tshark</code>, the command-line version of Wireshark. This was originally named “Ethereal”, with command-line version <code class="highlighter-rouge">tethereal</code>.</li>
-  <li>Under the hood of Wireshark is <code class="highlighter-rouge">libpcap</code>, which is part of the <a href="https://www.tcpdump.org/"><code class="highlighter-rouge">tcpdump</code> command line packet analyzer</a>. Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)</li>
+  <li><a href="https://www.wireshark.org/">Wireshark</a> - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides <code class="language-plaintext highlighter-rouge">tshark</code>, the command-line version of Wireshark. This was originally named “Ethereal”, with command-line version <code class="language-plaintext highlighter-rouge">tethereal</code>.</li>
+  <li>Under the hood of Wireshark is <code class="language-plaintext highlighter-rouge">libpcap</code>, which is part of the <a href="https://www.tcpdump.org/"><code class="language-plaintext highlighter-rouge">tcpdump</code> command line packet analyzer</a>. Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)</li>
   <li><a href="https://www.telerik.com/fiddler">Fiddler</a> is a web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software.</li>
-  <li><a href="https://nmap.org/zenmap/">Zenmap</a>, the graphical interface for the <code class="highlighter-rouge">nmap</code> command line tool, provides facilities for scanning networks and systems for security vulnerabilities.</li>
+  <li><a href="https://nmap.org/zenmap/">Zenmap</a>, the graphical interface for the <code class="language-plaintext highlighter-rouge">nmap</code> command line tool, provides facilities for scanning networks and systems for security vulnerabilities.</li>
 </ul>
 
 <p>During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.</p>

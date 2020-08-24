@@ -205,7 +205,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.0.0, updated 08/23/2020
+        Site v1.1.0, updated 08/24/2020
       </small>
     </span>
   </nav>
@@ -246,7 +246,7 @@
 npm install electron-is-dev
 </code></pre>
   </li>
-  <li>Create a new file in the <code class="highlighter-rouge">public</code> folder of your app, <code class="highlighter-rouge">public/start-electron.js</code>, with the following code:
+  <li>Create a new file in the <code class="language-plaintext highlighter-rouge">public</code> folder of your app, <code class="language-plaintext highlighter-rouge">public/start-electron.js</code>, with the following code:
     <pre><code class="language-{javascript}">const electron = require('electron'),
   app = electron.app,
   BrowserWindow = electron.BrowserWindow;
@@ -278,18 +278,18 @@ app.on('activate', () =&gt; {
 })
 </code></pre>
   </li>
-  <li>Add some new configuration to your app’s <code class="highlighter-rouge">package.json</code> file:
+  <li>Add some new configuration to your app’s <code class="language-plaintext highlighter-rouge">package.json</code> file:
     <ul>
-      <li>In the <code class="highlighter-rouge">"scripts"</code> section, add the following scripts:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 &amp;&amp; electron .\"",
+      <li>In the <code class="language-plaintext highlighter-rouge">"scripts"</code> section, add the following scripts:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 &amp;&amp; electron .\"",
  "electron-package": "./node_modules/.bin/electron-builder -c.extraMetadata.main=build/start-electron.js",
  "preelectron-package": "npm run build"
 </code></pre></div>        </div>
-        <p>These scripts will allow you to start electron in development mode (<code class="highlighter-rouge">npm run electron-dev</code>), and to build (“package”) your application into an executable for the system you’re running on (<code class="highlighter-rouge">npm run electron-package</code>).</p>
+        <p>These scripts will allow you to start electron in development mode (<code class="language-plaintext highlighter-rouge">npm run electron-dev</code>), and to build (“package”) your application into an executable for the system you’re running on (<code class="language-plaintext highlighter-rouge">npm run electron-package</code>).</p>
       </li>
-      <li>Modify the <code class="highlighter-rouge">"homepage"</code> value to read: <code class="highlighter-rouge">"homepage": "./",</code>. (If it’s not there, add it.)</li>
-      <li>Add a new <code class="highlighter-rouge">"build"</code> section to the file:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "build": {
+      <li>Modify the <code class="language-plaintext highlighter-rouge">"homepage"</code> value to read: <code class="language-plaintext highlighter-rouge">"homepage": "./",</code>. (If it’s not there, add it.)</li>
+      <li>Add a new <code class="language-plaintext highlighter-rouge">"build"</code> section to the file:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "build": {
    "appId": "com.loyno-mathcs.your-github-name.weatherstation.wotdevice",
    "files": [ "build/**/*", "node_modules/**/*" ],
    "directories":{
@@ -297,20 +297,20 @@ app.on('activate', () =&gt; {
    }
  },
 </code></pre></div>        </div>
-        <p>(Be sure to replace <code class="highlighter-rouge">your-github-name</code> above with your actual Github username.)</p>
+        <p>(Be sure to replace <code class="language-plaintext highlighter-rouge">your-github-name</code> above with your actual Github username.)</p>
       </li>
-      <li>Update the <code class="highlighter-rouge">"name"</code> value to something more appropriate for this application (i.e., <code class="highlighter-rouge">"name": "wot-device"</code> or similar).</li>
+      <li>Update the <code class="language-plaintext highlighter-rouge">"name"</code> value to something more appropriate for this application (i.e., <code class="language-plaintext highlighter-rouge">"name": "wot-device"</code> or similar).</li>
     </ul>
   </li>
   <li>Test running your application in development mode:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-dev
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-dev
 </code></pre></div>    </div>
     <p>You should see your app launch as a desktop application in a new window, and immediately become fullscreen.</p>
   </li>
   <li>Test building your application:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-package
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run electron-package
 </code></pre></div>    </div>
-    <p>You should find a new <code class="highlighter-rouge">dist</code> directory with a folder for your operating system. Inside, you should see a new executable. Double-click it to test executing the app you’ve created.</p>
+    <p>You should find a new <code class="language-plaintext highlighter-rouge">dist</code> directory with a folder for your operating system. Inside, you should see a new executable. Double-click it to test executing the app you’ve created.</p>
   </li>
 </ol>
 
