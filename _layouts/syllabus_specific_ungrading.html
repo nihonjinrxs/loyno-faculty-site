@@ -1,0 +1,193 @@
+---
+layout: page
+---
+<a name='title' class='md-header-anchor '></a>
+<div class='page syllabus'>
+  <div id='write' class='is-mac'>
+    <a name='toc' class='md-header-anchor'></a>
+    <h2>Table of Contents</h2>
+    <div class="toc-columns">
+      <ul>
+        <li><a href="#instructor-info">Instructor Information</a></li>
+        <li><a href="#description">Course Description</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#learning-objectives">Learning Objectives</a></li>
+        <li><a href="#learning-outcomes">Learning Outcomes</a></li>
+        {% if page.syllabus.textbooks != null or page.syllabus.textbooks_optional != null %}
+        <li><a href="#textbooks">Textbooks</a></li>
+        {% endif %}
+      </ul>
+      <ul>
+        {% if page.syllabus.project != null %}
+        <li><a href="#project">{{ page.syllabus.project.title }}</a></li>
+        {% endif %}
+        {% if page.syllabus.reflection != null %}
+        <li><a href="#reflection">{{ page.syllabus.reflection.title }}</a></li>
+        {% endif %}
+        {% if page.syllabus.final != null %}
+        <li><a href="#final">{{ page.syllabus.final.title }}</a></li>
+        {% endif %}
+        <li><a href="#grades">Grades</a></li>
+        {% if page.syllabus.instructor_policies != null %}
+        <li><a href="#instructor-policies">Instructor's Policies</a></li>
+        {% endif %}
+        <li><a href="#policies">General Policies</a></li>
+      </ul>
+    </div>
+    <ul class="toc-schedule-wrapper">
+      <li>
+        <a href="#schedule">Course Schedule</a>
+        <div class="toc-schedule">
+          Week
+          {% for month in page.syllabus.schedule %}
+          {% for week in month.weeks %}
+          {% assign padded_week = week.week_num %}
+          {% if padded_week < 10 %}
+            {% assign padded_week = padded_week | prepend: '0' %}
+          {% endif %}
+          <a href="#schedule-week-{{padded_week}}">{{week.week_num}}</a>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="toc-schedule">
+          Month
+          {% for month in page.syllabus.schedule %}
+          <a href="#schedule-month-{{month.month | downcase}}-{{month.year}}">
+            {{month.month | slice: 0, 3}}
+          </a>
+          {% endfor %}
+        </div>
+      </li>
+    </ul>
+
+    <a name='instructor-info' class='md-header-anchor '></a>
+    {% include syllabus-instructor-info.html %}
+
+    <a name='description' class='md-header-anchor '></a>
+    <h2>
+      COURSE DESCRIPTION
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    <h3>👨🏻‍🏫 From the Instructor</h3>
+    {{ page.syllabus.description | markdownify }}
+    
+    {% if page.syllabus.bulletin != nil %}
+    <h3><a href="{{ page.course_info.bulletin_link }}" target="_blank">📜 From the Undergraduate Bulletin</a></h3>
+    {{ page.syllabus.bulletin | markdownify }}
+    {% endif %}
+
+    <a name='prerequisites' class='md-header-anchor '></a>
+    <h2>
+      🏛 PREREQUISITES
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.prerequisites | markdownify }}
+
+    <a name='learning-objectives' class='md-header-anchor '></a>
+    <h2>
+      🎓 LEARNING OBJECTIVES
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.learning_objectives | markdownify }}
+
+    <a name='learning-outcomes' class='md-header-anchor '></a>
+    <h2>
+      🎓 LEARNING OUTCOMES
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.learning_outcomes | markdownify }}
+      
+    <a name='textbooks' class='md-header-anchor '></a>
+    <h2>
+      📚 REQUIRED TEXTBOOKS
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% if page.syllabus.textbooks != null %}
+    {% for book in page.syllabus.textbooks %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><strong><em>{{ book.title }}</em></strong></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+      Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
+    </p>
+    {% endif %}
+    </p>
+    {% if book.textbook_message != null %}
+      {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page.syllabus.textbooks_optional != null %}
+    <h2>
+      📚  RECOMMENDED TEXTBOOKS
+        <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {% for book in page.syllabus.textbooks_optional %}
+    <p>{{ book.icon }} <a href='{{ book.isbn_url }}' target='_blank'><strong><em>{{ book.title }}</em></strong></a>, by {{ book.authors }}. {{ book.publisher }}, {{ book.pub_date }}. ISBN {{ book.isbn }}.
+    {% if book.companion_site != null %}
+    <p>
+        Companion website: <a href='{{ book.companion_site }}' target='_blank'>{{ book.companion_site }}</a>.
+    </p>
+    {% endif %}
+    </p>
+    {% if book.textbook_message != null %}
+      {{ book.textbook_message | markdownify }}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if page.syllabus.project != null %}
+    <a name='project' class='md-header-anchor '></a>
+    <h2>
+      {% if page.syllabus.project.icon %}
+      {{ page.syllabus.project.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.project.title | upcase }}
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.project.description | markdownify }}
+    {% endif %}
+
+    {% if page.syllabus.reflection != null %}
+    <a name='reflection' class='md-header-anchor '></a>
+    <h2>
+      {% if page.syllabus.reflection.icon %}
+      {{ page.syllabus.reflection.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.reflection.title | upcase }}
+      <span class="right toplink"><a href="#reflection" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.reflection.description | markdownify }}
+    {% endif %}
+
+    {% if page.syllabus.final != null %}
+    <a name='final' class='md-header-anchor '></a>
+    <h2>
+      {% if page.syllabus.final.icon %}
+      {{ page.syllabus.final.icon }}
+      {% else %}
+      📝
+      {% endif %} {{ page.syllabus.final.title | upcase }}
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    {{ page.syllabus.final.description | markdownify }}
+    {% endif %}
+
+    <a name='grades' class='md-header-anchor '></a>
+    <h2>
+      💯 GRADES
+      <span class="right toplink"><a href="#title" alt="go to top">🔝</a></span>
+    </h2>
+    <p>{{ page.syllabus.grades.ungrading | markdownify }}</p>
+    
+    <a name='schedule' class='md-header-anchor '></a>
+    <h2>
+      📆 COURSE SCHEDULE
+    </h2>
+    {% include course-schedule-with-assignments.html schedule=page.syllabus.schedule %}
+
+    {% include syllabus-policies.html year=page.syllabus.policies_year %}
+  </div>
+</div>
