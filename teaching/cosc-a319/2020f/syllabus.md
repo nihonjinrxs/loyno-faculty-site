@@ -128,7 +128,7 @@ syllabus:
         * [Create React App](https://facebook.github.io/create-react-app/)
       * API:
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
-        * [Node.js ("LTS" v10.x)](https://nodejs.org/en/)
+        * [Node.js ("LTS" v12.x)](https://nodejs.org/en/)
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
         * [Express.js](https://expressjs.com/)
 
