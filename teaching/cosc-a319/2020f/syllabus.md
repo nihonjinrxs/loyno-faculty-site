@@ -43,7 +43,7 @@ syllabus:
       isbn: 978-0-12-811027-0
       textbook_message: |
         **You DO need to obtain a copy of this book, at least for the semester.**
-        I understand that the Monroe Library will have digital copies of the book available. Please check with them to understand how to use one.
+        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via our Elsevier ScienceDirect link](https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network). If you have trouble, you can contact the library staff for help.
 
         This book is also available for sale online for between $70 and $90, and is a fantastic reference for this content for the future.
       isbn_url: https://isbnsearch.org/isbn/9780128110270
@@ -130,6 +130,7 @@ syllabus:
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
         * [Node.js ("LTS" v10.x)](https://nodejs.org/en/)
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
+        * [Express.js](https://expressjs.com/)
 
       #### Network Inspection Tools
 
@@ -196,8 +197,8 @@ syllabus:
       
       These papers are due:
       
-      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on October 12, 2020, by 11:59 PM US Central**
-      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on December 18, 2020, by 11:59 PM US Central**
+      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on Monday, October 12, 2020, by 11:59 PM US Central**
+      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on Friday, December 18, 2020, by 11:59 PM US Central**
   
       ### Submission Information
       
@@ -205,7 +206,7 @@ syllabus:
 
       ### How you will be graded
 
-      Each of your grade proposals, so long as they are well-defended with specific personal reflections, will be the primary consideration for your grade at the midterm and for your final grade in the course.
+      Each of your grade proposals, so long as they are well-defended with specific personal reflections, will be the primary consideration for your grade at the midterm and for your final grade in the course respectively.
 
       In order to ensure your grade proposal is well-defended, you will want to focus on the following:
 
@@ -237,7 +238,8 @@ syllabus:
       **Early Feedback Opportunity.** If you are concerned about whether you have earned a specific grade or how to defend a grade proposal, you are welcome to talk with me about what you plan to propose while working on  your reflection paper, and I can help guide you on what might be compelling in defense of that grade. **This must be done early in the assignment period and not at the last minute.** If you wait until the last minute, I may not be able to accomodate a meeting prior to having to submit grades.
   schedule:
     -
-      month: Aug
+      month: August
+      year: 2020
       weeks:
         -
           week_num: 1
@@ -260,28 +262,62 @@ syllabus:
                 - 
                   type: tools
                   title: Language &amp; Tools Intro
-              readings: |
-                * [Create a GitHub Account](https://github.com)
-                * [Get the GitHub Student Developer Pack](https://education.github.com/pack)
-                * [Create a Heroku Account](https://heroku.com/)
-                * [Sign up for AWS Educate](https://aws.amazon.com/education/awseducate/)
+              readings:
+                -
+                  type: read-web
+                  title: Create a GitHub Account
+                  url: https://github.com
+                -
+                  type: read-web
+                  title: Get the GitHub Student Developer Pack
+                  url: https://education.github.com/pack
+                -
+                  type: read-web
+                  title: Create a Heroku Account
+                  url: https://heroku.com/
               assigned:
+                -
+                  type: journal
+                  title: "Journal: Expectations"
+                  due: Tue 08/25
+                  notes: Completed during class
                 - 
-                  title: "🏗 P0: Project Proposal"
+                  type: project
+                  title: "P0: Project Proposal"
                   due: Tue 09/08
+              due:
             -
               session_num: 2
               day: Thursday
               date: 08/27
               formats:
-                - 💭 Lecture
-              topics: |
-                💭 Intro to the Internet
-              readings: |
-                📘 TIN: pp. 1 - 30 (Ch 1)
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Intro to the Internet
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 1 - 30 (Ch 1)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
               assigned: 
+              due:
+        -
+          week_num: 2
+          sessions:
+            -
+              day: Monday
+              date: 08/31
+              due:
+                - 
+                  type: journal
+                  title: "Week 1 Reflection"
     -
-      month: Sep
+      month: September
+      year: 2020
       weeks:
         -
           week_num: 2
@@ -291,503 +327,820 @@ syllabus:
               day: Tuesday
               date: 09/01
               formats:
-                - 💭 Lecture
-              topics: |
-                💭 Layered Network Models
-
-                💭 The TCP/IP Protocol Stack
-              readings: |
-                📘 TIN: pp. 31 - 69 (Ch 1 & 2)
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Layered Network Models
+                - 
+                  type: lecture
+                  title: The TCP/IP Protocol Stack
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 30 - 69 (Ch 1 & 2)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
               assigned:
-            -
-              session_num: 3
-              day: Tuesday
-              date: 09/01
-              formats:
-                - 💭 Lecture
-              topics: |
-                💭 Intro to JavaScript
-              readings: |
-                📙 [EJS: Intro. - Ch 7](https://eloquentjavascript.net/) (review)
-                
-                (Note: EJS programming concepts should already be well-understood; material should be review except for new syntax)
+              due:
             -
               session_num: 4
               day: Thursday
-              date: 08/29
-              topics: |
-                💭 JavaScript Asynchrony/Concurrency
-                
-                💭 JavaScript Debugging
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-              readings: |
-                📙 [EJS: Ch 8 - 11](https://eloquentjavascript.net/)
+              date: 09/03
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+              topics:
+                - 
+                  type: discussion
+                  title: TCP/IP Stack
+                - 
+                  type: discussion
+                  title: RFCs
+                - 
+                  type: discussion
+                  title: Packet Capture
+              readings:
+              assigned:
+              due:
         -
           week_num: 3
           sessions:
             -
+              day: Monday
+              date: 09/07
+              due:
+                - 
+                  type: journal
+                  title: "Week 2 Reflection"
+            -
               session_num: 5
               day: Tuesday
-              date: 09/03
-              topics: |
-                💭 JavaScript in the Browser
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-              readings: |
-                📙 [EJS: Ch 13 - 15, Ch 18](https://eloquentjavascript.net/)
+              date: 09/08
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: demo
+                  title: Intro to JavaScript
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Intro. - Ch 6"
+                  url: https://eloquentjavascript.net/
+                  notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
+              assigned:
+                - 
+                  type: assignment
+                  title: "A1: Ethernet Parser - Basic JavaScript"
+                  due: Tue 09/10
+              due:
+                - 
+                  type: project
+                  title: "P0: Project Proposal"
             -
               session_num: 6
               day: Thursday
-              date: 09/05
-              topics: |
-                💭 JavaScript Internals
-                
-                💭 JavaScript Debugging
-
-                💭 Containerization
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-              readings: |
-                🔗 [JavaScript Internals: Under the Hood of a Browser](https://medium.com/better-programming/javascript-internals-under-the-hood-of-a-browser-f357378cc922)
-                
-                🔗 [MDN JavaScript Concurrency Model & Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
-                
-                🔗 [JavaScript Callback Concurrency (Pre-promises)](https://blog.avenuecode.com/understanding-the-javascript-concurrency-model)
-                
-                ⏯ [Asynchrony: Under the Hood (Video - 25min)](https://youtu.be/SrNQS8J67zc)
-                
-                💻 [Loupe: Exploratory tool to understand JS execution ordering](http://bit.ly/js-loupe)
-                
-                🔗 [Intro to VMs, Containers & Docker](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/)
+              date: 09/10
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: lecture
+                  title: JavaScript Asynchrony/Concurrency
+                - 
+                  type: lecture
+                  title: JavaScript Debugging
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Ch 8 - 11"
+                  url: https://eloquentjavascript.net/
+                -
+                  type: read-web
+                  title: "Asynchrony: Under the Hood (Video - 25min)"
+                  url: https://youtu.be/SrNQS8J67zc
+                -
+                  type: read-web
+                  title: MDN JavaScript Concurrency Model &amp; Event Loop
+                  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+                -
+                  type: read-web
+                  title: "JavaScript Internals: Under the Hood of a Browser"
+                  url: https://medium.com/better-programming/javascript-internals-under-the-hood-of-a-browser-f357378cc922
+                -
+                  type: read-web
+                  title: "JavaScript Callback Concurrency (Pre-promises)"
+                  url: https://blog.avenuecode.com/understanding-the-javascript-concurrency-model
+              assigned:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
+                  due: Tue 09/17
+              due:
+                - 
+                  type: assignment
+                  title: "A1: Ethernet Parser - Basic JavaScript"
         -
           week_num: 4
           sessions:
             -
+              day: Monday
+              date: 09/14
+              due:
+                - 
+                  type: journal
+                  title: "Week 3 Reflection"
+            -
               session_num: 7
-              day: Tuesday
-              date: 09/10
-              topics: |
-                💭 Intro to React
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-                
-                🏗 Project (Intro/Start)
-              readings: |
-                🔗 [create-react-app Get Started](https://facebook.github.io/create-react-app/docs/getting-started)
-
-                🔗 [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+              day: Thursday
+              date: 09/15
+              formats:
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: project
+                  title: Project Specification
+                - 
+                  type: discussion
+                  title: JavaScript
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+                - 
+                  type: project
+                  title: "P1: Project Specification"
+                  due: Tue 09/24
+              due:
             -
               session_num: 8
               day: Thursday
-              date: 09/12
-              topics: |
-                🏗 PROJECT DAY: Web Client
-
-                <small>*(Instructor out of town)*</small>
-              activities: |
-                🏗 Project
+              date: 09/17
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: HTTP and Web-based Applications
               readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 661 - 684 (Ch 26)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+              due:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
         -
           week_num: 5
           sessions:
             -
+              day: Monday
+              date: 09/21
+              due:
+                - 
+                  type: journal
+                  title: "Week 4 Reflection"
+            -
               session_num: 9
               day: Tuesday
-              date: 09/17
-              topics: |
-                🏗 Check-in about PROJECT DAY
-                
-                💭 Intro to Node.js
-              activities: |
-                🏗 Project
-                
-                💭 Lecture
-
-                💻 Demo
-              readings: |
-                📗 BWT: pp. 59 - 82 (Ch 3)
-
-                📙 [EJS: Ch 20](https://eloquentjavascript.net/)
+              date: 09/22
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: lab
+                  title: Inspecting and Understanding HTTP Traffic
+              readings:
+              assigned:
+              due:
             -
               session_num: 10
               day: Thursday
-              date: 09/19
-              topics: |
-                💭 Intro to Node.js (cont.)
-
-                💭 Web of Things APIs
-              activities: |
-                💭 Lecture
-              readings: |
-                📗 BWT: pp. 109 - 174 (Ch 5 - 6)
+              date: 09/24
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: JavaScript in the Browser
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Ch 13 - 15"
+                  url: https://eloquentjavascript.net/
+              assigned:
+                - 
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
+                  due: Thu 10/01
+              due:
+                - 
+                  type: project
+                  title: "P1: Project Specification"
         -
           week_num: 6
           sessions:
             -
+              day: Monday
+              date: 09/28
+              due:
+                - 
+                  type: journal
+                  title: "Week 5 Reflection"
+            -
               session_num: 11
               day: Tuesday
-              date: 09/24
-              topics: |
-                🏗 PROJECT DAY: Server API
-              activities: |
-                🏗 Project
-              readings: |
+              date: 09/29
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: demo
+                  title: Web Pages, the DOM &amp; the JS API
+              readings:
+              assigned:
+              due:
+    -
+      month: October
+      year: 2020
+      weeks:
+        -
+          week_num: 6
+          sessions:
             -
               session_num: 12
-              day: Thursday
-              date: 09/26
-              topics: |
-                💭 Intro to TCP/IP Stack
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 3 - 69 (Ch 1 - 2)
-
-                🔗 [Network Failure Modes and Prevention](https://www.computerworld.com/article/2563041/network-failure-modes-and-prevention.html)
-    -
-      month: Oct
-      weeks:
+              day: Tuesday
+              date: 10/01
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: lecture
+                  title: Modern Browser-based Applications
+                - 
+                  type: demo
+                  title: JavaScript &amp; React
+              readings:
+                -
+                  type: read-web
+                  title: React Tutorial
+                  url: https://reactjs.org/tutorial/tutorial.html
+                -
+                  type: read-web
+                  title: Thinking in React
+                  url: https://reactjs.org/docs/thinking-in-react.html
+              assigned:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
+                  due: Tue 10/13
+              due:
+                - 
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
         -
           week_num: 7
           sessions:
             -
+              day: Monday
+              date: 10/05
+              due:
+                - 
+                  type: journal
+                  title: "Week 6 Reflection"
+            -
               session_num: 13
               day: Tuesday
-              date: 10/01
-              topics: |
-                💭 Embedded Devices
-
-                💭 IoT Integration Patterns
-
-                💭 Intro to Electron.js
-              activities: |
-                💭 Lecture
-
-                💻 Demo
-              readings: |
-                📗 BWT: pp. 83 - 108 (Ch 4)
-
-                📗 BWT: pp. 175 - 213 (Ch 7)
-
-                🔗 [Writing Your First Electron App](https://electronjs.org/docs/tutorial/first-app)
-
-                🔗 [Electron Application Architecture](https://electronjs.org/docs/tutorial/application-architecture)
+              date: 10/06
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: JavaScript &amp; React
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
             -
               session_num: 14
               day: Thursday
-              date: 10/03
-              topics: |
-                💭 IoT Discovery & Sharing Patterns
-
-                🏗 PROJECT DAY: IoT/WoT Device
-              activities: |
-                🏗 Project
-              readings: |
-                📗 BWT: pp. 109 - 174 (Ch 8 - 9)
-            -
-              session_num: "-"
-              day: Saturday
-              date: 10/05
-              topics: |
-                👨🏻‍🏫 Instructor speaking
-                
-                Attend for 250 points extra credit
-              activities: |
-                🔗 [DevFest New Orleans 2019](https://devfest2019.gdgneworleans.com/)
-
-                8 AM &mdash; 5 PM<br/>Miller Hall Rm 114
-              readings: |
-                🔗 [Register Now](https://forms.gle/GNihqAGiK8aWgMZb7)
-
-                Registration is $10 &mdash; $25 (more the later you register), scholarships available
+              date: 10/08
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: FTP
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 613 - 636 (Ch 24)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+              due:
         -
           week_num: 8
           sessions:
             -
+              day: Monday
+              date: 10/12
+              due:
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
+            -
               session_num: 15
               day: Tuesday
-              date: 10/08
-              topics: |
-                💭 Network Link Technologies
-
-                💭 Packet Optical Networks
-
-                💭 Forward Error Correction (FEC)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 71 - 135 (Ch 3 - 4)
-
-                🔗 [Network Failure Prevention: Let's Get Physical](https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html)
-
-                🔗 [Network Failure Modes and Prevention: The Data Link Layer](https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html)
-            -
-              session_num: "-"
-              day: Tuesday
-              date: 10/08
-              topics: |
-                👨🏻‍🏫 Dr. Stephen Kent speaking
-                
-                Attend for 250 points extra credit
-              activities: |
-                6:30 PM (immediately after class)
-
-                Danna Center Audubon Room
-              readings: |
-                🔗 [Internet Hall of Fame page](https://www.internethalloffame.org/inductees/stephen-kent)
-
-                🔗 [Co-Authored IETF RFCs](https://www.rfc-editor.org/search/rfc_search_detail.php?pubstatus%5B%5D=Any&pub_date_type=any&author=Kent)
+              date: 10/13
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Email, SMTP, MIME &amp; POP3
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 637 - 659 (Ch 25)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+              due:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
             -
               session_num: 16
               day: Thursday
-              date: 10/10
-              topics: |
-                ✅ MIDTERM EXAM
-              activities: |
-                ✅ Exam
-              readings: |
-                Study!
+              date: 10/15
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: UDP
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 289 - 306 (Ch 11)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: assignment
+                  title: "A4: UDP Parser"
+                  due: Thu 10/22
+              due:
         -
           week_num: 9
           sessions:
             -
-              session_num: "-"
-              day: Tuesday
-              date: 10/15
-              topics: |
-                NO CLASS - FALL BREAK
-              activities: |
-              readings: |
+              day: Monday
+              date: 10/19
+              due:
+                - 
+                  type: journal
+                  title: "Week 8 Reflection"
             -
               session_num: 17
+              day: Tuesday
+              date: 10/20
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: Making UDP Requests in JavaScript
+                - 
+                  type: lab
+                  title: JavaScript & React
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
+            -
+              session_num: 18
               day: Thursday
-              date: 10/17
-              topics: |
-                🏗 PROJECT DAY: IoT/WoT Device
-
-                <small>*(Instructor out of town)*</small>
-              activities: |
-                🏗 Project
-              readings: |
-                Plan your work to be effective during the class period.
+              date: 10/22
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: TCP
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 307 - 329 (Ch 12)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: assignment
+                  title: "A5: TCP Parser"
+                  due: Thu 10/29
+              due:
+                - 
+                  type: assignment
+                  title: "A4: UDP Parser"
         -
           week_num: 10
           sessions:
             -
-              session_num: 18
-              day: Tuesday
-              date: 10/22
-              topics: |
-                🏗 PROJECT DAY:  Server API <-> IoT/WoT Device
-
-                <small>*(Instructor out of town)*</small>
-              activities: |
-                🏗 Project
-              readings: |
-                Plan your work to be effective during the class period.
+              day: Monday
+              date: 10/26
+              due:
+                - 
+                  type: journal
+                  title: "Week 9 Reflection"
             -
               session_num: 19
+              day: Tuesday
+              date: 10/27
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: TCP Transaction Flow
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
+            -
+              session_num: 20
               day: Thursday
-              date: 10/24
-              topics: |
-                🏗 PROJECT DAY:  Web Client <-> Server API
-
-                <small>*(Instructor out of town)*</small>
-              activities: |
-                🏗 Project
-              readings: |
-                Plan your work to be effective during the class period.
+              date: 10/29
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: TCP
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 307 - 329 (Ch 12)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: project
+                  title: "P3: Project Web API"
+                  due: Thu 11/12
+              due:
+                - 
+                  type: assignment
+                  title: "A5: TCP Parser"
+    -
+      month: November
+      year: 2020
+      weeks:
         -
           week_num: 11
           sessions:
             -
-              session_num: 20
-              day: Tuesday
-              date: 10/29
-              topics: |
-                🏗 Check-in & help for PROJECT DAYS
-              activities: |
-                🏗 Project
-              readings: |
+              day: Monday
+              date: 11/02
+              due:
+                - 
+                  type: journal
+                  title: "Week 10 Reflection"
             -
               session_num: 21
+              day: Tuesday
+              date: 11/03
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: demo
+                  title: Building Web-based APIs Using Express
+              readings:
+                -
+                  type: read-web
+                  title: Beginners' Guide to Understanding Node.js &amp; Express.js Fundamentals
+                  url: https://medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1
+                -
+                  type: read-web
+                  title: "Express.js: Getting Started"
+                  url: https://expressjs.com/en/starter/installing.html
+              assigned:
+              due:
+            -
+              session_num: 22
               day: Thursday
-              date: 10/31
-              topics: |
-                ✅ Midterm Exam detailed review
-
-                🎃 *Happy Halloween!*
-                
-                👻 <small>Feel free to attend class in (classroom-appropriate) costume. Bragging rights awarded for costumes related to course material.</small>
-              activities: |
-                ✅ Exam Review
-              readings: |
-    -
-      month: Nov
-      weeks:
+              date: 11/05
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: DNS
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 587 - 612 (Ch 23)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: project
+                  title: "P4: Web App Integration with API"
+                  due: Tue 12/08
+                  notes: Concurrently with P3 
+              due:
         -
           week_num: 12
           sessions:
             -
-              session_num: 22
-              day: Tuesday
-              date: 11/05
-              topics: |
-                💭 IPv4 & IPv6 Addressing
-
-                💭 Address Resolution Protocol (ARP)
-
-                💭 IPv4 & IPv6 Headers
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 139 - 219 (Ch 5 - 7)
+              day: Monday
+              date: 11/09
+              due:
+                - 
+                  type: journal
+                  title: "Week 11 Reflection"
             -
               session_num: 23
+              day: Tuesday
+              date: 11/10
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: demo
+                  title: DNS Record Inspection
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
+            -
+              session_num: 24
               day: Thursday
-              date: 11/07
-              topics: |
-
-                💭 Internet Control Message Protocol (ICMP)
-
-                💭 Routing
-
-                💭 IP Forwarding
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 221 - 288 (Ch 8 - 10)
-
-                🔗 [Network Failure Modes and Prevention: Murphy and the Network Layer](https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html)
+              date: 11/12
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: "IP: Addressing, Subnetting &amp; Supernetting"
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 139 - 173 (Ch 5)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: assignment
+                  title: "A6: IP Address Subnetter/Supernetter"
+                  due: Tue 11/19
+              due:
+                - 
+                  type: project
+                  title: "P3: Project Web API"
         -
           week_num: 13
           sessions:
             -
-              session_num: 24
-              day: Tuesday
-              date: 11/12
-              topics: |
-                💭 User Datagram Protocol (UDP)
-
-                💭 Transmission Control Protocol (TCP)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 289 - 330 (Ch 11 - 12)
+              day: Monday
+              date: 11/16
+              due:
+                - 
+                  type: journal
+                  title: "Week 12 Reflection"
             -
               session_num: 25
+              day: Tuesday
+              date: 11/17
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: IP Subnetting &amp; Supernetting
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
+            -
+              session_num: 26
               day: Thursday
-              date: 11/14
-              topics: |
-                🏗 PROJECT DAY: Instructor Q&A/Assist
-
-                <small>This is a time to get help working through
-                remaining issues on your project assignments during
-                class.</small>
-              activities: |
-                🏗 Project
-              readings: |
-                <small>Come with your questions and frustrations
-                ready.</small>
+              date: 11/19
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: "IP: Headers &amp; Fragmentation"
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 197 - 219 (Ch 7)"
+                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+              assigned:
+                - 
+                  type: assignment
+                  title: "A7: IP Parser"
+                  due: Thu 12/03
+              due:
+                - 
+                  type: assignment
+                  title: "A6: IP Address Subnetter/Supernetter"
         -
           week_num: 14
           sessions:
             -
-              session_num: 26
-              day: Tuesday
-              date: 11/19
-              topics: |
-                💭 Multiplexing & Sockets
-
-                💭 Dynamic Host Configuration Protocol (DHCP)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 331 - 348 (Ch 13)
-
-                📘 TIN: pp. 563 - 586 (Ch 22)
+              day: Monday
+              date: 11/23
+              due:
+                - 
+                  type: journal
+                  title: "Week 13 Reflection"
             -
-              session_num: 27
+              day: Tuesday
+              date: 11/24
+              notes: NO CLASS - Thanksgiving Holidays
+            -
               day: Thursday
-              date: 11/21
-              topics: |
-                💭 The Domain Name System (DNS)
-
-                💭 File Transfer Protocol (FTP)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 587 - 636 (Ch 23 - 24)
+              date: 11/26
+              notes: NO CLASS - Thanksgiving Holidays
+    -
+      month: December
+      year: 2020
+      weeks:
         -
           week_num: 15
           sessions:
             -
-              session_num: 28
+              session_num: 27
               day: Tuesday
-              date: 11/26
-              topics: |
-                💭 Simple Mail Transfer Protocol (SMTP) & Email
-
-                💭 Hypertext Transfer Protocol (HTTP)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 637 - 684 (Ch 25 - 26)
-
-                🔗 [Network Failure Modes and Prevention: Application Layers](https://www.computerworld.com/article/2545395/network-failure-modes-and-prevention--application-layers.html)
+              date: 12/01
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: IP Header Parsing &amp; Packet Fragmentation
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+              due:
             -
-              session_num: "-"
+              session_num: 28
               day: Thursday
-              date: 11/28
-              topics: |
-                **NO CLASS**
-
-                🦃 *Happy Thanksgiving!*
-              activities: |
-              readings: |
-    -
-      month: Dec
-      weeks:
+              date: 12/03
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Concurrency &amp; Other Problems in Networked/Distributed Systems
+              readings:
+                -
+                  type: read-web
+                  title: Network Failure Modes &amp; Prevention
+                  url: https://www.computerworld.com/article/2563041/network-failure-modes-and-prevention.html
+                -
+                  type: read-web
+                  title: "Network Failure Modes &amp; Prevention: Let's Get Physical"
+                  url: https://www.computerworld.com/article/2554445/network-failure-prevention--let-s-get-physical.html
+                -
+                  type: read-web
+                  title: "Network Failure Modes &amp; Prevention: The Data Link Layer"
+                  url: https://www.computerworld.com/article/2554769/network-failure-modes-and-prevention--the-data-link-layer.html
+                -
+                  type: read-web
+                  title: "Network Failure Modes &amp; Prevention: Murphy &amp; the Network Layer"
+                  url: https://www.computerworld.com/article/2555142/network-failure-modes-and-prevention--murphy-and-the-network-layer.html
+                -
+                  type: read-web
+                  title: "Network Failure Modes &amp; Prevention: Application Layers"
+                  url: https://www.computerworld.com/article/2545395/network-failure-modes-and-prevention--application-layers.html
+              assigned:
+              due:
+                - 
+                  type: assignment
+                  title: "A7: IP Parser"
         -
           week_num: 16
           sessions:
             -
+              day: Monday
+              date: 12/07
+              due:
+                - 
+                  type: journal
+                  title: "Week 13 Reflection"
+            -
               session_num: 29
               day: Tuesday
-              date: 12/03
-              topics: |
-                💭 Secure Socket Layer (SSL)
-
-                💭 Secure Shell (SSH) Remote Access
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 685 - 703 (Ch 27)
-                
-                📘 TIN: pp. 761 - 784 (Ch 30)
-            -
-              session_num: 30
-              day: Thursday
-              date: 12/05
-              topics: |
-                💭 Network Address Translation (NAT)
-
-                💭 Firewalls
-
-                💭 IP Security (IPSEC)
-              activities: |
-                💭 Lecture
-              readings: |
-                📘 TIN: pp. 785 - 830 (Ch 31 - 33)
+              date: 12/08
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+              topics:
+                - 
+                  type: discussion
+                  title: "The TCP/IP Stack in Action: Wrapping &amp; Unwrapping Data"
+              readings:
+              assigned:
+              due:
+                - 
+                  type: project
+                  title: "P4: Web App Integration with API"
         -
           week_num: 17
           sessions:
@@ -795,16 +1148,23 @@ syllabus:
               session_num: F
               day: Thursday
               date: 12/12<br/>4:30-6:30p
-              topics: |
-                ✅ FINAL EXAM
-
-                🏗 PROJECT DEMO
-              activities: |
-                ✅ Exam
-
-                🏗 Project
+              formats:
+                -
+                  type: celebration
+                  title: Celebration!
+              topics:
+                -
+                  type: project
+                  title: PROJECT CELEBRATION & DEMO
               readings: |
-                Study!
-
-                Complete your 🏗 Project!
+                Be ready to talk about your goal and show off your project!
+                
+                Bring your favorite treat and non-alcoholic beverage.
+            -
+              day: Friday
+              date: 12/18
+              due:
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
 ---

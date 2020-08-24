@@ -52,7 +52,9 @@ layout: page
         <div class="toc-schedule">
           Month
           {% for month in page.syllabus.schedule %}
-          <a href="#schedule-month-{{month.month | downcase}}">{{month.month}}</a>
+          <a href="#schedule-month-{{month.month | downcase}}-{{month.year}}">
+            {{month.month | slice: 0, 3}}
+          </a>
           {% endfor %}
         </div>
       </li>
@@ -182,7 +184,7 @@ layout: page
     
     <a name='schedule' class='md-header-anchor '></a>
     <h2>
-      📆 SCHEDULE OF TOPICS
+      📆 COURSE SCHEDULE
     </h2>
     {% include course-schedule-with-assignments.html schedule=page.syllabus.schedule %}
 

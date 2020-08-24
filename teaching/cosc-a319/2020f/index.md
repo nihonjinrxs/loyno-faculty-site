@@ -20,7 +20,7 @@ To be successful in this course, you should have practical experience building s
 * **Assignment Specifications** (coming soon...)
 * [Our Canvas Class (requires login)](https://loyno.instructure.com/courses/946)
 * Textbooks and their companion websites
-  * 📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)
+  * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network)
   * [📙 Eloquent Javascript, 3rd Edition (2018)](https://eloquentjavascript.net/)
 * Additional/Optional Textbooks and Readings
   * [📗 Building the Web of Things, 1st Edition (2016)](https://webofthings.org/book/)
@@ -28,7 +28,8 @@ To be successful in this course, you should have practical experience building s
   * [📔 Distributed Systems, 3rd Edition (2017)](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/)
 * Languages, Tools, etc.
   * [GitHub](https://github.com/) (Create an account now, if you don't already have one!)
-  * [GitHub Student Developer Pack](https://education.github.com/pack) (Get this now, you'll want it!)
+  * [GitHub Student Developer Pack](https://education.github.com/pack) (Get this now, you'll want it! Free stuff!)
   * [Node.js](https://nodejs.org/en/) (For server applications -- We'll be using "LTS" versions consistently)
   * [React](https://reactjs.org/) (For web-browser applications)
+  * [Express](https://expressjs.com/) (For server-side web API applications)
   * [Heroku](https://heroku.com) (To deploy your project software)

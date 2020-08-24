@@ -1,66 +1,119 @@
-<p>The following schedule of topics and activities represents the best estimation of the semester schedule based on available information at the time of writing. Dates and activities are subject to change in response to needs that come up during the semester. You will be notified in class or via Blackboard about any adjustments to the schedule.</p>
+<p>The following schedule of topics and activities represents the best estimation of the semester schedule based on available information at the time of writing. Dates and activities are subject to change in response to needs that come up during the semester. You will be notified in class and/or via Canvas or text message about any adjustments to the schedule.</p>
 <table>
   <thead>
     <tr>
       <th style='text-align:center;'><strong>Week •  Session</strong></th>
       <th style='text-align:center;'><strong>Date</strong></th>
-      <th style='text-align:left;'><strong>Format &amp; Topics</strong></th>
-      <th style='text-align:left;'><strong>Readings &amp; Preparation</strong></th>
-      <th style='text-align:left;'><strong>Assigned (due)</strong></th>
+      <th style='text-align:left;'><strong>What You Need to Know</strong></th>
     </tr>
   </thead>
   <tbody>
+    {% assign last_week_rendered = 0 %}
     {% for month_block in include.schedule %}
-      {% for week in month_block.weeks %}
-      {% assign first_of_month = forloop.first %}
-        {% for session in week.sessions %}
       <tr>
-        <td style='text-align:center;'>
-          {% if first_of_month %}
-          <a name="schedule-month-{{ month_block.month | downcase }}"></a>
-          {% endif %}
-          {% if forloop.first %}
+        <td colspan="3" class="centered highlighted">
+          <a name="schedule-month-{{ month_block.month | downcase }}-{{ month_block.year }}"></a>
+          {{ month_block.month }} {{ month_block.year }}
+        </td>
+      </tr>
+      {% for week in month_block.weeks %}
+        {% if last_week_rendered != week.week_num %}
+        <tr>
+          <td colspan="3" class="centered highlighted">
             {% assign padded_week = week.week_num %}
             {% if padded_week < 10 %}
               {% assign padded_week = padded_week | prepend: '0' %}
             {% endif %}
             <a name="schedule-week-{{ padded_week }}"></a>
-          {% endif %}
-          {{ week.week_num }}&nbsp;•&nbsp;{{ session.session_num }}</td>
-        <td style='text-align:center;'>
+            Course Week {{ week.week_num }}
+          </td>
+        </tr>
+        {% assign last_week_rendered = week.week_num %}
+        {% endif %}
+        {% for session in week.sessions %}
+        <tr>
+        <td class="centered">
+          W{{ week.week_num }}&nbsp;•&nbsp;S{{ session.session_num | default: "-" }}</td>
+        <td class="centered">
           <p>{{ session.day | truncate: 3, "" }} {{ session.date }}</p>
         </td>
         <td style='text-align:left;'>
-          <p><strong>Format:</strong></p>
-          <ul>
+          {% if session.readings != null %}
+          <p class="emoji-list-header">
+            <strong>Readings &amp; Preparation:</strong>
+          </p>
+          <ul class="emoji-list">
+            {% for reading in session.readings %}
+            <li class="{{ reading.type }}">
+              <strong>
+                {% if reading.url != null %}
+                <a href="{{ reading.url }}" target="_blank">{{ reading.title }}</a>
+                {% else %}
+                {{ reading.title }}
+                {% endif %}
+              </strong>
+              {% if reading.notes != null %}
+              <br /><small>(<strong>Note:</strong> {{ reading.notes }})</small>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if session.due != null %}
+          <p class="emoji-list-header">
+            <strong>Due Today:</strong>
+          </p>
+          <ul class="emoji-list">
+            {% for due in session.due %}
+            <li class="{{ due.type }}">
+              <strong>{{ due.title }}</strong>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if session.formats != null %}
+          <p class="emoji-list-header">
+            <strong>Class Format:</strong>
+          </p>
+          <ul class="emoji-list">
             {% for format in session.formats %}
-            <li class="emoji-list {{ format.type }}">
+            <li class="{{ format.type }}">
               {{ format.title }}
             </li>
             {% endfor %}
           </ul>
-          <p><strong>Topics:</strong></p>
-          <ul>
+          {% endif %}
+          {% if session.topics != null %}
+          <p class="emoji-list-header">
+            <strong>Topics:</strong>
+          </p>
+          <ul class="emoji-list">
             {% for topic in session.topics %}
-            <li class="emoji-list {{ topic.type }}">
+            <li class="{{ topic.type }}">
               {{ topic.title }}
             </li>
             {% endfor %}
           </ul>
-        </td>
-        <td style='text-align:left;'>
-          {{ session.readings | markdownify }}
-        </td>
-        <td style='text-align:left;'>
-          {% for assignment in session.assigned %}
-          {% if assignment.url != null %}
-          <a href="{{ assignment.url }}" target="_blank" alt="View assignment details for {{ assignment.title }}">
           {% endif %}
-            <p><strong>{{ assignment.title }}</strong> ({{ assignment.due }})</p> 
-          {% if assignment.url != null %}
-          </a>
-          {% endif %}
+          {% if session.assigned != null %}
+          <p class="emoji-list-header">
+            <strong>Assigned Today:</strong>
+          </p>
+          <ul class="emoji-list">
+            {% for assignment in session.assigned %}
+            <li class="{{ assignment.type }}">
+              <strong>{{ assignment.title }}</strong>
+              <br />(due {{ assignment.due }})
+              {% if assignment.notes != null %}
+              <br /><small><strong>Note:</strong> {{ assignment.notes }}</small>
+              {% endif %}
+              </li>
           {% endfor %}
+          </ul>
+          {% endif %}
+          {% if session.notes != null %}
+          <P>{{ session.notes }}</P>
+          {% endif %}
         </td>
       </tr>
       {% endfor %}
@@ -70,12 +123,35 @@
 </table>
 
 <style>
-  li.emoji-list {
-    list-style-type: none;
+  td.centered {
+    text-align: center;
   }
-  li.emoji-list::before {
-    margin-left: -1.6rem;
-    margin-right: 0.5rem;
+  td.highlighted,
+  tr:nth-child(odd) td.highlighted {
+    background-color: #660000;
+    color: white;
+  }
+  p.emojified::before {
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0;
+  }
+  p.emoji-list-header {
+    margin-bottom: 0;
+  } 
+  .emoji-list>li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0.8em;
+    text-indent: -1.2em;
+  }
+  .emoji-list>li::before {
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    padding-left: 0.8em;
+    margin-left: -0.8em;
+    margin-right: 0;
   }
   .hello::before {
     content: '\1F44B';
@@ -97,5 +173,29 @@
   }
   .tools::before {
     content: '\1F5A5';
+  }
+  .lab::before {
+    content: '\2328';
+  }
+  .demo::before {
+    content: '\1F4BB';
+  }
+  .celebration::before {
+    content: '\1F389';
+  }
+  .assignment::before {
+    content: '\270D';
+  }
+  .read-TIN::before {
+    content: '\1F4D8';
+  }
+  .read-EJS::before {
+    content: '\1F4D9';
+  }
+  .read-web::before {
+    content: '\1F517';
+  }
+  .journal::before {
+    content: '\1F4D3';
   }
 </style>
