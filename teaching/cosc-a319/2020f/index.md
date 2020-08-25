@@ -20,7 +20,7 @@ To be successful in this course, you should have practical experience building s
 * **Assignment Specifications** (coming soon...)
 * [Our Canvas Class (requires login)](https://loyno.instructure.com/courses/946)
 * Textbooks and their companion websites
-  * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network)
+  * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270)
   * [📙 Eloquent Javascript, 3rd Edition (2018)](https://eloquentjavascript.net/)
 * Additional/Optional Textbooks and Readings
   * [📗 Building the Web of Things, 1st Edition (2016)](https://webofthings.org/book/)

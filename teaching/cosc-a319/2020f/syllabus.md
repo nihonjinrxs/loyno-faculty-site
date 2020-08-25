@@ -43,7 +43,7 @@ syllabus:
       isbn: 978-0-12-811027-0
       textbook_message: |
         **You DO need to obtain a copy of this book, at least for the semester.**
-        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via our Elsevier ScienceDirect link](https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network). If you have trouble, you can contact the library staff for help.
+        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via our Elsevier ScienceDirect link](http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270). If you have trouble, you can contact the library staff for help.
 
         This book is also available for sale online for between $70 and $90, and is a fantastic reference for this content for the future.
       isbn_url: https://isbnsearch.org/isbn/9780128110270
@@ -302,7 +302,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 1 - 30 (Ch 1)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned: 
               due:
         -
@@ -341,7 +341,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 30 - 69 (Ch 1 & 2)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
             -
@@ -504,7 +504,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 661 - 684 (Ch 26)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
                 - 
@@ -679,7 +679,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 613 - 636 (Ch 24)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
         -
@@ -708,7 +708,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 637 - 659 (Ch 25)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
                 - 
@@ -730,7 +730,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 289 - 306 (Ch 11)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: assignment
@@ -787,7 +787,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 307 - 329 (Ch 12)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: assignment
@@ -844,7 +844,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 307 - 329 (Ch 12)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: project
@@ -907,7 +907,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 587 - 612 (Ch 23)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: project
@@ -962,7 +962,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 139 - 173 (Ch 5)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: assignment
@@ -1019,7 +1019,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 197 - 219 (Ch 7)"
-                  url: https://www-sciencedirect-com.ezproxy.loyno.edu/book/9780128110270/the-illustrated-network
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: assignment
