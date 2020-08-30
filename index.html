@@ -28,34 +28,39 @@ info:
   education:
     -
       type: Ph.D. Program (ABD/Unfinished)
-      year: 
+      year: "&mdash;"
       institution: University of Maryland at College Park
       subject: Applied Mathematics, Applied Statistics &amp; Scientific Computing
     -
-      type: Cert.
+      type: Certificate (Non-credit)
+      year: 2016
+      institution: Johns Hopkins University (via Coursera)
+      subject: Executive Data Science Specialization
+    -
+      type: Certificate (Executive Education)
       year: 2010
       institution: University of Maryland at College Park
       subject: Innovation Management (Non-Credit)
     -
-      type: M.S.
+      type: Master of Science
       year: 2007
       institution: University of Maryland at College Park
       subject: Applied Mathematics &amp; Scientific Computing
     -
-      type: Grad. Cert.
+      type: Graduate Certificate
       year: 2007
       institution: University of Maryland at College Park
       subject: Computational Harmonic Analysis
     -
-      type: Grad. Cert.
+      type: Graduate Certificate
       year: 2007
       institution: University of Maryland at College Park
       subject: Scientific Computing
     -
-      type: B.S.
+      type: Bachelor of Science
       year: 2001
       institution: Loyola University New Orleans
-      subject: Mathematics &amp; Computer Science
+      subject: "Mathematics; Computer Science; minor: Japanese Studies"
   work:
     -
       organization: Loyola University New Orleans
@@ -150,10 +155,12 @@ info:
   <div class="degree">
     <div class="degree-info">
       <span class="degree-type">{{ degree.type }}</span>
-      <span class="degree-year">{{ degree.year }}</span>
-      <span class="degree-institution">{{ degree.institution }}</span>
+      <span class="degree-subject">{{ degree.subject }}</span>
     </div>
-    <div class="degree-subject">{{ degree.subject }}</div>
+    <div class="degree-info">
+      <span class="degree-institution">{{ degree.institution }}</span>
+      <span class="degree-year">{{ degree.year }}</span>
+    </div>
   </div>
   {% endfor %}
 </div>
