@@ -126,6 +126,14 @@
 .theme-base-ryan .underlined {
   text-decoration: underline;
 }
+.theme-base-ryan .page-subtitle {
+  color: #660000;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.theme-base-ryan .page ul ul {
+  margin-bottom: 0;
+}
 .theme-base-ryan .syllabus .right {
   align-self: flex-end;
   text-align: right;
@@ -191,16 +199,16 @@
 }
 .theme-base-ryan .education .degree .degree-year {
   flex: 2, 0, 33.333333%;
-  text-align: center;
+  text-align: right;
 }
 .theme-base-ryan .education .degree .degree-institution {
   font-style: italic;
   flex: 3, 0, 50%;
-  text-align: right;
 }
 .theme-base-ryan .education .degree .degree-subject {
   font-style: italic;
   font-weight: bold;
+  text-align: right;
 }
 .theme-base-ryan .work {
   display: flex;
