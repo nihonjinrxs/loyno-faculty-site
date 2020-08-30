@@ -465,7 +465,7 @@ syllabus:
                   title: "Week 3 Reflection"
             -
               session_num: 7
-              day: Thursday
+              day: Tuesday
               date: 09/15
               formats:
                 - 
@@ -598,7 +598,7 @@ syllabus:
           sessions:
             -
               session_num: 12
-              day: Tuesday
+              day: Thursday
               date: 10/01
               formats:
                 - 
