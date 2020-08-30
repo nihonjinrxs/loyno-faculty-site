@@ -4,6 +4,18 @@ layout: default
 
 <div class="page">
   <a name="title" class='md-header-anchor'></a>
-  <h1 class="page-title">{{ page.title }}</h1>
+  <h1 class="page-title">
+    {% if page.subtitle-above == true %}
+    {% if page.subtitle != nil %}
+    <span class="page-subtitle">{{ page.subtitle }}</span><br />
+    {% endif %}
+    {% endif %}
+    {{ page.title }}
+    {% if page.subtitle-above == nil or page.subtitle-above == false %}
+    {% if page.subtitle != nil %}
+    <br /><span class="page-subtitle">{{ page.subtitle }}</span>
+    {% endif %}
+    {% endif %}
+  </h1>
   {{ content }}
 </div>
