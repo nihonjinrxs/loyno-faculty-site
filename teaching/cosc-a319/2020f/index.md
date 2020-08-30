@@ -17,7 +17,7 @@ To be successful in this course, you should have practical experience building s
 
 * **[Read the Syllabus!](./syllabus)**
 * **[Course Project](./project)**
-* **Assignment Specifications** (coming soon...)
+* **[Assignment Specifications](./assignments)**
 * [Our Canvas Class (requires login)](https://loyno.instructure.com/courses/946)
 * Textbooks and their companion websites
   * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270)
