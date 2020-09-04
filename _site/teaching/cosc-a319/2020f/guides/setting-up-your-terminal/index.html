@@ -11,7 +11,7 @@
 
   <title>
     
-      404: Page not found &middot; Ryan Bensussan Harvey
+      Setting Up Your Terminal &middot; Ryan Bensussan Harvey
     
   </title>
 
@@ -279,9 +279,50 @@
       </div>
 
       <div class="container content">
-        <div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/~rharvey/">Head back home</a> to try finding it again.</p>
+        <div class="post">
+  <h1 class="post-title">Setting Up Your Terminal</h1>
+  <span class="post-date"></span>
+  <ul>
+  <li><a href="#windows-command-shells">Windows Command Shells</a></li>
+  <li><a href="#terminal-options-for-macos">Terminal Options for macOS</a></li>
+  <li><a href="#terminal-options-for-linux">Terminal Options for Linux</a></li>
+</ul>
+
+<p>We’ll be working at the ommand line a lot. Let’s make sure your tools are going to serve you well.</p>
+
+<h2 id="windows-command-shells">Windows Command Shells</h2>
+
+<p>If you’re using Windows, you may want to install a better command line terminal. One that works quite well and has lots of good features, including support for multiple tabs of terminals, and terminals of different types (cmd, PowerShell, git bash, Windows Subsystem for Linux), shortcut keys, and more, is <a href="https://cmder.net">Cmder</a>. It comes as a zip file that you can unzip to your home directory or desktop and run from there.</p>
+
+<p>Once you install it, you may want to go through the settings and configure things. A few settings I modified:</p>
+
+<ul>
+  <li>Bumped up the font size and selected my favorite console font (<strong>Fira Code</strong>) from <strong>General &gt; Fonts</strong> settings area</li>
+  <li>Selected <strong>Show status bar</strong> in the <strong>Features &gt; Status bar</strong> settings area</li>
+  <li>Went through the color schemes in  <strong>Features &gt; Colors</strong> and chose my favorite (<strong>&lt; Tomorrow Night Bright &gt;</strong>)</li>
+  <li>Turned on <strong>Start selection with Shift+Arrow</strong> in the <strong>Keys &amp; Macro &gt; Mark/Copy</strong> area</li>
+</ul>
+
+<p>In addition, in a PowerShell tab, run the following:</p>
+
+<pre><code class="language-{PowerShell}">Install-Module -Name PSReadLine -RequiredVersion 1.2 -Scope CurrentUser -Force -SkipPublisherCheck
+</code></pre>
+
+<h2 id="terminal-options-for-macos">Terminal Options for macOS</h2>
+
+<p>The Mac terminal is pretty good. However, if you’re looking for something better, I’ve found <a href="https://iterm2.com/">iTerm2 for macOS</a> to offer a number of useful features as well.</p>
+
+<h2 id="terminal-options-for-linux">Terminal Options for Linux</h2>
+
+<p>On most Linux distributions with a graphical user interface, the baseline terminal will be fine. However, if you want to be able to setup single-window multi-terminal layouts and re-order terminal tabs, etc., take a look at <a href="https://gnometerminator.blogspot.com/p/introduction.html">Gnome Terminator</a>.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+  </ul>
 </div>
 
       </div>

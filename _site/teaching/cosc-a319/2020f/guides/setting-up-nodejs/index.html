@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Setting Up and Working with Node.js &middot; Ryan Bensussan Harvey
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/~rharvey/public/css/poole.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/syntax.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/lanyon.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/custom.css">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.loyno.edu/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.loyno.edu/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.loyno.edu/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.loyno.edu/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.loyno.edu/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.loyno.edu/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.loyno.edu/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.loyno.edu/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.loyno.edu/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.loyno.edu/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.loyno.edu/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://www.loyno.edu/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.loyno.edu/favicon-16x16.png">
+  <!-- link rel="manifest" href="./manifest.json" -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.loyno.edu/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-ryan sidebar-overlay">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" >
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Information about Ryan's teaching, research and computer science education work.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/~rharvey/">Home</a>
+
+     
+    
+     
+     
+       
+         
+       
+     
+       
+     
+       
+     
+       
+        
+          <a  class="sidebar-nav-item" 
+              href="/~rharvey/blog/">
+            Blog
+          </a>
+         
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+    
+
+    <p class="sidebar-nav-item sidebar-nav-heading">Teaching</p>
+     
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+        
+          <a  class="sidebar-nav-item level-2" 
+              href="/~rharvey/teaching/cosc-a319/">
+            <i class="fa fa-angle-right"></i>
+            <p>COSC A319 Internet Technologies</p>
+          </a>
+         
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+        
+          <a  class="sidebar-nav-item level-2" 
+              href="/~rharvey/teaching/cosc-a451/">
+            <i class="fa fa-angle-right"></i>
+            <p>COSC A451 Software Engineering</p>
+          </a>
+         
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+     
+       
+    
+
+    <div class="sidebar-nav-item sidebar-nav-heading">
+      <a href="">
+        <small>
+          <i class="fa fa-code-fork"></i> Fork this site on GitHub
+        </small>
+      </a>
+    </div>
+    <span class="sidebar-nav-item">
+      <small>
+        Site v1.2.1, updated 09/04/2020
+      </small>
+    </span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2020 Ryan B. Harvey. All rights reserved.
+    </p>
+    <small>
+      <p>
+        The contents of this communication are the sole responsibility of Ryan B. Harvey and do not necessarily represent the opinions or policies of Loyola University New Orleans.
+      </p>
+    </small>
+  </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/~rharvey/" title="Home">Ryan Bensussan Harvey</a>
+            <small>Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Setting Up and Working with Node.js</h1>
+  <span class="post-date"></span>
+  <ul>
+  <li><a href="#but-first">But first…</a></li>
+  <li><a href="#supporting-multiple-versions-of-nodejs-via-nvm">Supporting multiple versions of Node.js via nvm</a></li>
+  <li><a href="#our-baseline-nodejs-version">Our baseline Node.js version</a></li>
+  <li><a href="#installing-nvm-and-nodejs">Installing nvm and Node.js</a>
+    <ul>
+      <li><a href="#windows">Windows</a></li>
+      <li><a href="#linux-and-macos">Linux and macOS</a></li>
+    </ul>
+  </li>
+  <li><a href="#selecting-which-nodejs-version-to-use">Selecting Which Node.js Version to Use</a></li>
+  <li><a href="#running-the-nodejs-repl">Running the Node.js REPL</a></li>
+</ul>
+
+<p>You’ll want to get setup to work with Node.js quite soon. This how-to will provide instructions for doing that on both Windows and on Mac/Linux.</p>
+
+<h2 id="but-first">But first…</h2>
+
+<p>Because we’ll be doing a lot of work at the command line, you may want to look at <a href="./setting-up-your-terminal">Setting Up Your Terminal</a> before starting here.</p>
+
+<h2 id="supporting-multiple-versions-of-nodejs-via-nvm">Supporting multiple versions of Node.js via nvm</h2>
+
+<p>Languages evolve over time, and JavaScript is no different. Because of that, we will occasionally want to upgrade the version of the language implementation we’re using. That can be frustrating if you install using the baseline installer. Instead we’ll use a tool called <code class="language-plaintext highlighter-rouge">nvm</code> (and it’s counterpart <code class="language-plaintext highlighter-rouge">nvm-windows</code>) to install our starting point for Node.js, allowing us an easy way to install and manage the versions of the language we work with.</p>
+
+<h2 id="our-baseline-nodejs-version">Our baseline Node.js version</h2>
+
+<p>In the course, we’ll try to stick to the latest release of the long-term support (LTS) major version of Node.js. The release cycle for Node.js has several release lines. The LTS release line ensures stability first, but also implements important bug fixes and security patches as they are available. Unlike the “Current” version line, however, the LTS version line does not attempt to integrate new, bleeding edge features that may still be under standards discussion or may not yet have a stable implemetation. At the time of writing, Node.js 12.18.3 is the latest LTE release, and 14.9.0 is the latest Current release.</p>
+
+<h2 id="installing-nvm-and-nodejs">Installing nvm and Node.js</h2>
+
+<p>Here, I’ll walk you through installing <code class="language-plaintext highlighter-rouge">nvm</code> (or <code class="language-plaintext highlighter-rouge">nvm-windows</code>) and then using that to install the latest LTS Node.js version.</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>On Windows, you’ll first want to download <a href="https://github.com/coreybutler/nvm-windows/releases">the latest release of <code class="language-plaintext highlighter-rouge">nvm-windows</code></a>, selecting the <code class="language-plaintext highlighter-rouge">nvm-setup.zip</code> file. Once downloaded, unzip that file to get an executable installer <code class="language-plaintext highlighter-rouge">nvm-setup.exe</code>. Run that installer and follow the prompts, accepting the default values along the way.</p>
+
+<p>Then, run either <code class="language-plaintext highlighter-rouge">cmd</code> as Adminstrator (possibly using Cmder), and check that <code class="language-plaintext highlighter-rouge">nvm</code> is working:</p>
+
+<pre><code class="language-{cmd}">&gt; nvm list
+
+No installations recognized.
+</code></pre>
+
+<p>To see available Node.js versions you can install, use:</p>
+
+<pre><code class="language-{cmd}">&gt; nvm list available
+
+|   CURRENT    |     LTS      |  OLD STABLE  | OLD UNSTABLE |
+|--------------|--------------|--------------|--------------|
+|    14.9.0    |   12.18.3    |   0.12.18    |   0.11.16    |
+|    14.8.0    |   12.18.2    |   0.12.17    |   0.11.15    |
+|    14.7.0    |   12.18.1    |   0.12.16    |   0.11.14    |
+|    14.6.0    |   12.18.0    |   0.12.15    |   0.11.13    |
+|    14.5.0    |   12.17.0    |   0.12.14    |   0.11.12    |
+|    14.4.0    |   12.16.3    |   0.12.13    |   0.11.11    |
+|    14.3.0    |   12.16.2    |   0.12.12    |   0.11.10    |
+|    14.2.0    |   12.16.1    |   0.12.11    |    0.11.9    |
+|    14.1.0    |   12.16.0    |   0.12.10    |    0.11.8    |
+|    14.0.0    |   12.15.0    |    0.12.9    |    0.11.7    |
+|   13.14.0    |   12.14.1    |    0.12.8    |    0.11.6    |
+|   13.13.0    |   12.14.0    |    0.12.7    |    0.11.5    |
+|   13.12.0    |   12.13.1    |    0.12.6    |    0.11.4    |
+|   13.11.0    |   12.13.0    |    0.12.5    |    0.11.3    |
+|   13.10.1    |   10.22.0    |    0.12.4    |    0.11.2    |
+|   13.10.0    |   10.21.0    |    0.12.3    |    0.11.1    |
+|    13.9.0    |   10.20.1    |    0.12.2    |    0.11.0    |
+|    13.8.0    |   10.20.0    |    0.12.1    |    0.9.12    |
+|    13.7.0    |   10.19.0    |    0.12.0    |    0.9.11    |
+|    13.6.0    |   10.18.1    |   0.10.48    |    0.9.10    |
+
+This is a partial list. For a complete list, visit https://nodejs.org/download/release
+</code></pre>
+
+<p>Find the latest version in the LTS column (usually at the top), and install that:</p>
+
+<pre><code class="language-{cmd}">&gt; nvm install 12.18.3                                               
+Downloading node.js version 12.18.3 (64-bit)...                     
+Complete                                                            
+Creating C:\Users\rharvey\AppData\Roaming\nvm\temp                  
+                                                                    
+Downloading npm version 6.14.6... Complete                          
+Installing npm v6.14.6...                                           
+                                                                    
+Installation complete. If you want to use this version, type        
+                                                                    
+nvm use 12.18.3
+</code></pre>
+
+<p>Then, tell <code class="language-plaintext highlighter-rouge">nvm</code> to use that version:</p>
+
+<pre><code class="language-{cmd}">&gt; nvm use 12.18.3               
+Now using node v12.18.3 (64-bit)
+</code></pre>
+
+<p>Finally, check that you’re using that version of Node.js:</p>
+
+<pre><code class="language-{cmd}">&gt; node -v
+v12.18.3
+</code></pre>
+
+<h3 id="linux-and-macos">Linux and macOS</h3>
+
+<p>On Linux or macOS, the easiest way to install <code class="language-plaintext highlighter-rouge">nvm</code> is to just run the installation script:</p>
+
+<pre><code class="language-{bash}">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+</code></pre>
+
+<blockquote>
+  <p><strong>NOTE:</strong> It’s generally not a good idea to run arbitrary code from the Internet on your computer, which is exactly what this command is doing – the <code class="language-plaintext highlighter-rouge">curl</code> command downloads the script file, and the pipe <code class="language-plaintext highlighter-rouge">|</code> passes it directly to the <code class="language-plaintext highlighter-rouge">bash</code> shell command, executing it line by line. I’ve reviewed what this script is doing, so I’m comfortable running it and recommending that you do so. You should generally be cautious, and inspect scripts like this that you plan to run on your computer. <a href="https://github.com/nvm-sh/nvm/blob/v0.35.3/install.sh">Thankfully, this script is entirely open source, and you can inspect it as needed.</a></p>
+</blockquote>
+
+<p>Next, we’ll verify the installation using the <code class="language-plaintext highlighter-rouge">command</code> command:</p>
+
+<pre><code class="language-{bash}">$ command -v nvm
+nvm
+</code></pre>
+
+<p>Once that’s installed, we can list our available Node.js versions using <code class="language-plaintext highlighter-rouge">nvm ls</code> and the versions avaiable to install using <code class="language-plaintext highlighter-rouge">nvm ls-remote</code>. Note that the LTS versions will be marked in this list along with their LTS release codename. The LTS release codename for the version 12 line is <strong>Erbium</strong>.</p>
+
+<p>Find the release version that is marked as <strong>Latest LTS: Erbium</strong> (12.18.3 at the time of writing), and install that using:</p>
+
+<pre><code class="language-{bash}">$ nvm install 12.18.3
+Downloading and installing node v12.18.3...
+Downloading https://nodejs.org/dist/v12.18.3/node-v12.18.3-linux-x64.xz...
+################################################################################100%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v12.18.3 (npm v6.14.6)
+</code></pre>
+
+<p>Finally, check that you’re using the expected node version:</p>
+
+<pre><code class="language-{bash}">$ node -v
+v12.18.3
+</code></pre>
+
+<h2 id="selecting-which-nodejs-version-to-use">Selecting Which Node.js Version to Use</h2>
+
+<p>There are a few ways to select which Node.js version to use.</p>
+
+<p>First, to select manually, you can do <code class="language-plaintext highlighter-rouge">nvm use &lt;version_number&gt;</code>.</p>
+
+<p>However, it’s usually a good idea to have the version we expect tied to our project. To do this, we can create a new file <code class="language-plaintext highlighter-rouge">.nvmrc</code> in the root of the project repository with only the version number in it. If that is present, you can do <code class="language-plaintext highlighter-rouge">nvm use</code> in the project directory, and nvm will read the version from that file.</p>
+
+<h2 id="running-the-nodejs-repl">Running the Node.js REPL</h2>
+
+<p>As you work through things, you’ll want to experiment with JavaScript statements. To do that, you can run <code class="language-plaintext highlighter-rouge">node</code> to get a console in your shell that accepts JavaScript statements, evaluates them, and prints the output back to the console. This is called a “Read-Evaluate-Print Loop” or “REPL”, and you’ll find that many interpreted languages provide this kind of interactive interface.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+      </div>
+      
+<hr>
+<div class="container footer">
+  Built with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> using
+  the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a>.
+</div>
+
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="https://use.fontawesome.com/263865d36b.js"></script>
+  </body>
+</html>
