@@ -1,7 +1,20 @@
 ---
 layout: post
 title: Setting Up and Working with Node.js
+tags:
+- how-to
+- cosc-a319
+- nodejs
+- nvm
 ---
+- [But first...](#but-first)
+- [Supporting multiple versions of Node.js via nvm](#supporting-multiple-versions-of-nodejs-via-nvm)
+- [Our baseline Node.js version](#our-baseline-nodejs-version)
+- [Installing nvm and Node.js](#installing-nvm-and-nodejs)
+  - [Windows](#windows)
+  - [Linux and macOS](#linux-and-macos)
+- [Selecting Which Node.js Version to Use](#selecting-which-nodejs-version-to-use)
+- [Running the Node.js REPL](#running-the-nodejs-repl)
 
 You'll want to get setup to work with Node.js quite soon. This how-to will provide instructions for doing that on both Windows and on Mac/Linux.
 

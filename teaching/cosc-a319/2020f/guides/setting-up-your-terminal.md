@@ -1,8 +1,21 @@
 ---
 layout: post
 title: Setting Up Your Terminal
+tags:
+- how-to
+- cosc-a319
+- cli
+- command line
+- terminal
+- powershell
+- cmd
+- bash
 ---
-We'll be working at the command line a lot. Let's make sure your tools are going to serve you well.
+- [Windows Command Shells](#windows-command-shells)
+- [Terminal Options for macOS](#terminal-options-for-macos)
+- [Terminal Options for Linux](#terminal-options-for-linux)
+
+We'll be working at the ommand line a lot. Let's make sure your tools are going to serve you well.
 
 ## Windows Command Shells
 
@@ -12,7 +25,7 @@ Once you install it, you may want to go through the settings and configure thing
 
 * Bumped up the font size and selected my favorite console font (**Fira Code**) from **General > Fonts** settings area
 * Selected **Show status bar** in the **Features > Status bar** settings area
-* Went through the color schemes in  **Features > Colors** and chose my favorite (**&lang;Tomorrow Night Bright&rang;**)
+* Went through the color schemes in  **Features > Colors** and chose my favorite (**< Tomorrow Night Bright >**)
 * Turned on **Start selection with Shift+Arrow** in the **Keys &amp; Macro > Mark/Copy** area
 
 In addition, in a PowerShell tab, run the following:
