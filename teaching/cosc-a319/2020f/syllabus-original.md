@@ -400,7 +400,7 @@ syllabus:
                 - 
                   type: assignment
                   title: "A1: Ethernet Parser - Basic JavaScript"
-                  due: Tue 09/15
+                  due: Tue 09/10
               due:
                 - 
                   type: project
@@ -411,42 +411,11 @@ syllabus:
               date: 09/10
               formats:
                 - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: demo
-                  title: How to do an assignment
-              readings:
-              assigned:
-              due:
-        -
-          week_num: 4
-          sessions:
-            -
-              day: Monday
-              date: 09/14
-              due:
-                - 
-                  type: journal
-                  title: "Week 3 Reflection"
-            -
-              session_num: 7
-              day: Tuesday
-              date: 09/15
-              due:
-                - 
-                  type: assignment
-                  title: "A1: Ethernet Parser - Basic JavaScript"
-              notes: NO CLASS - Cancelled due to Hurricane Sally
-            -
-              session_num: 8
-              day: Thursday
-              date: 09/17
-              formats:
-                - 
                   type: lecture
                   title: Lecture
+                - 
+                  type: lab
+                  title: Lab
               topics:
                 - 
                   type: lecture
@@ -475,12 +444,72 @@ syllabus:
                   type: read-web
                   title: "JavaScript Callback Concurrency (Pre-promises)"
                   url: https://blog.avenuecode.com/understanding-the-javascript-concurrency-model
+              assigned:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
+                  due: Tue 09/17
+              due:
+                - 
+                  type: assignment
+                  title: "A1: Ethernet Parser - Basic JavaScript"
+        -
+          week_num: 4
+          sessions:
+            -
+              day: Monday
+              date: 09/14
+              due:
+                - 
+                  type: journal
+                  title: "Week 3 Reflection"
+            -
+              session_num: 7
+              day: Tuesday
+              date: 09/15
+              formats:
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: project
+                  title: Project Specification
+                - 
+                  type: discussion
+                  title: JavaScript
+                - 
+                  type: lab
+                  title: Homework Help
+              readings:
+              assigned:
+                - 
+                  type: project
+                  title: "P1: Project Specification"
+                  due: Tue 09/24
+              due:
+            -
+              session_num: 8
+              day: Thursday
+              date: 09/17
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: HTTP and Web-based Applications
+              readings:
                 -
-                  type: read-web
-                  title: "Loupe (JavaScript event loop vizualizer)"
-                  url: http://latentflip.com/loupe/
+                  type: read-TIN
+                  title: "TIN: pp. 661 - 684 (Ch 26)"
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
         -
           week_num: 5
           sessions:
@@ -497,31 +526,17 @@ syllabus:
               date: 09/22
               formats:
                 - 
-                  type: demo
-                  title: Demo
-                - 
                   type: discussion
                   title: Discussion
+                - 
+                  type: lab
+                  title: Lab
               topics:
                 - 
-                  type: demo
-                  title: More JavaScript Asynchrony/Concurrency
-                - 
-                  type: demo
-                  title: JavaScript Debugging
-                - 
-                  type: project
-                  title: Project Specification
+                  type: lab
+                  title: Inspecting and Understanding HTTP Traffic
               readings:
               assigned:
-                - 
-                  type: assignment
-                  title: "A2: Ethernet Parser - Async Programming in JS"
-                  due: Tue 09/29
-                - 
-                  type: project
-                  title: "P1: Project Specification"
-                  due: Thu 10/01
               due:
             -
               session_num: 10
@@ -531,23 +546,24 @@ syllabus:
                 - 
                   type: lecture
                   title: Lecture
-                - 
-                  type: lab
-                  title: Lab
               topics:
                 - 
                   type: lecture
-                  title: HTTP and Web-based Applications
-                - 
-                  type: lab
-                  title: Inspecting and Understanding HTTP Traffic
+                  title: JavaScript in the Browser
               readings:
                 -
-                  type: read-TIN
-                  title: "TIN: pp. 661 - 684 (Ch 26)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  type: read-EJS
+                  title: "EJS: Ch 13 - 15"
+                  url: https://eloquentjavascript.net/
               assigned:
+                - 
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
+                  due: Thu 10/01
               due:
+                - 
+                  type: project
+                  title: "P1: Project Specification"
         -
           week_num: 6
           sessions:
@@ -564,22 +580,15 @@ syllabus:
               date: 09/29
               formats:
                 - 
-                  type: lecture
-                  title: Lecture
+                  type: demo
+                  title: Demo
               topics:
                 - 
-                  type: lecture
-                  title: JavaScript in the Browser
+                  type: demo
+                  title: Web Pages, the DOM &amp; the JS API
               readings:
-                -
-                  type: read-EJS
-                  title: "EJS: Ch 13 - 15"
-                  url: https://eloquentjavascript.net/
               assigned:
               due:
-                - 
-                  type: assignment
-                  title: "A2: Ethernet Parser - Async Programming in JS"
     -
       month: October
       year: 2020
@@ -591,38 +600,6 @@ syllabus:
               session_num: 12
               day: Thursday
               date: 10/01
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: demo
-                  title: Web Pages, the DOM &amp; the JS API
-              readings:
-              assigned:
-                - 
-                  type: assignment
-                  title: "A3: Dynamic Content in a Webpage"
-                  due: Thu 10/06
-              due:
-                - 
-                  type: project
-                  title: "P1: Project Specification"
-        -
-          week_num: 7
-          sessions:
-            -
-              day: Monday
-              date: 10/05
-              due:
-                - 
-                  type: journal
-                  title: "Week 6 Reflection"
-            -
-              session_num: 13
-              day: Tuesday
-              date: 10/06
               formats:
                 - 
                   type: lecture
@@ -655,10 +632,20 @@ syllabus:
                 - 
                   type: assignment
                   title: "A3: Dynamic Content in a Webpage"
+        -
+          week_num: 7
+          sessions:
             -
-              session_num: 14
-              day: Thursday
-              date: 10/08
+              day: Monday
+              date: 10/05
+              due:
+                - 
+                  type: journal
+                  title: "Week 6 Reflection"
+            -
+              session_num: 13
+              day: Tuesday
+              date: 10/06
               formats:
                 - 
                   type: discussion
@@ -674,6 +661,25 @@ syllabus:
                   type: lab
                   title: Homework Help
               readings:
+              assigned:
+              due:
+            -
+              session_num: 14
+              day: Thursday
+              date: 10/08
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: FTP
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 613 - 636 (Ch 24)"
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
         -

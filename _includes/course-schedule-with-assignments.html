@@ -11,7 +11,7 @@
     {% assign last_week_rendered = 0 %}
     {% for month_block in include.schedule %}
       <tr>
-        <td colspan="3" class="centered highlighted">
+        <td colspan="3" class="centered highlight-month">
           <a name="schedule-month-{{ month_block.month | downcase }}-{{ month_block.year }}"></a>
           {{ month_block.month }} {{ month_block.year }}
         </td>
@@ -19,7 +19,7 @@
       {% for week in month_block.weeks %}
         {% if last_week_rendered != week.week_num %}
         <tr>
-          <td colspan="3" class="centered highlighted">
+          <td colspan="3" class="centered highlight-week">
             {% assign padded_week = week.week_num %}
             {% if padded_week < 10 %}
               {% assign padded_week = padded_week | prepend: '0' %}
@@ -126,10 +126,15 @@
   td.centered {
     text-align: center;
   }
-  td.highlighted,
-  tr:nth-child(odd) td.highlighted {
+  td.highlight-week,
+  tr:nth-child(odd) td.highlight-week {
     background-color: #660000;
     color: white;
+  }
+  td.highlight-month,
+  tr:nth-child(odd) td.highlight-month {
+    background-color: #fad800;
+    color: #660000;
   }
   p.emojified::before {
     display: inline-block;
