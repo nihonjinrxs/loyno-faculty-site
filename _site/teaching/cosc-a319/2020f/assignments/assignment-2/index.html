@@ -18,10 +18,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="/~rharvey/public/css/poole.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/syntax.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/lanyon.css">
-  <link rel="stylesheet" href="/~rharvey/public/css/custom.css">
+  <link rel="stylesheet" href="/loyno-faculty-site/public/css/poole.css">
+  <link rel="stylesheet" href="/loyno-faculty-site/public/css/syntax.css">
+  <link rel="stylesheet" href="/loyno-faculty-site/public/css/lanyon.css">
+  <link rel="stylesheet" href="/loyno-faculty-site/public/css/custom.css">
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="https://www.loyno.edu/apple-icon-57x57.png">
@@ -60,7 +60,7 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/~rharvey/">Home</a>
+    <a class="sidebar-nav-item" href="/loyno-faculty-site/">Home</a>
 
      
     
@@ -77,10 +77,14 @@
        
         
           <a  class="sidebar-nav-item" 
-              href="/~rharvey/blog/">
+              href="/loyno-faculty-site/blog/">
             Blog
           </a>
          
+       
+     
+       
+     
        
      
        
@@ -166,7 +170,7 @@
        
         
           <a  class="sidebar-nav-item level-2" 
-              href="/~rharvey/teaching/cosc-a319/">
+              href="/loyno-faculty-site/teaching/cosc-a319/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A319 Internet Technologies</p>
           </a>
@@ -218,9 +222,13 @@
        
      
        
+     
+       
+     
+       
         
           <a  class="sidebar-nav-item level-2" 
-              href="/~rharvey/teaching/cosc-a451/">
+              href="/loyno-faculty-site/teaching/cosc-a451/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A451 Software Engineering</p>
           </a>
@@ -249,7 +257,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.2.1, updated 09/04/2020
+        Site v1.2.1, updated 09/24/2020
       </small>
     </span>
   </nav>
@@ -272,7 +280,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/~rharvey/" title="Home">Ryan Bensussan Harvey</a>
+            <a href="/loyno-faculty-site/" title="Home">Ryan Bensussan Harvey</a>
             <small>Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div></small>
           </h3>
         </div>
@@ -290,7 +298,252 @@
     Asynchronous JavaScript:<br />Ethernet Frame Data Parser
     
   </h1>
-  <p>Details coming soon…</p>
+  <ul>
+  <li><a href="#-schedule">📆 Schedule</a></li>
+  <li><a href="#background">Background</a>
+    <ul>
+      <li><a href="#ethernet-packets-ethernet-frames-and-the-inter-packet-gap">Ethernet Packets, Ethernet Frames and the Inter-packet Gap</a></li>
+    </ul>
+  </li>
+  <li><a href="#your-assignment">Your Assignment</a>
+    <ul>
+      <li><a href="#expected-output">Expected Output</a></li>
+      <li><a href="#program-structure">Program Structure</a>
+        <ul>
+          <li><a href="#a-note-on-working-with-asynchronous-events-and-streams-in-javascript">A note on working with asynchronous events and streams in JavaScript</a></li>
+          <li><a href="#getting-started-on-the-assignment">Getting started on the assignment</a></li>
+        </ul>
+      </li>
+      <li><a href="#submission-and-feedback">Submission and Feedback</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this assignment, you’ll create and export a class that attaches
+to a socket interface that presents a <code class="language-plaintext highlighter-rouge">stream.Readable</code>-compatible
+interface to read a stream of binary network data and parse out
+Ethernet frames as they occur, handling both the DIX Ethernet II
+and IEEE 802.3 formats.</p>
+
+<p>Ethernet frame addressing, being a data link layer protocol, uses a
+point-to-point addressing scheme called the media access control (MAC)
+addressing, a hardware-based addressing scheme that assigns a unique
+identifier to each network interface controller (NIC), usually available
+burned into the NIC’s firmware.</p>
+
+<h2 id="-schedule">📆 Schedule</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Assigned</td>
+      <td>Tue, Sep 22, 2020</td>
+    </tr>
+    <tr>
+      <td>Office hours</td>
+      <td><a href="[https://](https://bit.ly/mr-harvey-office-hours)">By appointment</a></td>
+    </tr>
+    <tr>
+      <td>Assignment Due</td>
+      <td>Tue, Sep 29, 2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="background">Background</h2>
+
+<h3 id="ethernet-packets-ethernet-frames-and-the-inter-packet-gap">Ethernet Packets, Ethernet Frames and the Inter-packet Gap</h3>
+
+<p>Ethernet lives on layer 2 (Data Link) of the layered network model,
+but is transmitted over layer 1 (Physical). On the Physical layer,
+Ethernet packets are transmitted over transmission media separated
+by an inter-packet gap of minimum 12 bytes (octets). When designed, this
+gap was intended to provide a delay between packets; now, however, a
+12 byte gap provides minimal time delay, and acts simply as a separation
+between packets. Because of this, in some cases, that gap is now reduced
+to 8 bytes. (In this assignment, to simplify things, we’ll only be concerned
+with an inter-packet gap of at least 12 bytes.) Inter-packet gap looks
+like idle signal, generally a high voltage level on the wire, or all <code class="language-plaintext highlighter-rouge">1</code>
+bits. You can find idle signal by searching for repeated <code class="language-plaintext highlighter-rouge">FF</code> octets.</p>
+
+<p>A new Ethernet packet is signified by a preamble of 7 bytes (octets) of
+alternating 1s and 0s, followed by a 1-byte <em>start frame delimiter (SFD)</em>
+<code class="language-plaintext highlighter-rouge">10101011</code>. In hexadecimal, this preamble and SFD sequence is
+<code class="language-plaintext highlighter-rouge">AA AA AA AA AA AA AA AB</code>.</p>
+
+<p>An Ethernet frame is the layer 2 routing portion of the packet, and begins
+immediately after the SFD.</p>
+
+<p>So, to find an Ethernet frame in a stream of data, you’ll need to first
+identify the preamble and SFD. Then, capture from the octet after the SFD
+until you see 12 or more octets of idle signal. The captured packet can
+then be trimmed of the additional idle signal and parsed. Use the frame
+check sequence to ensure that you’ve captured a complete frame.</p>
+
+<h2 id="your-assignment">Your Assignment</h2>
+
+<p>To complete this assignment, you need to write the body of the <code class="language-plaintext highlighter-rouge">parseFrames</code>
+function defined and exported from <code class="language-plaintext highlighter-rouge">index.js</code>. In addition, you’ll need to
+implement the <code class="language-plaintext highlighter-rouge">EthernetSocketProcessor</code>, an <code class="language-plaintext highlighter-rouge">EventEmitter</code> class that listens
+to a socket and parses Ethernet frames as data arrives and emits them in
+<code class="language-plaintext highlighter-rouge">data</code> events.</p>
+
+<p>This processing is inherently asychronous. Sockets generally implement the
+<code class="language-plaintext highlighter-rouge">streams.Readable</code> interface, so you can look at that class in the Node.js
+documentation to get an idea of how data will come into your class.</p>
+
+<p>Once you’ve found the frames that must be parsed, you’ll use your frame
+parser from assignment A1 to parse the fields out of the frame, so that you
+can emit a parsed JavaScript object representing the frame’s data.</p>
+
+<h3 id="expected-output">Expected Output</h3>
+
+<p>Your class should extend/implement either <code class="language-plaintext highlighter-rouge">events.EventEmitter</code> or one of the
+writable <code class="language-plaintext highlighter-rouge">stream</code> classes (which implement <code class="language-plaintext highlighter-rouge">events.EventEmitter</code> already), and
+emit ‘data’ events with the same JavaScript object structure as in Assignment A1
+(included below, inside the array, as a reminder) as the event’s message. The
+exported function in <code class="language-plaintext highlighter-rouge">index.js</code> should also capture all frames parsed along the
+way, and should return a JavaScript <code class="language-plaintext highlighter-rouge">Promise</code> object that resolves with an array
+of those parsed frame objects once the socket is closed.</p>
+
+<pre><code class="language-{text}">[
+  {
+    protocol: (either "Ethernet II" or "IEEE 802.3"),
+    header: {
+      destinationMAC: (MAC address binary value as length 6 Buffer),
+      destination: (MAC Address human-readable text string),
+      sourceMAC: (MAC address binary value as length 6 Buffer),
+      source: (MAC Address human-readable text string),
+      type: (16-bit Unsigned integer value),
+      length: (16-bit Unsigned integer value, number of payload bytes),
+      llc: { // only include if relevant to protocol
+        dsap: (Unsigned Integer),
+        ssap: (Unsigned Integer),
+        control: (Unsigned Integer)
+      },
+      snap_oui: (MAC OUI binary value as length 3 Buffer, if relevant to protocol)
+    },
+    payload: (payload data in binary format as an Buffer with appropriate length),
+    frame_check: (Integer CRC-32 frame check sequence value),
+    frame_check_valid: (Boolean, true if computed FCS matches)
+  },
+  ...
+]
+</code></pre>
+
+<h3 id="program-structure">Program Structure</h3>
+
+<p>While you must make your implementation pass automated tests that
+will only use the exported <code class="language-plaintext highlighter-rouge">parseFrames</code> function and the
+<code class="language-plaintext highlighter-rouge">EthernetSocketProcessor</code>, class you may want to add additional methods
+or classes that assist in finding, segmenting and parsing the stream data.
+Each of these functions should be well-tested (repeatably via automation),
+so that you can be confident of the accuracy and error-free quality of
+your parsing code. Each of these functions should also include relevant
+documentation <a href="https://jsdoc.app/">in JSdoc format</a> about why they exist,
+including expected inputs and outputs with data types. (Existing code
+both here and in Assignment A1 are documented using this format, and some
+documentation has already been written for you for the <code class="language-plaintext highlighter-rouge">EthernetSocketProcessor</code>
+class, which you can use as a specification for what that class should do.)</p>
+
+<p>In this repo, you will find a <code class="language-plaintext highlighter-rouge">lib</code> folder which contains several things
+that should be helpful:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ethernet</code> folder - this is where you should copy the entire assignment A1
+project directory so that you can import it as <code class="language-plaintext highlighter-rouge">ethernet</code> into your new project</li>
+  <li><code class="language-plaintext highlighter-rouge">EthernetSocketProcessor.js</code> - an empty module where you can create your
+socket processor class that emits the appropriate events.</li>
+</ul>
+
+<p>In addition to that, you’ll find the main files in the repo root containing
+helpful tests and starter code:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">index.js</code> - the starting point for your class, which should <em>only</em> import and
+export the class for use (the class should be created in its own module in <code class="language-plaintext highlighter-rouge">lib</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">index.test.js</code> - a suite of tests that will assess the correctness of your
+your implementation.</li>
+</ul>
+
+<h4 id="a-note-on-working-with-asynchronous-events-and-streams-in-javascript">A note on working with asynchronous events and streams in JavaScript</h4>
+
+<p>In this assignment, you’ll be working with binary data coming into your
+class through a mock network socket which is a subclass of the <code class="language-plaintext highlighter-rouge">stream.Readable</code>
+class in JavaScript. Data pushed over the this mock socket will be in the form
+of binary data <code class="language-plaintext highlighter-rouge">Buffer</code> objects. There are several ways to handle <code class="language-plaintext highlighter-rouge">stream</code>-based data,
+which you can learn about
+<a href="https://nodejs.org/dist/latest-v12.x/docs/api/stream.html">in the Node.js docs on <code class="language-plaintext highlighter-rouge">Stream</code></a>.</p>
+
+<p>The output of your class should be communicated by emitting JavaScript <code class="language-plaintext highlighter-rouge">events</code>.
+You can learn more about working with events
+<a href="https://nodejs.org/dist/latest-v12.x/docs/api/events.html">in the Node.js docs on <code class="language-plaintext highlighter-rouge">Events</code></a>.</p>
+
+<p>Because the output of your class will need to emit events, you may want to try
+<a href="https://eloquentjavascript.net/06_object.html">making your class subclass <code class="language-plaintext highlighter-rouge">EventEmitter</code></a>,
+and then using the event-based reading mode of the input <code class="language-plaintext highlighter-rouge">stream.Readable</code>-compatible class,
+adding listeners for relevant events to get the input data from the mock network socket.</p>
+
+<h4 id="getting-started-on-the-assignment">Getting started on the assignment</h4>
+
+<p>As with Assignment A1, in order to get started with the assignment, you’ll want
+to do the following things:</p>
+
+<ul>
+  <li>Review this assignment description in detail</li>
+  <li>Explore JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/events.html">Events and <code class="language-plaintext highlighter-rouge">EventEmitter</code></a></li>
+  <li>Explore JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/stream.html#stream_readable_streams">Readable Streams</a></li>
+  <li>Clone this repo to your computer</li>
+  <li>Read through the comments and code included for you, particularly in <code class="language-plaintext highlighter-rouge">index.js</code> and <code class="language-plaintext highlighter-rouge">lib/EthernetSocketProcessor.js</code></li>
+  <li>Copy your the contents of your Assignment A1 repo, which should now be a working ethernet frame parser
+library, into the <code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder in this repo. (You may want to exclude the <code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.vscode</code>,
+and <code class="language-plaintext highlighter-rouge">.github</code> folders from that copy, as it may confuse Visual Studio Code to have those folders at
+multiple levels of the repo.)</li>
+  <li>
+    <p>Run the following at the command line from within the project directory (use <code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing
+<code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory, to get there):</p>
+
+    <pre><code class="language-{sh}">nvm use 12.18
+npm install
+npm test
+</code></pre>
+  </li>
+</ul>
+
+<p>This assignment will also automatically check your code style for readability. To run those tests
+at your own command line, you can use:</p>
+
+<pre><code class="language-{sh}">npm run lint
+</code></pre>
+
+<h3 id="submission-and-feedback">Submission and Feedback</h3>
+
+<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">master</code> branch on the repository.
+Github Classroom will create a pull request on the repository for you, titled
+<strong>Feedback</strong>. As you push your commits on the master branch up to Github, they
+will be added to the activity on this pull request.</p>
+
+<p>In addition to the synchronous mechanism of requesting help via office hours
+appointments, this pull request will be your mechanism for asking questions and
+requesting help asynchronously during the course of this assignment. I will also
+use this pull request to provide feedback on your work. I will provide feedback on
+the completed assignment within a week of the due date of the assignment.
+If you push your code earlier than the due date, I will try to provide
+feedback as needed earlier.</p>
+
+<p>I suggest that you push your work to Github as you make commits, and that you make
+commits frequently as you work on the assignment. This way, if you have questions,
+I will be able to review your work-in-progress and give more relevant answers and
+feedback. If you have a question specific to a particular area of the code, note that
+you can add comments inline on the pull request by clicking on the <strong>Files changed</strong> tab
+of the pull request, then clicking the little blue <code class="language-plaintext highlighter-rouge">+</code> icon that appears when you hover
+over a specific line of code.</p>
+
+<p>I will do my best to respond to questions posed during the course of the assignment with
+in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
+me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Good luck, and I look forward to seeing what you create!</p>
 
 </div>
 
