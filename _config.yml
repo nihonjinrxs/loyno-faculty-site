@@ -14,10 +14,10 @@ highlighter:         'rouge'
 title:               'Ryan Bensussan Harvey'
 tagline:             "Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div>"
 description:         "Information about Ryan's teaching, research and computer science education work."
-# url:                 'https://loyno.edu/~rharvey'
+url:                 'https://loyno.edu/~rharvey'
 #baseurl:             'https://www.loyno.edu/'
-# baseurl:             '/~rharvey'
-baseurl:             '/loyno-faculty-site'
+baseurl:             '/~rharvey'
+# baseurl:             '/loyno-faculty-site'
 paginate:            10
 credits:             'Built with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 # About/contact
