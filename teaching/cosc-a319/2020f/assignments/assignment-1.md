@@ -33,7 +33,7 @@ burned into the NIC's firmware.
 ## 📆 Schedule
 
 | Assigned       | Tue, Sep 8, 2020  |
-| Office hours   | [By appointment]([https://](https://bit.ly/mr-harvey-office-hours)) |
+| Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
 | Assignment Due | Thu, Sep 10, 2020 |
 
 ## Background

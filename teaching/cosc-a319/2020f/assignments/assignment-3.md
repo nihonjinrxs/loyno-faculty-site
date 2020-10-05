@@ -14,7 +14,7 @@ and sort it in various ways.
 
 | Assigned       | Tue, Oct 6, 2020  |
 | Discussion/Lab class period | Thu, Oct 8, 2020  |
-| Office hours   | [By appointment]([https://](https://bit.ly/mr-harvey-office-hours)) |
+| Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
 | Assignment Due | Tue, Oct 13, 2020 |
 
 ## Your Assignment
