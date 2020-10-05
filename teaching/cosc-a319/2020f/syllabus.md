@@ -601,10 +601,6 @@ syllabus:
                   title: Web Pages, the DOM &amp; the JS API
               readings:
               assigned:
-                - 
-                  type: assignment
-                  title: "A3: Dynamic Content in a Webpage"
-                  due: Thu 10/06
               due:
                 - 
                   type: project
@@ -648,13 +644,10 @@ syllabus:
                   url: https://reactjs.org/docs/thinking-in-react.html
               assigned:
                 - 
-                  type: project
-                  title: "P2: Project Web Client"
-                  due: Tue 10/13
-              due:
-                - 
                   type: assignment
                   title: "A3: Dynamic Content in a Webpage"
+                  due: Tue 10/13
+              due:
             -
               session_num: 14
               day: Thursday
@@ -675,6 +668,10 @@ syllabus:
                   title: Homework Help
               readings:
               assigned:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
+                  due: Thu 10/29
               due:
         -
           week_num: 8
@@ -706,8 +703,8 @@ syllabus:
               assigned:
               due:
                 - 
-                  type: project
-                  title: "P2: Project Web Client"
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
             -
               session_num: 16
               day: Thursday
@@ -845,6 +842,9 @@ syllabus:
                   title: "P3: Project Web API"
                   due: Thu 11/12
               due:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
                 - 
                   type: assignment
                   title: "A5: TCP Parser"

@@ -15,8 +15,8 @@ As with other work in this course, I will provide feedback as I see your work, b
 The following 5 assignments, explained in detail below, constitute the course-connected portion of your project:
 
 * [P0: Project Proposal](#p0)<br /><small><strong>Start:</strong> Thu, Aug 25, 2020; <strong>Due:</strong> Tue, Sep 8, 2020</small>
-* [P1: Project Specification](#p1)<br /><small><strong>Start:</strong> Tue, Sep 15, 2020; <strong>Due:</strong> Thu, Sep 24, 2020</small>
-* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Thu, Oct 1, 2020; <strong>Due:</strong> Tue, Oct 13, 2020</small>
+* [P1: Project Specification](#p1)<br /><small><strong>Start:</strong> Tue, Sep 15, 2020; <strong>Due:</strong> Thu, Oct 1, 2020</small>
+* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Thu, Oct 8, 2020; <strong>Due:</strong> Thu, Oct 29, 2020</small>
 * [P3: Web API Server](#p3)<br /><small><strong>Start:</strong> Thu, Oct 29, 2020; <strong>Due:</strong> Thu, Nov 12, 2020</small>
 * [P4: Integration and Deployment](#p4)<br /><small><strong>Start:</strong> Thu, Nov 5, 2020; <strong>Due:</strong> Tue, Dec 8, 2020</small>
 
@@ -82,7 +82,7 @@ Building on your proposal from the first assignment, you'll break down the funct
 | Introduction                | Tue, Sep 15, 2020 |
 | Discussion/Lab Class Period | Tue, Sep 22, 2020 |
 | Office hours                | By appointment    |
-| Assignment Due              | Thu, Sep 24, 2020 |
+| Assignment Due              | Thu, Oct 1, 2020  |
 
 ### ✅ Requirements for the Assignment
 
@@ -144,10 +144,12 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction                | Thu, Oct 1, 2020  |
-| Discussion/Lab Class Period | Tue, Oct 6, 2020  |
+| Introduction                | Thu, Oct 8, 2020  |
+| Discussion/Lab Class Period | Thu, Oct 8, 2020  |
+| Discussion/Lab Class Period | Tue, Oct 20, 2020 |
+| Discussion/Lab Class Period | Tue, Oct 27, 2020 |
 | Office hours                | By appointment    |
-| Assignment Due              | Tue, Oct 13, 2020 |
+| Assignment Due              | Thu, Oct 29, 2020 |
 
 ### 🛠 The Tools
 
