@@ -4,3 +4,7 @@
   Built with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> using
   the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a>.
 </div>
+
+{% if site.site_environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
