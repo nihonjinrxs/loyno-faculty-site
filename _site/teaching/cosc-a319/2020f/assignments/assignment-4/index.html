@@ -18,10 +18,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="/loyno-faculty-site/public/css/poole.css">
-  <link rel="stylesheet" href="/loyno-faculty-site/public/css/syntax.css">
-  <link rel="stylesheet" href="/loyno-faculty-site/public/css/lanyon.css">
-  <link rel="stylesheet" href="/loyno-faculty-site/public/css/custom.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/poole.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/syntax.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/lanyon.css">
+  <link rel="stylesheet" href="/~rharvey/public/css/custom.css">
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="https://www.loyno.edu/apple-icon-57x57.png">
@@ -60,7 +60,7 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/loyno-faculty-site/">Home</a>
+    <a class="sidebar-nav-item" href="/~rharvey/">Home</a>
 
      
     
@@ -77,7 +77,7 @@
        
         
           <a  class="sidebar-nav-item" 
-              href="/loyno-faculty-site/blog/">
+              href="/~rharvey/blog/">
             Blog
           </a>
          
@@ -170,7 +170,7 @@
        
         
           <a  class="sidebar-nav-item level-2" 
-              href="/loyno-faculty-site/teaching/cosc-a319/">
+              href="/~rharvey/teaching/cosc-a319/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A319 Internet Technologies</p>
           </a>
@@ -228,7 +228,7 @@
        
         
           <a  class="sidebar-nav-item level-2" 
-              href="/loyno-faculty-site/teaching/cosc-a451/">
+              href="/~rharvey/teaching/cosc-a451/">
             <i class="fa fa-angle-right"></i>
             <p>COSC A451 Software Engineering</p>
           </a>
@@ -257,7 +257,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.2.1, updated 10/05/2020
+        Site v1.2.1, updated 10/15/2020
       </small>
     </span>
   </nav>
@@ -280,7 +280,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/loyno-faculty-site/" title="Home">Ryan Bensussan Harvey</a>
+            <a href="/~rharvey/" title="Home">Ryan Bensussan Harvey</a>
             <small>Instructor in Computer Science <div class='social-icons'><a href='https://github.com/nihonjinrxs' target='_blank' alt='GitHub account'><i class='fa fa-github'> </i></a> <a href='https://twitter.com/CodeAndData' target='_blank' alt='Twitter account'><i class='fa fa-twitter'> </i></a> <a href='https://www.linkedin.com/in/ryanbharvey' target='_blank' alt='LinkedIn account'><i class='fa fa-linkedin-square'> </i></a> <a href='http://datascientist.guru' target='_blank' alt='Professional website of Ryan B. Harvey'><i class='fa fa-globe'> </i></a></div></small>
           </h3>
         </div>
@@ -298,7 +298,369 @@
     UDP Packet Parser
     
   </h1>
-  <p>Details coming soon…</p>
+  <ul>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#-schedule">📆 Schedule</a></li>
+  <li><a href="#background">Background</a>
+    <ul>
+      <li><a href="#user-datagram-protocol-udp">User Datagram Protocol (UDP)</a></li>
+      <li><a href="#ports-and-sockets">Ports and Sockets</a></li>
+      <li><a href="#udp-packet-structure">UDP Packet Structure</a>
+        <ul>
+          <li><a href="#the-checksum-field-and-ip-pseudo-headers">The Checksum Field and IP Pseudo-headers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#your-assignment">Your Assignment</a>
+    <ul>
+      <li><a href="#expected-output">Expected Output</a></li>
+      <li><a href="#bonus-challenge-integration">Bonus Challenge: Integration</a></li>
+      <li><a href="#program-structure">Program Structure</a>
+        <ul>
+          <li><a href="#a-note-on-working-with-binary-in-javascript">A note on working with binary in JavaScript</a></li>
+          <li><a href="#getting-started-on-the-assignment">Getting started on the assignment</a></li>
+        </ul>
+      </li>
+      <li><a href="#submission-and-feedback">Submission and Feedback</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>In this assignment, you’ll create and export a function that parses
+a User Datagram Protocol (UDP) packet.</p>
+
+<h2 id="-schedule">📆 Schedule</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Assigned</td>
+      <td>Thu, Oct 15, 2020</td>
+    </tr>
+    <tr>
+      <td>Office hours</td>
+      <td><a href="https://bit.ly/mr-harvey-office-hours">By appointment</a></td>
+    </tr>
+    <tr>
+      <td>Discussion/Lab</td>
+      <td>Tue, Oct 20, 2020</td>
+    </tr>
+    <tr>
+      <td>Assignment Due</td>
+      <td>Thu, Oct 22, 2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="background">Background</h2>
+
+<h3 id="user-datagram-protocol-udp">User Datagram Protocol (UDP)</h3>
+
+<p>UDP is a Transport layer protocol, operating on layer 4 of the layered
+network model, and is often found encapsulated as the payload of Internet
+Protocol version 4 (IPv4) or Internet Protocol version 6 (IPv6) packets.</p>
+
+<p>UDP is a simpler protocol than its sibling protocol TCP, which we will
+cover later in the course, as it provides no guarantees that a packet
+reaches its destination. It is often used for data that is real-time,
+or that loses value if it arrives later than intended.</p>
+
+<p>In addition to its current uses, it is used as the basis for <a href="https://datatracker.ietf.org/doc/draft-ietf-quic-transport/?include_text=1">a new proposed
+Transport layer protocol QUIC</a>
+(whose packets are encapsulated within UDP datagrams). QUIC is in turn
+<a href="https://datatracker.ietf.org/doc/draft-ietf-quic-http/?include_text=1">proposed as the basis for the new version of the HyperText Transfer Protocol,
+HTTP/3</a>.</p>
+
+<blockquote>
+  <p>NOTE: This is an example of the Internet standards process in action, as these
+standards, currently having <strong>Internet Draft</strong> status, are currently being
+vetted and implemented. You can find various documents and email archives
+regarding the decisions being made on these standards at <a href="https://datatracker.ietf.org/wg/quic/documents/">the QUIC working
+group home on IETF.org</a>.</p>
+</blockquote>
+
+<h3 id="ports-and-sockets">Ports and Sockets</h3>
+
+<p>Addresses on the Transport layer are called ports. Ports are
+16-bit (2-byte) unsigned integer values (between 0 and 65535),
+and address processes on a host. (Recall that host-level
+addressing is handled at the Network layer using the Internet
+Protocol’s addressing schemes – versions 4 and 6.)</p>
+
+<p>Although ports are represented as simple unsigned integer
+values, all ports are not the same. Port numbers are managed
+by the Internet Assigned Numbers Authority (IANA) in the
+<a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml"><em>Service Name and Transport Protocol Port Numbers Registry</em></a>.
+There are three classes of ports:</p>
+
+<ul>
+  <li>Well-known ports (0 - 1023): assigned and controlled</li>
+  <li>Registered ports (1024 - 49151): not assigned or controlled,
+but can be <a href="https://www.iana.org/form/ports-services">registered with IANA</a>
+by organizations/entities to prevent duplication</li>
+  <li>Dynamic ports (49152 - 65535): used as temporary or
+private ports; not assigned, controlled or registered</li>
+</ul>
+
+<p>You will often make use of several of the well-known ports:</p>
+
+<ul>
+  <li>20 &amp; 21 - file transfer protocol (FTP), data &amp; control</li>
+  <li>22 - secure shell (SSH) remote server access</li>
+  <li>25 - SMTP email transport</li>
+  <li>53 - domain name service (DNS)</li>
+  <li>67 &amp; 68 - DHCP server &amp; client, likely used by your computer to
+find an available IP address to use on your local network</li>
+  <li>80 - HTTP, used for web pages and web-based communications</li>
+  <li>110 - POP3, email access</li>
+  <li>115 - SFTP, secure FTP using Secure Sockets Layer (SSL) encryption</li>
+  <li>143 - IMAP email access</li>
+  <li>443 - HTTPS, secure HTTP using Secure Sockets Layer (SSL) encryption</li>
+</ul>
+
+<p>In addition, if you use a database, you may also run into
+vendor registered ports, for example:</p>
+
+<ul>
+  <li>1433 - default connection port for MS SQL Server processes</li>
+  <li>3306 - default connection port for MySQL server processes</li>
+  <li>5432 - default connection port for PostgreSQL server processes</li>
+  <li>6379 - default connection port for Redis server processes</li>
+  <li>27017 - default connection port for MongoDB server processes</li>
+</ul>
+
+<p>When combined with an IP address to address a specific process
+on a specific host, the combination of port and IP address is
+called a socket. A socket is an abstract concept representing
+the address of a process on a host, and many programming language
+standard libraries have socket abstractions that you can use
+when building software.</p>
+
+<h3 id="udp-packet-structure">UDP Packet Structure</h3>
+
+<p>The packet structure of a UDP packet involves a fixed-length
+8-byte header containing four 2-byte fields:</p>
+
+<ul>
+  <li>the source port (16-bit unsigned integer)</li>
+  <li>the destination port (16-bit unsigned integer)</li>
+  <li>the full length in bytes of the packet, including header (16-bit unsigned integer)</li>
+  <li>a checksum on the packet (16-bit unsigned integer; see below for details)</li>
+</ul>
+
+<p>The payload, called the Datagram Data, if included, can be up
+to 65353 bytes. However, practically, the maximum achievable
+packet length is much smaller and is determined by the send and
+receive buffer capacity of the end systems, which are often set
+to around 8000 bytes.</p>
+
+<pre><code class="language-{text}">UDP Packet Structure
+|----header-----|---payload-. . .-----------|
+0       4       8
+----------------------------. . .------------
+| ' ' ' | ' ' ' | ' ' ' ' ' . . . ' ' ' ' ' |
+| 2B| 2B| 2B| 2B|     0 to 65345 bytes      |
+|Src|Dst|Len|Chk|       Datagram Data       |
+|Prt|Prt|   |sum| (in practice, max ~8000B) |
+----------------------------. . .------------
+</code></pre>
+
+<h4 id="the-checksum-field-and-ip-pseudo-headers">The Checksum Field and IP Pseudo-headers</h4>
+
+<p>The checksum field is a special case in UDP. A product of the long
+period during development of the internet when the Network and
+Transport layer protocols were not distinct, the checksum of a
+UDP packet is calculated on an augmented version of the packet
+that includes a <em>pseudo-header</em> of data from the encapsulating
+IP packet. Because the fields in the IPv4 and IPv6 packet headers
+differ significantly, so also does the UDP IPv4 pseudo-header from
+the UDP IPv6 pseudo-header. Both pseudo-headers include the
+host addresses for source and destination, as well as the protocol
+ID for the encapsulated packet (UDP for IPv4, but could be different
+for IPv6), and the UDP length value from the IP packet header. Both
+pseudo-headers also employ a filler of all zeros to align data
+to 4-byte boundaries.</p>
+
+<p>The UDP IPv4 and UDP IPv6 pseudo-header structures are included below.
+Byte 9 in the IPv4 pseudo-header, labeled <code class="language-plaintext highlighter-rouge">Pr</code> is the <em>Protocol</em> field
+of the IPv4 header. Similarly, byte 39 of the IPv6 pseudo-header,
+labeled <code class="language-plaintext highlighter-rouge">N H</code> is the <em>Next Header</em> field of the IPv6 packet header.
+These fields are 1 byte each, and take unsigned 8-bit integer values
+identifying the protocol of the encapsulated packet. Those <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol
+numbers</a>
+are also managed by IANA. The protocol number for UDP is 17.</p>
+
+<pre><code class="language-{text}">UDP IPv4 Pseudo-header Structure
+0           4           8          12
+-------------------------------------
+|  '  '  '  |  '  '  '  |  '  '  '  |
+|  4 bytes  |  4 bytes  |1B|1B| 2B  |
+|   Source  |    Dest   |  |Pr| UDP |
+|    IPv4   |    IPv4   |0s|  | Len |
+-------------------------------------
+</code></pre>
+
+<pre><code class="language-{text}">UDP IPv6 Pseudo-header Structure
+0       4       8      12      16      20      24      28      32      36      40
+---------------------------------------------------------------------------------
+| ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' |
+|           16 bytes            |           16 bytes            |  UDP  |     | |
+|      Source IPv6 Address      |   Destination IPv6 Address    |  ULP  |     |N|
+|                               |                               |  Len  | 0s  |H|
+---------------------------------------------------------------------------------
+</code></pre>
+
+<p>The relevant pseudo-header is attached at the beginning of the packet,
+before the UDP header, and the checksum field of the UDP header is
+zero-filled. Using that data, the checksum is then calculated as the
+16-bit one’s compliment of the one’s compliment sum of the combined
+data.</p>
+
+<p>You can use <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">the <code class="language-plaintext highlighter-rouge">createChecksum</code> function of the <code class="language-plaintext highlighter-rouge">raw_sockets</code> Node.js
+package</a>
+to compute the proper checksum for the data.</p>
+
+<h2 id="your-assignment">Your Assignment</h2>
+
+<p>To complete this assignment, you need to write the body of the <code class="language-plaintext highlighter-rouge">parse</code>
+function defined and exported from <code class="language-plaintext highlighter-rouge">index.js</code>. You do not need to worry
+about asynchronous operations for this – just be able to parse the
+incoming byte <code class="language-plaintext highlighter-rouge">Buffer</code>(s) using the UDP protocol.</p>
+
+<h3 id="expected-output">Expected Output</h3>
+
+<p>Your function should return a JavaScript object with the fields and
+structure specified below. Expected data types and descriptions are
+included in parentheses.</p>
+
+<pre><code class="language-{text}">{
+  protocol: "UDP",
+  header: {
+    destination_port: (16-bit Unsigned integer value),
+    source_port: (16-bit Unsigned integer value),
+    length: (16-bit Unsigned integer value, number of total packet bytes),
+    checksum: (16-bit 1's compliment checksum including IP pseudo-header)
+  },
+  pseudo_header: {
+    pseudo_header_protocol: ("IPv4" or "IPv6"),
+    source_ip: (IPv4 or IPv6 address),
+    destination_ip: (IPv4 or IPv6 address),
+    protocol: (Unsigned integer value protocol identifier),
+    length: (UDP length)
+  },
+  payload: (payload data in binary format as an Buffer with appropriate length),
+  checksum_valid: (boolean, true if checksum is valid for data in packet)
+}
+</code></pre>
+
+<h3 id="bonus-challenge-integration">Bonus Challenge: Integration</h3>
+
+<p>Once this is complete and passing tests, copy this project into a new folder <code class="language-plaintext highlighter-rouge">lib/udp</code> in
+your Assignment A2 project (similar to what you did with the Assignment A1 code in the
+<code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder). Then, use this to parse the payload from UDP packets found by your
+Assignment 2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
+object structure above instead.</p>
+
+<p>Note that you’ll need to construct a couple dummy Ethernet frames that contain UDP
+data. The simplest way to do this is just to capture a few packets on your computer. If
+that’s too difficult, you can just generate it by following the frame and packet formats.</p>
+
+<h3 id="program-structure">Program Structure</h3>
+
+<p>While you must make your implementation pass automated tests that
+will only use the exported <code class="language-plaintext highlighter-rouge">parse</code> function, you will likely want
+to create several additional functions to help with parsing the data.
+Each of these functions should be well-tested (repeatably via automation),
+so that you can be confident of the accuracy and error-free quality of
+your parsing code. Each of these functions should also include relevant
+documentation <a href="https://jsdoc.app/">in JSdoc format</a> about why they exist,
+including expected inputs and outputs with data types.</p>
+
+<p>In this repo, you will find a <code class="language-plaintext highlighter-rouge">lib</code> folder which contains several things
+that should be helpful:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">udp.js</code> file - this is where you should put the protocol-specific
+parsing code you write</li>
+</ul>
+
+<h4 id="a-note-on-working-with-binary-in-javascript">A note on working with binary in JavaScript</h4>
+
+<p>In this assignment (as in prior assignments in this course), you’ll be
+working with binary data in JavaScript. The interface for this work
+will almost always be the <code class="language-plaintext highlighter-rouge">Buffer</code> class and its subclasses. Get to know
+the <code class="language-plaintext highlighter-rouge">Buffer</code> class as soon as possible.</p>
+
+<p>In particular, you’ll need to be very familiar with the methods to read
+various length unsigned integers, including the little endian (LE) and
+big endian (BE) variants and how to choose which variant you need, and the
+<code class="language-plaintext highlighter-rouge">subarray</code> method, as well as the typed subclasses of <code class="language-plaintext highlighter-rouge">Buffer</code>.</p>
+
+<h4 id="getting-started-on-the-assignment">Getting started on the assignment</h4>
+
+<p>As with Assignment A1, in order to get started with the assignment, you’ll want
+to do the following things:</p>
+
+<ul>
+  <li>Review this assignment description in detail, particularly the UDP packet structure and
+the notes about checksum calculation oddities</li>
+  <li>Explore JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html">Buffer</a></li>
+  <li>Explore the <code class="language-plaintext highlighter-rouge">raw_socket</code> library’s <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">createChecksum</a> function</li>
+  <li>Clone this repo to your computer</li>
+  <li>Read through the comments and code included for you, particularly in <code class="language-plaintext highlighter-rouge">index.js</code> and <code class="language-plaintext highlighter-rouge">lib/EthernetSocketProcessor.js</code></li>
+  <li>Copy your the contents of your Assignment A1 repo, which should now be a working ethernet frame parser
+library, into the <code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder in this repo. (You may want to exclude the <code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.vscode</code>,
+and <code class="language-plaintext highlighter-rouge">.github</code> folders from that copy, as it may confuse Visual Studio Code to have those folders at
+multiple levels of the repo.)</li>
+  <li>
+    <p>Run the following at the command line from within the project directory (use <code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing
+<code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory, to get there):</p>
+
+    <pre><code class="language-{sh}">nvm install 12.19
+nvm use 12.19
+npm install
+npm test
+</code></pre>
+  </li>
+</ul>
+
+<p>This assignment will also automatically check your code style for readability. To run those tests
+at your own command line, you can use:</p>
+
+<pre><code class="language-{sh}">npm run lint
+</code></pre>
+
+<h3 id="submission-and-feedback">Submission and Feedback</h3>
+
+<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">master</code> branch on the repository.
+Github Classroom will create a pull request on the repository for you, titled
+<strong>Feedback</strong>. As you push your commits on the master branch up to Github, they
+will be added to the activity on this pull request.</p>
+
+<p>In addition to the synchronous mechanism of requesting help via office hours
+appointments, this pull request will be your mechanism for asking questions and
+requesting help asynchronously during the course of this assignment. I will also
+use this pull request to provide feedback on your work. I will provide feedback on
+the completed assignment within a week of the due date of the assignment.
+If you push your code earlier than the due date, I will try to provide
+feedback as needed earlier.</p>
+
+<p>I suggest that you push your work to Github as you make commits, and that you make
+commits frequently as you work on the assignment. This way, if you have questions,
+I will be able to review your work-in-progress and give more relevant answers and
+feedback. If you have a question specific to a particular area of the code, note that
+you can add comments inline on the pull request by clicking on the <strong>Files changed</strong> tab
+of the pull request, then clicking the little blue <code class="language-plaintext highlighter-rouge">+</code> icon that appears when you hover
+over a specific line of code.</p>
+
+<p>I will do my best to respond to questions posed during the course of the assignment with
+in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
+me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Good luck, and I look forward to seeing what you create!</p>
 
 </div>
 
@@ -309,6 +671,19 @@
   Built with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> using
   the <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon theme</a>.
 </div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-211408-6', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
 
     </div>
 
