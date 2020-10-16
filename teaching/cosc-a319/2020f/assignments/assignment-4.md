@@ -291,6 +291,13 @@ to do the following things:
   npm install
   npm test
   ```
+  
+During development, you may wish to run the tests in _watch_ mode, so that each time you save a file,
+the tests that file affects will run. To do this, you can use:
+
+```{sh}
+npm test -- --watch
+```
 
 This assignment will also automatically check your code style for readability. To run those tests
 at your own command line, you can use:
@@ -301,9 +308,9 @@ npm run lint
 
 ### Submission and Feedback
 
-You must submit your changes as commits to the `master` branch on the repository.
+You must submit your changes as commits to the `main` branch on the repository.
 Github Classroom will create a pull request on the repository for you, titled
-**Feedback**. As you push your commits on the master branch up to Github, they
+**Feedback**. As you push your commits on the main branch up to Github, they
 will be added to the activity on this pull request.
 
 In addition to the synchronous mechanism of requesting help via office hours
