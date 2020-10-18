@@ -338,8 +338,8 @@ included in parentheses.
 
 Once this is complete and passing tests, copy this project into a new folder `lib/tcp` in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
-`lib/ethernet` folder). Then, use this to parse the payload from UDP packets found by your
-Assignment 2 async parser, and replace the `payload` key's current `Buffer` value with the
+`lib/ethernet` folder). Then, use this to parse the payload from TCP packets found by your
+Assignment A2 async parser, and replace the `payload` key's current `Buffer` value with the
 object structure above instead.
 
 Note that you'll need to construct a couple dummy Ethernet frames that contain TCP
@@ -362,6 +362,10 @@ that should be helpful:
 
 - `tcp.js` file - this is where you should put the protocol-specific
   parsing code you write
+- `checksum.js` file - this file exports a function `createChecksum`
+  that will compute the TCP checksum on an appropriately structured
+  `Buffer` (one having the correct pseudo-header prefixed to it, and
+  having the checksum field zeroed out)
 
 #### A note on working with binary in JavaScript
 
@@ -379,8 +383,8 @@ big endian (BE) variants and how to choose which variant you need, and the
 
 To work with individual bits, you'll need to take a byte and bit-shift or
 bit-mask it to get the specific bit you're looking for. For example, you
-to get the third bit from the left in `0x6d = 109 = 0b01101101`, you would
-could do this by:
+to get the third bit from the left in `0x6d = 109 = 0b01101101`, you could
+do this by:
 
 1. Create a bit mask having all zeros except the bit place you wish to
    extract, and a one in that bit position. For this example, that would
@@ -388,16 +392,20 @@ could do this by:
 2. Then, perform a
    [bitwise `AND` operation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
    between the byte you're extracting from and the bit mask you created.
-   In JavaScript, this example looks like: `0x6d & 0b00100000`.
+   In JavaScript, this example looks like: `0b01101101 & 0b00100000`.
+   The bitwise `AND` takes the bit values from both numbers at each bit
+   position and does a logical `AND` operation on them. Zero bits in the
+   bit mask force that bit to zero in an `AND` operation, so the value
+   in the bit position with the one is the only one that reflects its value.
 3. Finally, bit shift the result to remove the additional bits and get the
    flag value. In the example, you will want to
    [bit shift to the right](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
    by 5 positions (removing the 5 bit positions to the right of the one you
-   care about): `(0x6d & 0b00100000) >> 5`
+   care about): `(0b01101101 & 0b00100000) >> 5`
 
 With this process, you can extract the value of a specific bit (a `0` or `1`),
-and can then convert that value to a boolean value by comparing it with `1`.
-All together, the example would look like this:
+and can then convert that value to a boolean value by comparing it with `1`. All
+together, this process for a given flags field from a packet would look like this:
 
 ```{text}
 const flagsField = 0x6d; // This would be whatever you read from your packet.
@@ -408,11 +416,13 @@ Recall that binary position values, counting from the rightmost position,
 are increasing powers of two moving to the left.
 
 ```{text}
-------------------------------------------
-|  2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |
-------------------------------------------
-| 128 | 64 | 32 | 16 |  8 |  4 |  2 |  1 |
-------------------------------------------
+              ------------------------------------------
+     position |  8  |  7 |  6 |  5 |  4 |  3 |  2 |  1 |
+              ------------------------------------------
+   power of 2 |  2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |
+              ------------------------------------------
+base-10 value | 128 | 64 | 32 | 16 |  8 |  4 |  2 |  1 |
+              ------------------------------------------
 ```
 
 If you know the base-10 values of these bit mask binary numbers, you

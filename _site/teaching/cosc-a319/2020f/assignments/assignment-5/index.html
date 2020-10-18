@@ -671,8 +671,8 @@ included in parentheses.</p>
 
 <p>Once this is complete and passing tests, copy this project into a new folder <code class="language-plaintext highlighter-rouge">lib/tcp</code> in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
-<code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder). Then, use this to parse the payload from UDP packets found by your
-Assignment 2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
+<code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder). Then, use this to parse the payload from TCP packets found by your
+Assignment A2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
 object structure above instead.</p>
 
 <p>Note that you’ll need to construct a couple dummy Ethernet frames that contain TCP
@@ -696,6 +696,10 @@ that should be helpful:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">tcp.js</code> file - this is where you should put the protocol-specific
 parsing code you write</li>
+  <li><code class="language-plaintext highlighter-rouge">checksum.js</code> file - this file exports a function <code class="language-plaintext highlighter-rouge">createChecksum</code>
+that will compute the TCP checksum on an appropriately structured
+<code class="language-plaintext highlighter-rouge">Buffer</code> (one having the correct pseudo-header prefixed to it, and
+having the checksum field zeroed out)</li>
 </ul>
 
 <h4 id="a-note-on-working-with-binary-in-javascript">A note on working with binary in JavaScript</h4>
@@ -714,8 +718,8 @@ big endian (BE) variants and how to choose which variant you need, and the
 
 <p>To work with individual bits, you’ll need to take a byte and bit-shift or
 bit-mask it to get the specific bit you’re looking for. For example, you
-to get the third bit from the left in <code class="language-plaintext highlighter-rouge">0x6d = 109 = 0b01101101</code>, you would
-could do this by:</p>
+to get the third bit from the left in <code class="language-plaintext highlighter-rouge">0x6d = 109 = 0b01101101</code>, you could
+do this by:</p>
 
 <ol>
   <li>Create a bit mask having all zeros except the bit place you wish to
@@ -724,17 +728,21 @@ look like: <code class="language-plaintext highlighter-rouge">0b00100000</code>.
   <li>Then, perform a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">bitwise <code class="language-plaintext highlighter-rouge">AND</code> operation</a>
 between the byte you’re extracting from and the bit mask you created.
-In JavaScript, this example looks like: <code class="language-plaintext highlighter-rouge">0x6d &amp; 0b00100000</code>.</li>
+In JavaScript, this example looks like: <code class="language-plaintext highlighter-rouge">0b01101101 &amp; 0b00100000</code>.
+The bitwise <code class="language-plaintext highlighter-rouge">AND</code> takes the bit values from both numbers at each bit
+position and does a logical <code class="language-plaintext highlighter-rouge">AND</code> operation on them. Zero bits in the
+bit mask force that bit to zero in an <code class="language-plaintext highlighter-rouge">AND</code> operation, so the value
+in the bit position with the one is the only one that reflects its value.</li>
   <li>Finally, bit shift the result to remove the additional bits and get the
 flag value. In the example, you will want to
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift">bit shift to the right</a>
 by 5 positions (removing the 5 bit positions to the right of the one you
-care about): <code class="language-plaintext highlighter-rouge">(0x6d &amp; 0b00100000) &gt;&gt; 5</code></li>
+care about): <code class="language-plaintext highlighter-rouge">(0b01101101 &amp; 0b00100000) &gt;&gt; 5</code></li>
 </ol>
 
 <p>With this process, you can extract the value of a specific bit (a <code class="language-plaintext highlighter-rouge">0</code> or <code class="language-plaintext highlighter-rouge">1</code>),
-and can then convert that value to a boolean value by comparing it with <code class="language-plaintext highlighter-rouge">1</code>.
-All together, the example would look like this:</p>
+and can then convert that value to a boolean value by comparing it with <code class="language-plaintext highlighter-rouge">1</code>. All
+together, this process for a given flags field from a packet would look like this:</p>
 
 <pre><code class="language-{text}">const flagsField = 0x6d; // This would be whatever you read from your packet.
 const bit3Value = (flagsField &amp; 0b00100000) &gt;&gt; 5 === 1;
@@ -743,11 +751,13 @@ const bit3Value = (flagsField &amp; 0b00100000) &gt;&gt; 5 === 1;
 <p>Recall that binary position values, counting from the rightmost position,
 are increasing powers of two moving to the left.</p>
 
-<pre><code class="language-{text}">------------------------------------------
-|  2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |
-------------------------------------------
-| 128 | 64 | 32 | 16 |  8 |  4 |  2 |  1 |
-------------------------------------------
+<pre><code class="language-{text}">              ------------------------------------------
+     position |  8  |  7 |  6 |  5 |  4 |  3 |  2 |  1 |
+              ------------------------------------------
+   power of 2 |  2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |
+              ------------------------------------------
+base-10 value | 128 | 64 | 32 | 16 |  8 |  4 |  2 |  1 |
+              ------------------------------------------
 </code></pre>
 
 <p>If you know the base-10 values of these bit mask binary numbers, you

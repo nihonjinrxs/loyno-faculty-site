@@ -561,7 +561,7 @@ included in parentheses.</p>
 <p>Once this is complete and passing tests, copy this project into a new folder <code class="language-plaintext highlighter-rouge">lib/udp</code> in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
 <code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder). Then, use this to parse the payload from UDP packets found by your
-Assignment 2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
+Assignment A2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
 object structure above instead.</p>
 
 <p>Note that you’ll need to construct a couple dummy Ethernet frames that contain UDP
@@ -585,6 +585,10 @@ that should be helpful:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">udp.js</code> file - this is where you should put the protocol-specific
 parsing code you write</li>
+  <li><code class="language-plaintext highlighter-rouge">checksum.js</code> file - this file exports a function <code class="language-plaintext highlighter-rouge">createChecksum</code>
+that will compute the UDP checksum on an appropriately structured
+<code class="language-plaintext highlighter-rouge">Buffer</code> (one having the correct pseudo-header prefixed to it, and
+having the checksum field zeroed out)</li>
 </ul>
 
 <h4 id="a-note-on-working-with-binary-in-javascript">A note on working with binary in JavaScript</h4>

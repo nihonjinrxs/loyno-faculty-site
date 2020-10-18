@@ -231,7 +231,7 @@ included in parentheses.
 Once this is complete and passing tests, copy this project into a new folder `lib/udp` in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
 `lib/ethernet` folder). Then, use this to parse the payload from UDP packets found by your
-Assignment 2 async parser, and replace the `payload` key's current `Buffer` value with the
+Assignment A2 async parser, and replace the `payload` key's current `Buffer` value with the
 object structure above instead.
 
 Note that you'll need to construct a couple dummy Ethernet frames that contain UDP
@@ -254,6 +254,10 @@ that should be helpful:
 
 - `udp.js` file - this is where you should put the protocol-specific
   parsing code you write
+- `checksum.js` file - this file exports a function `createChecksum`
+  that will compute the UDP checksum on an appropriately structured
+  `Buffer` (one having the correct pseudo-header prefixed to it, and
+  having the checksum field zeroed out)
 
 #### A note on working with binary in JavaScript
 
@@ -291,7 +295,7 @@ to do the following things:
   npm install
   npm test
   ```
-  
+
 During development, you may wish to run the tests in _watch_ mode, so that each time you save a file,
 the tests that file affects will run. To do this, you can use:
 
