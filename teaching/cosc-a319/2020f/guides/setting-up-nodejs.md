@@ -12,6 +12,7 @@ tags:
 - [Our baseline Node.js version](#our-baseline-nodejs-version)
 - [Installing nvm and Node.js](#installing-nvm-and-nodejs)
   - [Windows](#windows)
+    - [Preparing your Node installation for libraries with native dependencies](#preparing-your-node-installation-for-libraries-with-native-dependencies)
   - [Linux and macOS](#linux-and-macos)
 - [Selecting Which Node.js Version to Use](#selecting-which-nodejs-version-to-use)
 - [Running the Node.js REPL](#running-the-nodejs-repl)
@@ -105,6 +106,29 @@ Finally, check that you're using that version of Node.js:
 ```{cmd}
 > node -v
 v12.18.3
+```
+
+#### Preparing your Node installation for libraries with native dependencies
+
+Once node is working properly, you'll want to setup the tools to build
+native dependencies for libraries you may want to install. On windows
+this means you'll need to do the following (again, at the command line, running as Admin):
+
+```{cmd}
+> npm install -g windows-build-tools
+# => this will take a while to complete
+> npm install -g node-gyp
+# => this will also take a bit
+```
+
+Once this is complete, you can test that things are working by installing
+any library with native dependencies. For example, in
+[assignment A4](../assignments/assignment-4.md), you'll need the `raw-socket`
+package, which can be installed from the project root directory in
+the cmd or Cmder programs running as Admin:
+
+```{cmd}
+> npm install raw-socket
 ```
 
 ### Linux and macOS
