@@ -16,9 +16,9 @@ The following 5 assignments, explained in detail below, constitute the course-co
 
 * [P0: Project Proposal](#p0)<br /><small><strong>Start:</strong> Thu, Aug 25, 2020; <strong>Due:</strong> Tue, Sep 8, 2020</small>
 * [P1: Project Specification](#p1)<br /><small><strong>Start:</strong> Tue, Sep 15, 2020; <strong>Due:</strong> Thu, Oct 1, 2020</small>
-* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Thu, Oct 8, 2020; <strong>Due:</strong> Thu, Oct 29, 2020</small>
-* [P3: Web API Server](#p3)<br /><small><strong>Start:</strong> Thu, Oct 29, 2020; <strong>Due:</strong> Thu, Nov 12, 2020</small>
-* [P4: Integration and Deployment](#p4)<br /><small><strong>Start:</strong> Thu, Nov 5, 2020; <strong>Due:</strong> Tue, Dec 8, 2020</small>
+* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Thu, Oct 8, 2020; <strong>Due:</strong> Thu, Nov 5, 2020</small>
+* [P3: Web API Server](#p3)<br /><small><strong>Start:</strong> Tue, Nov 5, 2020; <strong>Due:</strong> Tue, Dec 1, 2020</small>
+* [P4: Integration and Deployment](#p4)<br /><small><strong>Start:</strong> Tue, Nov 17, 2020; <strong>Due:</strong> Tue, Dec 8, 2020</small>
 
 At the end of the course, during the final exam period on **Thu, Dec 17, 2020, from 4:30 PM to 6:30 PM**, we'll [celebrate our work together](#pf). This will be your chance to talk about your goal, show off your work, and discuss what you hope to do with it in the future.
 
@@ -149,7 +149,7 @@ Once you have completed the project specification and project board, it's time t
 | Discussion/Lab Class Period | Tue, Oct 20, 2020 |
 | Discussion/Lab Class Period | Tue, Oct 27, 2020 |
 | Office hours                | By appointment    |
-| Assignment Due              | Thu, Oct 29, 2020 |
+| Assignment Due              | Thu, Nov 5, 2020  |
 
 ### 🛠 The Tools
 
@@ -216,11 +216,11 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction          | Thu, Oct 29, 2020 |
-| In-class Demo         | Tue, Nov 3, 2020  |
-| Demo/Lab Class Period | Tue, Nov 10, 2020 |
-| Office hours          | By appointment    |
-| Assignment Due        | Thu, Nov 12, 2020 |
+| Introduction &amp; In-class Demo | Thu, Nov 5, 2020      |
+| Discussion/Lab Class Period      | Tue, Nov 17, 2020     |
+| Thanksgiving Break               | Nov 21&mdash;29, 2020 |
+| Office hours                     | By appointment        |
+| Assignment Due                   | Tue, Dec 1, 2020      |
 
 ### 🛠 The Tools
 
@@ -287,12 +287,11 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction                | Thu, Nov 5, 2020  |
-| Demo/Lab Class Period       | Tue, Nov 10, 2020 |
-| Discussion/Lab Class Period | Tue, Nov 17, 2020 |
-| Discussion/Lab Class Period | Tue, Dec 1, 2020  |
-| Office hours                | By appointment    |
-| Assignment Due              | Tue, Dec 8, 2020  |
+| Introduction                | Thu, Nov 17, 2020     |
+| Discussion/Lab Class Period | Tue, Dec 1, 2020      |
+| Thanksgiving Break          | Nov 21&mdash;29, 2020 |
+| Office hours                | By appointment        |
+| Assignment Due              | Tue, Dec 8, 2020      |
 
 ### 🛠 The Tools
 

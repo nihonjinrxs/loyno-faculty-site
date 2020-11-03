@@ -780,10 +780,6 @@ syllabus:
                   title: "TIN: pp. 307 - 329 (Ch 12)"
                   url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
-                - 
-                  type: assignment
-                  title: "A5: TCP Parser"
-                  due: Thu 10/29
               due:
                 - 
                   type: assignment
@@ -823,31 +819,8 @@ syllabus:
               session_num: 20
               day: Thursday
               date: 10/29
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: TCP
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 307 - 329 (Ch 12)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
-              assigned:
-                - 
-                  type: project
-                  title: "P3: Project Web API"
-                  due: Thu 11/12
               due:
-                - 
-                  type: project
-                  title: "P2: Project Web Client"
-                - 
-                  type: assignment
-                  title: "A5: TCP Parser"
+              notes: NO CLASS - Cancelled due to Hurricane Zeta
     -
       month: November
       year: 2020
@@ -868,12 +841,34 @@ syllabus:
               date: 11/03
               formats:
                 - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: "Web APIs: from HTML to Other Response Types"
+              readings:
+              assigned:
+                - 
+                  type: assignment
+                  title: "A5: TCP Parser"
+                  due: Thu 11/12
+              due:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
+            -
+              session_num: 22
+              day: Thursday
+              date: 11/05
+              formats:
+                - 
                   type: demo
                   title: Demo
               topics:
                 - 
                   type: demo
-                  title: Building Web-based APIs Using Express
+                  title: Building Web-based APIs Using Node.js &amp; Express
               readings:
                 -
                   type: read-web
@@ -884,30 +879,10 @@ syllabus:
                   title: "Express.js: Getting Started"
                   url: https://expressjs.com/en/starter/installing.html
               assigned:
-              due:
-            -
-              session_num: 22
-              day: Thursday
-              date: 11/05
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: DNS
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 587 - 612 (Ch 23)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
-              assigned:
                 - 
                   type: project
-                  title: "P4: Web App Integration with API"
-                  due: Tue 12/08
-                  notes: Concurrently with P3 
+                  title: "P3: Project Web API"
+                  due: Thu 12/01
               due:
         -
           week_num: 12
@@ -925,19 +900,17 @@ syllabus:
               date: 11/10
               formats:
                 - 
-                  type: demo
-                  title: Demo
-                - 
-                  type: lab
-                  title: Lab
+                  type: lecture
+                  title: Lecture
               topics:
                 - 
-                  type: demo
-                  title: DNS Record Inspection
-                - 
-                  type: lab
-                  title: Homework Help
+                  type: lecture
+                  title: DNS
               readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 587 - 612 (Ch 23)"
+                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
             -
@@ -964,8 +937,8 @@ syllabus:
                   due: Tue 11/19
               due:
                 - 
-                  type: project
-                  title: "P3: Project Web API"
+                  type: assignment
+                  title: "A5: TCP Parser"
         -
           week_num: 13
           sessions:
@@ -996,6 +969,11 @@ syllabus:
                   title: Homework Help
               readings:
               assigned:
+                - 
+                  type: project
+                  title: "P4: Web App Integration with API"
+                  due: Tue 12/08
+                  notes: Concurrently with P3 
               due:
             -
               session_num: 26
@@ -1069,6 +1047,9 @@ syllabus:
               readings:
               assigned:
               due:
+                - 
+                  type: project
+                  title: "P3: Project Web API"
             -
               session_num: 28
               day: Thursday

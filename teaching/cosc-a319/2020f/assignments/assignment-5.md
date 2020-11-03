@@ -10,8 +10,8 @@ subtitle-above: true
   - [Transmission Control Protocol (TCP)](#transmission-control-protocol-tcp)
   - [Ports and Sockets](#ports-and-sockets)
   - [TCP Packet Structure](#tcp-packet-structure)
-    - [TCP Transactions and Related Header Fields](#tcp-transactions-and-related-header-fields)
-    - [The TCP Options Field](#the-tcp-options-field)
+  - [TCP Transactions and Related Header Fields](#tcp-transactions-and-related-header-fields)
+  - [The TCP Options Field](#the-tcp-options-field)
     - [The Checksum Field and IP Pseudo-headers](#the-checksum-field-and-ip-pseudo-headers)
 - [Your Assignment](#your-assignment)
   - [Expected Output](#expected-output)
@@ -29,10 +29,9 @@ a Transmission Control Protocol (TCP) packet.
 
 ## 📆 Schedule
 
-| Assigned       | Thu, Oct 22, 2020  |
+| Assigned       | Tue, Nov 3, 2020  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Discussion/Lab | Tue, Oct 27, 2020 |
-| Assignment Due | Thu, Oct 29, 2020 |
+| Assignment Due | Thu, Nov 12, 2020 |
 
 ## Background
 
@@ -139,7 +138,7 @@ TCP Packet Structure
 ----------------------------------------------. . .------------------------. . .-----
 ```
 
-#### TCP Transactions and Related Header Fields
+### TCP Transactions and Related Header Fields
 
 TCP-based communication is carried out through "transactions", however
 these transactions are not the same as what you may understand in other
@@ -205,7 +204,7 @@ in the packet header, which when set, indicate that the window size should
 temporarily be set to zero, preventing further sends until the congestion
 is cleared.
 
-#### The TCP Options Field
+### The TCP Options Field
 
 Options extend the TCP header, and are used to provide additional information
 about the segment and how to handle it. Options have a multi-byte structure
@@ -229,6 +228,8 @@ so option data length is always `L - 2` bytes. Various option types and their
 meanings, with references, can be found in
 [IANA's TCP Option Kind Numbers list](https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml).
 
+When parsing options for this assignment, you'll need to provide both the numeric option type `T` as the field `type_id`, as well as a string with the option type name. For the option type name field `type`, you will use the option name as listed in the _Meaning_ column of Table 12.2 of your text _The Illustrated Network_. Parsed options should also present their byte length `L` as the `length` field and any relevant fields (using their abbreviated names) as defined by the RFC listed in Table 12.2 that defines the option. RFCs can be found at [rfc-editor.net](http://rfc-editor.net).
+
 #### The Checksum Field and IP Pseudo-headers
 
 Similar to UDP, the checksum of the TCP header makes use of the
@@ -245,13 +246,14 @@ but could be different for IPv6), and the TCP length value from the
 IP packet header. Both pseudo-headers also employ a filler of all
 zeros to align data to 4-byte boundaries.
 
-The TCP IPv4 and TCP IPv6 pseudo-header structures (identical to those
-used for UDP) are included below. Byte 9 in the IPv4 pseudo-header,
-labeled `Pr` is the _Protocol_ field of the IPv4 header. Similarly,
-byte 39 of the IPv6 pseudo-header, labeled `N H` is the _Next Header_
-field of the IPv6 packet header. These fields are 1 byte each, and take
-unsigned 8-bit integer values identifying the protocol of the encapsulated
-packet. Those [protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) are also managed by IANA. The protocol number for TCP is 6.
+The TCP IPv4 and UDP IPv6 pseudo-header structures are included below.
+Byte 9 in the IPv4 pseudo-header, labeled `Pr` is the _Protocol_ field
+of the IPv4 header. Similarly, byte 39 of the IPv6 pseudo-header,
+labeled `N H` is the _Next Header_ field of the IPv6 packet header.
+These fields are 1 byte each, and take unsigned 8-bit integer values
+identifying the protocol of the encapsulated packet. Those [protocol
+numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+are also managed by IANA. The protocol number for TCP is 6.
 
 ```{text}
 UDP IPv4 Pseudo-header Structure
@@ -269,9 +271,9 @@ UDP IPv6 Pseudo-header Structure
 0       4       8      12      16      20      24      28      32      36      40
 ---------------------------------------------------------------------------------
 | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' | ' ' ' |
-|           16 bytes            |           16 bytes            |  UDP  |     | |
-|      Source IPv6 Address      |   Destination IPv6 Address    |  ULP  |     |N|
-|                               |                               |  Len  | 0s  |H|
+|           16 bytes            |           16 bytes            |  TCP  |     |N|
+|      Source IPv6 Address      |   Destination IPv6 Address    |  Len  |     |H|
+|                               |                               |       | 0s  | |
 ---------------------------------------------------------------------------------
 ```
 
@@ -320,7 +322,16 @@ included in parentheses.
     },
     window_size: (16-bit unsigned integer value),
     checksum: (16-bit 1's compliment checksum including IP pseudo-header),
-    urgent_pointer: (16-bit unsigned integer values)
+    urgent_pointer: (16-bit unsigned integer values),
+    options: [
+      (an object for each option with relevant fields:
+      {
+        type_id: (numeric type as unsigned 8-bit integer),
+        type: (string, type description per "Meaning" column of Table 12.2 in your textbook),
+        length: (byte length of the option as unsigned 8-bit integer if relevant),
+        (...other relevant fields, as defined by the RFC defining the option)
+      })
+    ]
   },
   pseudo_header: {
     pseudo_header_protocol: ("IPv4" or "IPv6"),
@@ -338,8 +349,8 @@ included in parentheses.
 
 Once this is complete and passing tests, copy this project into a new folder `lib/tcp` in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
-`lib/ethernet` folder). Then, use this to parse the payload from TCP packets found by your
-Assignment A2 async parser, and replace the `payload` key's current `Buffer` value with the
+`lib/ethernet` folder). Then, use this to parse the payload from UDP packets found by your
+Assignment 2 async parser, and replace the `payload` key's current `Buffer` value with the
 object structure above instead.
 
 Note that you'll need to construct a couple dummy Ethernet frames that contain TCP
@@ -362,10 +373,6 @@ that should be helpful:
 
 - `tcp.js` file - this is where you should put the protocol-specific
   parsing code you write
-- `checksum.js` file - this file exports a function `createChecksum`
-  that will compute the TCP checksum on an appropriately structured
-  `Buffer` (one having the correct pseudo-header prefixed to it, and
-  having the checksum field zeroed out)
 
 #### A note on working with binary in JavaScript
 
@@ -383,8 +390,8 @@ big endian (BE) variants and how to choose which variant you need, and the
 
 To work with individual bits, you'll need to take a byte and bit-shift or
 bit-mask it to get the specific bit you're looking for. For example, you
-to get the third bit from the left in `0x6d = 109 = 0b01101101`, you could
-do this by:
+to get the third bit from the left in `0x6d = 109 = 0b01101101`, you would
+could do this by:
 
 1. Create a bit mask having all zeros except the bit place you wish to
    extract, and a one in that bit position. For this example, that would
@@ -392,40 +399,23 @@ do this by:
 2. Then, perform a
    [bitwise `AND` operation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
    between the byte you're extracting from and the bit mask you created.
-   In JavaScript, this example looks like: `0b01101101 & 0b00100000`.
-   The bitwise `AND` takes the bit values from both numbers at each bit
-   position and does a logical `AND` operation on them. Zero bits in the
-   bit mask force that bit to zero in an `AND` operation, so the value
-   in the bit position with the one is the only one that reflects its value.
+   In JavaScript, this example looks like: `0x6d & 0b00100000`.
 3. Finally, bit shift the result to remove the additional bits and get the
    flag value. In the example, you will want to
    [bit shift to the right](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
    by 5 positions (removing the 5 bit positions to the right of the one you
-   care about): `(0b01101101 & 0b00100000) >> 5`
+   care about): `(0x6d & 0b00100000) >> 5`
 
 With this process, you can extract the value of a specific bit (a `0` or `1`),
-and can then convert that value to a boolean value by comparing it with `1`. All
-together, this process for a given flags field from a packet would look like this:
+and can then convert that value to a boolean value by comparing it with `1`.
+All together, the example would look like this:
 
 ```{text}
 const flagsField = 0x6d; // This would be whatever you read from your packet.
 const bit3Value = (flagsField & 0b00100000) >> 5 === 1;
 ```
 
-Recall that binary position values, counting from the rightmost position,
-are increasing powers of two moving to the left.
-
-```{text}
-              ------------------------------------------
-     position |  8  |  7 |  6 |  5 |  4 |  3 |  2 |  1 |
-              ------------------------------------------
-   power of 2 |  2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |
-              ------------------------------------------
-base-10 value | 128 | 64 | 32 | 16 |  8 |  4 |  2 |  1 |
-              ------------------------------------------
-```
-
-If you know the base-10 values of these bit mask binary numbers, you
+Note that if you know the base-10 values of these bit mask binary numbers, you
 can also use those, simplifying the code a bit:
 
 ```{text}
