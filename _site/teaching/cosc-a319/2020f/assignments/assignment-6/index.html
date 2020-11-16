@@ -257,7 +257,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.2.1, updated 11/03/2020
+        Site v1.3.0, updated 11/16/2020
       </small>
     </span>
   </nav>
@@ -298,7 +298,411 @@
     IP Address Subnetter/Supernetter
     
   </h1>
-  <p>Details coming soon…</p>
+  <h2 id="summary">Summary</h2>
+
+<p>In this assignment, you’ll create and export a classes that facilitate
+subnetting or supernetting of IPv4 networks when provided an IPv4
+address and target prefix length, as well as an optional current prefix
+length, returning the relevant resulting network information.</p>
+
+<h2 id="-schedule">📆 Schedule</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Assigned</td>
+      <td>Tue, Nov 17, 2020</td>
+    </tr>
+    <tr>
+      <td>Discussion/Lab Class Period</td>
+      <td>Tue, Dec 1, 2020</td>
+    </tr>
+    <tr>
+      <td>Thanksgiving Break</td>
+      <td>Nov 21—29, 2020</td>
+    </tr>
+    <tr>
+      <td>Office hours</td>
+      <td><a href="https://bit.ly/mr-harvey-office-hours">By appointment</a></td>
+    </tr>
+    <tr>
+      <td>Assignment Due</td>
+      <td>Thu, Dec 3, 2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="background">Background</h2>
+
+<h3 id="ip-addressing">IP Addressing</h3>
+
+<p>The IP protocol is the basis for all internet communication, and it
+operates at the network layer (layer 3) of the 5-layer Internet model.</p>
+
+<p>IPv4 and IPv6 have significant differences, and almost can be thought
+of as distinct protocols. One of the major differences is in the
+addressing scheme. IPv4 addresses are 32-bit values often represented
+in <em>dotted-decimal</em> format, segmented into 4 8-bit portions, each
+portion displayed as a decimal number between 0 and 255, with portions
+delimited by a decimal point (<code class="language-plaintext highlighter-rouge">.</code>). IPv6 addresses, on the other hand, are
+128-bit values, represented in 8 16-bit portions in hexadecimal form
+delimited by colons (<code class="language-plaintext highlighter-rouge">:</code>). IPv6 addresses are often abbreviated by leaving
+out leading zeros in each portion, replacing all-zero portions with just
+a single 0 digit, and by replacing long strings of consecutive all-zero
+portions with double-colons (<code class="language-plaintext highlighter-rouge">::</code>).</p>
+
+<p>IP addresses represent both the ID of the network to which they belong
+as well as the ID of the host machine on that network. In order to do
+that, a specific number of contiguous bits on the leftmost side of the
+address (in binary form) are allocated as the network ID, and the
+remainder are allocated to the host ID. This location at which this
+change from bits being allocated to network ID to bits being to the host
+ID is called the network/host boundary. Traditionally (in IPv4), these
+allocations happened at octet boundaries, resulting in network ID lengths of
+8, 16, or 24 bits, depending on the type of network and its addressing needs.</p>
+
+<p>For this assignment, we’ll be focused on IPv4 addresses only, but the
+process of subnetting and supernetting is quite similar for IPv6.</p>
+
+<h3 id="classful-and-classless-cidr-ipv4-addresses">Classful and Classless (CIDR) IPv4 Addresses</h3>
+
+<p>However, the way IPv4 addresses are assigned has changed over time. Early on,
+there were a collection of rules for assigning IPv4 network addresses and
+and setting the location of the network/host boundary for them that we now
+refer to as “classful addressing”. These rules resulted in excessive resources
+needed to maintain and route IP traffic, particularly with respect to size of
+routing tables. As the Internet grew and more networks were added, there were
+concerns about exhausting the IPv4 address space. These rules involved assigning
+default “subnet masks” to 5 ranges of addresses classified by their initial
+1-3 bits:</p>
+
+<ul>
+  <li><strong>Class A:</strong> Addresses starting with <code class="language-plaintext highlighter-rouge">0</code> (first octet in decimal between 0
+and 127) for use on networks with between 65,535 and 16,777,214 hosts.
+Default subnet mask: 255.0.0.0</li>
+  <li><strong>Class B:</strong> Addresses starting with <code class="language-plaintext highlighter-rouge">10</code> (first octet in decimal between
+128 and 191) for use on networks with between 255 and 65,534 hosts.
+Default subnet mask: 255.255.0.0</li>
+  <li><strong>Class C:</strong> Addresses starting with <code class="language-plaintext highlighter-rouge">110</code> (first octet in decimal between
+192 and 223) for use on networks with 254 or less hosts. Default subnet
+mask: 255.255.255.0</li>
+  <li><strong>Class D:</strong> Addresses starting with <code class="language-plaintext highlighter-rouge">1110</code> (first octet in decimal between
+224 and 239) for use for IPv4 multicast traffic. Default subnet mask:
+255.255.255.0</li>
+  <li><strong>Class E:</strong> Addresses starting with <code class="language-plaintext highlighter-rouge">1111</code> (first octet in decimal between
+240 and 255) for experimental purposes. Default subnet mask: 255.255.255.0</li>
+</ul>
+
+<p>In the late 1980s and early 1990s, the explosion of new Internet hosts (a
+consequence of what is commonly referred to as the .com boom) caused pressure
+on routing tables, and the rate of allocation of Class A and B network
+addresses became unsustainable. Because Class C networks were not able to be
+combined under the classful system, the end result of this would have been an
+exhaustion of available IPv4 network addresses before the end of 1995. To prevent
+this, the rules for assigning IPv4 addresses to networks changed in a few important
+ways in order to allow setting the network/host address boundary within an IPv4
+address optimally for the needs of the network.</p>
+
+<p>The first change was the ability to use variable-length subnet masking (VLSM).
+Rather than have fixed subnet masks for each class, the removal of classes as an
+address construction principle allowed for any bit-length for the network ID
+portion of the IPv4 address. Hence, rather than only allowing subnet masks
+of 255.0.0.0 (= <code class="language-plaintext highlighter-rouge">1111 1111 0000 0000 0000 0000 0000 0000</code>), 255.255.0.0,
+(= <code class="language-plaintext highlighter-rouge">1111 1111 1111 1111 0000 0000 0000 0000</code>) and 255.255.255.0
+(= <code class="language-plaintext highlighter-rouge">1111 1111 1111 1111 1111 1111 0000 0000</code>), the prefix of ones in the subnet
+mask could end anywere within an octed. Thus subnet masks could end not only
+in 0 and 255, but also at 128, 192, 168, 224, 240, 248, 252, and 254.</p>
+
+<p>Accompanying this change was a change, called classless inter-domain routing (CIDR),
+to the way network addresses (and their associated subnet masks) are written.
+This method of writing a network address indicates the subnet mask as the length
+of the all-1s prefix of the subnet mask after the network address, separated from
+the IPv4 address of the network with a slash (<code class="language-plaintext highlighter-rouge">/</code>). For example, the network address
+associated with the IP address <code class="language-plaintext highlighter-rouge">192.168.52.199</code> with a subnet mask of <code class="language-plaintext highlighter-rouge">255.255.255.192</code>
+would be written in CIDR form as <code class="language-plaintext highlighter-rouge">192.168.52.192/26</code>, with a host ID of <code class="language-plaintext highlighter-rouge">0.0.0.7</code>.</p>
+
+<h3 id="subnetting--supernetting-aggregation">Subnetting &amp; Supernetting (Aggregation)</h3>
+
+<p>As mentioned above, the goal of VLSM was to allow for finer-grained control over the
+size of an address block assigned to a network by moving the network/host boundary
+to a more optimal location within the IPv4 addresses of the network.</p>
+
+<h2 id="your-assignment">Your Assignment</h2>
+
+<p>To complete this assignment, you need to write and export two classes:</p>
+
+<h3 id="the-ipv4address-class">The <code class="language-plaintext highlighter-rouge">IPv4Address</code> class</h3>
+
+<p>An <code class="language-plaintext highlighter-rouge">IPv4Address</code> class that can be instantiated with:</p>
+
+<pre><code class="language-{javascript}">  new IPv4Address(
+    0b00001100_00101110_11010101_00111001,
+    0b11111111_11111111_11000000_00000000
+  )
+</code></pre>
+
+<p>Instances of the <code class="language-plaintext highlighter-rouge">IPv4Address</code> class should have properties:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">networkID</code> - binary IP network ID</li>
+  <li><code class="language-plaintext highlighter-rouge">hostID</code> - binary IP host ID</li>
+  <li><code class="language-plaintext highlighter-rouge">prefixLength</code> - integer network prefix length</li>
+  <li><code class="language-plaintext highlighter-rouge">network</code> - an <code class="language-plaintext highlighter-rouge">IPNetwork</code> instance specifying information about the
+IPv4 network to which this address belongs</li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">IPv4Address</code> class should have the following static methods:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">display(&lt;Buffer&gt; address) -&gt; &lt;string&gt;</code> - to convert binary IPv4 addresses
+into human-readable ones</li>
+  <li><code class="language-plaintext highlighter-rouge">create(&lt;number|string&gt; ip4Address, &lt;number|string&gt; subnetMask) -&gt; &lt;IPv4Address&gt;</code> -
+to create <code class="language-plaintext highlighter-rouge">IPv4Address</code> objects from either binary or string representations of
+the address and possibly the subnet as follows:
+    <ul>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Address.create(
+  0b00001100_00101110_11010101_00111001,
+  0b11111111_11111111_11000000_00000000
+)
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Address.create('12.46.213.57/18')
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Address.create('12.46.213.57', '255.255.192.0')
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-ipv4network-class">The <code class="language-plaintext highlighter-rouge">IPv4Network</code> class</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">IPv4Network</code> class that can be instantiated with:</p>
+
+<pre><code class="language-{javascript}">new IPv4Network(
+  0b00001100_00101110_11010101_00111001,
+  0b11111111_11111111_11000000_00000000
+)
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">IPv4Network</code> instances should should have properties:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">networkID</code> - binary IP network address</li>
+  <li><code class="language-plaintext highlighter-rouge">prefixLength</code> - the network prefix length</li>
+  <li><code class="language-plaintext highlighter-rouge">networkCIDRAddress</code> - the binary IP network address and integer prefix
+length combined in a human-readable CIDR format string</li>
+  <li><code class="language-plaintext highlighter-rouge">subnetMask</code> - binary subnet mask for the network’s prefix length</li>
+  <li><code class="language-plaintext highlighter-rouge">broadcastAddress</code> - binary IP address used for broadcast on the network</li>
+  <li><code class="language-plaintext highlighter-rouge">hostAddressRange</code> - 2-element array containing the minimum and maximum
+binary host IP addresses in the network</li>
+</ul>
+
+<p>Methods on <code class="language-plaintext highlighter-rouge">IPv4Network</code>:</p>
+<ul>
+  <li>Instance method <code class="language-plaintext highlighter-rouge">subnet(&lt;integer&gt; newPrefixLength) -&gt; &lt;IPv4Network[]&gt;</code> -
+a method that subnets the network and returns an <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">IPv4Network</code>
+instances for each of the subnets</li>
+  <li>Static method <code class="language-plaintext highlighter-rouge">supernet(&lt;IPv4Network[]&gt; networks) -&gt; &lt;IPv4Network[]&gt;</code> -
+a method that takes a collection of networks and combines them into a
+minimally covering collection of as few networks as possible, returning
+an <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">IPv4Networks</code>.  <em><strong>(Note: you cannot supernet an
+incomplete covering of the address space, so be sure that every
+address in the range of addresses covered by your supernet result
+is also covered by the one of the networks passed in.)</strong></em></li>
+  <li>Static method
+<code class="language-plaintext highlighter-rouge">create(&lt;number|string&gt; ip4Address, &lt;number|string&gt; subnetMask) -&gt; &lt;IPv4Network&gt;</code> -
+a method that takes either an IPv4 address as a CIDR format string, or an IPv4
+address and subnet mask, and creates and returns an <code class="language-plaintext highlighter-rouge">IPv4Network</code> instance:
+    <ul>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Network.create(
+  0b00001100_00101110_10001000_00101111,
+  0b11111111_11111111_11000000_00000000
+)
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Network.create('12.46.128/18')
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Network.create('12.46.136.47/18')
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Network.create('12.46.136.47', '255.255.192.0')
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="program-structure">Program Structure</h3>
+
+<p>While you must make your implementation pass automated tests that
+will only use the exports from <code class="language-plaintext highlighter-rouge">index.js</code>, you will need to create
+the classes each in their own file as a library, and re-export them
+from the main <code class="language-plaintext highlighter-rouge">index.js</code> file.
+Each of these classes should be well-tested (repeatably via automation),
+so that you can be confident of the accuracy and error-free quality of
+your parsing code. Each of the classes and their methods should also
+include relevant documentation <a href="https://jsdoc.app/">in JSdoc format</a>
+about why they exist, including expected inputs and outputs with data
+types.</p>
+
+<p>In this repo, you will find an <code class="language-plaintext highlighter-rouge">index.js</code> file, where you can import
+and re-export any objects or functions your library needs to provide
+as part of its public interface, as well as a <code class="language-plaintext highlighter-rouge">lib</code> folder, in which
+you can put your files for each class you create and export.</p>
+
+<h4 id="a-note-on-working-with-binary-in-javascript">A note on working with binary in JavaScript</h4>
+
+<p>In this assignment (as in prior assignments in this course), you’ll be
+working with binary data in JavaScript. The interface for this work
+will almost always be the <code class="language-plaintext highlighter-rouge">Buffer</code> class and its subclasses. Get to know
+the <code class="language-plaintext highlighter-rouge">Buffer</code> class as soon as possible.</p>
+
+<p>In particular, you’ll need to be very familiar with the methods to read
+various length unsigned integers, including the little endian (LE) and
+big endian (BE) variants and how to choose which variant you need, and the
+<code class="language-plaintext highlighter-rouge">subarray</code> method, as well as the typed subclasses of <code class="language-plaintext highlighter-rouge">Buffer</code>.</p>
+
+<h4 id="bitwise-operations-in-javascript-working-with-subnet-masks">Bitwise operations in JavaScript: working with subnet masks</h4>
+
+<p>As you’ll recall from assignments A4 and A5, to work with individual bits,
+you’ll need to take a byte and bit-shift or bit-mask it to get the specific
+bit you’re looking for. For example, you to get the third bit from the left
+in <code class="language-plaintext highlighter-rouge">0x6d = 109 = 0b01101101</code>, you would could do this by:</p>
+
+<ol>
+  <li>Create a bit mask having all zeros except the bit place you wish to
+extract, and a one in that bit position. For this example, that would
+look like: <code class="language-plaintext highlighter-rouge">0b00100000</code>.</li>
+  <li>Then, perform a
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">bitwise <code class="language-plaintext highlighter-rouge">AND</code> operation</a>
+between the byte you’re extracting from and the bit mask you created.
+In JavaScript, this example looks like: <code class="language-plaintext highlighter-rouge">0x6d &amp; 0b00100000</code>.</li>
+  <li>Finally, bit shift the result to remove the additional bits and get the
+flag value. In the example, you will want to do an
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">unsigned bit shift to the right</a>
+by 5 positions (removing the 5 bit positions to the right of the one you
+care about): <code class="language-plaintext highlighter-rouge">(0x6d &amp; 0b00100000) &gt;&gt;&gt; 5</code></li>
+</ol>
+
+<p>This has relevance to creating and working with subnet masks, which are
+just bit masks that operate across all 32 bits in the IPv4 address at once.</p>
+
+<p>To create a subnet mask from the prefix length, you can begin with a
+32-bit binary value comprised of all <code class="language-plaintext highlighter-rouge">1</code>s and do the following:</p>
+
+<ol>
+  <li>Start with all <code class="language-plaintext highlighter-rouge">1</code>s</li>
+  <li>Unsigned right shift (<code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code>) away the bits that should be <code class="language-plaintext highlighter-rouge">0</code>s</li>
+  <li>Left shift (<code class="language-plaintext highlighter-rouge">&lt;&lt;</code>) back the same amount to return to the right total length</li>
+  <li>Unsigned right shift (<code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code>) by <code class="language-plaintext highlighter-rouge">0</code> to ensure an unsigned integer value</li>
+</ol>
+
+<p>For example, if the prefix length is <code class="language-plaintext highlighter-rouge">8</code>, this looks like:</p>
+
+<pre><code class="language-{javascript}">const prefixLength = 8;
+
+const SUBNET_MASK_BASE = 0b11111111111111111111111111111111; // =&gt; 4294967295
+
+const numZeroBits = 32 - prefixLength;
+const subnetMask = (SUBNET_MASK_BASE &gt;&gt;&gt; numZeroBits &lt;&lt; numZeroBits &gt;&gt;&gt; 0);
+
+subnetMask // =&gt; 4278190080
+subnetMask.toString(2) // =&gt; '11111111000000000000000000000000'
+</code></pre>
+
+<p>Once you have a subnet mask, finding the network ID is just a bitwise
+<code class="language-plaintext highlighter-rouge">AND</code> operation:</p>
+
+<pre><code class="language-{javascript}">const ip4addr = Buffer.from([10, 105, 241, 58]).readUInt32BE();
+// ip4addr === 0b1010011010011111000100111010
+const networkID = subnetMask &amp; ip4addr;
+// networkID === 0b1010000000000000000000000000
+</code></pre>
+
+<p>And finding the host ID is a bitwise <code class="language-plaintext highlighter-rouge">AND</code> operation with the bitwise
+negation (<code class="language-plaintext highlighter-rouge">NOT</code>) of the subnet mask:</p>
+
+<pre><code class="language-{javascript}">const ip4addr = Buffer.from([10, 105, 241, 58]).readUInt32BE();
+// ip4addr === 0b1010011010011111000100111010
+const hostID = ~subnetMask &amp; ip4addr;
+// hostID === 0b0000000011010011111000100111010
+</code></pre>
+
+<h4 id="getting-started-on-the-assignment">Getting started on the assignment</h4>
+
+<p>As with Assignments A1 and A4, in order to get started with the assignment, you’ll want
+to do the following things:</p>
+
+<ul>
+  <li>Review this assignment description in detail, particularly the information on IP
+addresses, VLSM and CIDR, and subnetting and supernetting.</li>
+  <li>Review JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html">Buffer</a></li>
+  <li>Review the bitwise operators in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators">MDN JavaScript Operators reference</a></li>
+  <li>Clone this repo to your computer</li>
+  <li>Re-read the “Your Assignment” section of this description, paying attention to what
+you need to create.</li>
+  <li>
+    <p>Run the following at the command line from within the project directory (use
+<code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory,
+to get there):</p>
+
+    <pre><code class="language-{sh}">nvm install 14.15
+nvm use 14.15
+npm install
+npm test
+</code></pre>
+  </li>
+</ul>
+
+<p>During development, you may wish to run the tests in <em>watch</em> mode, so that each time
+you save a file, the tests that file affects will run. To do this, you can use:</p>
+
+<pre><code class="language-{sh}">npm test -- --watch
+</code></pre>
+
+<p>This assignment will also automatically check your code style for readability. To run
+those tests at your own command line, you can use:</p>
+
+<pre><code class="language-{sh}">npm run lint
+</code></pre>
+
+<h3 id="submission-and-feedback">Submission and Feedback</h3>
+
+<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">main</code> branch on the repository.
+Github Classroom will create a pull request on the repository for you, titled
+<strong>Feedback</strong>. As you push your commits on the main branch up to Github, they
+will be added to the activity on this pull request.</p>
+
+<p>In addition to the synchronous mechanism of requesting help via office hours
+appointments, this pull request will be your mechanism for asking questions and
+requesting help asynchronously during the course of this assignment. I will also
+use this pull request to provide feedback on your work. I will provide feedback on
+the completed assignment within a week of the due date of the assignment.
+If you push your code earlier than the due date, I will try to provide
+feedback as needed earlier.</p>
+
+<p>I suggest that you push your work to Github as you make commits, and that you make
+commits frequently as you work on the assignment. This way, if you have questions,
+I will be able to review your work-in-progress and give more relevant answers and
+feedback. If you have a question specific to a particular area of the code, note that
+you can add comments inline on the pull request by clicking on the <strong>Files changed</strong> tab
+of the pull request, then clicking the little blue <code class="language-plaintext highlighter-rouge">+</code> icon that appears when you hover
+over a specific line of code.</p>
+
+<p>I will do my best to respond to questions posed during the course of the assignment with
+in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
+me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Good luck, and I look forward to seeing what you create!</p>
 
 </div>
 
