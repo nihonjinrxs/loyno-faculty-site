@@ -931,10 +931,6 @@ syllabus:
                   title: "TIN: pp. 139 - 173 (Ch 5)"
                   url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
-                - 
-                  type: assignment
-                  title: "A6: IP Address Subnetter/Supernetter"
-                  due: Tue 11/19
               due:
                 - 
                   type: assignment
@@ -970,10 +966,9 @@ syllabus:
               readings:
               assigned:
                 - 
-                  type: project
-                  title: "P4: Web App Integration with API"
-                  due: Tue 12/08
-                  notes: Concurrently with P3 
+                  type: assignment
+                  title: "A6: IP Address Subnetter/Supernetter"
+                  due: Thu 12/03
               due:
             -
               session_num: 26
@@ -994,13 +989,11 @@ syllabus:
                   url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
-                  type: assignment
-                  title: "A7: IP Parser"
-                  due: Thu 12/03
+                  type: project
+                  title: "P4: Web App Integration with API"
+                  due: Tue 12/08
+                  notes: Concurrently with P3 
               due:
-                - 
-                  type: assignment
-                  title: "A6: IP Address Subnetter/Supernetter"
         -
           week_num: 14
           sessions:
@@ -1087,7 +1080,7 @@ syllabus:
               due:
                 - 
                   type: assignment
-                  title: "A7: IP Parser"
+                  title: "A6: IP Address Subnetter/Supernetter"
         -
           week_num: 16
           sessions:
