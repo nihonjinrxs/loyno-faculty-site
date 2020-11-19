@@ -122,7 +122,9 @@ An `IPv4Address` class that can be instantiated with:
 
 ```{javascript}
   new IPv4Address(
+    /* IPv4 address in binary/unsigned integer format */
     0b00001100_00101110_11010101_00111001,
+    /* IPv4 subnet mask in binary/unsigned integer format */
     0b11111111_11111111_11000000_00000000
   )
 ```
@@ -132,6 +134,7 @@ Instances of the `IPv4Address` class should have properties:
 - `networkID` - binary IP network ID
 - `hostID` - binary IP host ID
 - `prefixLength` - integer network prefix length
+- `subnetMask` - binary IP subnet mask
 - `network` - an `IPNetwork` instance specifying information about the
   IPv4 network to which this address belongs
 
@@ -144,15 +147,25 @@ The `IPv4Address` class should have the following static methods:
   the address and possibly the subnet as follows:
   - ```
     IPv4Address.create(
+      /* IPv4 address in binary/unsigned integer format */
       0b00001100_00101110_11010101_00111001,
+      /* IPv4 subnet mask in binary/unsigned integer format */
       0b11111111_11111111_11000000_00000000
     )
     ```
   - ```
-    IPv4Address.create('12.46.213.57/18')
+    IPv4Address.create(
+      /* IPv4 address in CIDR string format */
+      '12.46.213.57/18'
+    )
     ```
   - ```
-    IPv4Address.create('12.46.213.57', '255.255.192.0')
+    IPv4Address.create(
+      /* IPv4 address on the network in string human-readable format */
+      '12.46.213.57',
+      /* IPv4 subnet mask on the network in string human-readable format */
+      '255.255.192.0'
+    )
     ```
 
 ### The `IPv4Network` class
@@ -161,7 +174,9 @@ The `IPv4Network` class that can be instantiated with:
 
 ```{javascript}
 new IPv4Network(
+  /* IPv4 address on the network in binary/unsigned integer format */
   0b00001100_00101110_11010101_00111001,
+  /* IPv4 subnet mask in binary/unsigned integer format */
   0b11111111_11111111_11000000_00000000
 )
 ```
@@ -193,18 +208,31 @@ Methods on `IPv4Network`:
   address and subnet mask, and creates and returns an `IPv4Network` instance:
   - ```
     IPv4Network.create(
+      /* IPv4 address on the network in binary/unsigned integer format */
       0b00001100_00101110_10001000_00101111,
+      /* IPv4 subnet mask in binary/unsigned integer format */
       0b11111111_11111111_11000000_00000000
     )
     ```
   - ```
-    IPv4Network.create('12.46.128/18')
+    IPv4Network.create(
+      /* IPv4 network address in CIDR string format */
+      '12.46.128/18'
+    )
     ```
   - ```
-    IPv4Network.create('12.46.136.47/18')
+    IPv4Network.create(
+      /* IPv4 address on the network in CIDR string format */
+      '12.46.136.47/18'
+    )
     ```
   - ```
-    IPv4Network.create('12.46.136.47', '255.255.192.0')
+    IPv4Network.create(
+      /* IPv4 network address in string human-readable format */
+      '12.46.136.47',
+      /* IPv4 subnet mask in string human-readable format */
+      '255.255.192.0'
+    )
     ```
 
 ### Program Structure
