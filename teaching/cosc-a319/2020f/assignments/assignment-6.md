@@ -249,11 +249,10 @@ about why they exist, including expected inputs and outputs with data
 types.
 
 In this repo, you will find an `index.js` file, where the classes you are
-expected classes are imported and re-exported. You may choose to augment this
+expected to create are imported and re-exported. You may choose to augment this
 with any other objects or funcitons your library needs to provide as part of
 its public interface, however you should not need to.  You will also find a
-`lib` folder, in which there are two empty JavaScript files -- one for each
-class you will create and export.
+`lib` folder, in which there are two empty JavaScript files -- one forß
 
 #### A note on working with binary in JavaScript
 
