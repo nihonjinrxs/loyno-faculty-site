@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ryan Bensussan Harvey</title>
- <link href="https://loyno.edu/~rharvey/~rharvey/atom.xml" rel="self"/>
- <link href="https://loyno.edu/~rharvey/~rharvey/"/>
- <updated>2021-01-19T09:08:37-06:00</updated>
- <id>https://loyno.edu/~rharvey</id>
+ <link href="http://datascientist.guru/loyno-faculty-site/loyno-faculty-site/atom.xml" rel="self"/>
+ <link href="http://datascientist.guru/loyno-faculty-site/loyno-faculty-site/"/>
+ <updated>2021-01-19T09:14:30-06:00</updated>
+ <id>http://datascientist.guru/loyno-faculty-site</id>
  <author>
    <name></name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>There's a Blog?</title>
-   <link href="https://loyno.edu/~rharvey/2017/08/21/theres-a-blog/"/>
+   <link href="http://datascientist.guru/loyno-faculty-site/2017/08/21/theres-a-blog/"/>
    <updated>2017-08-21T00:00:00-05:00</updated>
-   <id>https://loyno.edu/~rharvey/~rharvey/2017/08/21/theres-a-blog</id>
+   <id>http://datascientist.guru/loyno-faculty-site/loyno-faculty-site/2017/08/21/theres-a-blog</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;Move along.  Nothing to see here.&lt;/p&gt;
 &lt;/blockquote&gt;
