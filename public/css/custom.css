@@ -65,7 +65,7 @@
   color: #888;
   font-size: 0.8rem;
 }
-.theme-base-ryan a.current-classes {
+.theme-base-ryan .current-classes {
   display: block;
   font-style: bold;
   color: #fad800;

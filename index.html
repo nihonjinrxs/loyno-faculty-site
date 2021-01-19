@@ -3,18 +3,18 @@ layout: default
 title: Home
 menu: main
 info:
-  office: Monroe Hall, Room 407 (not in office Fall 2020)
+  office: Monroe Hall, Room 407 (not in office Spring 2021)
   availability: 
     times: by appointment
     url: https://bit.ly/mr-harvey-office-hours
   zoom: https://bit.ly/meet-mr-harvey
-  currentsemester: Fall 2020
+  currentsemester: Spring 2021
   currentcourses:
     -
-      number: COSC A319
-      section: "051"
-      title: Internet Technologies
-      url: ./teaching/cosc-a319/2020f/
+      number:
+      section:
+      title: Not teaching
+      url:
   whoami: |
       I'm a _software engineer_, _data scientist_,
       _data engineer_, and _educator_.
@@ -135,9 +135,20 @@ info:
 </div>
 
 {% for course in page.info.currentcourses %}
+{% if course.url %}
 <a href="{{ site.baseurl }}/{{ course.url }}"  class="current-classes">
-  {{ course.number }} {{ course.section }} - {{ course.title }} ({{ page.info.currentsemester }})
+{% else %}
+<div class="current-classes">
+{% endif %}
+  {% if course.number || course.section %}
+    {{ course.number }} {{ course.section }} -
+  {% endif %}
+  {{ course.title }} ({{ page.info.currentsemester }})
+{% if course.url %}
 </a>
+{% else %}
+</div>
+{% endif %}
 {% endfor %}
 
 <div class="who-am-i">
