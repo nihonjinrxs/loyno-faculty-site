@@ -69,17 +69,24 @@ info:
       imageurl: http://omc.loyno.edu/sites/omc.loyno.edu/files/images/loyola-logo.gif
       url: https://www.loyno.edu/
     -
-      organization: TED Conferences
-      position: Data Engineer / Sr. Backend Engineer
-      startyear: 2016
-      imageurl: ./public/TED_logo_rgb.png
-      url: https://www.ted.com/
+      organization: Healthify
+      position: Sr. Software Engineer
+      startyear: 2021
+      imageurl: ./public/healthify_logo.png
+      url: https://www.healthify.us/
     -
       organization: Kitchology Inc.
       position: Data Scientist &amp; Software Architect
       startyear: 2013
       imageurl: https://static.wixstatic.com/media/83a4ea_367395d85b6849afa07759b239a106c6~mv2.gif
       url: https://www.kitchology.com/
+    -
+      organization: TED Conferences
+      position: Data Engineer / Sr. Backend Engineer
+      startyear: 2016
+      endyear: 2021
+      imageurl: ./public/TED_logo_rgb.png
+      url: https://www.ted.com/
   volunteering:
     -
       organization: The St. Charles Center for Faith + Action
@@ -195,7 +202,11 @@ info:
              alt="{{ job.organization }}" class="job-logo">
       </a>
       <span class="job-position">{{ job.position }}</span>
-      <span class="job-since">since {{ job.startyear }}</span>
+      {% if job.endyear == null %}
+        <span class="job-since">since {{ job.startyear }}</span>
+      {% else %}
+        <span class="job-since">{{ job.startyear }} - {{ job.endyear }}</span>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
