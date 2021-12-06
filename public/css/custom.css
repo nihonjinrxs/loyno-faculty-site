@@ -67,7 +67,7 @@
 }
 .theme-base-ryan .current-classes {
   display: block;
-  font-style: bold;
+  font-weight: bold;
   color: #fad800;
   font-size: 1.2rem;
   background-color: #660000;
@@ -80,6 +80,10 @@
   border-radius: 5px;
   border: 3px solid #660000;
   box-sizing: border-box;
+}
+.theme-base-ryan .container a.current-classes {
+  font-weight: bold;
+  color: #fad800;
 }
 .theme-base-ryan a.current-classes:hover {
   text-decoration: none;
