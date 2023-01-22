@@ -44,11 +44,11 @@ github:
 site_environment:    'production'
 
 # loyno.edu deploy
-# url:                 'https://loyno.edu/~rharvey'
-# baseurl:             '/~rharvey'
-# google_analytics:    'UA-211408-6'
+url:                 'https://loyno.edu/~rharvey'
+baseurl:             '/~rharvey'
+google_analytics:    'UA-211408-6'
 
 # github pages deploy
-url:                 'http://codeanddata.codes/loyno-faculty-site'
-baseurl:             '/loyno-faculty-site'
-google_analytics:    'UA-211408-7'
+# url:                 'http://codeanddata.codes/loyno-faculty-site'
+# baseurl:             '/loyno-faculty-site'
+# google_analytics:    'UA-211408-7'
