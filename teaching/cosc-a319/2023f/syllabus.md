@@ -2,30 +2,30 @@
 layout: syllabus_specific_ungrading
 title: COSC A319 Internet Technologies<br/>Syllabus (Fall 2020)
 syllabus:
-  semester: 2020 Fall
+  semester: 2023 Fall
   class_location: Online (Synchronous) in Canvas
-  policies_year: 2020-319
-  bulletin_link: https://courses.loyno.edu/course/cosc/a319/internet-technologies
+  policies_year: 2023-319
+  bulletin_link: https://loyno-ss.colleague.elluciancloud.com/Student/Student/Courses/Search?keyword=COSC-A319
   bulletin: |
     This course explores the concepts and technologies that are used in modern Internet systems, and provides the necessary skills and knowledge of software technologies needed for creating Internet/Web services. It is designed to expose students to web content presentation and generation technologies, programming, and building multi-tiered client/server web applications.
   description: |
-    This course introduces students to the world of internet and networked systems development. Concepts related to distributed systems development; concurrent and asynchronous processing; process communications and network transport protocols; distributed application architecture and design; deployment, monitoring and debugging of internet-based systems; and web of things development will be covered.
+    This course introduces students to the world of internet and networked systems development. Concepts related to distributed systems development; concurrent and asynchronous processing; process communications and network transport protocols; distributed application architecture and design; deployment, monitoring and debugging of internet-based systems will be covered.
   prerequisites: |
     One of:
 
     * [COSC A212 Introduction to Programming II](https://courses.loyno.edu/course/cosc/a212/introduction-programming-ii) and Sophomore standing
     * Instructor Approval.
 
-    To be successful in this course, students are expected to have practical experience building multi-file/multi-component software projects. In particular, students should be comfortable working with data structures, designing classes and class interfaces, and writing software modules that form part of a larger application.
+    To be successful in this course, students are expected to have practical experience building multi-file/multi-component software projects. In particular, students should be comfortable working with data structures, designing classes and class interfaces, and writing software modules that form part of a larger, multi-file application.
   learning_objectives: |
     Students will experience the design and construction of internet-based systems through hands-on interaction with course material. The course will provide students with a basis of theory upon which to reflect upon experiences: designing and building server-side systems that must communicate with client systems via internet protocols; designing and building client systems that operate and interact with the server system concurrently and asynchronously; debugging process timing and network failure issues; and understanding the network designs and protocols that enable the modern internet.
   learning_outcomes: |
     Upon completion of this course, students should be able to:
 
-      * Understand and explain the theoretical approaches to dealing with concurrency in software and the types of problems that can occur when software processes operate concurrently
-      * Understand and explain the theoretical approaches to building software systems with components that operate asynchronously
       * Understand and explain how messages travel between systems on the internet, including the various protocols used and what information they require and provide
       * Build parsers for key internet communication protocols and how they interact to enable modern web applications
+      * Understand and explain the theoretical approaches to building software systems with components that operate asynchronously
+      * Understand and explain the theoretical approaches to dealing with concurrency in software and the types of problems that can occur when software processes operate concurrently
       * Understand what types of services are offered by commercial cloud providers, and how those services fit into internet-based distributed software architectures
       * Build and deploy server-side API software capable of serving multiple client software types
       * Build and deploy web-based client software that communicates with a server-side API
@@ -43,7 +43,7 @@ syllabus:
       isbn: 978-0-12-811027-0
       textbook_message: |
         **You DO need to obtain a copy of this book, at least for the semester.**
-        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via our Elsevier ScienceDirect link](http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270). If you have trouble, you can contact the library staff for help.
+        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via the library catalog](https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one). If you have trouble, you can contact the library staff for help.
 
         This book is also available for sale online for between $70 and $90, and is a fantastic reference for this content for the future.
       isbn_url: https://isbnsearch.org/isbn/9780128110270
@@ -113,7 +113,7 @@ syllabus:
 
       ### What to Expect
 
-      Several class periods during the semester are set aside for demonstrations, homework help, or lab exploration. These days are opportunities for you to see how such projects are built, ask questions about issues you are having on your own project, or tell your peers about problems you've experienced while working on your project and how you overcame them. These sessions will be enough time to clarify the required functionality for each assignment with instructor/faculty assistance, get started on project work or assignments, and get help on problems you are experiencing while working on projects or assignments. However, these sessions likely will not be enough to complete the project. **Please expect to dedicate time outside of class to working on the project on your own.**
+      Several time periods during class this semester are set aside for demonstrations, homework help, or lab exploration. These are opportunities for you to see how such projects are built, ask questions about issues you are having on your own project, or tell your peers about problems you've experienced while working on your project and how you overcame them. These sessions will be enough time to clarify the required functionality for each assignment with instructor/faculty assistance, get started on project work or assignments, and get help on problems you are experiencing while working on projects or assignments. However, these sessions likely will not be enough to complete the project. **Please expect to dedicate time outside of class to working on the project on your own.**
 
       ### Tools and Equipment
       
@@ -128,7 +128,7 @@ syllabus:
         * [Create React App](https://facebook.github.io/create-react-app/)
       * API:
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
-        * [Node.js ("LTS" v12.x)](https://nodejs.org/en/)
+        * [Node.js ("LTS" v18.x)](https://nodejs.org/en/)
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
         * [Express.js](https://expressjs.com/)
 
@@ -149,7 +149,7 @@ syllabus:
 
       ### Personalize Your Project
 
-      Be creative and make your project yours.  You'll have fun, and you'll create something you can be proud to show off to your classmate and even to potential employers!
+      Be creative and make your project yours.  You'll have fun, and you'll create something you can be proud to show off to your classmates and even to potential employers!
 
       ### Celebration!
 
@@ -197,8 +197,8 @@ syllabus:
       
       These papers are due:
       
-      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on Monday, October 12, 2020, by 11:59 PM US Central**
-      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on Friday, December 18, 2020, by 11:59 PM US Central**
+      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on Tuesday, October 3, 2020, by 11:59 PM US Central**
+      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on Friday, December 15, 2020, by 11:59 PM US Central**
   
       ### Submission Information
       
@@ -235,19 +235,19 @@ syllabus:
 
       In the case where an adjustment is needed, I will discuss that with you in a one-on-one conversation scheduled as soon as possible outside of classtime (usually within office hours).
 
-      **Early Feedback Opportunity.** If you are concerned about whether you have earned a specific grade or how to defend a grade proposal, you are welcome to talk with me about what you plan to propose while working on  your reflection paper, and I can help guide you on what might be compelling in defense of that grade. **This must be done early in the assignment period and not at the last minute.** If you wait until the last minute, I may not be able to accomodate a meeting prior to having to submit grades.
+      **Early Feedback Opportunity.** If you are concerned about whether you have earned a specific grade or how to defend a grade proposal, you are welcome to talk with me about what you plan to propose while working on your reflection paper, and I can help guide you on what might be compelling in defense of that grade. **This must be done early in the assignment period and not at the last minute.** If you wait until the last minute, I may not be able to accomodate a meeting prior to having to submit grades.
   schedule:
     -
       month: August
-      year: 2020
+      year: 2023
       weeks:
         -
           week_num: 1
           sessions:
             -
-              session_num: 1
+              session_num: 1a
               day: Tuesday
-              date: 08/25
+              date: 08/22
               formats:
                 -  
                   type: hello
@@ -259,6 +259,46 @@ syllabus:
                 - 
                   type: course-info
                   title: Course Intro
+              readings:
+                -
+                  type: read-web
+                  title: Create a GitHub Account
+                  url: https://github.com
+                -
+                  type: read-web
+                  title: Get the GitHub Student Developer Pack
+                  url: https://education.github.com/pack
+                # -
+                #   type: read-web
+                #   title: Create a Heroku Account
+                #   url: https://heroku.com/
+              assigned:
+                -
+                  type: journal
+                  title: "Journal: Expectations"
+                  due: Tue 08/22
+                  notes: Completed during class
+                - 
+                  type: journal
+                  title: "Weekly Reflection Journals"
+                  due: weekly on Mondays before midnight Central
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
+                  due: Tue 10/03
+              due:
+                -
+                  type: journal
+                  title: "Journal: Expectations"
+            -
+              session_num: 1b
+              day: Tuesday
+              date: 08/22
+              formats:
+                -
+                  type: demo
+                  title: Language & Tools Demo
+              topics:
                 - 
                   type: tools
                   title: Language &amp; Tools Intro
@@ -271,25 +311,34 @@ syllabus:
                   type: read-web
                   title: Get the GitHub Student Developer Pack
                   url: https://education.github.com/pack
-                -
-                  type: read-web
-                  title: Create a Heroku Account
-                  url: https://heroku.com/
               assigned:
                 -
-                  type: journal
-                  title: "Journal: Expectations"
-                  due: Tue 08/25
+                  type: assignment
+                  title: "A0: Github Username"
+                  due: Tue 08/22
                   notes: Completed during class
                 - 
                   type: project
                   title: "P0: Project Proposal"
-                  due: Tue 09/08
+                  due: Tue 09/05
               due:
+                -
+                  type: assignment
+                  title: "A0: Github Username"
+        -
+          week_num: 2
+          sessions:
             -
-              session_num: 2
-              day: Thursday
-              date: 08/27
+              day: Monday
+              date: 08/28
+              due:
+                - 
+                  type: journal
+                  title: "Week 1 Reflection"
+            -
+              session_num: 2a
+              day: Tuesday
+              date: 08/29
               formats:
                 - 
                   type: lecture
@@ -298,56 +347,142 @@ syllabus:
                 - 
                   type: lecture
                   title: Intro to the Internet
+                - 
+                  type: lecture
+                  title: Layered Network Models & the TCP/IP Protocol Stack
               readings:
                 -
                   type: read-TIN
-                  title: "TIN: pp. 1 - 30 (Ch 1)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  title: "TIN Ch 1: pp. 1 - 46 (46 pages)"
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
+                -
+                  type: read-TIN
+                  title: "TIN Ch 2: pp. 47-69 (23 pages)"
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned: 
               due:
-        -
-          week_num: 2
-          sessions:
             -
-              day: Monday
-              date: 08/31
-              due:
+              session_num: 2b
+              day: Tuesday
+              date: 08/29
+              formats:
                 - 
-                  type: journal
-                  title: "Week 1 Reflection"
+                  type: discussion
+                  title: Discussion
+                -
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: discussion
+                  title: TCP/IP Protocol Stack
+                - 
+                  type: discussion
+                  title: RFCs
+                -
+                  type: demo
+                  title: Network Inspection & Packet Capture
+              readings:
+              assigned: 
+              due:
     -
       month: September
       year: 2020
       weeks:
         -
-          week_num: 2
+          week_num: 3
           sessions:
             -
-              session_num: 3
+              day: Monday
+              date: 09/04
+              due:
+                - 
+                  type: journal
+                  title: "Week 2 Reflection"
+            -
+              session_num: 3a
               day: Tuesday
-              date: 09/01
+              date: 09/05
               formats:
                 - 
-                  type: lecture
-                  title: Lecture
+                  type: lab
+                  title: Lab
               topics:
                 - 
-                  type: lecture
-                  title: Layered Network Models
-                - 
-                  type: lecture
-                  title: The TCP/IP Protocol Stack
+                  type: lab
+                  title: Intro to JavaScript
               readings:
                 -
-                  type: read-TIN
-                  title: "TIN: pp. 30 - 69 (Ch 1 & 2)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  type: read-EJS
+                  title: "EJS: Intro. - Ch 6 (~107 pages)"
+                  url: https://eloquentjavascript.net/
+                  notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
+              assigned:
+              due:
+                - 
+                  type: project
+                  title: "P0: Project Proposal"
+            -
+              session_num: 3b
+              day: Tuesday
+              date: 09/05
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                -
+                  type: demo
+                  title: How to do a Programming Assignment
+              readings:
+              assigned:
+                - 
+                  type: assignment
+                  title: "A1: Ethernet Parser - Basic JavaScript"
+                  due: Tue 09/12
+              due:
+        -
+          week_num: 4
+          sessions:
+            -
+              day: Monday
+              date: 09/11
+              due:
+                - 
+                  type: journal
+                  title: "Week 3 Reflection"
+            -
+              session_num: 4a
+              day: Tuesday
+              date: 09/12
+              formats:
+                -
+                  type: lecture
+                  title: Lecture
+                -
+                  type: lab
+                  title: Lab
+              topics:
+                -
+                  type: lecture
+                  title: JavaScript Error Handling
+                -
+                  type: lecture
+                  title: Regular Expressions
+                -
+                  type: lab
+                  title: Error Handling & Regular Expressions
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Ch 8 - 11 (~73 pages)"
+                  url: https://eloquentjavascript.net/
               assigned:
               due:
             -
-              session_num: 4
-              day: Thursday
-              date: 09/03
+              session_num: 4b
+              day: Tuesday
+              date: 09/12
               formats:
                 - 
                   type: discussion
@@ -355,81 +490,178 @@ syllabus:
               topics:
                 - 
                   type: discussion
-                  title: TCP/IP Stack
-                - 
-                  type: discussion
-                  title: RFCs
-                - 
-                  type: discussion
-                  title: Packet Capture
+                  title: "First assignment: questions to clarity"
               readings:
               assigned:
               due:
-        -
-          week_num: 3
-          sessions:
-            -
-              day: Monday
-              date: 09/07
-              due:
-                - 
-                  type: journal
-                  title: "Week 2 Reflection"
-            -
-              session_num: 5
-              day: Tuesday
-              date: 09/08
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-                - 
-                  type: lab
-                  title: Lab
-              topics:
-                - 
-                  type: demo
-                  title: Intro to JavaScript
-              readings:
                 -
-                  type: read-EJS
-                  title: "EJS: Intro. - Ch 6"
-                  url: https://eloquentjavascript.net/
-                  notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
-              assigned:
-                - 
                   type: assignment
                   title: "A1: Ethernet Parser - Basic JavaScript"
-                  due: Tue 09/15
-              due:
-                - 
-                  type: project
-                  title: "P0: Project Proposal"
-            -
-              session_num: 6
-              day: Thursday
-              date: 09/10
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: demo
-                  title: How to do an assignment
-              readings:
-              assigned:
-              due:
         -
-          week_num: 4
+          week_num: 5
           sessions:
             -
               day: Monday
-              date: 09/14
+              date: 09/18
               due:
                 - 
                   type: journal
-                  title: "Week 3 Reflection"
+                  title: "Week 4 Reflection"
+        -
+          week_num: 6
+          sessions:
+            -
+              day: Monday
+              date: 09/25
+              due:
+                - 
+                  type: journal
+                  title: "Week 5 Reflection"
+    -
+      month: October
+      year: 2020
+      weeks:
+        -
+          week_num: 7
+          sessions:
+            -
+              day: Monday
+              date: 10/02
+              due:
+                - 
+                  type: journal
+                  title: "Week 6 Reflection"
+            -
+              session_num: 7a
+              day: Tuesday
+              date: 10/03
+              due:
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
+
+        -
+          week_num: 8
+          sessions:
+            -
+              day: Tuesday
+              date: 10/10
+              due:
+              notes: NO CLASS - FALL BREAK
+        -
+          week_num: 9
+          sessions:
+            -
+              day: Monday
+              date: 10/16
+              due:
+                - 
+                  type: journal
+                  title: "Week 7 & 8 Reflection"
+        -
+          week_num: 10
+          sessions:
+            -
+              day: Monday
+              date: 10/23
+              due:
+                - 
+                  type: journal
+                  title: "Week 9 Reflection"
+        -
+          week_num: 11
+          sessions:
+            -
+              day: Monday
+              date: 10/30
+              due:
+                - 
+                  type: journal
+                  title: "Week 10 Reflection"
+    -
+      month: November
+      year: 2020
+      weeks:
+        -
+          week_num: 12
+          sessions:
+            -
+              day: Tuesday
+              date: 11/07
+              notes: "NO CLASS - ELECTION DAY: GO VOTE!"
+        -
+          week_num: 13
+          sessions:
+            -
+              day: Monday
+              date: 11/13
+              due:
+                - 
+                  type: journal
+                  title: "Week 11 & 12 Reflection"
+        -
+          week_num: H
+          sessions:
+            -
+              day: Monday
+              date: 11/20
+              due:
+                - 
+                  type: journal
+                  title: "Week 13 Reflection"
+        -
+          week_num: 14
+          sessions:
+            -
+              day: Monday
+              date: 11/27
+              due:
+                - 
+                  type: journal
+                  title: "Week H Reflection"
+    -
+      month: December
+      year: 2020
+      weeks:
+        -
+          week_num: 15
+          sessions:
+            -
+              day: Monday
+              date: 12/04
+              due:
+                - 
+                  type: journal
+                  title: "Week 14 Reflection"
+        -
+          week_num: 16
+          sessions:
+            -
+              session_num: F
+              day: Tuesday
+              date: 12/12<br/>7:00-9:00p
+              formats:
+                -
+                  type: celebration
+                  title: Celebration!
+              topics:
+                -
+                  type: project
+                  title: PROJECT CELEBRATION & DEMO
+              readings: |
+                Be ready to talk about your goal and show off your project!
+                
+                Bring your favorite treat and non-alcoholic beverage.
+            -
+              day: Friday
+              date: 12/15
+              due:
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
+        -
+          week_num: 20
+          sessions:
             -
               session_num: 7
               day: Tuesday
@@ -441,7 +673,7 @@ syllabus:
               notes: NO CLASS - Cancelled due to Hurricane Sally
             -
               session_num: 8
-              day: Thursday
+              day: Tuesday
               date: 09/17
               formats:
                 - 
@@ -481,9 +713,6 @@ syllabus:
                   url: http://latentflip.com/loupe/
               assigned:
               due:
-        -
-          week_num: 5
-          sessions:
             -
               day: Monday
               date: 09/21
@@ -525,7 +754,7 @@ syllabus:
               due:
             -
               session_num: 10
-              day: Thursday
+              day: Tuesday
               date: 09/24
               formats:
                 - 
@@ -545,19 +774,9 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 661 - 684 (Ch 26)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
-        -
-          week_num: 6
-          sessions:
-            -
-              day: Monday
-              date: 09/28
-              due:
-                - 
-                  type: journal
-                  title: "Week 5 Reflection"
             -
               session_num: 11
               day: Tuesday
@@ -580,16 +799,9 @@ syllabus:
                 - 
                   type: assignment
                   title: "A2: Ethernet Parser - Async Programming in JS"
-    -
-      month: October
-      year: 2020
-      weeks:
-        -
-          week_num: 6
-          sessions:
             -
               session_num: 12
-              day: Thursday
+              day: Tuesday
               date: 10/01
               formats:
                 - 
@@ -605,9 +817,6 @@ syllabus:
                 - 
                   type: project
                   title: "P1: Project Specification"
-        -
-          week_num: 7
-          sessions:
             -
               day: Monday
               date: 10/05
@@ -650,7 +859,7 @@ syllabus:
               due:
             -
               session_num: 14
-              day: Thursday
+              day: Tuesday
               date: 10/08
               formats:
                 - 
@@ -673,16 +882,6 @@ syllabus:
                   title: "P2: Project Web Client"
                   due: Thu 10/29
               due:
-        -
-          week_num: 8
-          sessions:
-            -
-              day: Monday
-              date: 10/12
-              due:
-                - 
-                  type: journal
-                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
             -
               session_num: 15
               day: Tuesday
@@ -699,7 +898,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 637 - 659 (Ch 25)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
                 - 
@@ -707,7 +906,7 @@ syllabus:
                   title: "A3: Dynamic Content in a Webpage"
             -
               session_num: 16
-              day: Thursday
+              day: Tuesday
               date: 10/15
               formats:
                 - 
@@ -721,23 +920,13 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 289 - 306 (Ch 11)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
                 - 
                   type: assignment
                   title: "A4: UDP Parser"
                   due: Thu 10/22
               due:
-        -
-          week_num: 9
-          sessions:
-            -
-              day: Monday
-              date: 10/19
-              due:
-                - 
-                  type: journal
-                  title: "Week 8 Reflection"
             -
               session_num: 17
               day: Tuesday
@@ -764,7 +953,7 @@ syllabus:
               due:
             -
               session_num: 18
-              day: Thursday
+              day: Tuesday
               date: 10/22
               formats:
                 - 
@@ -778,22 +967,12 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 307 - 329 (Ch 12)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
                 - 
                   type: assignment
                   title: "A4: UDP Parser"
-        -
-          week_num: 10
-          sessions:
-            -
-              day: Monday
-              date: 10/26
-              due:
-                - 
-                  type: journal
-                  title: "Week 9 Reflection"
             -
               session_num: 19
               day: Tuesday
@@ -817,24 +996,10 @@ syllabus:
               due:
             -
               session_num: 20
-              day: Thursday
+              day: Tuesday
               date: 10/29
               due:
               notes: NO CLASS - Cancelled due to Hurricane Zeta
-    -
-      month: November
-      year: 2020
-      weeks:
-        -
-          week_num: 11
-          sessions:
-            -
-              day: Monday
-              date: 11/02
-              due:
-                - 
-                  type: journal
-                  title: "Week 10 Reflection"
             -
               session_num: 21
               day: Tuesday
@@ -859,7 +1024,7 @@ syllabus:
                   title: "P2: Project Web Client"
             -
               session_num: 22
-              day: Thursday
+              day: Tuesday
               date: 11/05
               formats:
                 - 
@@ -884,16 +1049,6 @@ syllabus:
                   title: "P3: Project Web API"
                   due: Thu 12/01
               due:
-        -
-          week_num: 12
-          sessions:
-            -
-              day: Monday
-              date: 11/09
-              due:
-                - 
-                  type: journal
-                  title: "Week 11 Reflection"
             -
               session_num: 23
               day: Tuesday
@@ -910,12 +1065,12 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 587 - 612 (Ch 23)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
             -
               session_num: 24
-              day: Thursday
+              day: Tuesday
               date: 11/12
               formats:
                 - 
@@ -929,22 +1084,12 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 139 - 173 (Ch 5)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
                 - 
                   type: assignment
                   title: "A5: TCP Parser"
-        -
-          week_num: 13
-          sessions:
-            -
-              day: Monday
-              date: 11/16
-              due:
-                - 
-                  type: journal
-                  title: "Week 12 Reflection"
             -
               session_num: 25
               day: Tuesday
@@ -972,7 +1117,7 @@ syllabus:
               due:
             -
               session_num: 26
-              day: Thursday
+              day: Tuesday
               date: 11/19
               formats:
                 - 
@@ -986,7 +1131,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 197 - 219 (Ch 7)"
-                  url: http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
                 - 
                   type: project
@@ -994,28 +1139,14 @@ syllabus:
                   due: Tue 12/08
                   notes: Concurrently with P3 
               due:
-        -
-          week_num: 14
-          sessions:
-            -
-              day: Monday
-              date: 11/23
-              due:
-                - 
-                  type: journal
-                  title: "Week 13 Reflection"
             -
               day: Tuesday
               date: 11/24
               notes: NO CLASS - Thanksgiving Holidays
             -
-              day: Thursday
+              day: Tuesday
               date: 11/26
               notes: NO CLASS - Thanksgiving Holidays
-    -
-      month: December
-      year: 2020
-      weeks:
         -
           week_num: 15
           sessions:
@@ -1045,7 +1176,7 @@ syllabus:
                   title: "P3: Project Web API"
             -
               session_num: 28
-              day: Thursday
+              day: Tuesday
               date: 12/03
               formats:
                 - 
@@ -1081,16 +1212,6 @@ syllabus:
                 - 
                   type: assignment
                   title: "A6: IP Address Subnetter/Supernetter"
-        -
-          week_num: 16
-          sessions:
-            -
-              day: Monday
-              date: 12/07
-              due:
-                - 
-                  type: journal
-                  title: "Week 13 Reflection"
             -
               session_num: 29
               day: Tuesday
@@ -1109,30 +1230,5 @@ syllabus:
                 - 
                   type: project
                   title: "P4: Web App Integration with API"
-        -
-          week_num: 17
-          sessions:
-            -
-              session_num: F
-              day: Thursday
-              date: 12/12<br/>4:30-6:30p
-              formats:
-                -
-                  type: celebration
-                  title: Celebration!
-              topics:
-                -
-                  type: project
-                  title: PROJECT CELEBRATION & DEMO
-              readings: |
-                Be ready to talk about your goal and show off your project!
-                
-                Bring your favorite treat and non-alcoholic beverage.
-            -
-              day: Friday
-              date: 12/18
-              due:
-                - 
-                  type: journal
-                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
+
 ---

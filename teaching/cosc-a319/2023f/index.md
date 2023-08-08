@@ -9,9 +9,9 @@ This course introduces students to the world of internet and networked systems d
 
 ## What do I need to know before I take this course?
 
-Prerequisites include [COSC A212 Introduction to Programming II](http://2017bulletin.loyno.edu/undergraduate/computer-science#cosc-a212) and Sophomore standing, or Instructor Approval.
+Prerequisites include [COSC A212 Introduction to Programming II](https://loyno-ss.colleague.elluciancloud.com/Student/Student/Courses/Search?keyword=COSC-A212) and Sophomore standing, or Instructor Approval.
 
-To be successful in this course, you should have practical experience building software, and in particular, should be comfortable working with data structures, designing classes, and writing software modules.
+To be successful in this course, you should have practical experience building software, and in particular, should be comfortable working with data structures, designing classes, and writing software modules in a multi-file software system.
 
 ## Important Links
 
@@ -20,9 +20,9 @@ To be successful in this course, you should have practical experience building s
 * **[Assignment Specifications](./assignments)**
 * **[Useful How-to Guides](./guides)**
 * **[Example Code Files Used in Demos](./example-code)**
-* [Our Canvas Class (requires login)](https://loyno.instructure.com/courses/946)
+* [Our Canvas Class (requires login)](https://loyno.instructure.com/courses/18329)
 * Textbooks and their companion websites
-  * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](http://ezproxy.loyno.edu/login?url=https://www.sciencedirect.com/science/book/9780128110270)
+  * [📘 The Illustrated Network: How TCP/IP Works in a Modern Network, 2nd Edition (2017)](https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one)
   * [📙 Eloquent Javascript, 3rd Edition (2018)](https://eloquentjavascript.net/)
 * Additional/Optional Textbooks and Readings
   * [📗 Building the Web of Things, 1st Edition (2016)](https://webofthings.org/book/)
