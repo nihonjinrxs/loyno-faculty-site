@@ -44,8 +44,12 @@ layout: page
           {% for week in month.weeks %}
           {% if last_week_added != week.week_num %}
             {% assign padded_week = week.week_num %}
+            {% assign addition = padded_week | plus: 0 %}
+            {% capture addition %}{{addition}}{% endcapture %}
+            {% if padded_week == addition %}
             {% if padded_week < 10 %}
               {% assign padded_week = padded_week | prepend: '0' %}
+            {% endif %}
             {% endif %}
             <a href="#schedule-week-{{padded_week}}">{{week.week_num}}</a>
             {% assign last_week_added = week.week_num %}

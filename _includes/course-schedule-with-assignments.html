@@ -21,8 +21,12 @@
         <tr>
           <td colspan="3" class="centered highlight-week">
             {% assign padded_week = week.week_num %}
+            {% assign addition = padded_week | plus: 0 %}
+            {% capture addition %}{{addition}}{% endcapture %}
+            {% if padded_week == addition %}
             {% if padded_week < 10 %}
               {% assign padded_week = padded_week | prepend: '0' %}
+            {% endif %}
             {% endif %}
             <a name="schedule-week-{{ padded_week }}"></a>
             Course Week {{ week.week_num }}
@@ -159,48 +163,48 @@
     margin-right: 0;
   }
   .hello::before {
-    content: '\1F44B';
+    content: '👋';
   }
   .discussion::before {
-    content: '\1F5EB';
+    content: '💬';
   }
   .project::before {
-    content: '\1F3D7';
+    content: '🏗';
   }
   .course-info::before {
-    content: '\1F4DC';
+    content: '📜';
   }
   .lecture::before {
-    content: '\1F5E9';
+    content: '👂';
   }
   .setting::before {
-    content: '\2699';
+    content: '🎛';
   }
   .tools::before {
-    content: '\1F5A5';
+    content: '🛠';
   }
   .lab::before {
-    content: '\2328';
+    content: '🔬';
   }
   .demo::before {
-    content: '\1F4BB';
+    content: '👀';
   }
   .celebration::before {
-    content: '\1F389';
+    content: '🎊';
   }
   .assignment::before {
-    content: '\270D';
+    content: '📝';
   }
   .read-TIN::before {
-    content: '\1F4D8';
+    content: '📘';
   }
   .read-EJS::before {
-    content: '\1F4D9';
+    content: '📙';
   }
   .read-web::before {
-    content: '\1F517';
+    content: '🔗';
   }
   .journal::before {
-    content: '\1F4D3';
+    content: '📓';
   }
 </style>
