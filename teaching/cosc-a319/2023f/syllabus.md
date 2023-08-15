@@ -43,7 +43,7 @@ syllabus:
       isbn: 978-0-12-811027-0
       textbook_message: |
         **You DO need to obtain a copy of this book, at least for the semester.**
-        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via the library catalog](https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one). If you have trouble, you can contact the library staff for help.
+        The Monroe Library has been able to provide a digital copy of the book. You should be able to access that [via the library catalog](http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270). If you have trouble, you can contact the library staff for help.
 
         This book is also available for sale online for between $70 and $90, and is a fantastic reference for this content for the future.
       isbn_url: https://isbnsearch.org/isbn/9780128110270
@@ -128,7 +128,7 @@ syllabus:
         * [Create React App](https://facebook.github.io/create-react-app/)
       * API:
         * [nvm (on macOS or Linux)](https://github.com/nvm-sh/nvm) or [nvm-windows (on Windows)](https://github.com/coreybutler/nvm-windows)
-        * [Node.js ("LTS" v18.x)](https://nodejs.org/en/)
+        * [Node.js ("LTS" v18.x)](https://nodejs.org/en/) <small>(Note that there will be [a major version upgrade mid-semester to LTS = v20.x](https://github.com/nodejs/release#release-schedule))</small>
         * [NPM](https://docs.npmjs.com/cli/npm) and/or [Yarn](https://yarnpkg.com/en/)
         * [Express.js](https://expressjs.com/)
 
@@ -142,7 +142,7 @@ syllabus:
 
       * [Wireshark](https://www.wireshark.org/) - the most commonly used network protocol analyzer, providing facilities for live capture and offline analysis of network traffic data at the packet and byte level. Also provides `tshark`, the command-line version of Wireshark. This was originally named "Ethereal", with command-line version `tethereal`.
       * Under the hood of Wireshark is `libpcap`, which is part of the [`tcpdump` command line packet analyzer](https://www.tcpdump.org/). Somewhat harder to use, it provides raw capture capability for cases where Wireshark is not enough. (Your instructor has not found any cases like this yet.)
-      * [Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software.
+      * [HTTP Toolkit](https://httptoolkit.com/) is an open-source web debugging proxy that is sometimes useful for manipulating a web session or intentionally impacting network performance when building internet-based software. (It is free with a paid upgrade to a Pro version, but you should not need the Pro features for this.)
       * [Zenmap](https://nmap.org/zenmap/), the graphical interface for the `nmap` command line tool, provides facilities for scanning networks and systems for security vulnerabilities.
 
       During this course, we will use Wireshark during demos to explore the protocol layers of internet message packets when we dive into the details of the various protocols.
@@ -197,12 +197,12 @@ syllabus:
       
       These papers are due:
       
-      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on Tuesday, October 3, 2020, by 11:59 PM US Central**
-      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on Friday, December 15, 2020, by 11:59 PM US Central**
+      * MIDTERM GRADE PROPOSAL REFLECTION PAPER **due on Friday, October 6, 2023, by 11:59 PM US Central**
+      * FINAL GRADE PROPOSAL REFLECTION PAPER **due on Friday, December 15, 2023, by 11:59 PM US Central**
   
       ### Submission Information
       
-      Papers **must be submitted in PDF format through the Canvas assignment**, which uses Urkund for plaigiarism detection. Unless you have arranged with me ahead of time due to some unforeseen circumstance, essays emailed to me or transmitted by some other mechanism result in you forfeiting your ability to weigh in on your grade for that portion of the course, meaning that my decision, based on what I know of your work so far, will be final.
+      Papers **must be submitted in PDF format through the Canvas assignment**, which uses plaigiarism detection. Unless you have arranged with me ahead of time due to some unforeseen circumstance, essays emailed to me or transmitted by some other mechanism result in you forfeiting your ability to weigh in on your grade for that portion of the course, meaning that my decision, based on what I know of your work so far, will be final.
 
       ### How you will be graded
 
@@ -243,9 +243,27 @@ syllabus:
       weeks:
         -
           week_num: 1
+          week_dates: Aug 20 - 26, 2023
           sessions:
+            - session_num: 1
+              day: Tuesday
+              date: 08/22
+              readings:
+                -
+                  type: read-web
+                  title: Create a GitHub Account
+                  url: https://github.com
+                -
+                  type: read-web
+                  title: Get the GitHub Student Developer Pack
+                  url: https://education.github.com/pack
+                # -
+                #   type: read-web
+                #   title: Create a Heroku Account
+                #   url: https://heroku.com/
+              due:
             -
-              session_num: 1a
+              session_num: 1:a
               day: Tuesday
               date: 08/22
               formats:
@@ -260,38 +278,14 @@ syllabus:
                   type: course-info
                   title: Course Intro
               readings:
-                -
-                  type: read-web
-                  title: Create a GitHub Account
-                  url: https://github.com
-                -
-                  type: read-web
-                  title: Get the GitHub Student Developer Pack
-                  url: https://education.github.com/pack
-                # -
-                #   type: read-web
-                #   title: Create a Heroku Account
-                #   url: https://heroku.com/
               assigned:
                 -
                   type: journal
                   title: "Journal: Expectations"
-                  due: Tue 08/22
+                  due: <strong>TODAY</strong>, Tue 08/22
                   notes: Completed during class
-                - 
-                  type: journal
-                  title: "Weekly Reflection Journals"
-                  due: weekly on Mondays before midnight Central
-                - 
-                  type: journal
-                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
-                  due: Tue 10/03
-              due:
-                -
-                  type: journal
-                  title: "Journal: Expectations"
             -
-              session_num: 1b
+              session_num: 1:b
               day: Tuesday
               date: 08/22
               formats:
@@ -302,31 +296,31 @@ syllabus:
                 - 
                   type: tools
                   title: Language &amp; Tools Intro
-              readings:
-                -
-                  type: read-web
-                  title: Create a GitHub Account
-                  url: https://github.com
-                -
-                  type: read-web
-                  title: Get the GitHub Student Developer Pack
-                  url: https://education.github.com/pack
               assigned:
                 -
                   type: assignment
                   title: "A0: Github Username"
-                  due: Tue 08/22
+                  due: <strong>TODAY</strong>, Tue 08/22
                   notes: Completed during class
+            - session_num: 1
+              day: Tuesday
+              date: 08/22
+              assigned:
                 - 
                   type: project
                   title: "P0: Project Proposal"
                   due: Tue 09/05
-              due:
-                -
-                  type: assignment
-                  title: "A0: Github Username"
+                - 
+                  type: journal
+                  title: "Weekly Reflection Journals"
+                  due: weekly on Mondays before midnight Central
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
+                  due: Fri 10/06
         -
           week_num: 2
+          week_dates: Aug 27 - Sep 2, 2023
           sessions:
             -
               day: Monday
@@ -336,7 +330,20 @@ syllabus:
                   type: journal
                   title: "Week 1 Reflection"
             -
-              session_num: 2a
+              session_num: 2
+              day: Tuesday
+              date: 08/29
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN Ch 1: pp. 1 - 46 (46 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                -
+                  type: read-TIN
+                  title: "TIN Ch 2: pp. 47 - 69 (23 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+            -
+              session_num: 2:a
               day: Tuesday
               date: 08/29
               formats:
@@ -350,19 +357,8 @@ syllabus:
                 - 
                   type: lecture
                   title: Layered Network Models & the TCP/IP Protocol Stack
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN Ch 1: pp. 1 - 46 (46 pages)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
-                -
-                  type: read-TIN
-                  title: "TIN Ch 2: pp. 47-69 (23 pages)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
-              assigned: 
-              due:
             -
-              session_num: 2b
+              session_num: 2:b
               day: Tuesday
               date: 08/29
               formats:
@@ -382,15 +378,21 @@ syllabus:
                 -
                   type: demo
                   title: Network Inspection & Packet Capture
-              readings:
-              assigned: 
-              due:
+            -
+              session_num: 2
+              day: Tuesday
+              date: 08/29
+              assigned:
+                -
+                  type: none
+                  title: No new assignments
     -
       month: September
-      year: 2020
+      year: 2023
       weeks:
         -
           week_num: 3
+          week_dates: Sep 3 - 9, 2023
           sessions:
             -
               day: Monday
@@ -400,7 +402,21 @@ syllabus:
                   type: journal
                   title: "Week 2 Reflection"
             -
-              session_num: 3a
+              session_num: 3
+              day: Tuesday
+              date: 09/05
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Intro. - Ch 6 (~107 pages)"
+                  url: https://eloquentjavascript.net/
+                  notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
+              due:
+                - 
+                  type: project
+                  title: "P0: Project Proposal"
+            -
+              session_num: 3:a
               day: Tuesday
               date: 09/05
               formats:
@@ -411,19 +427,8 @@ syllabus:
                 - 
                   type: lab
                   title: Intro to JavaScript
-              readings:
-                -
-                  type: read-EJS
-                  title: "EJS: Intro. - Ch 6 (~107 pages)"
-                  url: https://eloquentjavascript.net/
-                  notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
-              assigned:
-              due:
-                - 
-                  type: project
-                  title: "P0: Project Proposal"
             -
-              session_num: 3b
+              session_num: 3:b
               day: Tuesday
               date: 09/05
               formats:
@@ -434,15 +439,18 @@ syllabus:
                 -
                   type: demo
                   title: How to do a Programming Assignment
-              readings:
+            -
+              session_num: 3
+              day: Tuesday
+              date: 09/05
               assigned:
                 - 
                   type: assignment
                   title: "A1: Ethernet Parser - Basic JavaScript"
                   due: Tue 09/12
-              due:
         -
           week_num: 4
+          week_dates: Sep 10 - 16, 2023
           sessions:
             -
               day: Monday
@@ -452,7 +460,20 @@ syllabus:
                   type: journal
                   title: "Week 3 Reflection"
             -
-              session_num: 4a
+              session_num: 4
+              day: Tuesday
+              date: 09/12
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Ch 8 - 11 (~73 pages)"
+                  url: https://eloquentjavascript.net/
+              due:
+                -
+                  type: assignment
+                  title: "A1: Ethernet Parser - Basic JavaScript"
+            -
+              session_num: 4:a
               day: Tuesday
               date: 09/12
               formats:
@@ -472,15 +493,8 @@ syllabus:
                 -
                   type: lab
                   title: Error Handling & Regular Expressions
-              readings:
-                -
-                  type: read-EJS
-                  title: "EJS: Ch 8 - 11 (~73 pages)"
-                  url: https://eloquentjavascript.net/
-              assigned:
-              due:
             -
-              session_num: 4b
+              session_num: 4:b
               day: Tuesday
               date: 09/12
               formats:
@@ -491,14 +505,17 @@ syllabus:
                 - 
                   type: discussion
                   title: "First assignment: questions to clarity"
-              readings:
+            -
+              session_num: 4
+              day: Tuesday
+              date: 09/12
               assigned:
-              due:
                 -
-                  type: assignment
-                  title: "A1: Ethernet Parser - Basic JavaScript"
+                  type: none
+                  title: No new assignments
         -
           week_num: 5
+          week_dates: Sep 17 - 23, 2023
           sessions:
             -
               day: Monday
@@ -507,8 +524,70 @@ syllabus:
                 - 
                   type: journal
                   title: "Week 4 Reflection"
+            -
+              session_num: 5
+              day: Tuesday
+              date: 09/19
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN Ch 26: pp. 661 - 684 (24 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+            -
+              session_num: 5:a
+              day: Tuesday
+              date: 09/19
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: lecture
+                  title: HTTP and Web-based Applications
+                - 
+                  type: lab
+                  title: Inspecting and Understanding HTTP Traffic
+            -
+              session_num: 5:b
+              day: Tuesday
+              date: 09/19
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+                - 
+                  type: discussion
+                  title: Discussion
+              topics:
+                - 
+                  type: demo
+                  title: More JavaScript Asynchrony/Concurrency
+                - 
+                  type: demo
+                  title: JavaScript Debugging
+                - 
+                  type: project
+                  title: Project Specification
+            -
+              session_num: 5
+              day: Tuesday
+              date: 09/19
+              assigned:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
+                  due: Tue 09/26
+                - 
+                  type: project
+                  title: "P1: Project Specification"
+                  due: Thu 10/03
         -
           week_num: 6
+          week_dates: Sep 24 - 30, 2023
           sessions:
             -
               day: Monday
@@ -517,12 +596,58 @@ syllabus:
                 - 
                   type: journal
                   title: "Week 5 Reflection"
+            -
+              session_num: 6
+              day: Tuesday
+              date: 09/26
+              readings:
+                -
+                  type: read-EJS
+                  title: "EJS: Ch 13 - 15 (~45 pages)"
+                  url: https://eloquentjavascript.net/
+              due:
+                - 
+                  type: assignment
+                  title: "A2: Ethernet Parser - Async Programming in JS"
+            -
+              session_num: 6:a
+              day: Tuesday
+              date: 09/26
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: JavaScript in the Browser
+            -
+              session_num: 6:b
+              day: Tuesday
+              date: 09/26
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: demo
+                  title: Web Pages, the DOM &amp; the JS API
+            -
+              session_num: 6
+              day: Tuesday
+              date: 09/26
+              assigned:
+                -
+                  type: none
+                  title: No new assignments
     -
       month: October
-      year: 2020
+      year: 2023
       weeks:
         -
           week_num: 7
+          week_dates: Oct 1 - 7, 2023
           sessions:
             -
               day: Monday
@@ -532,16 +657,77 @@ syllabus:
                   type: journal
                   title: "Week 6 Reflection"
             -
-              session_num: 7a
+              session_num: 7
               day: Tuesday
               date: 10/03
+              readings:
+                -
+                  type: read-web
+                  title: React Tutorial
+                  url: https://reactjs.org/tutorial/tutorial.html
+                -
+                  type: read-web
+                  title: Thinking in React
+                  url: https://reactjs.org/docs/thinking-in-react.html
+              due:
+                - 
+                  type: project
+                  title: "P1: Project Specification"
+            -
+              session_num: 7:a
+              day: Tuesday
+              date: 10/03
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: lecture
+                  title: Modern Browser-based Applications
+                - 
+                  type: demo
+                  title: JavaScript &amp; React
+            -
+              session_num: 7:b
+              day: Tuesday
+              date: 10/03
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: JavaScript &amp; React
+                - 
+                  type: lab
+                  title: Homework Help
+            -
+              session_num: 7
+              day: Tuesday
+              date: 10/03
+              assigned:
+                - 
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
+                  due: Tue 10/17
+            -
+              day: Friday
+              date: 10/06
               due:
                 - 
                   type: journal
                   title: "GRADE PROPOSAL REFLECTION PAPER: MIDTERM GRADE"
-
         -
           week_num: 8
+          week_dates: Oct 8 - 14, 2023
           sessions:
             -
               day: Tuesday
@@ -550,6 +736,7 @@ syllabus:
               notes: NO CLASS - FALL BREAK
         -
           week_num: 9
+          week_dates: Oct 15 - 21, 2023
           sessions:
             -
               day: Monday
@@ -558,8 +745,79 @@ syllabus:
                 - 
                   type: journal
                   title: "Week 7 & 8 Reflection"
+            -
+              session_num: 9
+              day: Tuesday
+              date: 10/17
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN Ch 11: pp. 289 - 306 (18 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                -
+                  type: read-TIN
+                  title: "TIN Ch 24: pp. 613 - 636 (24 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+              due:
+                - 
+                  type: assignment
+                  title: "A3: Dynamic Content in a Webpage"
+            -
+              session_num: 9:a
+              day: Tuesday
+              date: 10/17
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: FTP
+                - 
+                  type: lecture
+                  title: UDP
+            -
+              session_num: 9:b
+              day: Tuesday
+              date: 10/17
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: Making UDP Requests in JavaScript
+                - 
+                  type: lab
+                  title: JavaScript & React
+                - 
+                  type: lab
+                  title: Homework Help
+            -
+              session_num: 9
+              day: Tuesday
+              date: 10/17
+              assigned:
+                - 
+                  type: assignment
+                  title: "A4: UDP Parser"
+                  due: Thu 10/24
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
+                  due: Thu 10/31
+                - 
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
+                  due: Fri 12/15
         -
           week_num: 10
+          week_dates: Oct 22 - 28, 2023
           sessions:
             -
               day: Monday
@@ -568,8 +826,68 @@ syllabus:
                 - 
                   type: journal
                   title: "Week 9 Reflection"
+            -
+              session_num: 10
+              day: Tuesday
+              date: 10/24
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN Ch 12: pp. 307 - 329 (23 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                -
+                  type: read-TIN
+                  title: "TIN Ch 25: pp. 637 - 659 (23 pages)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+              due:
+                - 
+                  type: assignment
+                  title: "A4: UDP Parser"
+            -
+              session_num: 10:a
+              day: Tuesday
+              date: 10/24
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Email, SMTP, MIME &amp; POP3
+                - 
+                  type: lecture
+                  title: TCP
+            -
+              session_num: 10:b
+              day: Tuesday
+              date: 10/24
+              formats:
+                - 
+                  type: discussion
+                  title: Discussion
+                - 
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: discussion
+                  title: TCP Transaction Flow
+                - 
+                  type: lab
+                  title: Homework Help
+            -
+              session_num: 10
+              day: Tuesday
+              date: 10/24
+              assigned:
+                - 
+                  type: assignment
+                  title: "A5: TCP Parser"
+                  due: Tue 11/14
         -
           week_num: 11
+          week_dates: Oct 29 - Nov 4, 2023
           sessions:
             -
               day: Monday
@@ -580,10 +898,11 @@ syllabus:
                   title: "Week 10 Reflection"
     -
       month: November
-      year: 2020
+      year: 2023
       weeks:
         -
           week_num: 12
+          week_dates: Nov 5 - 11, 2023
           sessions:
             -
               day: Tuesday
@@ -591,6 +910,7 @@ syllabus:
               notes: "NO CLASS - ELECTION DAY: GO VOTE!"
         -
           week_num: 13
+          week_dates: Nov 12 - 18, 2023
           sessions:
             -
               day: Monday
@@ -601,6 +921,7 @@ syllabus:
                   title: "Week 11 & 12 Reflection"
         -
           week_num: H
+          week_dates: Nov 19 - 25, 2023
           sessions:
             -
               day: Monday
@@ -611,6 +932,7 @@ syllabus:
                   title: "Week 13 Reflection"
         -
           week_num: 14
+          week_dates: Nov 26 - Dec 2, 2023
           sessions:
             -
               day: Monday
@@ -621,10 +943,11 @@ syllabus:
                   title: "Week H Reflection"
     -
       month: December
-      year: 2020
+      year: 2023
       weeks:
         -
           week_num: 15
+          week_dates: Dec 3 - 9, 2023
           sessions:
             -
               day: Monday
@@ -635,6 +958,7 @@ syllabus:
                   title: "Week 14 Reflection"
         -
           week_num: 16
+          week_dates: Dec 10 - 16, 2023
           sessions:
             -
               session_num: F
@@ -724,57 +1048,11 @@ syllabus:
               session_num: 9
               day: Tuesday
               date: 09/22
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-                - 
-                  type: discussion
-                  title: Discussion
-              topics:
-                - 
-                  type: demo
-                  title: More JavaScript Asynchrony/Concurrency
-                - 
-                  type: demo
-                  title: JavaScript Debugging
-                - 
-                  type: project
-                  title: Project Specification
-              readings:
-              assigned:
-                - 
-                  type: assignment
-                  title: "A2: Ethernet Parser - Async Programming in JS"
-                  due: Tue 09/29
-                - 
-                  type: project
-                  title: "P1: Project Specification"
-                  due: Thu 10/01
               due:
             -
               session_num: 10
               day: Tuesday
               date: 09/24
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-                - 
-                  type: lab
-                  title: Lab
-              topics:
-                - 
-                  type: lecture
-                  title: HTTP and Web-based Applications
-                - 
-                  type: lab
-                  title: Inspecting and Understanding HTTP Traffic
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 661 - 684 (Ch 26)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
               assigned:
               due:
             -
@@ -825,172 +1103,9 @@ syllabus:
                   type: journal
                   title: "Week 6 Reflection"
             -
-              session_num: 13
-              day: Tuesday
-              date: 10/06
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-                - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: lecture
-                  title: Modern Browser-based Applications
-                - 
-                  type: demo
-                  title: JavaScript &amp; React
-              readings:
-                -
-                  type: read-web
-                  title: React Tutorial
-                  url: https://reactjs.org/tutorial/tutorial.html
-                -
-                  type: read-web
-                  title: Thinking in React
-                  url: https://reactjs.org/docs/thinking-in-react.html
-              assigned:
-                - 
-                  type: assignment
-                  title: "A3: Dynamic Content in a Webpage"
-                  due: Tue 10/13
-              due:
-            -
-              session_num: 14
-              day: Tuesday
-              date: 10/08
-              formats:
-                - 
-                  type: discussion
-                  title: Discussion
-                - 
-                  type: lab
-                  title: Lab
-              topics:
-                - 
-                  type: discussion
-                  title: JavaScript &amp; React
-                - 
-                  type: lab
-                  title: Homework Help
-              readings:
-              assigned:
-                - 
-                  type: project
-                  title: "P2: Project Web Client"
-                  due: Thu 10/29
-              due:
-            -
-              session_num: 15
-              day: Tuesday
-              date: 10/13
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: Email, SMTP, MIME &amp; POP3
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 637 - 659 (Ch 25)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
-              assigned:
-              due:
-                - 
-                  type: assignment
-                  title: "A3: Dynamic Content in a Webpage"
-            -
-              session_num: 16
-              day: Tuesday
-              date: 10/15
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: UDP
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 289 - 306 (Ch 11)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
-              assigned:
-                - 
-                  type: assignment
-                  title: "A4: UDP Parser"
-                  due: Thu 10/22
-              due:
-            -
-              session_num: 17
-              day: Tuesday
-              date: 10/20
-              formats:
-                - 
-                  type: discussion
-                  title: Discussion
-                - 
-                  type: lab
-                  title: Lab
-              topics:
-                - 
-                  type: discussion
-                  title: Making UDP Requests in JavaScript
-                - 
-                  type: lab
-                  title: JavaScript & React
-                - 
-                  type: lab
-                  title: Homework Help
-              readings:
-              assigned:
-              due:
-            -
-              session_num: 18
-              day: Tuesday
-              date: 10/22
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: TCP
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 307 - 329 (Ch 12)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
-              assigned:
-              due:
-                - 
-                  type: assignment
-                  title: "A4: UDP Parser"
-            -
               session_num: 19
               day: Tuesday
               date: 10/27
-              formats:
-                - 
-                  type: discussion
-                  title: Discussion
-                - 
-                  type: lab
-                  title: Lab
-              topics:
-                - 
-                  type: discussion
-                  title: TCP Transaction Flow
-                - 
-                  type: lab
-                  title: Homework Help
               readings:
               assigned:
               due:
@@ -1013,11 +1128,6 @@ syllabus:
                   type: lecture
                   title: "Web APIs: from HTML to Other Response Types"
               readings:
-              assigned:
-                - 
-                  type: assignment
-                  title: "A5: TCP Parser"
-                  due: Thu 11/12
               due:
                 - 
                   type: project
@@ -1065,7 +1175,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 587 - 612 (Ch 23)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
             -
@@ -1084,7 +1194,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 139 - 173 (Ch 5)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
               due:
                 - 
@@ -1131,7 +1241,7 @@ syllabus:
                 -
                   type: read-TIN
                   title: "TIN: pp. 197 - 219 (Ch 7)"
-                  url: https://lalo.ent.sirsi.net/client/en_US/loyola/search/detailnonmodal/ent:$002f$002fSD_LOYNO$002f0$002fSD_LOYNO:1051354/one
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
               assigned:
                 - 
                   type: project

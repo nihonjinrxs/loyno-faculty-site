@@ -30,6 +30,9 @@
             {% endif %}
             <a name="schedule-week-{{ padded_week }}"></a>
             Course Week {{ week.week_num }}
+            {% if week.week_dates != nil %}
+            — {{ week.week_dates }}
+            {% endif %}
           </td>
         </tr>
         {% assign last_week_rendered = week.week_num %}
@@ -70,7 +73,13 @@
           <ul class="emoji-list">
             {% for due in session.due %}
             <li class="{{ due.type }}">
-              <strong>{{ due.title }}</strong>
+              <strong>
+                {{ due.title }}
+                {% if due.notes != null %}<small>
+                  ({{ due.notes }})
+                </small>
+                {% endif %}
+              </strong>
             </li>
             {% endfor %}
           </ul>
@@ -107,7 +116,9 @@
             {% for assignment in session.assigned %}
             <li class="{{ assignment.type }}">
               <strong>{{ assignment.title }}</strong>
+              {% if assignment.due != null %}
               <br />(due {{ assignment.due }})
+              {% endif %}
               {% if assignment.notes != null %}
               <br /><small><strong>Note:</strong> {{ assignment.notes }}</small>
               {% endif %}
@@ -164,6 +175,9 @@
   }
   .hello::before {
     content: '👋';
+  }
+  .none::before {
+    content: '🙅‍♂️';
   }
   .discussion::before {
     content: '💬';
