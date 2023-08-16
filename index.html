@@ -3,18 +3,18 @@ layout: default
 title: Home
 menu: main
 info:
-  office: Monroe Hall, Room 407 (not on campus Spring 2023)
+  office: Not on campus Fall 2023
   availability: 
     times: by appointment
     url: https://bit.ly/mr-harvey-office-hours
   zoom: https://bit.ly/meet-mr-harvey
-  currentsemester: Spring 2023
+  currentsemester: Fall 2023
   currentcourses:
     -
-      number: 
-      section: 
-      title: Not teaching
-      url: 
+      number: COSC A319
+      section: W01
+      title: Internet Technologies
+      url: ./teaching/cosc-a319/2023f/
   whoami: |
       I'm an experienced _software_, _data_, and
       _video engineer_, _data scientist_, and _educator_.
@@ -63,60 +63,79 @@ info:
       subject: "Mathematics; Computer Science; minor: Japanese Studies"
   work:
     -
-      organization: Screencastify
-      position: Staff Software Engineer
-      startyear: 2022
-      imageurl: ./public/screencastify_logo.svg
-      url: https://www.screencastify.com/
+      organization: MBTA (via contract)
+      position: Sr. Software Engineer
+      startyear: 2023
+      imageurl: ./public/logos/MBTA.svg
+      url: https://www.mbta.com/
     -
       organization: Loyola University New Orleans
       position: Instructor in Computer Science
       startyear: 2017
-      imageurl: ./public/loyola-logo.gif
+      imageurl: ./public/logos/loyola-logo.gif
       url: https://www.loyno.edu/
+    -
+      organization: Screencastify
+      position: Staff Software Engineer
+      startyear: 2022
+      endyear: 2023
+      imageurl: ./public/logos/screencastify_logo.svg
+      url: https://www.screencastify.com/
     -
       organization: Kitchology Inc.
       position: Data Scientist &amp; Software Architect
       startyear: 2013
-      imageurl: https://static.wixstatic.com/media/83a4ea_367395d85b6849afa07759b239a106c6~mv2.gif
+      endyear: 2023
+      imageurl: ./public/logos/kitchology.gif
       url: https://www.kitchology.com/
     -
       organization: Healthify / WellSky
       position: Sr. Software Engineer
       startyear: 2021
       endyear: 2022
-      imageurl: ./public/healthify_logo.png
+      imageurl: ./public/logos/healthify_logo.png
       url: https://www.healthify.us/
     -
       organization: TED Conferences
       position: Data Engineer / Sr. Backend Engineer
       startyear: 2016
       endyear: 2021
-      imageurl: ./public/TED_logo_rgb.png
+      imageurl: ./public/logos/TED_logo_rgb.png
       url: https://www.ted.com/
   volunteering:
+    - organization: FIRST
+      position: Event Volunteer & Control Systems Advisor
+      startyear: 2023
+      imageurl: ./public/logos/first-horz-rgb.png
+      url: https://www.firstinspires.org
+    - organization: FRC Team 2992, The S.S. Prometheus
+      position: Mentor, Code & Controls
+      startyear: 2022
+      imageurl: ./public/logos/2992-circuit-logo.png
+      url: https://www.mandevillerobotics.org
     -
       organization: The St. Charles Center for Faith + Action
       position: Board Member
       startyear: 2020
-      imageurl: ./public/st-charles-center.png
+      imageurl: ./public/logos/st-charles-center.png
       url: https://stcharlesave.center
     -
       organization: Loyola University New Orleans
       position: Research Associate Pro Bono
       startyear: 2016
-      imageurl: ./public/loyola-logo.gif
+      imageurl: ./public/logos/loyola-logo.gif
       url: https://www.loyno.edu/
     -
       organization: Code for New Orleans
       position: Brigade Captain &amp; Chief Data Wrangler
       startyear: 2016
-      imageurl: https://codefornola.github.io/style_guide/assets/images/cfno-logo.png
-      url: https://codeforneworleans.org/
+      endyear: 2023
+      imageurl: ./public/logos/cfno-logo.png
     -
       organization: University of Maryland at College Park
       position: Research Affiliate, Norbert Wiener Center, UMCP
       startyear: 2014
+      endyear: 2019
       imageurl: http://norbertwiener.umd.edu/NWC_logos/Color/ColorLogoBig.png
       url: https://norbertwiener.umd.edu/
       linkalt: Visit the homepage of the Norbert Wiener Center at the University of Maryland.
@@ -128,7 +147,7 @@ info:
       alt="Picture of Ryan Harvey">
   <div class="finding-me">
     <a href="http://loyno.edu/" target="_blank">
-      <img src="./public/logo-loyola-horizontal.svg"
+      <img src="./public/logos/logo-loyola-horizontal.svg"
       alt="Loyola University New Orleans">
   </a>
     <p>
@@ -150,20 +169,22 @@ info:
 
 <div id="current-classes">
 {% for course in page.info.currentcourses %}
-{% if course.url %}
-<a href="{{ site.baseurl }}/{{ course.url }}"  class="current-classes">
-{% else %}
-<div class="current-classes">
-{% endif %}
-  {% if course.number || course.section %}
+  {% if course.url %}
+  <a href="{{ site.baseurl }}/{{ course.url }}"  class="current-classes">
+  {% else %}
+  <div class="current-classes">
+  {% endif %}
+  
+  {% if course.number or course.section %}
     {{ course.number }} {{ course.section }} -
   {% endif %}
   {{ course.title }} ({{ page.info.currentsemester }})
-{% if course.url %}
-</a>
-{% else %}
-</div>
-{% endif %}
+  
+  {% if course.url %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
 {% endfor %}
 </div>
 
@@ -235,7 +256,11 @@ info:
                alt="{{ job.organization }}" class="job-logo">
         </a>
         <span class="job-position">{{ job.position }}</span>
+      {% if job.endyear == null %}
         <span class="job-since">since {{ job.startyear }}</span>
+      {% else %}
+        <span class="job-since">{{ job.startyear }} - {{ job.endyear }}</span>
+      {% endif %}
       </div>
     {% endfor %}
 </div>
