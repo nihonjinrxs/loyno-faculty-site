@@ -245,7 +245,8 @@ syllabus:
           week_num: 1
           week_dates: Aug 20 - 26, 2023
           sessions:
-            - session_num: 1
+            -
+              session_num: reminder
               day: Tuesday
               date: 08/22
               readings:
@@ -302,7 +303,8 @@ syllabus:
                   title: "A0: Github Username"
                   due: <strong>TODAY</strong>, Tue 08/22
                   notes: Completed during class
-            - session_num: 1
+            -
+              session_num: assignment
               day: Tuesday
               date: 08/22
               assigned:
@@ -323,6 +325,7 @@ syllabus:
           week_dates: Aug 27 - Sep 2, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 08/28
               due:
@@ -330,7 +333,7 @@ syllabus:
                   type: journal
                   title: "Week 1 Reflection"
             -
-              session_num: 2
+              session_num: reminder
               day: Tuesday
               date: 08/29
               readings:
@@ -342,6 +345,10 @@ syllabus:
                   type: read-TIN
                   title: "TIN Ch 2: pp. 47 - 69 (23 pages)"
                   url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                -
+                  type: read-web
+                  title: "MDN: Learn web development"
+                  url: https://developer.mozilla.org/en-US/docs/Learn
             -
               session_num: 2:a
               day: Tuesday
@@ -379,7 +386,7 @@ syllabus:
                   type: demo
                   title: Network Inspection & Packet Capture
             -
-              session_num: 2
+              session_num: assignment
               day: Tuesday
               date: 08/29
               assigned:
@@ -395,6 +402,7 @@ syllabus:
           week_dates: Sep 3 - 9, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 09/04
               due:
@@ -402,7 +410,7 @@ syllabus:
                   type: journal
                   title: "Week 2 Reflection"
             -
-              session_num: 3
+              session_num: reminder
               day: Tuesday
               date: 09/05
               readings:
@@ -411,6 +419,10 @@ syllabus:
                   title: "EJS: Intro. - Ch 6 (~107 pages)"
                   url: https://eloquentjavascript.net/
                   notes: "Programming concepts in EJS should already be well-understood; material should be review except for new syntax"
+                -
+                  type: read-web
+                  title: "MDN: JavaScript Guide"
+                  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
               due:
                 - 
                   type: project
@@ -440,7 +452,7 @@ syllabus:
                   type: demo
                   title: How to do a Programming Assignment
             -
-              session_num: 3
+              session_num: assignment
               day: Tuesday
               date: 09/05
               assigned:
@@ -453,6 +465,7 @@ syllabus:
           week_dates: Sep 10 - 16, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 09/11
               due:
@@ -460,7 +473,7 @@ syllabus:
                   type: journal
                   title: "Week 3 Reflection"
             -
-              session_num: 4
+              session_num: reminder
               day: Tuesday
               date: 09/12
               readings:
@@ -506,7 +519,7 @@ syllabus:
                   type: discussion
                   title: "First assignment: questions to clarity"
             -
-              session_num: 4
+              session_num: assignment
               day: Tuesday
               date: 09/12
               assigned:
@@ -518,6 +531,7 @@ syllabus:
           week_dates: Sep 17 - 23, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 09/18
               due:
@@ -525,7 +539,7 @@ syllabus:
                   type: journal
                   title: "Week 4 Reflection"
             -
-              session_num: 5
+              session_num: reminder
               day: Tuesday
               date: 09/19
               readings:
@@ -533,6 +547,18 @@ syllabus:
                   type: read-TIN
                   title: "TIN Ch 26: pp. 661 - 684 (24 pages)"
                   url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+                -
+                  type: read-web
+                  title: "Asynchrony: Under the Hood (Video - 25min)"
+                  url: https://youtu.be/SrNQS8J67zc
+                -
+                  type: read-web
+                  title: MDN JavaScript Concurrency Model &amp; Event Loop
+                  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+                -
+                  type: read-web
+                  title: "JavaScript Callback Concurrency (Pre-promises)"
+                  url: https://blog.avenuecode.com/understanding-the-javascript-concurrency-model
             -
               session_num: 5:a
               day: Tuesday
@@ -565,7 +591,7 @@ syllabus:
               topics:
                 - 
                   type: demo
-                  title: More JavaScript Asynchrony/Concurrency
+                  title: JavaScript Asynchrony/Concurrency
                 - 
                   type: demo
                   title: JavaScript Debugging
@@ -573,7 +599,7 @@ syllabus:
                   type: project
                   title: Project Specification
             -
-              session_num: 5
+              session_num: assignment
               day: Tuesday
               date: 09/19
               assigned:
@@ -590,6 +616,7 @@ syllabus:
           week_dates: Sep 24 - 30, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 09/25
               due:
@@ -597,7 +624,7 @@ syllabus:
                   type: journal
                   title: "Week 5 Reflection"
             -
-              session_num: 6
+              session_num: reminder
               day: Tuesday
               date: 09/26
               readings:
@@ -605,6 +632,14 @@ syllabus:
                   type: read-EJS
                   title: "EJS: Ch 13 - 15 (~45 pages)"
                   url: https://eloquentjavascript.net/
+                -
+                  type: read-web
+                  title: "Loupe (JavaScript event loop vizualizer)"
+                  url: http://latentflip.com/loupe/
+                -
+                  type: read-web
+                  title: "JavaScript Internals: Under the Hood of a Browser"
+                  url: https://medium.com/better-programming/javascript-internals-under-the-hood-of-a-browser-f357378cc922
               due:
                 - 
                   type: assignment
@@ -634,7 +669,7 @@ syllabus:
                   type: demo
                   title: Web Pages, the DOM &amp; the JS API
             -
-              session_num: 6
+              session_num: assignment
               day: Tuesday
               date: 09/26
               assigned:
@@ -650,6 +685,7 @@ syllabus:
           week_dates: Oct 1 - 7, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 10/02
               due:
@@ -657,7 +693,7 @@ syllabus:
                   type: journal
                   title: "Week 6 Reflection"
             -
-              session_num: 7
+              session_num: reminder
               day: Tuesday
               date: 10/03
               readings:
@@ -710,7 +746,7 @@ syllabus:
                   type: lab
                   title: Homework Help
             -
-              session_num: 7
+              session_num: assignment
               day: Tuesday
               date: 10/03
               assigned:
@@ -730,6 +766,7 @@ syllabus:
           week_dates: Oct 8 - 14, 2023
           sessions:
             -
+              session_num: reminder
               day: Tuesday
               date: 10/10
               due:
@@ -739,6 +776,7 @@ syllabus:
           week_dates: Oct 15 - 21, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 10/16
               due:
@@ -746,7 +784,7 @@ syllabus:
                   type: journal
                   title: "Week 7 & 8 Reflection"
             -
-              session_num: 9
+              session_num: reminder
               day: Tuesday
               date: 10/17
               readings:
@@ -763,7 +801,7 @@ syllabus:
                   type: assignment
                   title: "A3: Dynamic Content in a Webpage"
             -
-              session_num: 9:a
+              session_num: 8:a
               day: Tuesday
               date: 10/17
               formats:
@@ -778,7 +816,7 @@ syllabus:
                   type: lecture
                   title: UDP
             -
-              session_num: 9:b
+              session_num: 8:b
               day: Tuesday
               date: 10/17
               formats:
@@ -799,7 +837,7 @@ syllabus:
                   type: lab
                   title: Homework Help
             -
-              session_num: 9
+              session_num: assignment
               day: Tuesday
               date: 10/17
               assigned:
@@ -820,6 +858,7 @@ syllabus:
           week_dates: Oct 22 - 28, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 10/23
               due:
@@ -827,7 +866,7 @@ syllabus:
                   type: journal
                   title: "Week 9 Reflection"
             -
-              session_num: 10
+              session_num: reminder
               day: Tuesday
               date: 10/24
               readings:
@@ -844,7 +883,7 @@ syllabus:
                   type: assignment
                   title: "A4: UDP Parser"
             -
-              session_num: 10:a
+              session_num: 9:a
               day: Tuesday
               date: 10/24
               formats:
@@ -859,7 +898,7 @@ syllabus:
                   type: lecture
                   title: TCP
             -
-              session_num: 10:b
+              session_num: 9:b
               day: Tuesday
               date: 10/24
               formats:
@@ -877,7 +916,7 @@ syllabus:
                   type: lab
                   title: Homework Help
             -
-              session_num: 10
+              session_num: assignment
               day: Tuesday
               date: 10/24
               assigned:
@@ -890,260 +929,17 @@ syllabus:
           week_dates: Oct 29 - Nov 4, 2023
           sessions:
             -
+              session_num: reminder
               day: Monday
               date: 10/30
               due:
                 - 
                   type: journal
                   title: "Week 10 Reflection"
-    -
-      month: November
-      year: 2023
-      weeks:
-        -
-          week_num: 12
-          week_dates: Nov 5 - 11, 2023
-          sessions:
             -
+              session_num: reminder
               day: Tuesday
-              date: 11/07
-              notes: "NO CLASS - ELECTION DAY: GO VOTE!"
-        -
-          week_num: 13
-          week_dates: Nov 12 - 18, 2023
-          sessions:
-            -
-              day: Monday
-              date: 11/13
-              due:
-                - 
-                  type: journal
-                  title: "Week 11 & 12 Reflection"
-        -
-          week_num: H
-          week_dates: Nov 19 - 25, 2023
-          sessions:
-            -
-              day: Monday
-              date: 11/20
-              due:
-                - 
-                  type: journal
-                  title: "Week 13 Reflection"
-        -
-          week_num: 14
-          week_dates: Nov 26 - Dec 2, 2023
-          sessions:
-            -
-              day: Monday
-              date: 11/27
-              due:
-                - 
-                  type: journal
-                  title: "Week H Reflection"
-    -
-      month: December
-      year: 2023
-      weeks:
-        -
-          week_num: 15
-          week_dates: Dec 3 - 9, 2023
-          sessions:
-            -
-              day: Monday
-              date: 12/04
-              due:
-                - 
-                  type: journal
-                  title: "Week 14 Reflection"
-        -
-          week_num: 16
-          week_dates: Dec 10 - 16, 2023
-          sessions:
-            -
-              session_num: F
-              day: Tuesday
-              date: 12/12<br/>7:00-9:00p
-              formats:
-                -
-                  type: celebration
-                  title: Celebration!
-              topics:
-                -
-                  type: project
-                  title: PROJECT CELEBRATION & DEMO
-              readings: |
-                Be ready to talk about your goal and show off your project!
-                
-                Bring your favorite treat and non-alcoholic beverage.
-            -
-              day: Friday
-              date: 12/15
-              due:
-                - 
-                  type: journal
-                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
-        -
-          week_num: 20
-          sessions:
-            -
-              session_num: 7
-              day: Tuesday
-              date: 09/15
-              due:
-                - 
-                  type: assignment
-                  title: "A1: Ethernet Parser - Basic JavaScript"
-              notes: NO CLASS - Cancelled due to Hurricane Sally
-            -
-              session_num: 8
-              day: Tuesday
-              date: 09/17
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: JavaScript Asynchrony/Concurrency
-                - 
-                  type: lecture
-                  title: JavaScript Debugging
-              readings:
-                -
-                  type: read-EJS
-                  title: "EJS: Ch 8 - 11"
-                  url: https://eloquentjavascript.net/
-                -
-                  type: read-web
-                  title: "Asynchrony: Under the Hood (Video - 25min)"
-                  url: https://youtu.be/SrNQS8J67zc
-                -
-                  type: read-web
-                  title: MDN JavaScript Concurrency Model &amp; Event Loop
-                  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
-                -
-                  type: read-web
-                  title: "JavaScript Internals: Under the Hood of a Browser"
-                  url: https://medium.com/better-programming/javascript-internals-under-the-hood-of-a-browser-f357378cc922
-                -
-                  type: read-web
-                  title: "JavaScript Callback Concurrency (Pre-promises)"
-                  url: https://blog.avenuecode.com/understanding-the-javascript-concurrency-model
-                -
-                  type: read-web
-                  title: "Loupe (JavaScript event loop vizualizer)"
-                  url: http://latentflip.com/loupe/
-              assigned:
-              due:
-            -
-              day: Monday
-              date: 09/21
-              due:
-                - 
-                  type: journal
-                  title: "Week 4 Reflection"
-            -
-              session_num: 9
-              day: Tuesday
-              date: 09/22
-              due:
-            -
-              session_num: 10
-              day: Tuesday
-              date: 09/24
-              assigned:
-              due:
-            -
-              session_num: 11
-              day: Tuesday
-              date: 09/29
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: JavaScript in the Browser
-              readings:
-                -
-                  type: read-EJS
-                  title: "EJS: Ch 13 - 15"
-                  url: https://eloquentjavascript.net/
-              assigned:
-              due:
-                - 
-                  type: assignment
-                  title: "A2: Ethernet Parser - Async Programming in JS"
-            -
-              session_num: 12
-              day: Tuesday
-              date: 10/01
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: demo
-                  title: Web Pages, the DOM &amp; the JS API
-              readings:
-              assigned:
-              due:
-                - 
-                  type: project
-                  title: "P1: Project Specification"
-            -
-              day: Monday
-              date: 10/05
-              due:
-                - 
-                  type: journal
-                  title: "Week 6 Reflection"
-            -
-              session_num: 19
-              day: Tuesday
-              date: 10/27
-              readings:
-              assigned:
-              due:
-            -
-              session_num: 20
-              day: Tuesday
-              date: 10/29
-              due:
-              notes: NO CLASS - Cancelled due to Hurricane Zeta
-            -
-              session_num: 21
-              day: Tuesday
-              date: 11/03
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: "Web APIs: from HTML to Other Response Types"
-              readings:
-              due:
-                - 
-                  type: project
-                  title: "P2: Project Web Client"
-            -
-              session_num: 22
-              day: Tuesday
-              date: 11/05
-              formats:
-                - 
-                  type: demo
-                  title: Demo
-              topics:
-                - 
-                  type: demo
-                  title: Building Web-based APIs Using Node.js &amp; Express
+              date: 10/31
               readings:
                 -
                   type: read-web
@@ -1153,16 +949,89 @@ syllabus:
                   type: read-web
                   title: "Express.js: Getting Started"
                   url: https://expressjs.com/en/starter/installing.html
+                -
+                  type: read-web
+                  title: Express.js Tutorial (Zetcode)
+                  url: https://zetcode.com/javascript/expressjs/
+              due:
+                - 
+                  type: project
+                  title: "P2: Project Web Client"
+            -
+              session_num: 10:a
+              day: Tuesday
+              date: 10/31
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: "Web APIs: from HTML to Other Response Types"
+            -
+              session_num: 10:b
+              day: Tuesday
+              date: 10/31
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+              topics:
+                - 
+                  type: demo
+                  title: Building Web-based APIs Using Node.js &amp; Express
+            -
+              session_num: assignment
+              day: Tuesday
+              date: 10/31
               assigned:
                 - 
                   type: project
                   title: "P3: Project Web API"
-                  due: Thu 12/01
-              due:
+                  due: Tue 11/21
+    -
+      month: November
+      year: 2023
+      weeks:
+        -
+          week_num: 12
+          week_dates: Nov 5 - 11, 2023
+          sessions:
             -
-              session_num: 23
+              session_num: reminder
               day: Tuesday
-              date: 11/10
+              date: 11/07
+              notes: "NO CLASS - ELECTION DAY: GO VOTE!"
+        -
+          week_num: 13
+          week_dates: Nov 12 - 18, 2023
+          sessions:
+            -
+              session_num: reminder
+              day: Monday
+              date: 11/13
+              due:
+                - 
+                  type: journal
+                  title: "Week 11 & 12 Reflection"
+            -
+              session_num: reminder
+              day: Tuesday
+              date: 11/14
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 587 - 612 (Ch 23)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+              due:
+                - 
+                  type: assignment
+                  title: "A5: TCP Parser"
+            -
+              session_num: 11:a
+              day: Tuesday
+              date: 11/14
               formats:
                 - 
                   type: lecture
@@ -1171,17 +1040,61 @@ syllabus:
                 - 
                   type: lecture
                   title: DNS
+            -
+              session_num: 11:b
+              day: Tuesday
+              date: 11/14
+              formats:
+                - 
+                  type: demo
+                  title: Demo
+                -
+                  type: lab
+                  title: Lab
+              topics:
+                - 
+                  type: demo
+                  title: Setting Up & Inspecting DNS Records
+                -
+                  type: lab
+                  title: Homework & Project Help
+            -
+              session_num: assignment
+              day: Tuesday
+              date: 11/14
+              assigned:
+                -
+                  type: none
+                  title: No new assignments
+        -
+          week_num: H
+          week_dates: Nov 19 - 25, 2023
+          sessions:
+            -
+              session_num: reminder
+              day: Monday
+              date: 11/20
+              due:
+                - 
+                  type: journal
+                  title: "Week 13 Reflection"
+            -
+              session_num: reminder
+              day: Tuesday
+              date: 11/21
               readings:
                 -
                   type: read-TIN
-                  title: "TIN: pp. 587 - 612 (Ch 23)"
+                  title: "TIN: pp. 139 - 173 (Ch 5)"
                   url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
-              assigned:
               due:
+                - 
+                  type: project
+                  title: "P3: Project Web API"
             -
-              session_num: 24
+              session_num: 12:a
               day: Tuesday
-              date: 11/12
+              date: 11/21
               formats:
                 - 
                   type: lecture
@@ -1190,20 +1103,10 @@ syllabus:
                 - 
                   type: lecture
                   title: "IP: Addressing, Subnetting &amp; Supernetting"
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 139 - 173 (Ch 5)"
-                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
-              assigned:
-              due:
-                - 
-                  type: assignment
-                  title: "A5: TCP Parser"
             -
-              session_num: 25
+              session_num: 12:b
               day: Tuesday
-              date: 11/17
+              date: 11/21
               formats:
                 - 
                   type: discussion
@@ -1218,17 +1121,48 @@ syllabus:
                 - 
                   type: lab
                   title: Homework Help
-              readings:
+            -
+              session_num: assignment
+              day: Tuesday
+              date: 11/21
               assigned:
                 - 
                   type: assignment
                   title: "A6: IP Address Subnetter/Supernetter"
-                  due: Thu 12/03
-              due:
+                  due: Thu 11/28
+                - 
+                  type: project
+                  title: "P4: Web App Integration with API"
+                  due: Tue 12/05
+        -
+          week_num: 14
+          week_dates: Nov 26 - Dec 2, 2023
+          sessions:
             -
-              session_num: 26
+              session_num: reminder
+              day: Monday
+              date: 11/27
+              due:
+                - 
+                  type: journal
+                  title: "Week H Reflection"
+            -
+              session_num: reminder
               day: Tuesday
-              date: 11/19
+              date: 11/28
+              readings:
+                -
+                  type: read-TIN
+                  title: "TIN: pp. 197 - 219 (Ch 7)"
+                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
+              due:
+                - 
+                  type: assignment
+                  title: "A6: IP Address Subnetter/Supernetter"
+            -
+              session_num: 13:a
+              day: Tuesday
+              date: 11/28
               formats:
                 - 
                   type: lecture
@@ -1237,33 +1171,10 @@ syllabus:
                 - 
                   type: lecture
                   title: "IP: Headers &amp; Fragmentation"
-              readings:
-                -
-                  type: read-TIN
-                  title: "TIN: pp. 197 - 219 (Ch 7)"
-                  url: http://loyno.idm.oclc.org/login?url=https://www.sciencedirect.com/science/book/9780128110270
-              assigned:
-                - 
-                  type: project
-                  title: "P4: Web App Integration with API"
-                  due: Tue 12/08
-                  notes: Concurrently with P3 
-              due:
             -
+              session_num: 13:b
               day: Tuesday
-              date: 11/24
-              notes: NO CLASS - Thanksgiving Holidays
-            -
-              day: Tuesday
-              date: 11/26
-              notes: NO CLASS - Thanksgiving Holidays
-        -
-          week_num: 15
-          sessions:
-            -
-              session_num: 27
-              day: Tuesday
-              date: 12/01
+              date: 11/28
               formats:
                 - 
                   type: discussion
@@ -1278,24 +1189,35 @@ syllabus:
                 - 
                   type: lab
                   title: Homework Help
-              readings:
+            -
+              session_num: assignment
+              day: Tuesday
+              date: 11/28
               assigned:
+                - 
+                  type: assignment
+                  title: "A7: IP Packet Parser"
+                  due: Thu 12/05
+    -
+      month: December
+      year: 2023
+      weeks:
+        -
+          week_num: 15
+          week_dates: Dec 3 - 9, 2023
+          sessions:
+            -
+              session_num: reminder
+              day: Monday
+              date: 12/04
               due:
                 - 
-                  type: project
-                  title: "P3: Project Web API"
+                  type: journal
+                  title: "Week 14 Reflection"
             -
-              session_num: 28
+              session_num: reminder
               day: Tuesday
-              date: 12/03
-              formats:
-                - 
-                  type: lecture
-                  title: Lecture
-              topics:
-                - 
-                  type: lecture
-                  title: Concurrency &amp; Other Problems in Networked/Distributed Systems
+              date: 12/05
               readings:
                 -
                   type: read-web
@@ -1317,15 +1239,29 @@ syllabus:
                   type: read-web
                   title: "Network Failure Modes &amp; Prevention: Application Layers"
                   url: https://www.computerworld.com/article/2545395/network-failure-modes-and-prevention--application-layers.html
-              assigned:
               due:
                 - 
                   type: assignment
-                  title: "A6: IP Address Subnetter/Supernetter"
+                  title: "A7: IP Packet Parser"
+                - 
+                  type: project
+                  title: "P4: Web App Integration with API"
             -
-              session_num: 29
+              session_num: 14:a
               day: Tuesday
-              date: 12/08
+              date: 12/05
+              formats:
+                - 
+                  type: lecture
+                  title: Lecture
+              topics:
+                - 
+                  type: lecture
+                  title: Concurrency &amp; Other Problems in Networked/Distributed Systems
+            -
+              session_num: 14:b
+              day: Tuesday
+              date: 12/05
               formats:
                 - 
                   type: discussion
@@ -1334,11 +1270,47 @@ syllabus:
                 - 
                   type: discussion
                   title: "The TCP/IP Stack in Action: Wrapping &amp; Unwrapping Data"
-              readings:
+            -
+              session_num: assignment
+              day: Tuesday
+              date: 12/05
               assigned:
+                -
+                  type: none
+                  title: No new assignments
+        -
+          week_num: 16
+          week_dates: Dec 10 - 16, 2023
+          sessions:
+            -
+              session_num: reminder
+              day: Tuesday
+              date: 12/12
+              readings:
+                - 
+                  type: celebration
+                  title: Be ready to talk about your goal and show off your project!
+                -
+                  type: celebration
+                  title: Bring your favorite treat 🧁 and non-alcoholic beverage 🥤 to enjoy.
+            -
+              session_num: F
+              day: Tuesday
+              date: 12/12<br/>7:00-9:00p
+              formats:
+                -
+                  type: celebration
+                  title: Celebration!
+              topics:
+                -
+                  type: project
+                  title: PROJECT CELEBRATION & DEMO
+            -
+              day: Friday
+              date: 12/15
               due:
                 - 
-                  type: project
-                  title: "P4: Web App Integration with API"
+                  type: journal
+                  title: "GRADE PROPOSAL REFLECTION PAPER: FINAL GRADE"
 
 ---

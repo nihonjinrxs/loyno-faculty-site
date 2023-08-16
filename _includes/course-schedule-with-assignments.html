@@ -40,7 +40,18 @@
         {% for session in week.sessions %}
         <tr>
         <td class="centered">
-          W{{ week.week_num }}&nbsp;•&nbsp;S{{ session.session_num | default: "-" }}</td>
+          {% if session.session_num != null %}
+            {% if session.session_num == "reminder" %}
+          W{{ week.week_num }}&nbsp;•&nbsp;📌
+            {% elsif session.session_num == "assignment" %}
+          W{{ week.week_num }}&nbsp;•&nbsp;📋
+            {% else %}
+          W{{ week.week_num }}&nbsp;•&nbsp;S{{ session.session_num }}
+            {% endif %}
+          {% else %}
+          W{{ week.week_num }}&nbsp;•&nbsp;📌
+          {% endif %}
+        </td>
         <td class="centered">
           <p>{{ session.day | truncate: 3, "" }} {{ session.date }}</p>
         </td>
