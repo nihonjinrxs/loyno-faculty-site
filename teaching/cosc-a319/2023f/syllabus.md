@@ -1,6 +1,6 @@
 ---
 layout: syllabus_specific_ungrading
-title: COSC A319 Internet Technologies<br/>Syllabus (Fall 2020)
+title: COSC A319 Internet Technologies<br/>Syllabus (Fall 2023)
 syllabus:
   semester: 2023 Fall
   class_location: Online (Synchronous) in Canvas

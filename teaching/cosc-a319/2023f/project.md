@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Course Project<br/>COSC A319 Internet Technologies<br/>(Fall 2020)
+title: Course Project<br/>COSC A319 Internet Technologies<br/>(Fall 2023)
 ---
 ## PROJECT OVERVIEW
 
@@ -14,13 +14,13 @@ As with other work in this course, I will provide feedback as I see your work, b
 
 The following 5 assignments, explained in detail below, constitute the course-connected portion of your project:
 
-* [P0: Project Proposal](#p0)<br /><small><strong>Start:</strong> Thu, Aug 25, 2020; <strong>Due:</strong> Tue, Sep 8, 2020</small>
-* [P1: Project Specification](#p1)<br /><small><strong>Start:</strong> Tue, Sep 15, 2020; <strong>Due:</strong> Thu, Oct 1, 2020</small>
-* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Thu, Oct 8, 2020; <strong>Due:</strong> Thu, Nov 5, 2020</small>
-* [P3: Web API Server](#p3)<br /><small><strong>Start:</strong> Tue, Nov 5, 2020; <strong>Due:</strong> Tue, Dec 1, 2020</small>
-* [P4: Integration and Deployment](#p4)<br /><small><strong>Start:</strong> Thu, Nov 19, 2020; <strong>Due:</strong> Tue, Dec 8, 2020</small>
+* [P0: Project Proposal](#p0)<br /><small><strong>Start:</strong> Tue, Aug 22, 2023; <strong>Due:</strong> Tue, Sep 5, 2023</small>
+* [P1: Project Specification](#p1)<br /><small><strong>Start:</strong> Tue, Sep 19, 2023; <strong>Due:</strong> Tue, Oct 3, 2023</small>
+* [P2: Web Client](#p2)<br /><small><strong>Start:</strong> Tue, Oct 17, 2023; <strong>Due:</strong> Tue, Oct 31, 2023</small>
+* [P3: Web API Server](#p3)<br /><small><strong>Start:</strong> Tue, Oct 31, 2023; <strong>Due:</strong> Tue, Nov 21, 2023</small>
+* [P4: Integration and Deployment](#p4)<br /><small><strong>Start:</strong> Tue, Nov 21, 2023; <strong>Due:</strong> Tue, Dec 5, 2023</small>
 
-At the end of the course, during the final exam period on **Thu, Dec 17, 2020, from 4:30 PM to 6:30 PM**, we'll [celebrate our work together](#pf). This will be your chance to talk about your goal, show off your work, and discuss what you hope to do with it in the future.
+At the end of the course, during the final exam period on **Tue, Dec 12, 2023, from 7:00 PM to 9:00 PM**, we'll [celebrate our work together](#pf). This will be your chance to talk about your goal, show off your work, and discuss what you hope to do with it in the future.
 
 ---------------------------------------------
 
@@ -43,9 +43,9 @@ The possibilities are endless. I look forward to seeing what you decide to work 
 
 ### 📆 Schedule
 
-| Introduction            | Tue, Aug 25, 2020 |
-| Discussion Class Period | Thu, Sep  3, 2020 |
-| Assignment Due          | Tue, Sep  8, 2020 |
+| Introduction            | Tue, Aug 22, 2023 |
+| Office hours            | [By appointment](https://bit.ly/mr-harvey-office-hours)    |
+| Assignment Due          | Tue, Sep  5, 2023 |
 
 ### ✅ Requirements for the Assignment
 
@@ -79,10 +79,9 @@ Building on your proposal from the first assignment, you'll break down the funct
 
 ### 📆 Schedule
 
-| Introduction                | Tue, Sep 15, 2020 |
-| Discussion/Lab Class Period | Tue, Sep 22, 2020 |
-| Office hours                | By appointment    |
-| Assignment Due              | Thu, Oct 1, 2020  |
+| Introduction                | Tue, Sep 19, 2023 |
+| Office hours                | [By appointment](https://bit.ly/mr-harvey-office-hours)    |
+| Assignment Due              | Tue, Oct 3, 2023  |
 
 ### ✅ Requirements for the Assignment
 
@@ -110,7 +109,7 @@ Once you've developed your collection of user stories and identified the categor
 
 Once prioritized, identify among the highest prioritized themes those that are important to include in the minimum viable application. Then, for those themes, identify whether each user story involves creating new capabilities in the browser-based client application, in the server application that supports it, or in both. If there are portions of the same user story that involve creating new capabilities in both applications, you will need to make a note on the story of what portion of the functionality belongs in the server and what portion belongs in the client.
 
-These MVA-relevant themes and their user stories should then be captured in a project board in your project Github repository. You can find the project board feature under the **Projects** tab of your project repo. For more information on project boards, [see the Github documentation here](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards).
+These MVA-relevant themes and their user stories should then be captured in a project board in your project GitHub repository. You can find the project board feature under the **Projects** tab of your project repo. For more information on project boards, [see the GitHub documentation here](https://docs.GitHub.com/en/GitHub/managing-your-work-on-GitHub/about-project-boards).
 
 Your project board will serve as a guide for you during development of the next three assignments, so it's very important that you create the relevant cards there. 
 
@@ -122,11 +121,11 @@ Your specification document should reference your project board and should conta
 
 ### 📦 Submission
 
-The project board must be completed in your project Github repository.
+The project board must be completed in your project GitHub repository.
 
 Your proposal document can be written in whatever software you wish, but **must be submitted as a PDF format document**.
 
-Your proposal document **must be submitted via the Canvas assignment**, and **must be submitted at least once before the deadline** (along with organizing and collecting your story themes relevant to the MVA in your Github repo) in order to be marked complete.
+Your proposal document **must be submitted via the Canvas assignment**, and **must be submitted at least once before the deadline** (along with organizing and collecting your story themes relevant to the MVA in your GitHub repo) in order to be marked complete.
 
 ### ✨ Feedback
 
@@ -144,12 +143,11 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction                | Thu, Oct 8, 2020  |
-| Discussion/Lab Class Period | Thu, Oct 8, 2020  |
-| Discussion/Lab Class Period | Tue, Oct 20, 2020 |
-| Discussion/Lab Class Period | Tue, Oct 27, 2020 |
-| Office hours                | By appointment    |
-| Assignment Due              | Thu, Nov 5, 2020  |
+| Introduction                | Tue, Oct 17, 2023 |
+| Discussion/Lab Class Period | Tue, Oct 17, 2023 |
+| Discussion/Lab Class Period | Tue, Oct 24, 2023 |
+| Office hours                | [By appointment](https://bit.ly/mr-harvey-office-hours)    |
+| Assignment Due              | Tue, Oct 31, 2023 |
 
 ### 🛠 The Tools
 
@@ -163,8 +161,8 @@ To do this, we'll use JavaScript with HTML and CSS, as you might expect, but we'
 
 #### 🏭 Infrastructure Services
 
-* [Github](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and Github to manage your codebase.
-* [Travis CI](https://education.travis-ci.com) - a continuous integration platform that you'll use to ensure every commit you push to Github passes all automated tests.
+* [GitHub](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and GitHub to manage your codebase.
+* [GitHub Actions](https://docs.github.com/en/actions) - a continuous integration platform that you'll use to ensure every commit you push to GitHub passes all automated tests.
 * [Heroku](https://heroku.com) - a platform-as-a-service that allows easy deployment of web-based applications that you'll used to deploy your application so that it's viewable from anywhere.
 
 ### ✅ Requirements for the Assignment
@@ -181,8 +179,8 @@ Once these are decided and you have committed to a specific set of user stories 
 #### 🔩 Source Code, Process & Deployment Requirements
 
 1. Code for the application should be well-organized, using components and folders to keep related code together.
-2. The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
-3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see Travis CI in the Tools section above).
+2. The application should make use of GitHub for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see GitHub Actions in the Tools section above).
 4. The application should be well-documented (see JSdoc in the Tools section above).
 5. The application should be deployed to the Internet (see Heroku in the Tools section above), and should be live (that is, publicly viewable via the Internet in a browser).
 
@@ -190,7 +188,7 @@ Once these are decided and you have committed to a specific set of user stories 
 
 This assignment must be submitted as **a link to your project board in the Canvas Assignment**. (You may also submit a link to a filtered view of your project board containing only relevant user stories, if you wish.)
 
-While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a Github Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
+While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a GitHub Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
 
 If you don't feel the code in your PR is ready, but still need early feedback, you have the option to create your PR in **Draft** mode, which will indicate to your reviewer(s) that you are requesting feedback at an early stage of implementation (as well as prevent accidental merging to the main branch of the repo).
 
@@ -199,14 +197,14 @@ If you don't feel the code in your PR is ready, but still need early feedback, y
 I will review and provide feedback on Pull Requests (PRs) as requested throughout the assignment period. Before requesting feedback, be sure to identify the following in your PR description:
 
 * what the PR does or implements
-* a link to the Github Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to Github Issue 24 on the same repo).
+* a link to the GitHub Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to GitHub Issue 24 on the same repo).
 * any important decisions you made about code structure or how to implement something
 * any specific questions or assistance needed
 * any context for where you are in the process of implementation (checklist, statements about what's not yet done, etc.)
 
-To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My Github username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
+To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My GitHub username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
 
-Starting with this assignment, it is imperative that you push your code to a remote branch on Github and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
+Starting with this assignment, it is imperative that you push your code to a remote branch on GitHub and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
 
 <a name="p3"></a>
 
@@ -216,11 +214,10 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction &amp; In-class Demo | Thu, Nov 5, 2020      |
-| Discussion/Lab Class Period      | Tue, Nov 17, 2020     |
-| Thanksgiving Break               | Nov 21&mdash;29, 2020 |
-| Office hours                     | By appointment        |
-| Assignment Due                   | Tue, Dec 1, 2020      |
+| Introduction &amp; In-class Demo | Tue, Oct 31, 2023 |
+| Discussion/Lab Class Period      | Tue, Nov 14, 2023 |
+| Office hours                     | [By appointment](https://bit.ly/mr-harvey-office-hours)    |
+| Assignment Due                   | Tue, Nov 21, 2023 |
 
 ### 🛠 The Tools
 
@@ -234,8 +231,8 @@ To do this, we'll use JavaScript on the server through Node.js, along with three
 
 #### 🏭 Infrastructure Services
 
-* [Github](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and Github to manage your codebase.
-* [Travis CI](https://education.travis-ci.com) - a continuous integration platform that you'll use to ensure every commit you push to Github passes all automated tests.
+* [GitHub](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and GitHub to manage your codebase.
+* [GitHub Actions](https://docs.github.com/en/actions) - a continuous integration platform that you'll use to ensure every commit you push to GitHub passes all automated tests.
 * [Heroku](https://heroku.com) - a platform-as-a-service that allows easy deployment of web-based applications that you'll used to deploy your application so that it's viewable from anywhere.
 
 ### ✅ Requirements for the Assignment
@@ -252,8 +249,8 @@ Once these are decided and you have committed to a specific set of user stories 
 #### 🔩 Source Code, Process & Deployment Requirements
 
 1. Code for the application should be well-organized, using components and folders to keep related code together.
-2. The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
-3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see Travis CI in the Tools section above).
+2. The application should make use of GitHub for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see GitHub Actions in the Tools section above).
 4. The application should be well-documented (see JSdoc in the Tools section above).
 5. The application should be deployed to the Internet (see Heroku in the Tools section above), and should be live (that is, publicly viewable via the Internet in a browser).
 
@@ -261,7 +258,7 @@ Once these are decided and you have committed to a specific set of user stories 
 
 This assignment must be submitted as **a link to your project board in the Canvas Assignment**. (You may also submit a link to a filtered view of your project board containing only relevant user stories, if you wish.)
 
-While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a Github Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
+While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a GitHub Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
 
 If you don't feel the code in your PR is ready, but still need early feedback, you have the option to create your PR in **Draft** mode, which will indicate to your reviewer(s) that you are requesting feedback at an early stage of implementation (as well as prevent accidental merging to the main branch of the repo).
 
@@ -270,14 +267,14 @@ If you don't feel the code in your PR is ready, but still need early feedback, y
 I will review and provide feedback on Pull Requests (PRs) as requested throughout the assignment period. Before requesting feedback, be sure to identify the following in your PR description:
 
 * what the PR does or implements
-* a link to the Github Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to Github Issue 24 on the same repo).
+* a link to the GitHub Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to GitHub Issue 24 on the same repo).
 * any important decisions you made about code structure or how to implement something
 * any specific questions or assistance needed
 * any context for where you are in the process of implementation (checklist, statements about what's not yet done, etc.)
 
-To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My Github username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
+To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My GitHub username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
 
-Starting with this assignment, it is imperative that you push your code to a remote branch on Github and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
+Starting with this assignment, it is imperative that you push your code to a remote branch on GitHub and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
 
 <a name="p4"></a>
 
@@ -287,11 +284,11 @@ Once you have completed the project specification and project board, it's time t
 
 ### 📆 Schedule
 
-| Introduction                | Thu, Nov 19, 2020     |
-| Discussion/Lab Class Period | Tue, Dec 1, 2020      |
-| Thanksgiving Break          | Nov 21&mdash;29, 2020 |
-| Office hours                | By appointment        |
-| Assignment Due              | Tue, Dec 8, 2020      |
+| Introduction                | Tue, Nov 21, 2023     |
+| Thanksgiving Break          | Nov 22&mdash;24, 2023 |
+| Discussion/Lab Class Period | Tue, Nov 28, 2023     |
+| Office hours                | [By appointment](https://bit.ly/mr-harvey-office-hours)        |
+| Assignment Due              | Tue, Dec 5, 2023      |
 
 ### 🛠 The Tools
 
@@ -305,8 +302,8 @@ To do this, we'll use JavaScript on the server through Node.js, along with three
 
 #### 🏭 Infrastructure Services
 
-* [Github](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and Github to manage your codebase.
-* [Travis CI](https://education.travis-ci.com) - a continuous integration platform that you'll use to ensure every commit you push to Github passes all automated tests.
+* [GitHub](https://github.com) - a web service providing hosting and additional features for the [git](https://git-scm.com/) distributed version control system. You'll be using git and GitHub to manage your codebase.
+* [GitHub Actions](https://docs.github.com/en/actions) - a continuous integration platform that you'll use to ensure every commit you push to GitHub passes all automated tests.
 * [Heroku](https://heroku.com) - a platform-as-a-service that allows easy deployment of web-based applications that you'll used to deploy your application so that it's viewable from anywhere.
 
 ### ✅ Requirements for the Assignment
@@ -323,8 +320,8 @@ Once these are decided and you have committed to a specific set of user stories 
 #### 🔩 Source Code, Process & Deployment Requirements
 
 1. Code for the application should be well-organized, using components and folders to keep related code together.
-2. The application should make use of Github for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
-3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see Travis CI in the Tools section above).
+2. The application should make use of GitHub for version control. Commits should be small, be well-described in their commit messages, and contain a single change to the application.
+3. All code for the application should be well-tested. (This means that for each function you write, you should write at least one, and possibly several, tests.) Automated tests should run on every commit and pull request to the repo (see GitHub Actions in the Tools section above).
 4. The application should be well-documented (see JSdoc in the Tools section above).
 5. The application should be deployed to the Internet (see Heroku in the Tools section above), and should be live (that is, publicly viewable via the Internet in a browser).
 
@@ -332,7 +329,7 @@ Once these are decided and you have committed to a specific set of user stories 
 
 This assignment must be submitted as **a link to your project board in the Canvas Assignment**. (You may also submit a link to a filtered view of your project board containing only relevant user stories, if you wish.)
 
-While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a Github Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
+While working through your project board, I recommend you convert each user story card to an issue on the repo. Then, as you write code to implement the user story, you can do that on a new branch in the repo and submit that branch as a GitHub Pull Request. Your PR will provide a good mechanism for feedback on your work, and can be linked back to the issue to provide for easy tracking of what code changes implemented what features in your application.
 
 If you don't feel the code in your PR is ready, but still need early feedback, you have the option to create your PR in **Draft** mode, which will indicate to your reviewer(s) that you are requesting feedback at an early stage of implementation (as well as prevent accidental merging to the main branch of the repo).
 
@@ -341,14 +338,14 @@ If you don't feel the code in your PR is ready, but still need early feedback, y
 I will review and provide feedback on Pull Requests (PRs) as requested throughout the assignment period. Before requesting feedback, be sure to identify the following in your PR description:
 
 * what the PR does or implements
-* a link to the Github Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to Github Issue 24 on the same repo).
+* a link to the GitHub Issue for the user story (these can be tagged by number, so `#24` would automatically create a link to GitHub Issue 24 on the same repo).
 * any important decisions you made about code structure or how to implement something
 * any specific questions or assistance needed
 * any context for where you are in the process of implementation (checklist, statements about what's not yet done, etc.)
 
-To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My Github username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
+To request feedback, you can tag me on the Pull Request either in the **Reviews** section at the top right of the PR screen, or by tagging my username in a comment on the PR. [My GitHub username is `@nihonjinrxs`.](https://github.com/nihonjinrxs)
 
-Starting with this assignment, it is imperative that you push your code to a remote branch on Github and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
+Starting with this assignment, it is imperative that you push your code to a remote branch on GitHub and create a PR as soon as possible, pushing code changes as you create them. This will allow for the most real-time feedback, and will support you in your learning and in accomplishing your goals for the project.
 
 <a name="pf"></a>
 

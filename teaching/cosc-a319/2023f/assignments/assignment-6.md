@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "IP Address Subnetter/Supernetter"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A6
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A6
 subtitle-above: true
 ---
 ## Summary
@@ -13,11 +13,9 @@ length, returning the relevant resulting network information.
 
 ## 📆 Schedule
 
-| Assigned                    | Tue, Nov 17, 2020                                       |
-| Discussion/Lab Class Period | Tue, Dec 1, 2020                                        |
-| Thanksgiving Break          | Nov 21&mdash;29, 2020                                   |
-| Office hours                | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due              | Thu, Dec 3, 2020                                        |
+| Assigned       | Tue, Nov 21, 2023 |
+| Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
+| Assignment Due | Tue, Nov 28, 2023 |
 
 ## Background
 

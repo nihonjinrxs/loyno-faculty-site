@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "JavaScript in the Browser:<br />Dynamic Web Page"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A3
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A3
 subtitle-above: true
 ---
 
@@ -12,10 +12,10 @@ and sort it in various ways.
 
 ## 📆 Schedule
 
-| Assigned       | Tue, Oct 6, 2020  |
-| Discussion/Lab class period | Thu, Oct 8, 2020  |
+| Assigned       | Tue, Oct 3, 2023  |
+| Fall Break | Oct 9 &mdash; 10, 2023 |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due | Tue, Oct 13, 2020 |
+| Assignment Due | Tue, Oct 17, 2023 |
 
 ## Your Assignment
 

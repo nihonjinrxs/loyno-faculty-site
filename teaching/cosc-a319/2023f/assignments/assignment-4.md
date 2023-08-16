@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "UDP Packet Parser"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A4
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A4
 subtitle-above: true
 ---
 - [Summary](#summary)
@@ -26,10 +26,9 @@ a User Datagram Protocol (UDP) packet.
 
 ## 📆 Schedule
 
-| Assigned       | Thu, Oct 15, 2020  |
+| Assigned       | Tue, Oct 17, 2023  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Discussion/Lab | Tue, Oct 20, 2020 |
-| Assignment Due | Thu, Oct 22, 2020 |
+| Assignment Due | Tue, Oct 24, 2023 |
 
 ## Background
 

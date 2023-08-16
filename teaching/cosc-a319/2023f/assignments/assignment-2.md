@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Asynchronous JavaScript:<br />Ethernet Frame Data Parser"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A2
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A2
 subtitle-above: true
 ---
 - [📆 Schedule](#-schedule)
@@ -28,9 +28,9 @@ burned into the NIC's firmware.
 
 ## 📆 Schedule
 
-| Assigned       | Tue, Sep 22, 2020  |
+| Assigned       | Tue, Sep 19, 2023  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due | Tue, Sep 29, 2020 |
+| Assignment Due | Tue, Sep 26, 2023 |
 
 ## Background
 

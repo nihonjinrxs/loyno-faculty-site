@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Basic (Synchronous) JavaScript:<br />Ethernet Frame Data Parser"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A1
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A1
 subtitle-above: true
 ---
 - [Summary](#summary)
@@ -32,9 +32,9 @@ burned into the NIC's firmware.
 
 ## 📆 Schedule
 
-| Assigned       | Tue, Sep 8, 2020  |
+| Assigned       | Tue, Sep 5, 2023  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due | Thu, Sep 10, 2020 |
+| Assignment Due | Thu, Sep 12, 2023 |
 
 ## Background
 

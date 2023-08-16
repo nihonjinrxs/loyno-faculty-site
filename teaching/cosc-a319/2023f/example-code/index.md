@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Useful Code Samples<br/>COSC A319 Internet Technologies<br/>(Fall 2020)
+title: Useful Code Samples<br/>COSC A319 Internet Technologies<br/>(Fall 2023)
 ---
 
 The following code examples may be useful.

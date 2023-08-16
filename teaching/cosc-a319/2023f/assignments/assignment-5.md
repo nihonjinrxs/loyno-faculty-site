@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TCP Packet Parser"
-subtitle: COSC A319 Internet Technologies (Fall 2020) - Assignment A5
+subtitle: COSC A319 Internet Technologies (Fall 2023) - Assignment A5
 subtitle-above: true
 ---
 - [Summary](#summary)
@@ -29,9 +29,9 @@ a Transmission Control Protocol (TCP) packet.
 
 ## 📆 Schedule
 
-| Assigned       | Tue, Nov 3, 2020  |
+| Assigned       | Tue, Oct 24, 2023  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due | Thu, Nov 12, 2020 |
+| Assignment Due | Tue, Nov 14, 2023 |
 
 ## Background
 
