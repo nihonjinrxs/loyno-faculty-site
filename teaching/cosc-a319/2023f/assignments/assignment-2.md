@@ -28,9 +28,9 @@ burned into the NIC's firmware.
 
 ## 📆 Schedule
 
-| Assigned       | Tue, Sep 19, 2023  |
+| Assigned       | POSTPONED  |
 | Office hours   | [By appointment](https://bit.ly/mr-harvey-office-hours) |
-| Assignment Due | Tue, Sep 26, 2023 |
+| Assignment Due | POSTPONED |
 
 ## Background
 

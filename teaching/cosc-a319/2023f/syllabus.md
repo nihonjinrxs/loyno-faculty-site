@@ -607,6 +607,7 @@ syllabus:
                   type: assignment
                   title: "A2: Ethernet Parser - Async Programming in JS"
                   due: Tue 09/26
+                  notes: POSTPONED UNTIL LATER THIS SEMESTER
                 - 
                   type: project
                   title: "P1: Project Specification"
@@ -644,6 +645,7 @@ syllabus:
                 - 
                   type: assignment
                   title: "A2: Ethernet Parser - Async Programming in JS"
+                  notes: POSTPONED UNTIL LATER THIS SEMESTER
             -
               session_num: 6:a
               day: Tuesday
