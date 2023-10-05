@@ -349,7 +349,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.5.0, updated 08/22/2023
+        Site v1.5.0, updated 10/04/2023
       </small>
     </span>
   </nav>
@@ -392,8 +392,7 @@
   </h1>
   <p>In this assignment, you’ll create a web client using plain HTML and JavaScript (and some CSS for styling if you like).</p>
 
-<p>This web client will pull data from a remote web API and display it in tabular format, allowing a user to filter
-and sort it in various ways.</p>
+<p>This web client will pull data from a remote web API and display it in tabular format, allowing a user to filter and sort it in various ways.</p>
 
 <h2 id="-schedule">📆 Schedule</h2>
 
@@ -432,39 +431,72 @@ events and enable the relevant functionality.</p>
   <li>As a weather enthusiast, I would like to review record filings from weather
 stations, so that I can explore recent weather conditions.</li>
   <li>As a weather enthusiast, I would like to be able to review only reports
-from currently active, or currently inactive, weather stations, so that I can
-assess whether there is a difference between the data from those sets of stations.</li>
-  <li>As a weather enthusiast, I would like to be able to apply various sorts to the
-weather station reports, specifically by ID, date and time of last reading,
-temperature or humidity value, or active/inactive status, so that I can better
-understand the shape of the data.</li>
+from weather stations that were active, or not active, when the
+measurements were taken, so that I can assess whether there is a difference
+between the data from those sets of stations.</li>
+  <li>As a weather enthusiast, I would like to be able to apply various sorts
+to the weather station reports, specifically by ID, date and time of
+last reading, temperature or humidity value, or active/inactive status,
+so that I can better understand the shape of the data.</li>
+  <li><em>Bonus challenge</em>: As a weather enthusiast, I would like to page through 
+data records in smaller quantities at a time so that I won’t be overwhelmed
+by too many records at once.</li>
+  <li><em>Bonus challenge</em>: As a weather enthusiast, I would like to be able to
+filter the available data by weather station and by date range so that I
+can dive into the specifics of various locations and time periods.</li>
 </ul>
 
 <p>For the purposes of this assignment, you will use fake weather station data
-available from this API endpoint: <code class="language-plaintext highlighter-rouge">http://dummy-data-api-server.herokuapp.com/data</code>.</p>
+available from the API at: <code class="language-plaintext highlighter-rouge">https://dummy-data-api-server.fly.dev/</code>. This API has a root endpoint <code class="language-plaintext highlighter-rouge">https://dummy-data-api-server.fly.dev/</code> that indicates the health of the service, and an endpoint <code class="language-plaintext highlighter-rouge">https://dummy-data-api-server.fly.dev/data</code> that serves (fake) weather data records. Individual records have the following format:</p>
+
+<pre><code class="language-{json}">{
+  "id": 1,
+  "filing_id": "fd7da058-4ec3-4e85-b4cd-2c4365956511",
+  "active": false,
+  "description": "Sherbro International Airport",
+  "last_reading": "2023-07-01T02:19:42Z",
+  "measures": {
+    "temperature": 65.65,
+    "humidity": 58.73
+  }
+}
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">data</code> endpoint also accepts the following URL query parameters:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">from</code> - the starting record ID to return records from (whole number value between <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">1000</code>, default)</li>
+  <li><code class="language-plaintext highlighter-rouge">count</code> - the number of records to return (whole number between <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">500</code>, default <code class="language-plaintext highlighter-rouge">100</code>.</li>
+</ul>
+
+<p>So, for example, to load <code class="language-plaintext highlighter-rouge">231</code> records starting from record id <code class="language-plaintext highlighter-rouge">28</code>, you could use <code class="language-plaintext highlighter-rouge">https://dummy-data-api-server.fly.dev/data?from=28&amp;count=231</code>.</p>
+
+<p>The response body will have the overall format:</p>
+
+<pre><code class="language-{json}">{
+  "count": &lt;number of records&gt;,
+  "data": &lt;array of records&gt;
+}
+</code></pre>
 
 <p>Specifically, based on the above user stories, your web page should:</p>
 
 <ul>
   <li>respond to clicks of the <code class="language-plaintext highlighter-rouge">Load data</code> button by loading the data from the remote server</li>
-  <li>populate the data, once loaded, into an HTML table, respecting the relevant filtering
-and sorting settings selected by the user</li>
-  <li>repopulate the table with appropriately sorted data rows when a the sorting setting is
-changed by the user</li>
-  <li>repopulate the table with appropriately filtered data rows when the filtering setting
-is changed by the user</li>
+  <li>populate the data, once loaded, into an HTML table, respecting the relevant filtering and sorting settings selected by the user</li>
+  <li>repopulate the table with appropriately sorted data rows when a the sorting setting is changed by the user</li>
+  <li>repopulate the table with appropriately filtered data rows when the filtering setting is changed by the user</li>
 </ul>
 
-<p>(Note that you do not need to make a new request to the API for data unless the user clicks
-the <code class="language-plaintext highlighter-rouge">Load data</code> button again. Because of this, it’s a good idea to separate the data loading
-functionality of your JavaScript code from the table rendering functionality.)</p>
+<p>(Note that you do not necessarily need to make a new request to the API for data unless you don’t already have the data the user needs in memory, or the user clicks the <code class="language-plaintext highlighter-rouge">Load data</code> button again. Because of this, it’s a good idea to separate the data loading functionality of your JavaScript code from the table rendering functionality.)</p>
 
 <h3 id="expected-output">Expected Output</h3>
 
-<p>For this assignment, loading your web page (served by a web server) should enable the
-above-mentioned requirements. An example of this might look like:</p>
+<p>For this assignment, loading your web page (served by a web server) should enable the above-mentioned requirements. A minimal example of this, not implementing the bonus challenges, might look like:</p>
 
 <p><img src="../weatherdatainspector.png" alt="Example solution screenshot" /></p>
+
+<p>Note that you are free to use the <code class="language-plaintext highlighter-rouge">assets/styles/main.css</code> file to style your webpage in any way you prefer. Please be creative and add some personal style to your assignment!</p>
 
 <h3 id="program-structure">Program Structure</h3>
 
@@ -495,24 +527,11 @@ this file with information that may be helpful.)</li>
   </li>
 </ul>
 
-<p>There are comments througout the <code class="language-plaintext highlighter-rouge">index.html</code> file indicating locations where specific
-work should happen within the file. Please read and pay attention to these, as they
-will help you complete the assignment.</p>
-
-<blockquote>
-  <p>You may note that the <code class="language-plaintext highlighter-rouge">master</code> branch has been changed to the <code class="language-plaintext highlighter-rouge">main</code> branch.
-This is in response to current events, recognizing the lingering master/slave
-connotation of the existing <code class="language-plaintext highlighter-rouge">master</code> branch naming, and desiring to make
-branch naming more inclusive. These changes are being made to both <code class="language-plaintext highlighter-rouge">git</code> and to
-Github. For more on these changes, see <a href="https://github.com/gitgitgadget/git/pull/655">this pull request to <code class="language-plaintext highlighter-rouge">git</code></a>
-and <a href="https://github.com/github/renaming">Github’s README on their work</a>. <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/221164">Gitlab
-is also making similar changes</a>, as are others.</p>
-</blockquote>
+<p>There are comments througout the <code class="language-plaintext highlighter-rouge">index.html</code> file indicating locations where specific work should happen within the file. Please read and pay attention to these, as they will help you complete the assignment.</p>
 
 <h4 id="getting-started-on-the-assignment">Getting started on the assignment</h4>
 
-<p>As with prior assignments, in order to get started with the assignment, you’ll want
-to do the following things:</p>
+<p>As with prior assignments, in order to get started with the assignment, you’ll want to do the following things:</p>
 
 <ul>
   <li>Review this assignment description in detail</li>
@@ -521,35 +540,18 @@ to do the following things:</p>
   <li>Take the requirements one-by-one, implementing them and verifying that they work as expected.</li>
 </ul>
 
-<p>Unlike prior assignments, there are no automated tests for this assignment. (There could be, but creating them
-is fairly involved, and it’s easer for this simple assignment to verify by running your code directly.)</p>
+<p>Unlike prior assignments, there are no automated tests for this assignment. (There could be, but creating them is fairly involved, and it’s easer for this simple assignment to verify by running your code directly.)</p>
 
 <h3 id="submission-and-feedback">Submission and Feedback</h3>
 
-<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">main</code> branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-<strong>Feedback</strong>. As you push your commits on the <code class="language-plaintext highlighter-rouge">main</code> branch up to Github, they
-will be added to the activity on this pull request.</p>
+<p>You must submit your changes as commits to a new branch on the repository. You will need to create a pull request on the repository which compares that branch against the base branch <code class="language-plaintext highlighter-rouge">main</code>. As you push your commits on your branch up to Github, they will be added to the activity on this pull request.</p>
 
-<p>In addition to the synchronous mechanism of requesting help via office hours
-appointments, this pull request will be your mechanism for asking questions and
-requesting help asynchronously during the course of this assignment. I will also
-use this pull request to provide feedback on your work. I will provide feedback on
-the completed assignment within a week of the due date of the assignment.
-If you push your code earlier than the due date, I will try to provide
-feedback as needed earlier.</p>
+<p>In addition to the synchronous mechanism of requesting help via office hours appointments, your pull request will be your mechanism for asking questions and requesting help asynchronously during the course of this assignment. I will also use this pull request to provide feedback on your work. I will provide feedback on the completed assignment within a week of the due date of the assignment. If you push your code earlier than the due date, I will try to provide feedback as needed earlier.</p>
 
-<p>I suggest that you push your work to Github as you make commits, and that you make
-commits frequently as you work on the assignment. This way, if you have questions,
-I will be able to review your work-in-progress and give more relevant answers and
-feedback. If you have a question specific to a particular area of the code, note that
-you can add comments inline on the pull request by clicking on the <strong>Files changed</strong> tab
-of the pull request, then clicking the little blue <code class="language-plaintext highlighter-rouge">+</code> icon that appears when you hover
+<p>I suggest that you push your work to Github as you make commits, and that you make commits frequently as you work on the assignment. This way, if you have questions, I will be able to review your work-in-progress and give more relevant answers and feedback. If you have a question specific to a particular area of the code, note that you can add comments inline on the pull request by clicking on the <strong>Files changed</strong> tab of the pull request, then clicking the little blue <code class="language-plaintext highlighter-rouge">+</code> icon that appears when you hover
 over a specific line of code.</p>
 
-<p>I will do my best to respond to questions posed during the course of the assignment with
-in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
-me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+<p>I will do my best to respond to questions posed during the course of the assignment with in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
 
 <p>Good luck, and I look forward to seeing what you create!</p>
 
