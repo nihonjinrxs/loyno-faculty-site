@@ -44,16 +44,18 @@ reaches its destination. It is often used for data that is real-time,
 or that loses value if it arrives later than intended.
 
 In addition to its current uses, it is used as the basis for [a new proposed
-Transport layer protocol QUIC](https://datatracker.ietf.org/doc/draft-ietf-quic-transport/?include_text=1)
+Transport layer protocol QUIC (RFC 9000)](https://datatracker.ietf.org/doc/rfc9000/)
 (whose packets are encapsulated within UDP datagrams). QUIC is in turn
 [proposed as the basis for the new version of the HyperText Transfer Protocol,
-HTTP/3](https://datatracker.ietf.org/doc/draft-ietf-quic-http/?include_text=1).
+HTTP/3 (RFC 9114)](https://datatracker.ietf.org/doc/rfc9114/).
 
 > NOTE: This is an example of the Internet standards process in action, as these
-standards, currently having **Internet Draft** status, are currently being
-vetted and implemented. You can find various documents and email archives
-regarding the decisions being made on these standards at [the QUIC working
-group home on IETF.org](https://datatracker.ietf.org/wg/quic/documents/).
+standards, currently having **Proposed Standard** status, have largely been vetted
+and are now being implemented. You can find various documents and email archives
+regarding the decisions being made on these standards at [the QUIC working group
+home on IETF.org](https://datatracker.ietf.org/wg/quic/documents/). In addition, if
+you review the pages linked above for each RFC, they contain information
+about the current status and history of each of the proposed standard documents.
 
 ### Ports and Sockets
 
@@ -187,9 +189,10 @@ zero-filled. Using that data, the checksum is then calculated as the
 16-bit one's compliment of the one's compliment sum of the combined
 data.
 
-You can use [the `createChecksum` function of the `raw_sockets` Node.js
+You can use [the `createChecksum` function of the `raw-socket` Node.js
 package](https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-)
-to compute the proper checksum for the data.
+to compute the proper checksum for the data. That function is exported
+from the included `lib/checksum.js` module, so you can import it from there.
 
 ## Your Assignment
 
@@ -220,7 +223,7 @@ included in parentheses.
     protocol: (Unsigned integer value protocol identifier),
     length: (UDP length)
   },
-  payload: (payload data in binary format as an Buffer with appropriate length),
+  payload: (payload data in binary format as a Buffer with appropriate length),
   checksum_valid: (boolean, true if checksum is valid for data in packet)
 }
 ```
@@ -230,12 +233,17 @@ included in parentheses.
 Once this is complete and passing tests, copy this project into a new folder `lib/udp` in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
 `lib/ethernet` folder). Then, use this to parse the payload from UDP packets found by your
-Assignment A2 async parser, and replace the `payload` key's current `Buffer` value with the
+Assignment 2 async parser, and replace the `payload` key's current `Buffer` value with the
 object structure above instead.
 
-Note that you'll need to construct a couple dummy Ethernet frames that contain UDP
+You'll need to construct a couple dummy Ethernet frames that contain UDP
 data. The simplest way to do this is just to capture a few packets on your computer. If
 that's too difficult, you can just generate it by following the frame and packet formats.
+
+> NOTE: Since we've postponed Assignment A2, this integration will not be feasible at the
+time this is assigned. However, you should consider this bonus challenge active for the
+remainder of the course and after, such that if and when Assignment A2 is set, you may include
+this challege as an extension of it.
 
 ### Program Structure
 
@@ -276,21 +284,17 @@ As with Assignment A1, in order to get started with the assignment, you'll want
 to do the following things:
 
 - Review this assignment description in detail, particularly the UDP packet structure and
-  the notes about checksum calculation oddities
+  the notes about checksum calculation oddities and pseudo-headers
 - Explore JavaScript [Buffer](https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html)
-- Explore the `raw_socket` library's [createChecksum](https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-) function
+- Explore the `raw-socket` library's [createChecksum](https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-) function
 - Clone this repo to your computer
-- Read through the comments and code included for you, particularly in `index.js` and `lib/EthernetSocketProcessor.js`
-- Copy your the contents of your Assignment A1 repo, which should now be a working ethernet frame parser
-  library, into the `lib/ethernet` folder in this repo. (You may want to exclude the `.git`, `.vscode`,
-  and `.github` folders from that copy, as it may confuse Visual Studio Code to have those folders at
-  multiple levels of the repo.)
+- Read through the comments and code included for you in `index.js` and `lib/udp.js`
 - Run the following at the command line from within the project directory (use `cd <path>`, replacing
   `<path>` with the folder path to your project directory, to get there):
 
   ```{sh}
-  nvm install 12.19
-  nvm use 12.19
+  nvm install lts/*
+  nvm use
   npm install
   npm test
   ```
@@ -311,10 +315,10 @@ npm run lint
 
 ### Submission and Feedback
 
-You must submit your changes as commits to the `main` branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-**Feedback**. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.
+**You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the `main`
+branch.** As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.
 
 In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -335,5 +339,8 @@ over a specific line of code.
 I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. **If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: `@nihonjinrxs`.**
+
+Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.
 
 Good luck, and I look forward to seeing what you create!
