@@ -349,7 +349,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.5.0, updated 10/04/2023
+        Site v1.5.0, updated 10/15/2023
       </small>
     </span>
   </nav>
@@ -456,18 +456,20 @@ cover later in the course, as it provides no guarantees that a packet
 reaches its destination. It is often used for data that is real-time,
 or that loses value if it arrives later than intended.</p>
 
-<p>In addition to its current uses, it is used as the basis for <a href="https://datatracker.ietf.org/doc/draft-ietf-quic-transport/?include_text=1">a new proposed
-Transport layer protocol QUIC</a>
+<p>In addition to its current uses, it is used as the basis for <a href="https://datatracker.ietf.org/doc/rfc9000/">a new proposed
+Transport layer protocol QUIC (RFC 9000)</a>
 (whose packets are encapsulated within UDP datagrams). QUIC is in turn
-<a href="https://datatracker.ietf.org/doc/draft-ietf-quic-http/?include_text=1">proposed as the basis for the new version of the HyperText Transfer Protocol,
-HTTP/3</a>.</p>
+<a href="https://datatracker.ietf.org/doc/rfc9114/">proposed as the basis for the new version of the HyperText Transfer Protocol,
+HTTP/3 (RFC 9114)</a>.</p>
 
 <blockquote>
   <p>NOTE: This is an example of the Internet standards process in action, as these
-standards, currently having <strong>Internet Draft</strong> status, are currently being
-vetted and implemented. You can find various documents and email archives
-regarding the decisions being made on these standards at <a href="https://datatracker.ietf.org/wg/quic/documents/">the QUIC working
-group home on IETF.org</a>.</p>
+standards, currently having <strong>Proposed Standard</strong> status, have largely been vetted
+and are now being implemented. You can find various documents and email archives
+regarding the decisions being made on these standards at <a href="https://datatracker.ietf.org/wg/quic/documents/">the QUIC working group
+home on IETF.org</a>. In addition, if
+you review the pages linked above for each RFC, they contain information
+about the current status and history of each of the proposed standard documents.</p>
 </blockquote>
 
 <h3 id="ports-and-sockets">Ports and Sockets</h3>
@@ -607,9 +609,10 @@ zero-filled. Using that data, the checksum is then calculated as the
 16-bit one’s compliment of the one’s compliment sum of the combined
 data.</p>
 
-<p>You can use <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">the <code class="language-plaintext highlighter-rouge">createChecksum</code> function of the <code class="language-plaintext highlighter-rouge">raw_sockets</code> Node.js
+<p>You can use <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">the <code class="language-plaintext highlighter-rouge">createChecksum</code> function of the <code class="language-plaintext highlighter-rouge">raw-socket</code> Node.js
 package</a>
-to compute the proper checksum for the data.</p>
+to compute the proper checksum for the data. That function is exported
+from the included <code class="language-plaintext highlighter-rouge">lib/checksum.js</code> module, so you can import it from there.</p>
 
 <h2 id="your-assignment">Your Assignment</h2>
 
@@ -639,7 +642,7 @@ included in parentheses.</p>
     protocol: (Unsigned integer value protocol identifier),
     length: (UDP length)
   },
-  payload: (payload data in binary format as an Buffer with appropriate length),
+  payload: (payload data in binary format as a Buffer with appropriate length),
   checksum_valid: (boolean, true if checksum is valid for data in packet)
 }
 </code></pre>
@@ -649,12 +652,19 @@ included in parentheses.</p>
 <p>Once this is complete and passing tests, copy this project into a new folder <code class="language-plaintext highlighter-rouge">lib/udp</code> in
 your Assignment A2 project (similar to what you did with the Assignment A1 code in the
 <code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder). Then, use this to parse the payload from UDP packets found by your
-Assignment A2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
+Assignment 2 async parser, and replace the <code class="language-plaintext highlighter-rouge">payload</code> key’s current <code class="language-plaintext highlighter-rouge">Buffer</code> value with the
 object structure above instead.</p>
 
-<p>Note that you’ll need to construct a couple dummy Ethernet frames that contain UDP
+<p>You’ll need to construct a couple dummy Ethernet frames that contain UDP
 data. The simplest way to do this is just to capture a few packets on your computer. If
 that’s too difficult, you can just generate it by following the frame and packet formats.</p>
+
+<blockquote>
+  <p>NOTE: Since we’ve postponed Assignment A2, this integration will not be feasible at the
+time this is assigned. However, you should consider this bonus challenge active for the
+remainder of the course and after, such that if and when Assignment A2 is set, you may include
+this challege as an extension of it.</p>
+</blockquote>
 
 <h3 id="program-structure">Program Structure</h3>
 
@@ -698,21 +708,17 @@ to do the following things:</p>
 
 <ul>
   <li>Review this assignment description in detail, particularly the UDP packet structure and
-the notes about checksum calculation oddities</li>
+the notes about checksum calculation oddities and pseudo-headers</li>
   <li>Explore JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html">Buffer</a></li>
-  <li>Explore the <code class="language-plaintext highlighter-rouge">raw_socket</code> library’s <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">createChecksum</a> function</li>
+  <li>Explore the <code class="language-plaintext highlighter-rouge">raw-socket</code> library’s <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">createChecksum</a> function</li>
   <li>Clone this repo to your computer</li>
-  <li>Read through the comments and code included for you, particularly in <code class="language-plaintext highlighter-rouge">index.js</code> and <code class="language-plaintext highlighter-rouge">lib/EthernetSocketProcessor.js</code></li>
-  <li>Copy your the contents of your Assignment A1 repo, which should now be a working ethernet frame parser
-library, into the <code class="language-plaintext highlighter-rouge">lib/ethernet</code> folder in this repo. (You may want to exclude the <code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.vscode</code>,
-and <code class="language-plaintext highlighter-rouge">.github</code> folders from that copy, as it may confuse Visual Studio Code to have those folders at
-multiple levels of the repo.)</li>
+  <li>Read through the comments and code included for you in <code class="language-plaintext highlighter-rouge">index.js</code> and <code class="language-plaintext highlighter-rouge">lib/udp.js</code></li>
   <li>
     <p>Run the following at the command line from within the project directory (use <code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing
 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory, to get there):</p>
 
-    <pre><code class="language-{sh}">nvm install 12.19
-nvm use 12.19
+    <pre><code class="language-{sh}">nvm install lts/*
+nvm use
 npm install
 npm test
 </code></pre>
@@ -733,10 +739,10 @@ at your own command line, you can use:</p>
 
 <h3 id="submission-and-feedback">Submission and Feedback</h3>
 
-<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">main</code> branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-<strong>Feedback</strong>. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.</p>
+<p><strong>You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the <code class="language-plaintext highlighter-rouge">main</code>
+branch.</strong> As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.</p>
 
 <p>In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -757,6 +763,9 @@ over a specific line of code.</p>
 <p>I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.</p>
 
 <p>Good luck, and I look forward to seeing what you create!</p>
 
