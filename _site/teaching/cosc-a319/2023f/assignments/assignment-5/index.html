@@ -349,7 +349,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.5.0, updated 10/15/2023
+        Site v1.5.0, updated 10/22/2023
       </small>
     </span>
   </nav>
@@ -457,7 +457,7 @@ TCP is currently used for a large portion of the World-Wide Web data sent
 over the Internet today.</p>
 
 <p>TCP is a more complex protocol than its sibling protocol UDP. The
-<em>connection-oriented</em> nature of the TCP protocol adds a number of
+<em>connection-oriented</em> nature of the TCP protocol adds a number more
 complexities to the communication interaction than might be expected,
 and in fact, TCP adds some functionality that would normally fall under
 the responsibilities of Session layer services (layer 5 in the 7-layer
@@ -653,7 +653,7 @@ so option data length is always <code class="language-plaintext highlighter-roug
 meanings, with references, can be found in
 <a href="https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml">IANA’s TCP Option Kind Numbers list</a>.</p>
 
-<p>When parsing options for this assignment, you’ll need to provide both the numeric option type <code class="language-plaintext highlighter-rouge">T</code> as the field <code class="language-plaintext highlighter-rouge">type_id</code>, as well as a string with the option type name. For the option type name field <code class="language-plaintext highlighter-rouge">type</code>, you will use the option name as listed in the <em>Meaning</em> column of Table 12.2 of your text <em>The Illustrated Network</em>. Parsed options should also present their byte length <code class="language-plaintext highlighter-rouge">L</code> as the <code class="language-plaintext highlighter-rouge">length</code> field and any relevant fields (using their abbreviated names) as defined by the RFC listed in Table 12.2 that defines the option. RFCs can be found at <a href="http://rfc-editor.net">rfc-editor.net</a>.</p>
+<p>When parsing options for this assignment, you’ll need to provide both the numeric option type <code class="language-plaintext highlighter-rouge">T</code> as the field <code class="language-plaintext highlighter-rouge">type_id</code>, as well as a string with the option type name. For the option type name field <code class="language-plaintext highlighter-rouge">type</code>, you will use the option name as listed in the <em>Meaning</em> column of Table 12.2 of your text <em>The Illustrated Network</em>. Parsed options should also present their byte length <code class="language-plaintext highlighter-rouge">L</code> as the <code class="language-plaintext highlighter-rouge">length</code> field and any relevant fields (using their abbreviated names) as defined by the RFC listed in Table 12.2 that defines the option. RFCs can be found at <a href="http://rfc-editor.net">rfc-editor.net</a>. Note that several of the listed options in the textbook are now obsoleted in the standards, and can now be ignored.</p>
 
 <h4 id="the-checksum-field-and-ip-pseudo-headers">The Checksum Field and IP Pseudo-headers</h4>
 
@@ -685,7 +685,7 @@ are also managed by IANA. The protocol number for TCP is 6.</p>
 -------------------------------------
 |  '  '  '  |  '  '  '  |  '  '  '  |
 |  4 bytes  |  4 bytes  |1B|1B| 2B  |
-|   Source  |    Dest   |  |Pr| UDP |
+|   Source  |    Dest   |  |Pr| TCP |
 |    IPv4   |    IPv4   |0s|  | Len |
 -------------------------------------
 </code></pre>
@@ -703,11 +703,10 @@ are also managed by IANA. The protocol number for TCP is 6.</p>
 <p>The relevant pseudo-header is attached at the beginning of the packet,
 before the TCP header, and the checksum field of the TCP header is
 zero-filled. Using that data, the checksum is then calculated as the
-16-bit one’s compliment of the one’s compliment sum of the combined
+16-bit one’s compliment of the two’s compliment sum of the combined
 data.</p>
 
-<p>You can use <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">the <code class="language-plaintext highlighter-rouge">createChecksum</code> function of the <code class="language-plaintext highlighter-rouge">raw-socket</code> Node.js
-package</a>
+<p>You can use the <code class="language-plaintext highlighter-rouge">createChecksum</code> function provided in <code class="language-plaintext highlighter-rouge">lib/checksum.js</code>
 to compute the proper checksum for the data.</p>
 
 <h2 id="your-assignment">Your Assignment</h2>
@@ -779,6 +778,13 @@ object structure above instead.</p>
 data. The simplest way to do this is just to capture a few packets on your computer. If
 that’s too difficult, you can just generate it by following the frame and packet formats.</p>
 
+<blockquote>
+  <p>NOTE: Since we’ve postponed Assignment A2, this integration will not be feasible at the
+time this is assigned. However, you should consider this bonus challenge active for the
+remainder of the course and after, such that if and when Assignment A2 is set, you may include
+this challege as an extension of it.</p>
+</blockquote>
+
 <h3 id="program-structure">Program Structure</h3>
 
 <p>While you must make your implementation pass automated tests that
@@ -837,14 +843,21 @@ and can then convert that value to a boolean value by comparing it with <code cl
 All together, the example would look like this:</p>
 
 <pre><code class="language-{text}">const flagsField = 0x6d; // This would be whatever you read from your packet.
-const bit3Value = (flagsField &amp; 0b00100000) &gt;&gt; 5 === 1;
+const bit3FlagValue = (flagsField &amp; 0b00100000) &gt;&gt; 5 === 1;
 </code></pre>
 
 <p>Note that if you know the base-10 values of these bit mask binary numbers, you
 can also use those, simplifying the code a bit:</p>
 
 <pre><code class="language-{text}">const flagsField = 0x6d; // This would be whatever you read from your packet.
-const bit3Value = (flagsField &amp; 32) &gt;&gt; 5 === 1;
+const bit3FlagValue = (flagsField &amp; 32) &gt;&gt; 5 === 1;
+</code></pre>
+
+<p>As another shortcut, you could also just skip the bit-shifting step and check whether
+the resulting number after the bitwise <code class="language-plaintext highlighter-rouge">AND</code> is greater than <code class="language-plaintext highlighter-rouge">0</code>:</p>
+
+<pre><code class="language-{text}">const flagsField = 0x6d // This would be whatever you read from your socket.
+const bit3FlagValue = flagsField &amp; 32 &gt; 0;
 </code></pre>
 
 <h4 id="getting-started-on-the-assignment">Getting started on the assignment</h4>
@@ -857,15 +870,14 @@ to do the following things:</p>
 the notes about the various fields, checksum calculation oddities and pseudo-headers</li>
   <li>Explore JavaScript <a href="https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html">Buffer</a></li>
   <li>Explore the bitwise operators in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators">MDN JavaScript Operators reference</a></li>
-  <li>Explore the <code class="language-plaintext highlighter-rouge">raw-socket</code> library’s <a href="https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-">createChecksum</a> function</li>
   <li>Clone this repo to your computer</li>
   <li>Read through the comments and code included for you in <code class="language-plaintext highlighter-rouge">index.js</code> and <code class="language-plaintext highlighter-rouge">lib/tcp.js</code></li>
   <li>
     <p>Run the following at the command line from within the project directory (use <code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing
 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory, to get there):</p>
 
-    <pre><code class="language-{sh}">nvm install 12.19
-nvm use 12.19
+    <pre><code class="language-{sh}">nvm install
+nvm use lts/*
 npm install
 npm test
 </code></pre>
@@ -884,12 +896,17 @@ at your own command line, you can use:</p>
 <pre><code class="language-{sh}">npm run lint
 </code></pre>
 
+<p>To check both tests and linting results, you can use the convenience command:</p>
+
+<pre><code class="language-{sh}">npm run check
+</code></pre>
+
 <h3 id="submission-and-feedback">Submission and Feedback</h3>
 
-<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">main</code> branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-<strong>Feedback</strong>. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.</p>
+<p>You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the <code class="language-plaintext highlighter-rouge">main</code>
+branch. As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.</p>
 
 <p>In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -910,6 +927,9 @@ over a specific line of code.</p>
 <p>I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.</p>
 
 <p>Good luck, and I look forward to seeing what you create!</p>
 
