@@ -44,7 +44,7 @@ TCP is currently used for a large portion of the World-Wide Web data sent
 over the Internet today.
 
 TCP is a more complex protocol than its sibling protocol UDP. The
-_connection-oriented_ nature of the TCP protocol adds a number of
+_connection-oriented_ nature of the TCP protocol adds a number more
 complexities to the communication interaction than might be expected,
 and in fact, TCP adds some functionality that would normally fall under
 the responsibilities of Session layer services (layer 5 in the 7-layer
@@ -228,7 +228,7 @@ so option data length is always `L - 2` bytes. Various option types and their
 meanings, with references, can be found in
 [IANA's TCP Option Kind Numbers list](https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml).
 
-When parsing options for this assignment, you'll need to provide both the numeric option type `T` as the field `type_id`, as well as a string with the option type name. For the option type name field `type`, you will use the option name as listed in the _Meaning_ column of Table 12.2 of your text _The Illustrated Network_. Parsed options should also present their byte length `L` as the `length` field and any relevant fields (using their abbreviated names) as defined by the RFC listed in Table 12.2 that defines the option. RFCs can be found at [rfc-editor.net](http://rfc-editor.net).
+When parsing options for this assignment, you'll need to provide both the numeric option type `T` as the field `type_id`, as well as a string with the option type name. For the option type name field `type`, you will use the option name as listed in the _Meaning_ column of Table 12.2 of your text _The Illustrated Network_. Parsed options should also present their byte length `L` as the `length` field and any relevant fields (using their abbreviated names) as defined by the RFC listed in Table 12.2 that defines the option. RFCs can be found at [rfc-editor.net](http://rfc-editor.net). Note that several of the listed options in the textbook are now obsoleted in the standards, and can now be ignored.
 
 #### The Checksum Field and IP Pseudo-headers
 
@@ -261,7 +261,7 @@ UDP IPv4 Pseudo-header Structure
 -------------------------------------
 |  '  '  '  |  '  '  '  |  '  '  '  |
 |  4 bytes  |  4 bytes  |1B|1B| 2B  |
-|   Source  |    Dest   |  |Pr| UDP |
+|   Source  |    Dest   |  |Pr| TCP |
 |    IPv4   |    IPv4   |0s|  | Len |
 -------------------------------------
 ```
@@ -280,11 +280,10 @@ UDP IPv6 Pseudo-header Structure
 The relevant pseudo-header is attached at the beginning of the packet,
 before the TCP header, and the checksum field of the TCP header is
 zero-filled. Using that data, the checksum is then calculated as the
-16-bit one's compliment of the one's compliment sum of the combined
+16-bit one's compliment of the two's compliment sum of the combined
 data.
 
-You can use [the `createChecksum` function of the `raw-socket` Node.js
-package](https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-)
+You can use the `createChecksum` function provided in `lib/checksum.js`
 to compute the proper checksum for the data.
 
 ## Your Assignment
@@ -357,6 +356,11 @@ Note that you'll need to construct a couple dummy Ethernet frames that contain T
 data. The simplest way to do this is just to capture a few packets on your computer. If
 that's too difficult, you can just generate it by following the frame and packet formats.
 
+> NOTE: Since we've postponed Assignment A2, this integration will not be feasible at the
+time this is assigned. However, you should consider this bonus challenge active for the
+remainder of the course and after, such that if and when Assignment A2 is set, you may include
+this challege as an extension of it.
+
 ### Program Structure
 
 While you must make your implementation pass automated tests that
@@ -412,7 +416,7 @@ All together, the example would look like this:
 
 ```{text}
 const flagsField = 0x6d; // This would be whatever you read from your packet.
-const bit3Value = (flagsField & 0b00100000) >> 5 === 1;
+const bit3FlagValue = (flagsField & 0b00100000) >> 5 === 1;
 ```
 
 Note that if you know the base-10 values of these bit mask binary numbers, you
@@ -420,7 +424,15 @@ can also use those, simplifying the code a bit:
 
 ```{text}
 const flagsField = 0x6d; // This would be whatever you read from your packet.
-const bit3Value = (flagsField & 32) >> 5 === 1;
+const bit3FlagValue = (flagsField & 32) >> 5 === 1;
+```
+
+As another shortcut, you could also just skip the bit-shifting step and check whether
+the resulting number after the bitwise `AND` is greater than `0`:
+
+```{text}
+const flagsField = 0x6d // This would be whatever you read from your socket.
+const bit3FlagValue = flagsField & 32 > 0;
 ```
 
 #### Getting started on the assignment
@@ -432,15 +444,14 @@ to do the following things:
   the notes about the various fields, checksum calculation oddities and pseudo-headers
 - Explore JavaScript [Buffer](https://nodejs.org/dist/latest-v12.x/docs/api/buffer.html)
 - Explore the bitwise operators in the [MDN JavaScript Operators reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
-- Explore the `raw-socket` library's [createChecksum](https://www.npmjs.com/package/raw-socket#rawcreatechecksum-bufferorobject-bufferorobject-) function
 - Clone this repo to your computer
 - Read through the comments and code included for you in `index.js` and `lib/tcp.js`
 - Run the following at the command line from within the project directory (use `cd <path>`, replacing
   `<path>` with the folder path to your project directory, to get there):
 
   ```{sh}
-  nvm install 12.19
-  nvm use 12.19
+  nvm install
+  nvm use lts/*
   npm install
   npm test
   ```
@@ -459,12 +470,18 @@ at your own command line, you can use:
 npm run lint
 ```
 
+To check both tests and linting results, you can use the convenience command:
+
+```{sh}
+npm run check
+```
+
 ### Submission and Feedback
 
-You must submit your changes as commits to the `main` branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-**Feedback**. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.
+You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the `main`
+branch. As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.
 
 In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -485,5 +502,8 @@ over a specific line of code.
 I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. **If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: `@nihonjinrxs`.**
+
+Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.
 
 Good luck, and I look forward to seeing what you create!
