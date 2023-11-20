@@ -349,7 +349,7 @@
     </div>
     <span class="sidebar-nav-item">
       <small>
-        Site v1.5.0, updated 10/22/2023
+        Site v1.5.0, updated 11/19/2023
       </small>
     </span>
   </nav>
@@ -538,14 +538,31 @@ to a more optimal location within the IPv4 addresses of the network.</p>
 IPv4 network to which this address belongs</li>
 </ul>
 
+<p>And the following methods:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">display() -&gt; &lt;string&gt;</code> - to convert the binary form IPv4 address
+into human-readable CIDR format</li>
+</ul>
+
 <p>The <code class="language-plaintext highlighter-rouge">IPv4Address</code> class should have the following static methods:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">display(&lt;Buffer&gt; address) -&gt; &lt;string&gt;</code> - to convert binary IPv4 addresses
-into human-readable ones</li>
-  <li><code class="language-plaintext highlighter-rouge">create(&lt;number|string&gt; ip4Address, &lt;number|string&gt; subnetMask) -&gt; &lt;IPv4Address&gt;</code> -
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">parseIPAddress(&lt;string&gt; address) -&gt; &lt;number&gt;</code> - to convert a string format address (without CIDR prefix length) into a binary number format</p>
+
+    <ul>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Address.parseIPAddress('12.46.213.57')
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">create(&lt;number|string&gt; ip4Address, &lt;number|string&gt; subnetMask) -&gt; &lt;IPv4Address&gt;</code> -
 to create <code class="language-plaintext highlighter-rouge">IPv4Address</code> objects from either binary or string representations of
-the address and possibly the subnet as follows:
+the address and possibly the subnet as follows:</p>
+
     <ul>
       <li>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Address.create(
@@ -589,6 +606,7 @@ the address and possibly the subnet as follows:
 </code></pre>
 
 <p><code class="language-plaintext highlighter-rouge">IPv4Network</code> instances should should have properties:</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">networkID</code> - binary IP network address</li>
   <li><code class="language-plaintext highlighter-rouge">prefixLength</code> - the network prefix length</li>
@@ -601,6 +619,7 @@ binary host IP addresses in the network</li>
 </ul>
 
 <p>Methods on <code class="language-plaintext highlighter-rouge">IPv4Network</code>:</p>
+
 <ul>
   <li>Instance method <code class="language-plaintext highlighter-rouge">subnet(&lt;integer&gt; newPrefixLength) -&gt; &lt;IPv4Network[]&gt;</code> -
 a method that subnets the network and returns an <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">IPv4Network</code>
@@ -612,10 +631,12 @@ an <code class="language-plaintext highlighter-rouge">Array</code> of <code clas
 incomplete covering of the address space, so be sure that every
 address in the range of addresses covered by your supernet result
 is also covered by the one of the networks passed in.)</strong></em></li>
-  <li>Static method
+  <li>
+    <p>Static method
 <code class="language-plaintext highlighter-rouge">create(&lt;number|string&gt; ip4Address, &lt;number|string&gt; subnetMask) -&gt; &lt;IPv4Network&gt;</code> -
 a method that takes either an IPv4 address as a CIDR format string, or an IPv4
-address and subnet mask, and creates and returns an <code class="language-plaintext highlighter-rouge">IPv4Network</code> instance:
+address and subnet mask, and creates and returns an <code class="language-plaintext highlighter-rouge">IPv4Network</code> instance:</p>
+
     <ul>
       <li>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IPv4Network.create(
@@ -769,8 +790,8 @@ you need to create.</li>
 <code class="language-plaintext highlighter-rouge">cd &lt;path&gt;</code>, replacing <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> with the folder path to your project directory,
 to get there):</p>
 
-    <pre><code class="language-{sh}">nvm install 14.15
-nvm use 14.15
+    <pre><code class="language-{sh}">nvm install
+nvm use lts/*
 npm install
 npm test
 </code></pre>
@@ -791,10 +812,10 @@ those tests at your own command line, you can use:</p>
 
 <h3 id="submission-and-feedback">Submission and Feedback</h3>
 
-<p>You must submit your changes as commits to the <code class="language-plaintext highlighter-rouge">main</code> branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-<strong>Feedback</strong>. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.</p>
+<p>You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the <code class="language-plaintext highlighter-rouge">main</code>
+branch. As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.</p>
 
 <p>In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -815,6 +836,9 @@ over a specific line of code.</p>
 <p>I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. <strong>If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: <code class="language-plaintext highlighter-rouge">@nihonjinrxs</code>.</strong></p>
+
+<p>Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.</p>
 
 <p>Good luck, and I look forward to seeing what you create!</p>
 
