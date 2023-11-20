@@ -136,13 +136,23 @@ Instances of the `IPv4Address` class should have properties:
 - `network` - an `IPNetwork` instance specifying information about the
   IPv4 network to which this address belongs
 
+And the following methods:
+
+- `display() -> <string>` - to convert the binary form IPv4 address
+  into human-readable CIDR format
+
 The `IPv4Address` class should have the following static methods:
 
-- `display(<Buffer> address) -> <string>` - to convert binary IPv4 addresses
-  into human-readable ones
+- `parseIPAddress(<string> address) -> <number>` - to convert a string format address (without CIDR prefix length) into a binary number format
+
+  - ```
+    IPv4Address.parseIPAddress('12.46.213.57')
+    ```
+
 - `create(<number|string> ip4Address, <number|string> subnetMask) -> <IPv4Address>` -
   to create `IPv4Address` objects from either binary or string representations of
   the address and possibly the subnet as follows:
+
   - ```
     IPv4Address.create(
       /* IPv4 address in binary/unsigned integer format */
@@ -151,12 +161,14 @@ The `IPv4Address` class should have the following static methods:
       0b11111111_11111111_11000000_00000000
     )
     ```
+
   - ```
     IPv4Address.create(
       /* IPv4 address in CIDR string format */
       '12.46.213.57/18'
     )
     ```
+
   - ```
     IPv4Address.create(
       /* IPv4 address on the network in string human-readable format */
@@ -180,6 +192,7 @@ new IPv4Network(
 ```
 
 `IPv4Network` instances should should have properties:
+
 - `networkID` - binary IP network address
 - `prefixLength` - the network prefix length
 - `networkCIDRAddress` - the binary IP network address and integer prefix
@@ -190,6 +203,7 @@ new IPv4Network(
   binary host IP addresses in the network
 
 Methods on `IPv4Network`:
+
 - Instance method `subnet(<integer> newPrefixLength) -> <IPv4Network[]>` -
   a method that subnets the network and returns an `Array` of `IPv4Network`
   instances for each of the subnets
@@ -204,6 +218,7 @@ Methods on `IPv4Network`:
   `create(<number|string> ip4Address, <number|string> subnetMask) -> <IPv4Network>` -
   a method that takes either an IPv4 address as a CIDR format string, or an IPv4
   address and subnet mask, and creates and returns an `IPv4Network` instance:
+
   - ```
     IPv4Network.create(
       /* IPv4 address on the network in binary/unsigned integer format */
@@ -212,18 +227,21 @@ Methods on `IPv4Network`:
       0b11111111_11111111_11000000_00000000
     )
     ```
+
   - ```
     IPv4Network.create(
       /* IPv4 network address in CIDR string format */
       '12.46.128/18'
     )
     ```
+
   - ```
     IPv4Network.create(
       /* IPv4 address on the network in CIDR string format */
       '12.46.136.47/18'
     )
     ```
+
   - ```
     IPv4Network.create(
       /* IPv4 network address in string human-readable format */
@@ -347,8 +365,8 @@ to do the following things:
   to get there):
 
   ```{sh}
-  nvm install 14.15
-  nvm use 14.15
+  nvm install
+  nvm use lts/*
   npm install
   npm test
   ```
@@ -369,10 +387,10 @@ npm run lint
 
 ### Submission and Feedback
 
-You must submit your changes as commits to the `main` branch on the repository.
-Github Classroom will create a pull request on the repository for you, titled
-**Feedback**. As you push your commits on the main branch up to Github, they
-will be added to the activity on this pull request.
+You must submit your changes as commits to a new branch on the repository, and
+create a pull request on the repository comparing that branch against the `main`
+branch. As you push your commits on the new branch up to Github, they will be
+added to the activity on this pull request.
 
 In addition to the synchronous mechanism of requesting help via office hours
 appointments, this pull request will be your mechanism for asking questions and
@@ -393,5 +411,8 @@ over a specific line of code.
 I will do my best to respond to questions posed during the course of the assignment with
 in a day of the ask. **If you want to ask a question or request early feedback, please tag
 me in a comment on the pull request: `@nihonjinrxs`.**
+
+Once you feel you have completed the assignment, you should submit the link to your pull
+request on the assignment in Canvas.
 
 Good luck, and I look forward to seeing what you create!
