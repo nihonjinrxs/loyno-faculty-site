@@ -2,6 +2,13 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
+# previously part of ruby core, now separate
+gem 'csv'
+gem 'logger'
+gem 'base64'
+gem 'bigdecimal'
+
+# core app dependencies
 gem 'jekyll'
 gem 'redcarpet'
 gem 'kramdown-parser-gfm'
@@ -16,4 +23,5 @@ end
 
 group :development, :test do
   gem 'webrick'
+  gem 'bundler-audit'
 end
