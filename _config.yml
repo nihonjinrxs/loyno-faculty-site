@@ -33,7 +33,7 @@ author:
 - url:               'https://www.loyno.edu/academics/faculty-and-staff-directory/mr-ryan-harvey'
 - email:             'rharvey@loyno.edu'
 # Custom vars
-version:             '1.5.0'
+version:             '1.6.0'
 github:
 - repo:              'https://github.com/nihonjinrxs/loyno-faculty-repo'
 
